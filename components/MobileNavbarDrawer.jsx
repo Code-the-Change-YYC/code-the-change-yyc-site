@@ -35,14 +35,14 @@ const MobileNavbarDrawer = () => {
     <div className="flex flex-col bg-[#FF4D6F] rounded-b-2xl z-5 -mt-5 p-10 absolute top-full w-full items-center">
       <div className="flex flex-col w-full space-y-4">
         <h1
-          className={`cursor-pointer ${TEXT_CLASSES} ${selectedLink === "about" ? "underline" : ""}`}
+          className={`cursor-pointer ${TEXT_CLASSES} ${selectedLink === ABOUT ? "underline" : ""}`}
           onClick={() => handleClick(ABOUT)}
         >
           About
         </h1>
         {selectedLink === ABOUT && <NestedLinks options={["Who we are", "Projects"]} />}
         <h1
-          className={`cursor-pointer ${TEXT_CLASSES} ${selectedLink === ABOUT ? "underline" : ""}`}
+          className={`cursor-pointer ${TEXT_CLASSES} ${selectedLink === NEWS ? "underline" : ""}`}
           onClick={() => handleClick(NEWS)}
         >
           News
