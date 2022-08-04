@@ -7,17 +7,17 @@ import Fade from "./Fade";
 import { FaBars } from "react-icons/fa";
 import MobileNavbarDrawer from "./MobileNavbarDrawer";
 
-const textClasses = "text-xl font-semibold text-[#FF4D6F]";
-const optionClasses = "text-xl font-semibold text-white p-2";
-const optionsClasses = "absolute right-0 top-12 w-48 rounded-b-lg bg-[#FF4D6F] p-2";
+const TEXT_CLASSES = "text-xl font-semibold text-[#FF4D6F]";
+const OPTION_CLASSES = "text-xl font-semibold text-white p-2";
+const OPTIONS_CLASSES = "absolute right-0 top-12 w-48 rounded-b-lg bg-[#FF4D6F] p-2";
 
 const DropdownOptions = ({ options }) => {
   return (
-    <Menu.Items as="div" className={`absolute right-0 mt-2 origin-top-right divide-y ${optionsClasses}`}>
+    <Menu.Items as="div" className={`absolute right-0 mt-2 origin-top-right divide-y ${OPTIONS_CLASSES}`}>
       {options.map((option) => {
         const link = option.toLowerCase().split(" ").join("-");
         return (
-          <Menu.Item key={option} className={`flex justify-center items-center ${optionClasses}`}>
+          <Menu.Item key={option} className={`flex justify-center items-center ${OPTION_CLASSES}`}>
             <a href={`/${link}</Menu.Item>`}>{option}</a>
           </Menu.Item>
         );
@@ -41,28 +41,28 @@ const Navbar = () => {
         <div className="hidden md:flex md:items-center md:space-x-8">
           <Dropdown
             title="About"
-            titleClasses={textClasses}
-            optionsClasses={optionsClasses}
-            optionClasses={optionClasses}
+            titleClasses={TEXT_CLASSES}
+            optionsClasses={OPTIONS_CLASSES}
+            optionClasses={OPTION_CLASSES}
           >
             <DropdownOptions options={["Who we are", "Projects"]} />
           </Dropdown>
           <Dropdown
             title="News"
-            titleClasses={textClasses}
-            optionsClasses={optionsClasses}
-            optionClasses={optionClasses}
+            titleClasses={TEXT_CLASSES}
+            optionsClasses={OPTIONS_CLASSES}
+            optionClasses={OPTION_CLASSES}
           >
             <DropdownOptions options={["Announcements", "Blog"]} />
           </Dropdown>
           <Link href="/partnerships">
-            <span className={textClasses}>Partnerships</span>
+            <span className={TEXT_CLASSES}>Partnerships</span>
           </Link>
           <Link href="/contact">
-            <span className={textClasses}>Contact</span>
+            <span className={TEXT_CLASSES}>Contact</span>
           </Link>
           <Link href="/join">
-            <span className={textClasses}>Join</span>
+            <span className={TEXT_CLASSES}>Join</span>
           </Link>
         </div>
 
