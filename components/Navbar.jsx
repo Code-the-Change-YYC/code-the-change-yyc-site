@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import Dropdown from "./Dropdown";
+import Fade from "./Fade";
 import { FaBars } from "react-icons/fa";
 import MobileNavbarDrawer from "./MobileNavbarDrawer";
 
@@ -67,7 +68,9 @@ const Navbar = () => {
         <div className="md:hidden"></div>
       </div>
 
-      {open && <MobileNavbarDrawer />}
+      <Fade open={open}>
+        <MobileNavbarDrawer />
+      </Fade>
     </div>
   );
 };
