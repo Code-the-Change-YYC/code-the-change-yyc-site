@@ -12,7 +12,7 @@ const OPTION_CLASSES = "text-xl font-semibold text-white p-2";
 const OPTIONS_CLASSES = "top-14 w-48 rounded-b-lg bg-[#FF4D6F] p-2";
 const IMAGE_SIZE = 44;
 
-const DropdownOptions = ({ options }) => {
+const NavbarDropdownOptions = ({ options }) => {
   return (
     <Menu.Items as="div" className={`absolute right-0 origin-top-right divide-y ${OPTIONS_CLASSES}`}>
       {options.map((option) => {
@@ -46,7 +46,7 @@ const Navbar = () => {
             optionsClasses={OPTIONS_CLASSES}
             optionClasses={OPTION_CLASSES}
           >
-            <DropdownOptions options={["Who we are", "Projects"]} />
+            <NavbarDropdownOptions options={["Who we are", "Projects"]} />
           </Dropdown>
           <Dropdown
             title="News"
@@ -54,7 +54,7 @@ const Navbar = () => {
             optionsClasses={OPTIONS_CLASSES}
             optionClasses={OPTION_CLASSES}
           >
-            <DropdownOptions options={["Announcements", "Blog"]} />
+            <NavbarDropdownOptions options={["Announcements", "Blog"]} />
           </Dropdown>
           <Link href="/partnerships">
             <span className={TEXT_CLASSES}>Partnerships</span>
