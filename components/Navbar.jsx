@@ -9,16 +9,17 @@ import MobileNavbarDrawer from "./MobileNavbarDrawer";
 
 const TEXT_CLASSES = "text-xl font-semibold text-[#FF4D6F]";
 const OPTION_CLASSES = "text-xl font-semibold text-white p-2";
-const OPTIONS_CLASSES = "absolute right-0 top-12 w-48 rounded-b-lg bg-[#FF4D6F] p-2";
+const OPTIONS_CLASSES = "top-14 w-48 rounded-b-lg bg-[#FF4D6F] p-2";
+const IMAGE_SIZE = 44;
 
 const DropdownOptions = ({ options }) => {
   return (
-    <Menu.Items as="div" className={`absolute right-0 mt-2 origin-top-right divide-y ${OPTIONS_CLASSES}`}>
+    <Menu.Items as="div" className={`absolute right-0 origin-top-right divide-y ${OPTIONS_CLASSES}`}>
       {options.map((option) => {
         const link = option.toLowerCase().split(" ").join("-");
         return (
           <Menu.Item key={option} className={`flex justify-center items-center ${OPTION_CLASSES}`}>
-            <a href={`/${link}</Menu.Item>`}>{option}</a>
+            <a href={`/${link}`}>{option}</a>
           </Menu.Item>
         );
       })}
@@ -35,7 +36,7 @@ const Navbar = () => {
         <FaBars className="md:hidden text-[#A689FF] cursor-pointer" onClick={() => setOpen(!open)} />
 
         <Link href="/">
-          <Image className="cursor-pointer" src="/logo.png" alt="logo" width={44} height={44} />
+          <Image className="cursor-pointer" src="/logo.png" alt="logo" width={IMAGE_SIZE} height={IMAGE_SIZE} />
         </Link>
 
         <div className="hidden md:flex md:items-center md:space-x-8">
