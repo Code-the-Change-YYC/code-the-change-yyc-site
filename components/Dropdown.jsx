@@ -1,6 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
+import Fade from "./Fade";
 
 const Dropdown = ({ title, titleClasses, children, optionsClasses, optionClasses }) => {
   return (
@@ -9,17 +10,7 @@ const Dropdown = ({ title, titleClasses, children, optionsClasses, optionClasses
         <span className="mr-1">{title}</span>
         <FaAngleDown width={20} height={20} />
       </Menu.Button>
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        {children}
-      </Transition>
+      <Fade>{children}</Fade>
     </Menu>
   );
 };
