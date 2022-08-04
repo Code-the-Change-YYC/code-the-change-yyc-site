@@ -18,7 +18,9 @@ const Navbar = () => {
       <div className="rounded-b-2xl md:rounded-none flex justify-between items-center px-10 md:px-20 py-5 bg-white drop-shadow-lg z-10">
         <FaBars className="md:hidden text-[#A689FF] cursor-pointer" onClick={() => setOpen(!open)} />
 
-        <Image src="/logo.png" alt="logo" width={44} height={44} />
+        <Link href="/">
+          <Image className="cursor-pointer" src="/logo.png" alt="logo" width={44} height={44} />
+        </Link>
 
         <div className="hidden md:flex md:items-center md:space-x-8">
           <Dropdown

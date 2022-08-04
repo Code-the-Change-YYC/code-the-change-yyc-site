@@ -5,11 +5,14 @@ const textClasses = "text-4xl font-semibold text-white";
 const NestedLinks = ({ options }) => {
   return (
     <div className="ml-5 flex flex-col font-normal text-white">
-      {options.map((option) => (
-        <a key={option} href={`/${option.toLowerCase().replace(" ", "-")}`} className="text-xl py-1">
-          / {option}
-        </a>
-      ))}
+      {options.map((option) => {
+        const link = option.toLowerCase().split(" ").join("-");
+        return (
+          <a key={option} href={`/${link}`} className="text-xl py-1">
+            / {option}
+          </a>
+        );
+      })}
     </div>
   );
 };
