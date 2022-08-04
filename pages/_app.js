@@ -5,7 +5,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="font-omnes">
       <Component {...pageProps} />
-	  <Footer/>
+			<body>BODY</body>
+      <Footer className="mt-auto" />
     </div>
   );
 }
