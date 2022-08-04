@@ -1,13 +1,13 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useRef, useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+import { FaAngleDown } from "react-icons/fa";
 
 const Dropdown = ({ title, titleClasses, children, optionsClasses, optionClasses }) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <Menu.Button className={`inline-flex w-full justify-center items-center ${titleClasses}`}>
         <span className="mr-1">{title}</span>
-        <ChevronDownIcon width={20} height={20} />
+        <FaAngleDown width={20} height={20} />
       </Menu.Button>
       <Transition
         as={Fragment}

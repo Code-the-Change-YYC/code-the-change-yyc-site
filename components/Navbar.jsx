@@ -6,7 +6,7 @@ import Dropdown from "./Dropdown";
 
 const textClasses = "text-xl font-semibold text-[#FF4D6F]";
 const optionClasses = "text-xl font-semibold text-white p-2";
-const optionsClasses = "absolute right-0 top-12 w-36 rounded-b-lg bg-[#FF4D6F] p-2";
+const optionsClasses = "absolute right-0 top-12 w-44 rounded-b-lg bg-[#FF4D6F] p-2";
 
 const Navbar = () => {
   return (
@@ -32,10 +32,10 @@ const Navbar = () => {
         <Dropdown title="News" titleClasses={textClasses} optionsClasses={optionsClasses} optionClasses={optionClasses}>
           <Menu.Items as="div" className={`absolute right-0 mt-2 w-36 origin-top-right divide-y ${optionsClasses}`}>
             <Menu.Item className={`flex justify-center items-center ${optionClasses}`}>
-              <a href="/who-we-are">Who we are</a>
+              <a href="/announcements">Announcements</a>
             </Menu.Item>
             <Menu.Item className={`flex justify-center items-center ${optionClasses}`}>
-              <a href="/projects">Projects</a>
+              <a href="/blog">Blog</a>
             </Menu.Item>
           </Menu.Items>
         </Dropdown>
