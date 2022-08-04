@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Dropdown from "./Dropdown";
+import { FaBars } from "react-icons/fa";
 
 const textClasses = "text-xl font-semibold text-[#FF4D6F]";
 const optionClasses = "text-xl font-semibold text-white p-2";
@@ -10,10 +11,12 @@ const optionsClasses = "absolute right-0 top-12 w-44 rounded-b-lg bg-[#FF4D6F] p
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center px-20 py-5 bg-white drop-shadow-lg">
+    <div className="rounded-b-2xl md:rounded-none flex justify-between items-center px-10 md:px-20 py-5 bg-white drop-shadow-lg">
+      <FaBars className="md:hidden text-[#A689FF] cursor-pointer" />
+
       <Image src="/logo.png" alt="logo" width={44} height={44} />
 
-      <div className="flex items-center space-x-8">
+      <div className="hidden md:flex md:items-center md:space-x-8">
         <Dropdown
           title="About"
           titleClasses={textClasses}
@@ -49,6 +52,8 @@ const Navbar = () => {
           <span className={textClasses}>Join</span>
         </Link>
       </div>
+
+      <div className="md:hidden"></div>
     </div>
   );
 };
