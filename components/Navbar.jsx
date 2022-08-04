@@ -1,7 +1,7 @@
 import { Menu } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import Dropdown from "./Dropdown";
 import Fade from "./Fade";
 import { FaBars } from "react-icons/fa";

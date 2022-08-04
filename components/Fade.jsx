@@ -1,5 +1,4 @@
 import { Transition } from "@headlessui/react";
-import React from "react";
 
 const Fade = ({ open, children }) => {
   return (

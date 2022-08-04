@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const textClasses = "text-4xl font-semibold text-white";
