@@ -2,5 +2,8 @@
   "printWidth": 120,
   "trailingComma": "all",
   "tabWidth": 2,
-  "semi": true
+  "semi": true,
+  "rules": {
+    "indent": ["error", 2]
+  }
 }
