@@ -1,8 +1,8 @@
 {
   "extends": ["next", "eslint:recommended"],
-	"rules": {
-		"semi": ["error", "always"],
+  "rules": {
+    "semi": ["error", "always"],
     "indent": ["error", 2],
-		"eol-last": ["error", "always"]
-	}
+    "eol-last": ["error", "always"]
+  }
 }
