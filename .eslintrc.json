@@ -1,4 +1,5 @@
 {
+	"semi": true,
   "extends": ["next", "eslint:recommended"],
 	"rules": {
     "indent": ["error", 2]
