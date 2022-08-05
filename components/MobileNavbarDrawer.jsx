@@ -59,7 +59,7 @@ const MobileNavbarDrawer = () => {
         </a>
       </div>
 
-      <SocialMediaIcons />
+      <SocialMediaIcons classes="text-[#FFD2DC]"/>
     </div>
   );
 };

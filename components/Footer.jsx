@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       <div className={footerContainer}>
         <h2 className="font-medium">Keep Up With Us!</h2>
-        <SocialMediaIcons classes="text-[#7055FD] md:text-[#FFFFFF]" />
+        <SocialMediaIcons classes="text-[#7055FD] md:text-white" />
         <h4 className="text-[#C5C5C5] font-light mt-6">Copyright @ Code the Change YYC</h4>
       </div>
     </>

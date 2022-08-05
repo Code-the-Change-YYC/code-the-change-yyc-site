@@ -5,7 +5,7 @@ const ICON_SIZE = 30;
 
 const SocialMediaIcons = ({ classes }) => {
   return (
-    <div className={`flex items-start pt-5 space-x-6 text-[#FFD2DC] ${classes}`}>
+    <div className={`flex items-start pt-5 space-x-6 ${classes}`}>
       <Link href="https://www.facebook.com/CodeTheChangeYYC/">
         <FaFacebook size={ICON_SIZE} />
       </Link>
