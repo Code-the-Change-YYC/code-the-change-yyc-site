@@ -1,3 +1,7 @@
 {
-  "extends": ["next", "eslint:recommended"]
+  "extends": ["next", "eslint:recommended"],
+  "semi": true,
+  "rules": {
+    "indent": ["error", 2]
+  }
 }
