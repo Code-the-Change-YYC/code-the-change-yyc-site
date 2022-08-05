@@ -1,7 +1,7 @@
 {
-	"semi": true,
   "extends": ["next", "eslint:recommended"],
 	"rules": {
+		"semi": true,
     "indent": ["error", 2]
 	},
 	"eol-last": ["error", "always"]
