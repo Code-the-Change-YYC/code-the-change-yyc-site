@@ -3,9 +3,9 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-
 
 const ICON_SIZE = 30;
 
-const SocialMediaIcons = ({ mobile, desktop }) => {
+const SocialMediaIcons = ({ classes }) => {
   return (
-    <div className={`flex items-start pt-5 space-x-6 text-[${mobile}] md:text-[${desktop}]`}>
+    <div className={`flex items-start pt-5 space-x-6 text-[#FFD2DC] ${classes}`}>
       <Link href="https://www.facebook.com/CodeTheChangeYYC/">
         <FaFacebook size={ICON_SIZE} />
       </Link>
