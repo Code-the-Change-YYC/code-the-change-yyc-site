@@ -1,3 +1,7 @@
 {
-  "extends": ["next", "eslint:recommended"]
+  "extends": ["next", "eslint:recommended"],
+	"rules": {
+    "indent": ["error", 2]
+	},
+	"eol-last": ["error", "always"]
 }
