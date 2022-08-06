@@ -1,13 +1,13 @@
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <div className="flex h-screen justify-center items-center bg-[url('../public/images/homepage/homepage_background.png')] object-none">
+      <div className="flex h-screen justify-center items-center bg-[url('../public/images/homepage/homepage_background.png')]">
         <h1 className="text-8xl -mt-20 md:m-0 md:text-9xl font-black w-3/4 md:text-center">
           Coding a better world together.
         </h1>
       </div>
 
-      <div className="flex justify-between bg-[#7055FD] md:bg-white py-48 px-10 md:px-48 rounded-2xl drop-shadow-lg">
+      <div className="flex justify-between bg-[#7055FD] md:bg-white py-48 px-10 md:px-48 rounded-2xl drop-shadow-lg md:drop-shadow-none">
         <div className="flex flex-col md:w-1/3">
           <h2 className="hidden md:block text-5xl text-[#FF4D6F] font-bold">code the change yyc</h2>
           <p className="text-2xl text-white md:text-[#A689FF] font-medium">
@@ -20,7 +20,7 @@ export default function Home() {
         <div></div>
       </div>
 
-      <div className="flex justify-between py-48 px-10 md:px-48 items-center divide-x-4 divide-[#A689FF]">
+      <div className="flex justify-between py-48 px-10 md:px-48 items-center divide-x-4 divide-[#A689FF] bg-[#7055FD]">
         <div className="flex flex-col w-1/2 pr-32">
           <h1 className="text-5xl font-bold">Coding</h1>
           <p className="text-2xl text-white font-medium mt-4">
