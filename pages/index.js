@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Heading from "../components/Heading";
 
 export default function Home() {
   return (
@@ -27,9 +27,9 @@ export default function Home() {
         <div></div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center md:justify-between py-48 px-10 md:px-48 items-center md:divide-x-4 md:divide-[#A689FF] bg-white md:bg-[#7055FD]">
-        <div className="flex flex-col mt-10 md:w-1/2 md:pr-32 md:mt-0">
-          <h1 className="text-5xl font-bold">Coding</h1>
+      <div className="flex flex-col md:flex-row justify-center md:justify-between py-52 md:px-48 items-center md:divide-x-4 md:divide-[#A689FF] bg-white md:bg-[#7055FD]">
+        <div className="flex flex-col md:w-1/2 md:pr-32 md:mt-0">
+          <Heading classes="md:text-white">Coding</Heading>
           <p className="text-2xl text-black md:text-white font-medium mt-4 text-center md:text-left">
             We seek to partner with causes that have projects on the go that need additional programming and software
             development support. We will work with you to find the right tool for the job. We prefer projects that are
@@ -39,8 +39,16 @@ export default function Home() {
           <div></div>
         </div>
 
+        <img
+          src="/svgs/homepage/coding_community.svg"
+          alt="logo_svg"
+          className="md:hidden pt-16 object-fill w-[400px]"
+        />
+
         <div className="flex flex-col md:w-1/2 md:pl-32">
-          <h1 className="text-5xl font-bold">Community</h1>
+          <Heading longUnderline classes="md:text-white">
+            Community
+          </Heading>
           <p className="text-2xl text-black md:text-white font-medium mt-4 text-center md:text-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec vitae ac faucibus. Blandit ultrices magna
             natoque enim quis suscipit. Vitae eget venenatis rhoncus aliquet curabitur mauris, sed turpis nulla. Neque
