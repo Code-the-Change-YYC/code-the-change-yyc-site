@@ -1,4 +1,4 @@
-const HEADING_CONTAINER = "p-5";
+const HEADING_CONTAINER = "p-5 flex flex-col items-center";
 
 const LONG_UNDERLINE_DIR = "/svgs/long_heading_underline.svg";
 const SHORT_UNDERLINE_DIR = "/svgs/short_heading_underline.svg";
