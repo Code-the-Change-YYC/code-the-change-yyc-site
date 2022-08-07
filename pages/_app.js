@@ -2,7 +2,6 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import Footer from "../components/Footer";
-import Sponsors from "../components/Sponsors";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,9 +13,7 @@ function MyApp({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
       {/* CONTAINER FOR CONTENT BELOW TO TEST NAVBAR IS IN RIGHT POSITION*/}
-      <div className="mb-auto bg-green-500">
-        <Sponsors />
-      </div>
+      <div className="mb-auto bg-green-500"></div>
       <Footer />
     </div>
   );
