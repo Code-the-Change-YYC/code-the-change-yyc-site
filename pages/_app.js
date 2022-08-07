@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import Footer from "../components/Footer";
+import Executives from "../components/Executives";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
       <div className="mb-auto bg-green-500">
         <h1>content</h1>
       </div>
+      <Executives />
       <Footer />
     </div>
   );
