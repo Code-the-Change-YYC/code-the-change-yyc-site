@@ -12,6 +12,7 @@ const UNDERLINE_PROPERTIES = {
 };
 
 const Sponsors = () => {
+  // Multiplier is the value you need to multiply height by to get width
   const goldSponsorsLevelOne = [
     { file: "Benevity.png", multiplier: 3.216, height: 90 },
     { file: "Hunter Hub.png", multiplier: 7.02, height: 70 },
