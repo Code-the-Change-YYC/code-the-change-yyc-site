@@ -21,8 +21,8 @@ const Sponsors = () => {
   ];
 
   const bronzeSponsors = [
-    { file: "Helcim.svg", width: 70, height: 70 },
-    { file: "Village Ice Cream.png", width: 70, height: 70 },
+    { file: "Helcim.svg", width: 75, height: 75 },
+    { file: "Village Ice Cream.png", width: 75, height: 75 },
   ];
 
   return (
