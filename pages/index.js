@@ -20,7 +20,7 @@ export default function Home() {
         </h1>
       </div>
 
-      <div className="relative flex justify-between bg-[#7055FD] md:bg-white py-60 px-10 md:px-24 lg:px-48 rounded-2xl drop-shadow-lg md:drop-shadow-none">
+      <div className="relative flex justify-between bg-[#7055FD] md:bg-white py-52 px-10 md:px-24 lg:px-48 rounded-2xl drop-shadow-lg md:drop-shadow-none">
         <img
           src={LOGO_SVG}
           alt="logo_svg"
@@ -41,7 +41,7 @@ export default function Home() {
       <div className="flex flex-col md:flex-row justify-center md:justify-between pt-40 md:px-24 lg:px-48 items-center md:divide-x-4 md:divide-[#A689FF] bg-white md:bg-[#7055FD]">
         <div className="flex flex-col md:w-1/2 md:pr-32 md:mt-0 px-5 md:px-0">
           <Heading classes="md:text-white">Coding</Heading>
-          <TextSection>
+          <TextSection classes="md:text-white">
             We seek to partner with causes that have projects on the go that need additional programming and software
             development support. We will work with you to find the right tool for the job. We prefer projects that are
             already underway with a good vision, but require a lot more technical work to move it along.
@@ -56,7 +56,7 @@ export default function Home() {
           <Heading longUnderline classes="md:text-white">
             Community
           </Heading>
-          <TextSection>
+          <TextSection classes="md:text-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec vitae ac faucibus. Blandit ultrices magna
             natoque enim quis suscipit. Vitae eget venenatis rhoncus aliquet curabitur mauris, sed turpis nulla. Neque
             molestie mi placerat ultrices sit in sit pretium ut.
