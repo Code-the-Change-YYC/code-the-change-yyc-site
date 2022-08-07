@@ -3,7 +3,8 @@ import Heading from "../components/Heading";
 import TextSection from "../components/TextSection";
 
 const HOMEPAGE_BACKGROUND_IMAGE = "/images/homepage/homepage_background.png";
-const LOGO_SVG = "/svgs/homepage/with_logo.svg";
+const LOGO_SVG_TOP = "/svgs/homepage/with_logo_top.svg";
+const LOGO_SVG_BOTTOM = "/svgs/homepage/with_logo_bottom.svg";
 const COMMUNITY_SVG = "/svgs/homepage/coding_community.svg";
 
 export default function Home() {
@@ -22,9 +23,14 @@ export default function Home() {
 
       <div className="relative flex justify-between bg-[#7055FD] md:bg-white py-52 px-10 md:px-24 lg:px-48 rounded-2xl drop-shadow-lg md:drop-shadow-none">
         <img
-          src={LOGO_SVG}
+          src={LOGO_SVG_TOP}
           alt="logo_svg"
           className="md:hidden absolute top-0 mx-auto left-0 right-0 pt-20 object-fill w-[400px]"
+        />
+        <img
+          src={LOGO_SVG_BOTTOM}
+          alt="logo_svg"
+          className="md:hidden absolute -bottom-36 mx-auto left-0 right-0 pt-20 object-fill w-[400px]"
         />
         <div className=" flex flex-col md:w-1/3">
           <h2 className="hidden md:block text-5xl text-[#FF4D6F] font-bold">code the change yyc</h2>
