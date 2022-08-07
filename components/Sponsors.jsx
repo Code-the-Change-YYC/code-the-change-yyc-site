@@ -8,11 +8,14 @@ const CONTENT_CONTAINER = "my-10 font-medium max-w-sm text-center";
 const UNDERLINE_CONTAINER = "mb-10";
 
 const Sponsors = () => {
-  const goldSponsors = [
+  const goldSponsorsLevelOne = [
     { file: "Benevity.png", width: 235, height: 70 },
+    { file: "Hunter Hub.png", width: 350, height: 50 },
+  ];
+
+  const goldSponsorsLevelTwo = [
     { file: "Arcurve.png", width: 350, height: 35 },
     { file: "Cisco Secure.jpg", width: 255, height: 75 },
-    { file: "Hunter Hub.png", width: 350, height: 50 },
   ];
 
   const silverSponsors = [
@@ -32,7 +35,14 @@ const Sponsors = () => {
         <Image src="/svgs/Sponsorship Heart.svg" alt="" height="100%" width="100%" />
       </div>
       <div className={SPONSORS_LEVEL_CONTAINER}>
-        {goldSponsors.map(({ file, width, height }) => (
+        {goldSponsorsLevelOne.map(({ file, width, height }) => (
+          <div key={file} className="mx-5">
+            <Image src={`/sponsor_logos/${file}`} alt={file} width={width} height={height} />
+          </div>
+        ))}
+      </div>
+      <div className={SPONSORS_LEVEL_CONTAINER}>
+        {goldSponsorsLevelTwo.map(({ file, width, height }) => (
           <div key={file} className="mx-5">
             <Image src={`/sponsor_logos/${file}`} alt={file} width={width} height={height} />
           </div>
