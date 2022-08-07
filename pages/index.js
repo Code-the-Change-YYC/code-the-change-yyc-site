@@ -3,7 +3,12 @@ import Heading from "../components/Heading";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <div className="flex h-screen justify-center items-center bg-[url('/images/homepage/homepage_background.png')]">
+      <div className="relative flex h-screen justify-center items-center">
+        <img
+          src="/images/homepage/homepage_background.png"
+          alt="landing_bg_image"
+          className="absolute w-full h-full object-cover"
+        />
         <h1 className="text-stroke-outside text-7xl -mt-20 md:m-0 md:text-9xl font-black w-3/4 md:text-center text-[#7055FD] stroke-white drop-shadow-lg">
           Coding a better world together.
         </h1>
