@@ -27,7 +27,7 @@ const FAQDropdown = ({ prompt, content }) => {
         {({ open }) => (
           <>
             <Disclosure.Button className="items-center drop-shadow-md flex w-full justify-between rounded-lg bg-[#7055FD] px-8 py-4 text-left focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-              <span className="text-white italic text-xl font-medium">"{prompt}"</span>
+              <span className="text-white italic text-xl font-medium">&quot;{prompt}&quot;</span>
               <FaAngleDown className={`${open ? "rotate-180 transform" : ""} h-5 w-5 text-white`} />
             </Disclosure.Button>
             <Disclosure.Panel className="px-8 py-4 text-sm font-medium text-base">{content}</Disclosure.Panel>
@@ -45,7 +45,7 @@ const WhoWeAre = () => {
         <Heading>FAQ</Heading>
         <div className="flex flex-col py-10 w-full space-y-4">
           {FAQS.map(({ prompt, content }) => (
-            <FAQDropdown prompt={prompt} content={content} />
+            <FAQDropdown prompt={prompt} content={content} key={prompt} />
           ))}
         </div>
       </div>
