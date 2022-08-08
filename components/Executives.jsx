@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import Heading from "./Heading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const EXECUTIVES_CONTAINER = "bg-white flex flex-col items-center mb";
-const EXECUTIVE_LEVEL_CONTAINER = "flex flex-row flex-wrap justify-center w-full sm:w-8/12";
+const EXECUTIVE_LEVEL_CONTAINER = "flex flex-row flex-wrap justify-center w-full sm:w-8/12 mb-5";
 const PROFILE_CONTAINER = "flex flex-col items-center m-10";
 
 const Executives = () => {
