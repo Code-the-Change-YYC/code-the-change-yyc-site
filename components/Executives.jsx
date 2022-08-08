@@ -1,11 +1,8 @@
-import Link from "next/link";
 import Heading from "./Heading";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Avatar from "./Avatar";
 
 const EXECUTIVES_CONTAINER = "bg-white flex flex-col items-center mb";
 const EXECUTIVE_LEVEL_CONTAINER = "flex flex-row flex-wrap justify-center w-full sm:w-8/12 mb-5";
-const PROFILE_CONTAINER = "flex flex-col items-center m-10";
 
 const Executives = () => {
   const executives = [
@@ -52,20 +49,6 @@ const Executives = () => {
     },
   ];
 
-  const FontAwesomeLink = ({ username, icon }) => (
-    <Link href={`https://linkedin.com/in/${username}`}>
-      <FontAwesomeIcon className="h-6 w-6 text-[#7055FD] cursor-pointer" icon={icon} />
-    </Link>
-  );
-
-  const Avatar = ({ name, file, position, linkedin }) => (
-    <div className={PROFILE_CONTAINER}>
-      <img src={`/profiles/${file}`} alt={name} className={`w-28 sm:w-48 rounded-full`}/>
-      <h2 className="text-[#7055FD] text-xs sm:text-base font-semibold mt-3">{name}</h2>
-      <h2 className="text-[#7055FD] text-xs sm:text-base font-medium mb-2">{position}</h2>
-      <FontAwesomeLink username={linkedin} icon={faLinkedin} />
-    </div>
-  );
 
   return (
     <div className={EXECUTIVES_CONTAINER}>
