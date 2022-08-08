@@ -14,9 +14,6 @@ function MyApp({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
       {/* CONTAINER FOR CONTENT BELOW TO TEST NAVBAR IS IN RIGHT POSITION*/}
-      <div className="mb-auto bg-green-500">
-        <h1>content</h1>
-      </div>
       <Executives />
       <Footer />
     </div>
