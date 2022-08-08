@@ -67,8 +67,8 @@ const Executives = () => {
   const ProfileElement = ({ name, file, position, linkedin }) => (
     <div className={PROFILE_CONTAINER}>
       <Image className="rounded-full" src={`/profiles/${file}`} alt={name} height={PROFILE_SIZE} width={PROFILE_SIZE} />
-      <h2>{name}</h2>
-      <h2>{position}</h2>
+      <h2 className="text-[#7055FD] font-semibold mt-3">{name}</h2>
+      <h2 className="text-[#7055FD] font-medium mb-2">{position}</h2>
       <FontAwesomeLink username={linkedin} icon={faLinkedin} />
     </div>
   );
