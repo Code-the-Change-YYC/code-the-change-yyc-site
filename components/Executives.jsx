@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import Heading from "./Heading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-const EXECUTIVES_CONTAINER = "bg-white flex flex-col items-center";
+const EXECUTIVES_CONTAINER = "bg-white flex flex-col items-center mb-20";
 const EXECUTIVE_LEVEL_CONTAINER = "flex flex-row justify-center mt-10";
 const PROFILE_CONTAINER = "flex flex-col items-center mx-10";
 const PROFILE_SIZE = 200;
@@ -58,9 +59,9 @@ const Executives = () => {
   ];
 
   const FontAwesomeLink = ({ username, icon }) => (
-    <a href={link}>
-      <FontAwesomeIcon icon={icon} />
-    </a>
+    <Link href={`https://linkedin.com/in/${username}`}>
+      <FontAwesomeIcon className="h-6 w-6 text-[#7055FD] cursor-pointer" icon={icon} />
+    </Link>
   );
 
   const ProfileElement = ({ name, file, position, linkedin }) => (
@@ -68,7 +69,7 @@ const Executives = () => {
       <Image className="rounded-full" src={`/profiles/${file}`} alt={name} height={PROFILE_SIZE} width={PROFILE_SIZE} />
       <h2>{name}</h2>
       <h2>{position}</h2>
-      <FontAwesomeIcon link={linkedin} icon={faLinkedin} />
+      <FontAwesomeLink username={linkedin} icon={faLinkedin} />
     </div>
   );
 
