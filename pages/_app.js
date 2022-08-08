@@ -2,7 +2,6 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import Footer from "../components/Footer";
-import Executives from "../components/Executives";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,7 +13,6 @@ function MyApp({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
       {/* CONTAINER FOR CONTENT BELOW TO TEST NAVBAR IS IN RIGHT POSITION*/}
-      <Executives />
       <Footer />
     </div>
   );
