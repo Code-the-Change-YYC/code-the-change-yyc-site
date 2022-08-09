@@ -10,17 +10,15 @@ const ROLES = ["Development", "Marketing", "Design"];
 
 const RoleTile = ({ role }) => {
   return (
-    <div className="flex flex-col">
-      <Tile classes="flex flex-col items-center">
-        <Image
-          src={`/svgs/homepage/${role.toLowerCase()}.svg`}
-          alt={role}
-          width={ROLE_TILE_SIZE}
-          height={ROLE_TILE_SIZE}
-        />
-        <h2 className="text-2xl font-medium italic">{role}</h2>
-      </Tile>
-    </div>
+    <Tile classes="flex flex-col items-center">
+      <Image
+        src={`/svgs/homepage/${role.toLowerCase()}.svg`}
+        alt={role}
+        width={ROLE_TILE_SIZE}
+        height={ROLE_TILE_SIZE}
+      />
+      <h2 className="text-2xl font-medium italic">{role}</h2>
+    </Tile>
   );
 };
 
