@@ -26,7 +26,7 @@ const TIMELINE_CONTAINER = "bg-white flex flex-col items-center p-10"
 const Timeline = () => {
     return (
         <div className={TIMELINE_CONTAINER}>
-            <div className="border-l-4 border-[#7055FD] rounded-lg h-10" />
+            <div className="border-l-4 border-[#7055FD] rounded-lg h-24" />
         </div>
     )
 }
