@@ -1,24 +1,7 @@
 import { Disclosure } from "@headlessui/react";
 import { FaAngleDown } from "react-icons/fa";
 import Heading from "../../components/Heading";
-
-const FAQS = [
-  {
-    prompt: "Do I need technical knowledge to join?",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec vitae ac faucibus. Blandit ultrices magna natoque enim quis suscipit. Vitae eget venenatis rhoncus aliquet curabitur mauris, sed turpis nulla. Neque molestie mi placerat ultrices sit in sit pretium.",
-  },
-  {
-    prompt: "How much time should I expect to commit per week?",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec vitae ac faucibus. Blandit ultrices magna natoque enim quis suscipit. Vitae eget venenatis rhoncus aliquet curabitur mauris, sed turpis nulla. Neque molestie mi placerat ultrices sit in sit pretium.",
-  },
-  {
-    prompt: "Question 3",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec vitae ac faucibus. Blandit ultrices magna natoque enim quis suscipit. Vitae eget venenatis rhoncus aliquet curabitur mauris, sed turpis nulla. Neque molestie mi placerat ultrices sit in sit pretium.",
-  },
-];
+import { FAQS } from "../../data/faq";
 
 const FAQDropdown = ({ prompt, content }) => {
   return (
@@ -44,8 +27,8 @@ const WhoWeAre = () => {
       <div className="flex flex-col bg-white px-10 md:px-24 lg:px-48 w-full">
         <Heading>FAQ</Heading>
         <div className="flex flex-col py-10 w-full space-y-4">
-          {FAQS.map(({ prompt, content }) => (
-            <FAQDropdown prompt={prompt} content={content} key={prompt} />
+          {FAQS.map((props) => (
+            <FAQDropdown key={props.prompt} {...props} />
           ))}
         </div>
       </div>
