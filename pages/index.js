@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Heading from "../components/Heading";
 import TextSection from "../components/TextSection";
+import Sponsors from "../components/Sponsors";
 
 const HOMEPAGE_BACKGROUND_IMAGE = "/images/homepage/homepage_background.png";
 const LOGO_SVG_TOP = "/svgs/homepage/with_logo_top.svg";
@@ -44,7 +45,7 @@ export default function Home() {
         <div></div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center md:justify-between pt-40 md:px-24 lg:px-48 items-center md:divide-x-4 md:divide-[#A689FF] bg-white md:bg-[#7055FD]">
+      <div className="flex flex-col md:flex-row justify-center md:justify-between py-40 md:px-24 lg:px-48 items-center md:divide-x-4 md:divide-[#A689FF] bg-white md:bg-[#7055FD]">
         <div className="flex flex-col md:w-1/2 md:pr-32 md:mt-0 px-5 md:px-0">
           <Heading classes="md:text-white">Coding</Heading>
           <TextSection classes="md:text-white">
@@ -71,6 +72,8 @@ export default function Home() {
           <div></div>
         </div>
       </div>
+
+      <Sponsors />
     </div>
   );
 }

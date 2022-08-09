@@ -26,7 +26,9 @@ const Sponsors = () => {
     <div className={SPONSORS_CONTAINER}>
       <div className={HEADING_CONTAINER}>
         <Heading>Sponsors</Heading>
-        <Image src="/svgs/Sponsorship Heart.svg" alt="" height="100%" width="100%" />
+        <div className="ml-4">
+          <Image src="/svgs/Sponsorship Heart.svg" alt="" height="100%" width="100%" />
+        </div>
       </div>
       <div className={SPONSORS_LEVEL_CONTAINER}>
         {GOLD_SPONSORS_ONE.map(({ ...props }) => (
