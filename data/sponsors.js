@@ -6,7 +6,7 @@ export const GOLD_SPONSORS_ONE = [
 
 export const GOLD_SPONSORS_TWO = [
   { file: "Arcurve.png", multiplier: 10, height: 50, website: "arcurve.com" },
-  { file: "Cisco Secure.jpg", multiplier: 3.41, height: 120, website: "cisco.com/site/us/en/products/security" },
+  { file: "Cisco Secure.jpg", multiplier: 3.41, height: 120, website: "cisco.com" },
 ];
 
 export const SILVER_SPONSORS = [
