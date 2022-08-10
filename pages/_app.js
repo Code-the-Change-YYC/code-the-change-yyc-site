@@ -6,7 +6,7 @@ import Timeline from "../components/Timeline";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="font-omnes bg-[#7055FD] h-screen">
+    <div className="font-omnes h-screen">
       <Head>
         <link rel="shortcut icon" href="logo.png" />
         <title>Code the Change YYC</title>
