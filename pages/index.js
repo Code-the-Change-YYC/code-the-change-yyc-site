@@ -1,4 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+import { EffectCards } from "swiper";
+import { SwiperSlide } from "swiper/react";
+import Button from "../components/Button";
+import Carousel from "../components/Carousel";
+import Tile from "../components/Tile";
 import Heading from "../components/Heading";
 import TextSection from "../components/TextSection";
 import Sponsors from "../components/Sponsors";
@@ -7,6 +13,34 @@ const HOMEPAGE_BACKGROUND_IMAGE = "/images/homepage/homepage_background.png";
 const LOGO_SVG_TOP = "/svgs/homepage/with_logo_top.svg";
 const LOGO_SVG_BOTTOM = "/svgs/homepage/with_logo_bottom.svg";
 const COMMUNITY_SVG = "/svgs/homepage/coding_community.svg";
+const ROLE_TILE_SIZE = 300;
+const ROLES = ["Development", "Marketing", "Design"];
+
+const RoleTile = ({ role }) => {
+  return (
+    <Tile classes="flex flex-col items-center">
+      <Image
+        src={`/svgs/homepage/${role.toLowerCase()}.svg`}
+        alt={role}
+        width={ROLE_TILE_SIZE}
+        height={ROLE_TILE_SIZE}
+      />
+      <h2 className="text-2xl font-medium italic">{role}</h2>
+    </Tile>
+  );
+};
+
+const RolesMobileCardCarousel = () => {
+  return (
+    <Carousel effect={"cards"} grabCursor={true} modules={[EffectCards]}>
+      {ROLES.map((role) => (
+        <SwiperSlide key={role}>
+          <RoleTile role={role} key={role} />
+        </SwiperSlide>
+      ))}
+    </Carousel>
+  );
+};
 
 export default function Home() {
   return (
@@ -46,7 +80,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col md:flex-row justify-center md:justify-between py-40 md:px-24 lg:px-48 items-center md:divide-x-4 md:divide-[#A689FF] bg-white md:bg-[#7055FD]">
-        <div className="flex flex-col md:w-1/2 md:pr-32 md:mt-0 px-5 md:px-0">
+        <div className="flex flex-col md:w-1/2 md:pr-32 md:mt-0 px-5 md:px-0 items-center">
           <Heading classes="md:text-white">Coding</Heading>
           <TextSection classes="md:text-white">
             We seek to partner with causes that have projects on the go that need additional programming and software
@@ -59,7 +93,7 @@ export default function Home() {
 
         <img src={COMMUNITY_SVG} alt={COMMUNITY_SVG} className="md:hidden object-fill w-[400px]" />
 
-        <div className="flex flex-col md:w-1/2 md:pl-32 px-5 md:px-0">
+        <div className="flex flex-col md:w-1/2 md:pl-32 px-5 md:px-0 items-center">
           <Heading longUnderline classes="md:text-white">
             Community
           </Heading>
@@ -74,6 +108,24 @@ export default function Home() {
       </div>
 
       <Sponsors />
+
+      <div className="px-10 md:px-24 lg:px-48 py-20 bg-[#FF6B54]">
+        <h1 className="text-5xl font-semibold text-white">Ready to join the change?</h1>
+        <p className="text-xl text-white py-10 font-medium">
+          Explore our roles here and follow us on our socials to know when we’re recruiting! :)
+        </p>
+        <div className="hidden md:flex flex-col md:flex-row justify-between space-y-2 md:space-y-0 md:space-x-2">
+          {ROLES.map((role) => (
+            <RoleTile role={role} key={role} />
+          ))}
+        </div>
+        <div className="md:hidden px-10">
+          <RolesMobileCardCarousel />
+        </div>
+        <div className="py-12 flex justify-center">
+          <Button href="/join">Join Us!</Button>
+        </div>
+      </div>
     </div>
   );
 }
