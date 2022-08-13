@@ -3,7 +3,7 @@ import Link from "next/link";
 import Heading from "./Heading";
 import { GOLD_SPONSORS_ONE, GOLD_SPONSORS_TWO, SILVER_SPONSORS, BRONZE_SPONSORS } from "../data/sponsors";
 
-const SPONSORS_CONTAINER = "bg-white flex flex-col items-center py-20";
+const SPONSORS_CONTAINER = "bg-white flex flex-col items-center py-10 md:py-20";
 const HEADING_CONTAINER = "flex flex-row justify-center mb-10 ml-5";
 const SPONSORS_LEVEL_CONTAINER = "flex flex-row justify-center items-center my-5";
 const CONTENT_CONTAINER = "my-10 font-medium w-1/2 text-center";
