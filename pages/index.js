@@ -7,6 +7,7 @@ import Carousel from "../components/Carousel";
 import Tile from "../components/Tile";
 import Heading from "../components/Heading";
 import TextSection from "../components/TextSection";
+import Sponsors from "../components/Sponsors";
 
 const HOMEPAGE_BACKGROUND_IMAGE = "/images/homepage/homepage_background.png";
 const LOGO_SVG_TOP = "/svgs/homepage/with_logo_top.svg";
@@ -78,7 +79,7 @@ export default function Home() {
         <div></div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center md:justify-between py-40 md:px-24 lg:px-48 items-center md:divide-x-4 md:divide-[#A689FF] bg-white md:bg-[#7055FD]">
+      <div className="flex flex-col md:flex-row justify-center md:justify-between pt-40 md:py-40 md:px-24 lg:px-48 items-center md:divide-x-4 md:divide-[#A689FF] bg-white md:bg-[#7055FD]">
         <div className="flex flex-col md:w-1/2 md:pr-32 md:mt-0 px-5 md:px-0 items-center">
           <Heading classes="md:text-white">Coding</Heading>
           <TextSection classes="md:text-white">
@@ -92,7 +93,7 @@ export default function Home() {
 
         <img src={COMMUNITY_SVG} alt={COMMUNITY_SVG} className="md:hidden object-fill w-[400px]" />
 
-        <div className="flex flex-col md:w-1/2 md:pl-32 px-5 md:px-0 items-center">
+        <div className="flex flex-col md:w-1/2 md:pl-32 px-5 md:px-0 items-center pt-10 md:pt-0">
           <Heading longUnderline classes="md:text-white">
             Community
           </Heading>
@@ -105,6 +106,8 @@ export default function Home() {
           <div></div>
         </div>
       </div>
+
+      <Sponsors />
 
       <div className="px-10 md:px-24 lg:px-48 py-20 bg-[#FF6B54]">
         <h1 className="text-5xl font-semibold text-white">Ready to join the change?</h1>
