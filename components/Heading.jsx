@@ -8,7 +8,7 @@ const Heading = ({ classes, longUnderline = false, children }) => {
   return (
     <div className={HEADING_CONTAINER}>
       <h1 className={`text-5xl font-semibold ${classes}`}>{children}</h1>
-      <img src={longUnderline ? LONG_UNDERLINE_DIR : SHORT_UNDERLINE_DIR} alt="" />
+      <img className={classes} src={longUnderline ? LONG_UNDERLINE_DIR : SHORT_UNDERLINE_DIR} alt="" />
     </div>
   );
 };
