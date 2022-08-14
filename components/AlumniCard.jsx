@@ -17,7 +17,7 @@ const AlumniCard = () => {
             name={`${test.name}`}
             position={`${test.position}`}
             prevRole={`${test.prevRole}`}
-						classes="text-white"
+            classes="text-white"
           />
         </div>
         <div className={BACKGROUND_CARD}>BACKGROUND</div>
