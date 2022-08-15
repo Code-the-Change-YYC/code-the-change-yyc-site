@@ -1,26 +1,30 @@
-//const TIMELINE_DATA = [
-//  {
-//    year: 2019,
-//    description: "We opened this year!",
-//    image: "",
-//  },
-//  {
-//    year: 2020,
-//    description: "Another year happened",
-//    image: "",
-//  },
-//  {
-//    year: 2021,
-//    description: "Topan joined this year :)",
-//    image: "",
-//  },
-//  {
-//    year: 2022,
-//    description: "This is the current year",
-//    image: "",
-//  },
-//];
-//
+const TIMELINE_DATA = [
+  {
+    year: 2019,
+    description: "We opened this year!",
+    smallImage: "",
+    largeImage: ""
+  },
+  {
+    year: 2020,
+    description: "Another year happened",
+    smallImage: "",
+    largeImage: ""
+  },
+  {
+    year: 2021,
+    description: "Topan joined this year :)",
+    smallImage: "",
+    largeImage: ""
+  },
+  {
+    year: 2022,
+    description: "This is the current year",
+    smallImage: "",
+    largeImage: ""
+  },
+];
+
 const TIMELINE_CONTAINER = "bg-white flex flex-col w-full md:w-1/2";
 
 const Timeline = () => {
