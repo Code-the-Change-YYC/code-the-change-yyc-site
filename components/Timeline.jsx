@@ -43,7 +43,7 @@ const Timeline = () => {
             <img
               src={`/images/timeline/${largeImage}`}
               alt=""
-              className="box-border h-32 w-36 sm:h-52 sm:w-72 bg-[#BAFBE4] ml-8 mt-10 rounded-lg drop-shadow-md"
+              className="box-border h-32 w-36 sm:h-52 sm:w-72 bg-[#BAFBE4] mx-8 mt-10 rounded-lg drop-shadow-md"
             />
             <div className="flex flex-row mr-auto mt-10">
               <div className="top-1/2 relative border-t-4 border-[#7055FD] w-10" />
