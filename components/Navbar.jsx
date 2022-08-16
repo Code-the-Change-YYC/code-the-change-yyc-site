@@ -7,7 +7,7 @@ import Fade from "./Fade";
 import { FaBars } from "react-icons/fa";
 import MobileNavbarDrawer from "./MobileNavbarDrawer";
 
-const TEXT_CLASSES = "text-xl font-semibold text-[#FF4D6F]";
+const TEXT_CLASSES = "text-xl font-semibold text-[#FF4D6F] cursor-pointer";
 const OPTION_CLASSES = "text-xl font-semibold text-white p-2";
 const OPTIONS_CLASSES = "top-14 w-48 rounded-b-lg bg-[#FF4D6F] p-2";
 const IMAGE_SIZE = 44;
