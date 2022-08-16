@@ -14,7 +14,7 @@ const Timeline = () => {
             <img
               src={`/images/timeline/${smallImage}`}
               alt=""
-              className="box-border h-32 w-36 md:h-32 md:w-48 bg-[#BAFBE4] mx-4 mt-10 rounded-lg drop-shadow-md"
+              className="box-border h-32 w-36 sm:h-52 sm:w-80 bg-[#BAFBE4] mx-4 mt-10 rounded-lg drop-shadow-md"
             />
             <div className="flex flex-row ml-auto mt-10">
               <div className="px-3 text-5xl font-semibold">{year}</div>
@@ -26,7 +26,7 @@ const Timeline = () => {
           <img
             src={`/images/timeline/${largeImage}`}
             alt=""
-            className="box-border h-32 w-44 md:h-32 md:w-52 bg-[#A689FF] ml-auto md:ml-8 mt-16 rounded-l-lg drop-shadow-md"
+            className="box-border h-32 w-44 sm:h-52 sm:w-80 bg-[#A689FF] ml-auto sm:ml-8 mt-16 rounded-l-lg drop-shadow-md"
           />
         </div>
       );
@@ -36,20 +36,20 @@ const Timeline = () => {
           <img
             src={`/images/timeline/${smallImage}`}
             alt=""
-            className="box-border h-32 w-36 md:h-32 md:w-52 bg-[#A689FF] mr-8 md:mr-4 mt-16 rounded-r-lg drop-shadow-md"
+            className="box-border h-32 w-36 sm:h-52 sm:w-80 bg-[#A689FF] mr-8 sm:mr-8 mt-16 rounded-r-lg drop-shadow-md"
           />
           {middleLine}
           <div className="flex flex-col items-center">
             <img
               src={`/images/timeline/${largeImage}`}
               alt=""
-              className="box-border h-32 w-36 md:w-48 bg-[#BAFBE4] ml-8 mt-10 rounded-lg drop-shadow-md"
+              className="box-border h-32 w-36 sm:h-52 sm:w-72 bg-[#BAFBE4] ml-8 mt-10 rounded-lg drop-shadow-md"
             />
             <div className="flex flex-row mr-auto mt-10">
               <div className="top-1/2 relative border-t-4 border-[#7055FD] w-10" />
               <div className="pl-3 text-5xl font-semibold">{year}</div>
             </div>
-            <div className="w-40 px-10 mr-auto">{description}</div>
+            <div className="w-48 px-10 mr-auto">{description}</div>
           </div>
         </div>
       );
