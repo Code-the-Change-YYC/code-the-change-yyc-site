@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { TIMELINE_DATA } from "../data/timeline";
 
-const TIMELINE_CONTAINER = "bg-white flex flex-col";
+const TIMELINE_CONTAINER = "bg-white flex flex-col sm:h-0 sm:min-height-full";
 
 const Timeline = () => {
   const middleLine = <div className="border-l-4 border-[#7055FD] h-30" />;

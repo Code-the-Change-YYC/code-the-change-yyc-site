@@ -27,9 +27,9 @@ const FAQDropdown = ({ prompt, content }) => {
 const WhoWeAre = () => {
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-col sm:flex-row w-full h-full">
+      <div className="flex flex-col sm:flex-row">
         <About />
-        <div className="overflow-y-scroll">
+        <div className="overflow-y-auto">
           <Timeline />
         </div>
       </div>
