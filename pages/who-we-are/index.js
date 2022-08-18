@@ -2,6 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import { FaAngleDown } from "react-icons/fa";
 import Executives from "../../components/Executives";
 import Heading from "../../components/Heading";
+import Timeline from "../../components/Timeline";
 import { FAQS } from "../../data/faq";
 
 const FAQDropdown = ({ prompt, content }) => {
@@ -34,6 +35,7 @@ const WhoWeAre = () => {
           ))}
         </div>
       </div>
+      <Timeline />
     </div>
   );
 };

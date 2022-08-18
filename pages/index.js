@@ -8,6 +8,7 @@ import Tile from "../components/Tile";
 import Heading from "../components/Heading";
 import TextSection from "../components/TextSection";
 import Sponsors from "../components/Sponsors";
+import { UnderlineTypes } from "../utils/underlineType";
 
 const HOMEPAGE_BACKGROUND_IMAGE = "/images/homepage/homepage_background.png";
 const LOGO_SVG_TOP = "/svgs/homepage/with_logo_top.svg";
@@ -94,7 +95,7 @@ export default function Home() {
         <img src={COMMUNITY_SVG} alt={COMMUNITY_SVG} className="md:hidden object-fill w-[400px]" />
 
         <div className="flex flex-col md:w-1/2 md:pl-32 px-5 md:px-0 items-center pt-10 md:pt-0">
-          <Heading longUnderline classes="md:text-white">
+          <Heading underlineType={UnderlineTypes.GREEN_LONG_UNDERLINE} classes="md:text-white">
             Community
           </Heading>
           <TextSection classes="md:text-white">
