@@ -18,6 +18,7 @@ const About = () => {
           </Heading>
           <img src={WAVING_HAND_SVG} alt="" />
         </div>
+
         <TextSection classes="text-white w-2/3 sm:w-1/2 pt-10 sm:pb-20">
           <strong className={BLUE_BOLD_TEXT}>code the change yyc</strong> is a student-led initiative where students in
           technology-focused programs volunteer their time to work on projects for causes as a way to grow their
@@ -25,6 +26,7 @@ const About = () => {
           <strong className={BLUE_BOLD_TEXT}> experience</strong>, attain mentorship, and
           <strong className={BLUE_BOLD_TEXT}> give back</strong> to the community.
         </TextSection>
+
         <img src={WHITE_FLOWER_SVG} alt="" className="md:hidden p-10" />
       </div>
     </div>
