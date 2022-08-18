@@ -1,10 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import { TIMELINE_DATA } from "../data/timeline";
+import { UnderlineTypes } from "../utils/underlineType";
+import Heading from "./Heading";
 
 const TIMELINE_CONTAINER = "bg-white flex flex-col";
+const PURPLE_SIDE_LINES_DIR = "/svgs/timeline/left_side_lines.svg";
 
 const Timeline = () => {
   const middleLine = <div className="border-l-4 border-[#7055FD] h-30" />;
+
+  const timelineHeading = (
+    <div className="flex flex-row justify-center pb-5">
+      <img src={PURPLE_SIDE_LINES_DIR} alt="" className="pb-6" />
+      <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>Timeline</Heading>
+    </div>
+  );
 
   const renderTimeline = TIMELINE_DATA.map(({ year, description, smallImage, largeImage }, index) => {
     if (index % 2 == 0) {
@@ -56,7 +66,12 @@ const Timeline = () => {
     }
   });
 
-  return <div className={TIMELINE_CONTAINER}>{renderTimeline}</div>;
+  return (
+    <div className={TIMELINE_CONTAINER}>
+      {timelineHeading}
+      {renderTimeline}
+    </div>
+  );
 };
 
 export default Timeline;
