@@ -29,7 +29,7 @@ const WhoWeAre = () => {
     <div className="flex flex-col w-full">
       <div className="flex flex-col sm:flex-row">
         <About />
-        <div className="overflow-y-auto">
+        <div className="scrollbar-hide overflow-y-auto">
           <Timeline />
         </div>
       </div>
