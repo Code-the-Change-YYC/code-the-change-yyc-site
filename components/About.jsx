@@ -9,7 +9,7 @@ const BLUE_BOLD_TEXT = "text-2xl text-[#BAFBE4]";
 
 const About = () => {
   return (
-    <div className="flex flex-col w-full sm:w-1/3 grow">
+    <div className="flex flex-col w-full lg:w-1/3 grow">
       <img src={WINS_VOLUNTEERING_PNG} alt="Volunteering at WINS" />
       <div className="flex flex-col bg-[#7055FD] items-center">
         <div className="flex flex-row">
