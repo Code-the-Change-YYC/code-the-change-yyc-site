@@ -20,7 +20,6 @@ const AlumniCard = () => {
             classes="text-white"
           />
         </div>
-        <div className={BACKGROUND_CARD}>BACKGROUND</div>
       </div>
     </>
   );
