@@ -1,14 +1,28 @@
+import { UnderlineTypes } from "../utils/underlineType";
+
 /* eslint-disable @next/next/no-img-element */
 const HEADING_CONTAINER = "py-5 flex flex-col items-center";
 
-const LONG_UNDERLINE_DIR = "/svgs/long_heading_underline.svg";
-const SHORT_UNDERLINE_DIR = "/svgs/short_heading_underline.svg";
+const GREEN_LONG_UNDERLINE_DIR = "/svgs/long_heading_underline.svg";
+const GREEN_SHORT_UNDERLINE_DIR = "/svgs/short_heading_underline.svg";
+const PURPLE_SHORT_UNDERLINE_DIR = "/svgs/timeline/purple_heading_underline.svg";
 
-const Heading = ({ classes, longUnderline = false, children }) => {
+const Heading = ({ classes, underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE, children }) => {
+  const getUnderline = () => {
+    switch (underlineType) {
+      case UnderlineTypes.GREEN_LONG_UNDERLINE:
+        return GREEN_LONG_UNDERLINE_DIR;
+      case UnderlineTypes.GREEN_SHORT_UNDERLINE:
+        return GREEN_SHORT_UNDERLINE_DIR;
+      case UnderlineTypes.PURPLE_SHORT_UNDERLINE:
+        return PURPLE_SHORT_UNDERLINE_DIR;
+    }
+  };
+
   return (
     <div className={HEADING_CONTAINER}>
       <h1 className={`text-5xl font-semibold ${classes}`}>{children}</h1>
-      <img src={longUnderline ? LONG_UNDERLINE_DIR : SHORT_UNDERLINE_DIR} alt="" />
+      <img src={getUnderline()} alt="" />
     </div>
   );
 };

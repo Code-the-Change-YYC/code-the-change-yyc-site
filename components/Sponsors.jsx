@@ -26,7 +26,7 @@ const Sponsors = () => {
     <div className={SPONSORS_CONTAINER}>
       <div className={HEADING_CONTAINER}>
         <Heading>Sponsors</Heading>
-        <Image src="/svgs/Sponsorship Heart.svg" alt="" height="100%" width="100%" />
+        <Image src="/svgs/sponsorship_heart.svg" alt="" height="100%" width="100%" />
       </div>
       <div className={SPONSORS_LEVEL_CONTAINER}>
         {GOLD_SPONSORS_ONE.map(({ ...props }) => (
@@ -54,7 +54,7 @@ const Sponsors = () => {
       </div>
       <div className={UNDERLINE_CONTAINER}>
         <Image
-          src="/svgs/Purple Underline.svg"
+          src="/svgs/purple_underline.svg"
           alt=""
           width={UNDERLINE_PROPERTIES.width}
           height={UNDERLINE_PROPERTIES.height}
