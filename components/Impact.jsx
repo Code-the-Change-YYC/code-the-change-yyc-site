@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-const HEADER_CONTAINER = "bg-[#7055FD] text-white font-semibold text-4xl p-10 py-15 hidden md:flex";
+const HEADER_CONTAINER = "bg-[#7055FD] text-white font-semibold text-4xl px-20 py-10 hidden md:flex";
 const IMPACT_CONTAINER = "bg-white w-full my-10 hidden md:flex";
 const IMPACT_MOBILE_CONTAINER = "bg-white w-full my-5 md:hidden";
 
