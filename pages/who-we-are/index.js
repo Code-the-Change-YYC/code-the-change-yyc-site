@@ -2,6 +2,8 @@ import { Disclosure } from "@headlessui/react";
 import { FaAngleDown } from "react-icons/fa";
 import Executives from "../../components/Executives";
 import Heading from "../../components/Heading";
+import AlumniHighlights from "../../components/AlumniHighlights"
+import Timeline from "../../components/Timeline"
 import { FAQS } from "../../data/faq";
 
 const FAQDropdown = ({ prompt, content }) => {
