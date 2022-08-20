@@ -9,6 +9,10 @@ module.exports = {
         omnes: ["Omnes", ...defaultTheme.fontFamily.sans],
       },
     },
+    screens: {
+      xsm: "475px",
+      ...defaultTheme.screens,
+    },
   },
   plugins: [require("tailwind-scrollbar-hide")],
 };
