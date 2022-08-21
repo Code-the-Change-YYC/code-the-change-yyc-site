@@ -3,7 +3,7 @@ import { TIMELINE_DATA } from "../data/timeline";
 import { UnderlineTypes } from "../utils/underlineType";
 import Heading from "./Heading";
 
-const TIMELINE_CONTAINER = "bg-white flex flex-col lg:h-0 lg:min-height-full";
+const TIMELINE_CONTAINER = "bg-white flex flex-col lg:h-0 lg:h-screen";
 const PURPLE_SIDE_LINES_DIR = "/svgs/timeline/left_side_lines.svg";
 
 const Timeline = () => {

@@ -26,7 +26,7 @@ const FAQDropdown = ({ prompt, content }) => {
 
 const WhoWeAre = () => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full -mt-5 md:mt-0 lg:mt-0">
       <div className="flex flex-col lg:flex-row">
         <About />
         <div className="scrollbar-hide overflow-y-auto">
