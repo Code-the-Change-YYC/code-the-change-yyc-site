@@ -16,7 +16,7 @@ const Avatar = ({ name, file, position, linkedin, prevRole, classes }) => {
       <img src={`/profiles/${file}`} alt={name} className={`w-28 sm:w-48 rounded-full`} />
       <h2 className={`text-[#7055FD] text-xs sm:text-base font-semibold mt-3 ${classes}`}>{name}</h2>
       <h2 className={`text-[#7055FD] text-xs sm:text-base font-medium mb-2 ${classes}`}>{position}</h2>
-      {prevRole && <h2 className={`text-[#7055FD] text-xs sm:text-base font-medium mb-2 ${classes}`}>{prevRole}</h2>}
+      {prevRole && <h2 className={`text-[#7055FD] text-xs sm:text-base font-medium mb-2 ${classes}`}>Previously: {prevRole}</h2>}
       {linkedin && <FontAwesomeLink username={linkedin} icon={faLinkedin} />}
     </div>
   );
