@@ -1,21 +1,23 @@
 import Heading from "./Heading";
-import AlumniCard from "./AlumniCard";
+import AlumniCarousel from "./AlumniCarousel";
 
-const ALUMNI_CONTAINER = "h-[800px] w-screen bg-[#FF6B54] pt-12 mb-10 shadow-xl"; 
-const ALUMNI_HEADER = "w-full";
-const SPARKLE_IMG = "absolute top-[1360px] right-[70px]";
+const ALUMNI_CONTAINER = "relative flex flex-col items-center h-[1000px] bg-[#FF6B54] pt-3 mb-10 shadow-xl z-0";
+const ALUMNI_HEADER = "pb-10 w-[80%] flex items-left";
+const SPARKLE_IMG = "ml-5 mb-5";
 
 const AlumniHighlights = () => {
   return (
     <>
       <div className={ALUMNI_CONTAINER}>
         <div className={ALUMNI_HEADER}>
-          <Heading classes="text-white mr-24 pb-10" underlineType="WHITE_LONG_UNDERLINE">
-            Alumni <br/>Highlights
+          <Heading classes="text-white mr-24" underlineType={"WHITE_LONG_UNDERLINE"}>
+            <span className="flex flex-row mb-5">
+              Alumni Highlights
+              <img className={SPARKLE_IMG} src="/svgs/white_sparkle.svg"/>
+            </span>
           </Heading>
-					<img className={SPARKLE_IMG} src="/svgs/white_sparkle.svg" />
         </div>
-        {/* <AlumniCard /> */}
+        <AlumniCarousel />
       </div>
     </>
   );
