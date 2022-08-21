@@ -45,7 +45,7 @@ const RolesMobileCardCarousel = () => {
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col -mt-5">
       <div className="relative flex h-screen justify-center items-center">
         <img
           src={HOMEPAGE_BACKGROUND_IMAGE}
@@ -57,7 +57,7 @@ export default function Home() {
         </h1>
       </div>
 
-      <div className="relative flex justify-between bg-[#7055FD] md:bg-white py-52 px-10 md:px-24 lg:px-48 rounded-2xl drop-shadow-lg md:drop-shadow-none">
+      <div className="relative flex -mt-5 justify-between bg-[#7055FD] md:bg-white py-52 px-10 md:px-24 lg:px-48 rounded-2xl drop-shadow-lg md:drop-shadow-none">
         <img
           src={LOGO_SVG_TOP}
           alt="logo_svg"
