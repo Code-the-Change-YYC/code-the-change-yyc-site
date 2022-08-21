@@ -12,12 +12,6 @@ module.exports = {
       fontFamily: {
         omnes: ["Omnes", ...defaultTheme.fontFamily.sans],
       },
-      width: {
-        88: "22rem",
-      },
-      screens: {
-        timelinelg: "1065px",
-      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],
