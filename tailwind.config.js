@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         omnes: ["Omnes", ...defaultTheme.fontFamily.sans],
       },
+      width: {
+        "88": "22rem",
+      }
     },
     screens: {
       xsm: "475px",
