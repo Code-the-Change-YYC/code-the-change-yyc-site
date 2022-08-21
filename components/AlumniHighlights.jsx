@@ -13,7 +13,7 @@ const AlumniHighlights = () => {
           <Heading classes="text-white mr-24" underlineType={"WHITE_LONG_UNDERLINE"}>
             <span className="flex flex-row mb-5">
               Alumni Highlights
-              <img className={SPARKLE_IMG} src="/svgs/white_sparkle.svg"/>
+              <img className={SPARKLE_IMG} src="/svgs/white_sparkle.svg" />
             </span>
           </Heading>
         </div>

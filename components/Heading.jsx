@@ -17,8 +17,8 @@ const Heading = ({ classes, underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE
         return GREEN_SHORT_UNDERLINE_DIR;
       case UnderlineTypes.PURPLE_SHORT_UNDERLINE:
         return PURPLE_SHORT_UNDERLINE_DIR;
-			case UnderlineTypes.WHITE_LONG_UNDERLINE:
-				return WHITE_SINGLE_LINE_DIR;
+      case UnderlineTypes.WHITE_LONG_UNDERLINE:
+        return WHITE_SINGLE_LINE_DIR;
     }
   };
 
