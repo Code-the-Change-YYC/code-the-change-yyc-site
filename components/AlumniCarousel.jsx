@@ -6,7 +6,7 @@ import "swiper/css/effect-cards";
 
 const CAROUSEL_CONTAINER = "text-white rounded-lg w-[300px] h-[600px] shadow-2xl md:w-[80%]";
 const ALUMNI_TILE = "bg-[#7055FD] w-[300px] h-[600px] rounded-lg pt-5 px-5 items-center flex flex-col shadow-2xl md:w-[100%] md:flex-row";
-const ALUMNI_PROFILE = "flex flex-col items-center mx-auto md:mx-16"
+const ALUMNI_PROFILE = "flex flex-col items-center mx-auto"
 
 const AlumniTile = ({ alumni }) => {
   return (
