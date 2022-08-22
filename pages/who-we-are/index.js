@@ -2,8 +2,8 @@ import { Disclosure } from "@headlessui/react";
 import { FaAngleDown } from "react-icons/fa";
 import Executives from "../../components/Executives";
 import Heading from "../../components/Heading";
-import AlumniHighlights from "../../components/AlumniHighlights"
-import Timeline from "../../components/Timeline"
+import AlumniHighlights from "../../components/AlumniHighlights";
+import Timeline from "../../components/Timeline";
 import { FAQS } from "../../data/faq";
 
 const FAQDropdown = ({ prompt, content }) => {
@@ -28,7 +28,7 @@ const WhoWeAre = () => {
   return (
     <div className="flex flex-col w-full">
       <Executives />
-			<AlumniHighlights/>
+      <AlumniHighlights />
       <div className="flex flex-col bg-white px-10 md:px-24 lg:px-48 w-full">
         <Heading>FAQ</Heading>
         <div className="flex flex-col py-10 w-full space-y-4">

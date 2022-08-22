@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Heading from "./Heading";
 import AlumniCarousel from "./AlumniCarousel";
 
@@ -13,7 +14,7 @@ const AlumniHighlights = () => {
           <Heading classes="text-white" underlineType={false}>
             <span className="flex flex-row mb-5 md:items-end">
               Alumni Highlights
-              <img className={SPARKLE_IMG} src="/svgs/white_sparkle.svg" />
+              <img className={SPARKLE_IMG} alt="" src="/svgs/white_sparkle.svg" />
             </span>
           </Heading>
         </div>
