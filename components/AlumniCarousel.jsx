@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import { ALUMNI } from "../data/alumni";
 import { Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
+import Carousel from "./Carousel";
 import "swiper/css";
-import "swiper/css/effect-cards";
+import "swiper/css/navigation";
 
-const CAROUSEL_CONTAINER = "text-white rounded-lg w-[20rem] h-[37.5rem] shadow-2xl md:w-4/5";
+const CAROUSEL_CONTAINER = "text-white rounded-lg w-[20rem] h-[37.5rem] shadow-2xl md:w-4/5 swiper-button-white";
 const ALUMNI_TILE =
   "bg-[#7055FD] w-[20rem] h-[37.5rem] rounded-lg items-center p-5 flex flex-col shadow-2xl md:w-full md:flex-row";
 const ALUMNI_PROFILE = "flex flex-col items-center mx-auto";
@@ -33,13 +34,21 @@ const AlumniTile = ({ name, file, position, prevRole, testimonial }) => {
 const AlumniCarousel = () => {
   return (
     <div className={CAROUSEL_CONTAINER}>
-      <Swiper modules={[Navigation]} spaceBetween={SPACE_BETWEEN_ELEMENTS}>
+      <Carousel
+        style={{
+          "--swiper-navigation-color": "#FFF",
+          "--swiper-navigation-size": "25px",
+        }}
+        modules={[Navigation]}
+        navigation
+        spaceBetween={SPACE_BETWEEN_ELEMENTS}
+      >
         {ALUMNI.map((alumni) => (
           <SwiperSlide key={alumni.name}>
             <AlumniTile {...alumni} />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Carousel>
     </div>
   );
 };
