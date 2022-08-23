@@ -1,5 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { FaAngleDown } from "react-icons/fa";
+import About from "../../components/About";
 import Executives from "../../components/Executives";
 import Heading from "../../components/Heading";
 import AlumniHighlights from "../../components/AlumniHighlights";
@@ -26,7 +27,13 @@ const FAQDropdown = ({ prompt, content }) => {
 
 const WhoWeAre = () => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full -mt-5 md:mt-0 lg:mt-0">
+      <div className="flex flex-col lg:flex-row">
+        <About />
+        <div className="scrollbar-hide overflow-y-auto">
+          <Timeline />
+        </div>
+      </div>
       <Executives />
       <AlumniHighlights />
       <div className="flex flex-col bg-white px-10 md:px-24 lg:px-48 w-full">
@@ -37,7 +44,6 @@ const WhoWeAre = () => {
           ))}
         </div>
       </div>
-      <Timeline />
     </div>
   );
 };
