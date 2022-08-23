@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 const CAROUSEL_CONTAINER = "text-white rounded-lg w-[20rem] h-[37.5rem] shadow-2xl md:w-4/5 swiper-button-white";
 const ALUMNI_TILE =
-  "bg-[#7055FD] w-[20rem] h-[37.5rem] rounded-lg items-center p-5 flex flex-col shadow-2xl md:w-full md:flex-row";
+  "bg-[#7055FD] w-[20rem] h-[37.5rem] rounded-lg items-center p-10 flex flex-col shadow-2xl md:w-full md:flex-row";
 const ALUMNI_PROFILE = "flex flex-col items-center mx-auto";
 
 const SPACE_BETWEEN_ELEMENTS = 50;
