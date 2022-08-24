@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import { ALUMNI } from "../data/alumni";
 import { Navigation } from "swiper";
 import { SwiperSlide } from "swiper/react";
@@ -19,7 +19,9 @@ const AlumniTile = ({ name, file, position, prevRole, testimonial, linkedin }) =
   return (
     <div className={ALUMNI_TILE}>
       <div className={ALUMNI_PROFILE}>
-        <img src={`/profiles/${file}`} alt="Profile Picture" className="w-50 mb-3 mt-5 rounded-full md:w-80 mx-auto" />
+        <div className="w-50 mb-3 mt-5 md:w-80 mx-auto">
+          <Image src={file} alt="Profile Picture" style={{ borderRadius: "9999px" }} />
+        </div>
         <h2 className="text-[2rem] md:text-[2.5rem] font-bold">{name}</h2>
         <h2 className="text-[1.25rem] md:text-[1.5rem] font-semibold text-[#BAFBE4]">{position}</h2>
         <h2 className="text-[1.25rem] md:text-[1.5rem] font-medium mb-2">Previously: {prevRole}</h2>
