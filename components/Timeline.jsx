@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import { TIMELINE_DATA } from "../data/timeline";
 import { UnderlineTypes } from "../utils/underlineType";
 import Heading from "./Heading";
@@ -23,11 +24,9 @@ const Timeline = () => {
   const EvenTimelineBlock = ({ year, description, smallImage, largeImage }) => (
     <div className="flex flex-row flex-start">
       <div className="flex flex-col">
-        <img
-          src={`/images/timeline/${smallImage}`}
-          alt=""
-          className="w-[29vw] mx-[10vw] lg:w-[14.5vw] lg:mx-[5vw] mt-10 rounded-lg drop-shadow-md"
-        />
+        <div className="w-[29vw] mx-[10vw] lg:w-[14.5vw] lg:mx-[5vw] mt-10 drop-shadow-md">
+          <Image src={smallImage} alt="" placeholder="blur" style={{ borderRadius: "0.5rem" }} />
+        </div>
         <div className="flex flex-row ml-auto mt-10">
           <div className="px-3 text-5xl font-semibold">{year}</div>
           <div className="top-1/2 relative border-t-4 border-[#7055FD] w-10" />
@@ -35,28 +34,35 @@ const Timeline = () => {
         <div className="w-40 ml-auto">{description}</div>
       </div>
       {MiddleLine}
-      <img
-        src={`/images/timeline/${largeImage}`}
-        alt=""
-        className="w-[43vw] ml-[7vw] lg:w-[21.5vw] lg:ml-[3.5vw] my-16 rounded-l-lg drop-shadow-md"
-      />
+      <div className="w-[43vw] ml-[7vw] lg:w-[21.5vw] lg:ml-[3.5vw] my-16 drop-shadow-md">
+        <Image
+          src={largeImage}
+          alt=""
+          placeholder="blur"
+          style={{
+            borderTopLeftRadius: "0.5rem",
+            borderBottomLeftRadius: "0.5rem",
+          }}
+        />
+      </div>
     </div>
   );
 
   const OddTimelineBlock = ({ year, description, smallImage, largeImage }) => (
     <div className="flex flex-row flex-start">
-      <img
-        src={`/images/timeline/${smallImage}`}
-        alt=""
-        className="w-[42vw] bg-[#A689FF] mr-[7vw] lg:w-[21vw] lg:mr-[3.5vw] my-16 rounded-r-lg drop-shadow-md"
-      />
+      <div className="w-[42vw] mr-[7vw] lg:w-[21vw] lg:mr-[3.5vw] my-16 drop-shadow-md">
+        <Image
+          src={smallImage}
+          alt=""
+          placeholder="blur"
+          style={{ borderTopRightRadius: "0.5rem", borderBottomRightRadius: "0.5rem" }}
+        />
+      </div>
       {MiddleLine}
       <div className="flex flex-col">
-        <img
-          src={`/images/timeline/${largeImage}`}
-          alt=""
-          className="w-[30vw] mx-[10vw] lg:w-[15vw] lg:mx-[5vw] mt-10 rounded-lg drop-shadow-md"
-        />
+        <div className="w-[30vw] mx-[10vw] lg:w-[15vw] lg:mx-[5vw] mt-10 drop-shadow-md">
+          <Image src={largeImage} alt="" placeholder="blur" style={{ borderRadius: "0.5rem" }} />
+        </div>
         <div className="flex flex-row mr-auto mt-10">
           <div className="top-1/2 relative border-t-4 border-[#7055FD] w-10" />
           <div className="pl-3 text-5xl font-semibold">{year}</div>
