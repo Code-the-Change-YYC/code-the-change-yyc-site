@@ -25,7 +25,7 @@ export const SILVER_SPONSORS = [
     file: LighthouseLabs,
     multiplier: 4.8,
     height: 60,
-    website: "https://www.lighthouselabs.ca/?utm_source=ucalgary&utm_campaign=hackathon",
+    website: "lighthouselabs.ca/?utm_source=ucalgary&utm_campaign=hackathon",
   },
   { file: AltaML, multiplier: 2.86, height: 100, website: "altaml.com" },
 ];
