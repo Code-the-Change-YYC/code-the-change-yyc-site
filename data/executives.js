@@ -1,46 +1,46 @@
-import harsohailBrarJpg from "../public/profiles/Harsohail Brar.jpg";
-import topanBudimanJpg from "../public/profiles/Topan Budiman.png";
-import nataliaIonescuJpg from "../public/profiles/Natalia Ionescu.jpg";
-import sophiaLuJpg from "../public/profiles/Sophia Lu.jpg";
-import hosseinAlamatsazJpg from "../public/profiles/Hossein Alamatsaz.jpg";
-import ajayArumugamJpg from "../public/profiles/Ajay Arumugam.jpg";
-import tylerLamJpg from "../public/profiles/Tyler Lam.jpg";
+import HarsohailBrarJpg from "../public/profiles/Harsohail Brar.jpg";
+import TopanBudimanJpg from "../public/profiles/Topan Budiman.png";
+import NataliaIonescuJpg from "../public/profiles/Natalia Ionescu.jpg";
+import SophiaLuJpg from "../public/profiles/Sophia Lu.jpg";
+import HosseinAlamatsazJpg from "../public/profiles/Hossein Alamatsaz.jpg";
+import AjayArumugamJpg from "../public/profiles/Ajay Arumugam.jpg";
+import TylerLamJpg from "../public/profiles/Tyler Lam.jpg";
 
 export const EXECUTIVES = [
   {
     name: "Harsohail Brar",
-    file: harsohailBrarJpg,
+    file: HarsohailBrarJpg,
     position: "Co-President",
     linkedin: "harsohailbrar",
   },
   {
     name: "Topan Budiman",
-    file: topanBudimanJpg,
+    file: TopanBudimanJpg,
     position: "Co-President",
     linkedin: "topanbudiman",
   },
   {
     name: "Natalia Ionescu",
-    file: nataliaIonescuJpg,
+    file: NataliaIonescuJpg,
     position: "VP Graphic Design",
     linkedin: "natalia-ionescu",
   },
-  { name: "Sophia Lu", file: sophiaLuJpg, position: "VP Marketing", linkedin: "sophialu1" },
+  { name: "Sophia Lu", file: SophiaLuJpg, position: "VP Marketing", linkedin: "sophialu1" },
   {
     name: "Hossein Alamatsaz",
-    file: hosseinAlamatsazJpg,
+    file: HosseinAlamatsazJpg,
     position: "VP Finance",
     linkedin: "hosseinalamatsaz",
   },
   {
     name: "Ajay Arumugam",
-    file: ajayArumugamJpg,
+    file: AjayArumugamJpg,
     position: "VP Tech",
     linkedin: "ajay-arumugam-209a25198",
   },
   {
     name: "Tyler Lam",
-    file: tylerLamJpg,
+    file: TylerLamJpg,
     position: "VP Events",
     linkedin: "tylerwlam",
   },

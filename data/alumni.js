@@ -1,11 +1,11 @@
-import jofredCayabyabJpg from "../public/profiles/Jofred Cayabyab.jpg";
-import avneetGillJpg from "../public/profiles/Avneet Gill.jpg";
-import oscarWongJpg from "../public/profiles/Oscar Wong.jpg";
+import JofredCayabyabJpg from "../public/profiles/Jofred Cayabyab.jpg";
+import AvneetGillJpg from "../public/profiles/Avneet Gill.jpg";
+import OscarWongJpg from "../public/profiles/Oscar Wong.jpg";
 
 export const ALUMNI = [
   {
     name: "Jofred Cayabyab",
-    file: jofredCayabyabJpg,
+    file: JofredCayabyabJpg,
     position: "Software Engineer - Meta",
     prevRole: "VP Events",
     testimonial: "Great opportunity for up and coming students in tech to get involved.",
@@ -13,7 +13,7 @@ export const ALUMNI = [
   },
   {
     name: "Avneet Gill",
-    file: avneetGillJpg,
+    file: AvneetGillJpg,
     position: "Software Engineer - Amazon",
     prevRole: "VP Tech",
     testimonial: "Great opportunity for up and coming students in tech to get involved.",
@@ -21,7 +21,7 @@ export const ALUMNI = [
   },
   {
     name: "Oscar Wong",
-    file: oscarWongJpg,
+    file: OscarWongJpg,
     position: "Software Engineer - Figma",
     prevRole: "VP Tech",
     testimonial: "Great opportunity for up and coming students in tech to get involved.",
