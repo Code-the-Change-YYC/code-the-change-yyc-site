@@ -19,8 +19,8 @@ const AlumniTile = ({ name, file, position, prevRole, testimonial, linkedin }) =
   return (
     <div className={ALUMNI_TILE}>
       <div className={ALUMNI_PROFILE}>
-        <div className="w-50 mb-3 mt-5 md:w-80 mx-auto">
-          <Image src={file} alt="Profile Picture" style={{ borderRadius: "9999px" }} />
+        <div className="w-40 h-40 mb-3 mt-5 md:w-60 md:h-60 mx-auto relative rounded-full overflow-hidden">
+          <Image src={file} alt="Profile Picture" layout="fill" objectFit="contain" placeholder="blur" />
         </div>
         <h2 className="text-[2rem] md:text-[2.5rem] font-bold">{name}</h2>
         <h2 className="text-[1.25rem] md:text-[1.5rem] font-semibold text-[#BAFBE4]">{position}</h2>

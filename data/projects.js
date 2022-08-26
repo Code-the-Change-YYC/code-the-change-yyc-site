@@ -1,6 +1,10 @@
+import RubyForGood from "../public/images/projects/rfg.png";
+import YWCA from "../public/images/projects/ywca.png";
+import Mindfuel from "../public/images/projects/mindfuel.png";
+
 export const projects = [
   {
-    logo: "rfg.png",
+    logo: RubyForGood,
     name: "Ruby for Good CASA",
     liveProjectLink: "https://casavolunteertracking.org/",
     githubLink: "https://github.com/rubyforgood/casa/issues/1017",
@@ -9,7 +13,7 @@ export const projects = [
     ],
   },
   {
-    logo: "ywca.png",
+    logo: YWCA,
     name: "E-learning Storefront",
     descriptions: [
       "Creation and design of a storefront website with e-commerce integrated",
@@ -18,7 +22,7 @@ export const projects = [
     ],
   },
   {
-    logo: "mindfuel.png",
+    logo: Mindfuel,
     name: "Mindfuel System Redesign",
     descriptions: [
       "Build an activity board that contains new aggregated data everyday",
