@@ -14,7 +14,7 @@ const LONG_SQUIGGLY_LINE_SVG = "/svgs/join/long_squiggly_line.svg";
 const JoinUs = () => {
   const TeamPhoto = ({ photo, classes }) => (
     <div
-      className={`relative basis-2/5 w-48 h-48 md:w-60 md:h-60 lg:w-80 lg:h-80 mx-1 lg:mx-3 rounded-3xl overflow-hidden border-2 border-white ${classes}`}
+      className={`relative basis-2/5 grow w-48 h-48 md:w-60 md:h-60 lg:w-80 lg:h-80 mx-1 lg:mx-3 rounded-3xl overflow-hidden border-2 border-white ${classes}`}
     >
       <Image src={photo} alt="Team event photo" layout="fill" objectFit="cover" placeholder="blur" />
     </div>
