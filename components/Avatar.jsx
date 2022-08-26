@@ -2,7 +2,7 @@
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import FontAwesomeLink from "./FontAwesomeLink";
 
-const PROFILE_CONTAINER = "flex flex-col items-center m-10 basis-1/6 grow";
+const PROFILE_CONTAINER = "flex flex-col items-center m-10";
 
 const Avatar = ({ name, file, position, linkedin, prevRole, classes }) => {
   return (
