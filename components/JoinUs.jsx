@@ -29,7 +29,7 @@ const JoinUs = () => {
             <Image src={HEART_SYMBOL_SVG} alt="" height="70%" width="70%" />
           </div>
         </div>
-        <TextSection classes="text-white pb-10">
+        <TextSection classes="text-white pb-10 z-50">
           We are a welcoming and diverse team of students united by the mission of bettering our society through code.
           Regardless of what background you come from, if you are interested in making the world a better place -
           <strong className="text-bold text-[#FFD2DC]"> then please look to apply to our team!</strong>
