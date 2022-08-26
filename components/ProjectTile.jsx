@@ -4,7 +4,6 @@ import { FaExternalLinkSquareAlt, FaGithub } from "react-icons/fa";
 
 const ICON_SIZE = 30;
 
-/* eslint-disable @next/next/no-img-element */
 const ProjectTile = ({ logo, name, liveProjectLink, githubLink, descriptions }) => {
   return (
     <div className="flex flex-col items-center bg-white rounded-3xl border-4 border-[#A689FF] p-10 m-10 space-y-4 drop-shadow-md">
