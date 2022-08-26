@@ -7,8 +7,8 @@ const PROFILE_CONTAINER = "flex flex-col items-center m-10";
 const Avatar = ({ name, file, position, linkedin, prevRole, classes }) => {
   return (
     <div className={PROFILE_CONTAINER}>
-      <div className="w-28 sm:w-48 rounded-full">
-        <Image src={file} alt={name} style={{ borderRadius: "9999px" }} placeholder="blur" />
+      <div className="w-28 h-28 sm:w-48 sm:h-48 rounded-full relative overflow-hidden">
+        <Image src={file} alt={name} layout="fill" objectFit="contain" placeholder="blur" />
       </div>
       <h2 className={`text-[#7055FD] text-xs sm:text-base font-semibold mt-3 ${classes}`}>{name}</h2>
       <h2 className={`text-[#7055FD] text-xs sm:text-base font-medium mb-2 ${classes}`}>{position}</h2>
