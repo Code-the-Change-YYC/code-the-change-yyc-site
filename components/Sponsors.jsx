@@ -17,7 +17,7 @@ const Sponsors = () => {
   const SponsorImage = ({ file, multiplier, height, website }) => (
     <Link href={`https://www.${website}`}>
       <a className="mx-5">
-        <Image src={`/sponsor_logos/${file}`} alt={file} width={height * multiplier} height={height} />
+        <Image src={file} alt={file} width={height * multiplier} height={height} placeholder="blur" />
       </a>
     </Link>
   );

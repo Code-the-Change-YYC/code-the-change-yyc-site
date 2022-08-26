@@ -9,8 +9,8 @@ import Heading from "../components/Heading";
 import TextSection from "../components/TextSection";
 import Sponsors from "../components/Sponsors";
 import { UnderlineTypes } from "../utils/underlineType";
+import HomePageBackgroundImage from "../public/images/homepage/homepage_background.png";
 
-const HOMEPAGE_BACKGROUND_IMAGE = "/images/homepage/homepage_background.png";
 const LOGO_SVG_TOP = "/svgs/homepage/with_logo_top.svg";
 const LOGO_SVG_BOTTOM = "/svgs/homepage/with_logo_bottom.svg";
 const COMMUNITY_SVG = "/svgs/homepage/coding_community.svg";
@@ -47,11 +47,9 @@ export default function Home() {
   return (
     <div className="flex flex-col -mt-5">
       <div className="relative flex h-screen justify-center items-center">
-        <img
-          src={HOMEPAGE_BACKGROUND_IMAGE}
-          alt={HOMEPAGE_BACKGROUND_IMAGE}
-          className="absolute w-full h-full object-cover"
-        />
+        <div className="absolute w-full h-full object-cover">
+          <Image src={HomePageBackgroundImage} alt={HomePageBackgroundImage} layout="fill" placeholder="blur" />
+        </div>
         <h1 className="text-stroke-outside text-7xl -mt-20 md:m-0 md:text-9xl font-black w-3/4 md:text-center text-[#7055FD] stroke-white drop-shadow-lg">
           Coding a better world together.
         </h1>
