@@ -1,9 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import Heading from "./Heading";
 import AlumniCarousel from "./AlumniCarousel";
 import { UnderlineTypes } from "../utils/underlineType";
 
-const ALUMNI_CONTAINER = "flex flex-col items-center h-[62.5rem] bg-[#FF6B54] pt-10 shadow-xl z-0";
+const ALUMNI_CONTAINER = "flex flex-col items-center h-[65rem] bg-[#FF6B54] pt-10 shadow-xl z-0";
 const ALUMNI_HEADER = "pb-10 w-4/5 flex items-left";
 const SPARKLE_IMG = "ml-5 mb-5 w-16";
 
@@ -11,7 +11,9 @@ const AlumniHighlights = () => {
   const HeaderContent = (
     <span className="flex flex-row mb-5 md:items-end">
       Alumni Highlights
-      <img className={SPARKLE_IMG} alt="" src="/svgs/white_sparkle.svg" />
+      <div className={SPARKLE_IMG}>
+        <Image alt="" src="/svgs/white_sparkle.svg" height={70} width={70} />
+      </div>
     </span>
   );
 
