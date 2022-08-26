@@ -2,9 +2,9 @@ import Image from "next/image";
 import TextSection from "./TextSection";
 import { JOIN_ONE, JOIN_TWO } from "../data/join";
 const JOIN_US_CONTAINER = "bg-[#7055FD] flex flex-col";
-const CONTENT_CONTAINER = "flex flex-col pt-14 px-32 ";
+const CONTENT_CONTAINER = "flex flex-col pt-14 p-5 md:px-32";
 const HEADING_CONTAINER = "flex flex-row";
-const PHOTO_ROW = "flex flex-row justify-between";
+const PHOTO_ROW = "flex flex-row justify-between flex-wrap lg:flex-nowrap";
 
 const HEART_SYMBOL_SVG = "/svgs/join/heart_symbol.svg";
 const DOWN_ARROW_SVG = "/svgs/join/down_arrow.svg";
@@ -13,7 +13,9 @@ const LONG_SQUIGGLY_LINE_SVG = "/svgs/join/long_squiggly_line.svg";
 
 const JoinUs = () => {
   const TeamPhoto = ({ photo, classes }) => (
-    <div className={`relative w-72 h-72 rounded-3xl overflow-hidden border-2 border-white ${classes}`}>
+    <div
+      className={`relative w-36 h-36 md:w-60 md:h-60 lg:w-80 lg:h-80 m-1 rounded-3xl overflow-hidden border-2 border-white ${classes}`}
+    >
       <Image src={photo} alt="Team event photo" layout="fill" objectFit="cover" placeholder="blur" />
     </div>
   );
@@ -40,7 +42,7 @@ const JoinUs = () => {
             <TeamPhoto key={key} photo={photo} classes={classes} />
           ))}
         </div>
-        <div className={PHOTO_ROW}>
+        <div className={`${PHOTO_ROW} hidden lg:flex`}>
           {JOIN_TWO.map(({ key, ...props }) => (
             <TeamPhoto key={key} {...props} />
           ))}
