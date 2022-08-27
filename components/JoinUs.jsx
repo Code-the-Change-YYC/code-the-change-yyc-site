@@ -29,7 +29,7 @@ const JoinUs = () => {
             <Image src={HEART_SYMBOL_SVG} alt="" height="70%" width="70%" />
           </div>
         </div>
-        <TextSection classes="text-white pb-10 z-50">
+        <TextSection classes="text-white pb-10 z-20">
           We are a welcoming and diverse team of students united by the mission of bettering our society through code.
           Regardless of what background you come from, if you are interested in making the world a better place -
           <strong className="text-bold text-[#FFD2DC]"> then please look to apply to our team!</strong>
@@ -51,7 +51,7 @@ const JoinUs = () => {
       <div className="-mt-10 w-44 h-44 relative">
         <Image src={CRYSTAL_HEART_SVG} alt="" layout="fill" objectFit="contain" />
       </div>
-      <div className="-mt-24 w-screen h-56 relative">
+      <div className="-mt-24 w-screen h-56 xl:h-80 relative">
         <Image src={LONG_SQUIGGLY_LINE_SVG} alt="" layout="fill" objectFit="cover" />
       </div>
     </div>

@@ -32,7 +32,7 @@ const MobileNavbarDrawer = () => {
   };
 
   return (
-    <div className="flex flex-col bg-[#FF4D6F] rounded-b-2xl -mt-5 p-10 absolute top-full w-full items-center z-10">
+    <div className="flex flex-col bg-[#FF4D6F] rounded-b-2xl -mt-5 p-10 absolute top-full w-full items-center z-30">
       <div className="flex flex-col w-full space-y-4">
         <h1
           className={`cursor-pointer ${TEXT_CLASSES} ${selectedLink === ABOUT ? "underline" : ""}`}
