@@ -47,8 +47,14 @@ export default function Home() {
   return (
     <div className="flex flex-col -mt-5">
       <div className="relative flex h-screen justify-center items-center">
-        <div className="absolute w-full h-full object-cover">
-          <Image src={HomePageBackgroundImage} alt={HomePageBackgroundImage} layout="fill" placeholder="blur" />
+        <div className="absolute w-full h-full">
+          <Image
+            src={HomePageBackgroundImage}
+            alt={HomePageBackgroundImage}
+            layout="fill"
+            placeholder="blur"
+            objectFit="cover"
+          />
         </div>
         <h1 className="text-stroke-outside text-7xl -mt-20 md:m-0 md:text-9xl font-black w-3/4 md:text-center text-[#7055FD] stroke-white drop-shadow-lg">
           Coding a better world together.
