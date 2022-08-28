@@ -11,7 +11,9 @@ function MyApp({ Component, pageProps }) {
         <title>Code the Change YYC</title>
       </Head>
       <Navbar />
-      <Component {...pageProps} />
+      <div className="mt-20">
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </div>
   );
