@@ -1,20 +1,15 @@
 import Link from "next/link";
 
 const Button = (props) => {
-  return <Link href={props.href}>
-      <p
-        className={`cursor-pointer rounded-full text-white border-4 ${props.borderColor} text-3xl font-bold ${props.padding} ${props.buttonBackground} ${props.classes}`}
+  return (
+    <Link href={props.href}>
+      <div
+        className={`cursor-pointer rounded-full text-white border-white p-4 bg-[#7055FD] border-4 text-3xl font-bold ${props.classes}`}
       >
         {props.children}
-      </p>
+      </div>
     </Link>
-
+  );
 };
-
-Button.defaultProps = {
-  borderColor: "border-white",
-  padding: "p-4",
-  buttonBackground: "bg-[#7055FD]",
-}
 
 export default Button;

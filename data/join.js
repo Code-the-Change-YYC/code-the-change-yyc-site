@@ -19,3 +19,18 @@ export const JOIN_TWO = [
   { key: "wins-volunteering-three", photo: WinsVolunteeringThree, classes: "" },
   { key: "wins-volunteering-four", photo: WinsVolunteeringFour, classes: "mt-10" },
 ];
+
+export const ROLE = [
+  {
+    name: "Development",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit."
+  },
+  {
+    name: "Marketing",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit."
+  },
+  {
+    name: "Design",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit."
+  },
+];

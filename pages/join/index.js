@@ -1,11 +1,13 @@
 import JoinUs from "../../components/JoinUs";
-import FullRolesCarousel from "../../components/FullRolesCarousel";
+import RolesCarousel from "../../components/RolesCarousel";
 
 const Join = () => {
-  return <div>
-    <JoinUs />
-    <FullRolesCarousel/>
-    </div>  
+  return (
+    <div>
+      <JoinUs />
+      <RolesCarousel />
+    </div>
+  );
 };
 
 export default Join;
