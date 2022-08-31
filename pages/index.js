@@ -56,7 +56,7 @@ export default function Home() {
             objectFit="cover"
           />
         </div>
-        <h1 className="text-stroke-outside text-7xl -mt-20 md:m-0 md:text-9xl font-black w-3/4 md:text-center text-[#7055FD] stroke-white drop-shadow-lg">
+        <h1 className="text-stroke-outside text-7xl -mt-20 md:m-0 md:text-9xl font-black w-3/4 md:text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500 stroke-white drop-shadow-lg">
           Coding a better world together.
         </h1>
       </div>
