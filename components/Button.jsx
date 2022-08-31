@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-const Button = ({ classes, children, href }) => {
+const Button = (props) => {
   return (
-    <Link href={href}>
-      <p
-        className={`cursor-pointer rounded-full text-white border-4 border-white text-3xl font-bold p-4 bg-[#7055FD] ${classes}`}
+    <Link href={props.href}>
+      <div
+        className={`cursor-pointer rounded-full text-white border-white p-4 bg-[#7055FD] border-4 text-3xl font-bold ${props.classes}`}
       >
-        {children}
-      </p>
+        {props.children}
+      </div>
     </Link>
   );
 };
