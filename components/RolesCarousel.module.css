@@ -1,0 +1,29 @@
+.swiperContainer {
+    padding-top: 0.5rem;
+    top: 1.4rem;
+    position: relative;
+  }
+  
+  .swiperButtonPrev {
+    margin-left: -2.6rem;
+    --swiper-navigation-color: #fff;
+    --swiper-navigation-size: 2.3rem;
+  }
+  
+  .swiperButtonNext {
+    margin-right: -2.6rem;
+    --swiper-navigation-color: #fff;
+    --swiper-navigation-size: 2.3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .swiperButtonPrev {
+      margin-left: -6rem;
+      --swiper-navigation-size: 3.3rem;
+    }
+    .swiperButtonNext {
+      margin-right: -6rem;
+      --swiper-navigation-size: 3.3rem;
+    }
+  }
+  
