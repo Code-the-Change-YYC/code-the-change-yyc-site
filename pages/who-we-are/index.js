@@ -6,6 +6,7 @@ import Heading from "../../components/Heading";
 import AlumniHighlights from "../../components/AlumniHighlights";
 import Timeline from "../../components/Timeline";
 import { FAQS } from "../../data/faq";
+import Events from "../../components/Events";
 
 const FAQDropdown = ({ prompt, content }) => {
   return (
@@ -34,6 +35,7 @@ const WhoWeAre = () => {
           <Timeline />
         </div>
       </div>
+      <Events />
       <Executives />
       <AlumniHighlights />
       <div className="flex flex-col bg-white px-10 md:px-24 lg:px-48 w-full">
