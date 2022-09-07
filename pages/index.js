@@ -80,7 +80,7 @@ export default function Home() {
         </TextSection>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center md:justify-between pt-40 md:py-40 md:px-24 lg:px-48 items-center md:divide-x-4 md:divide-[#A689FF] bg-white">
+      <div className="flex flex-col md:flex-row justify-center md:justify-between pt-40 md:py-40 md:px-24 lg:px-48 md:divide-x-4 md:divide-[#A689FF] bg-white">
         <div className="flex flex-col md:w-1/2 md:pr-32 md:mt-0 px-5 md:px-0 items-center">
           <Heading>Coding</Heading>
           <TextSection>
@@ -89,13 +89,11 @@ export default function Home() {
             <span className={STANDOUT_TEXT_CLASSES}>additional programming and software development support</span>. We
             work with project managers, product designers, and analysts to turn project visions to quality software.
           </TextSection>
-          {/* TODO: Add image here */}
-          <div></div>
         </div>
 
         <img src={COMMUNITY_SVG} alt={COMMUNITY_SVG} className="md:hidden object-fill w-[400px]" />
 
-        <div className="flex flex-col md:w-1/2 md:pl-32 px-5 md:px-0 items-center pt-10 md:pt-0">
+        <div className="flex flex-col md:w-1/2 md:pl-32 px-5 md:px-0 items-center py-10 md:py-0">
           <Heading underlineType={UnderlineTypes.GREEN_LONG_UNDERLINE}>Community</Heading>
           <TextSection>
             Whether it’s through{" "}
@@ -104,12 +102,8 @@ export default function Home() {
             around the world. We also dedicate time volunteering at local organizations and host technical workshops
             with a hint of social impact ideologies!
           </TextSection>
-          {/* TODO: Add image here */}
-          <div></div>
         </div>
       </div>
-
-      <Sponsors />
 
       <div className="px-10 md:px-24 lg:px-48 py-20 bg-[#FF6B54]">
         <h1 className="text-5xl font-semibold text-white">Ready to join the change?</h1>
@@ -128,6 +122,8 @@ export default function Home() {
           <Button href="/join">Join Us!</Button>
         </div>
       </div>
+
+      <Sponsors />
     </div>
   );
 }
