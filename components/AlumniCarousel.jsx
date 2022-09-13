@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 const CAROUSEL_CONTAINER = "text-white rounded-lg w-[20rem] h-[44rem] shadow-2xl md:w-4/5 swiper-button-white";
 const ALUMNI_TILE =
-  "bg-[#7055FD] w-[20rem] h-[44rem] rounded-lg items-center p-14 lg:p-10 flex flex-col shadow-2xl md:w-full md:flex-row";
+  "bg-[#7055FD] w-[20rem] h-[70rem] md:h-[44rem] rounded-lg items-center p-14 lg:p-10 flex flex-col shadow-2xl md:w-full md:flex-row";
 const ALUMNI_PROFILE = "flex flex-col items-center mx-auto text-center";
 
 const SPACE_BETWEEN_ELEMENTS = 50;
@@ -31,7 +31,7 @@ const AlumniTile = ({ name, file, position, prevRole, testimonial, linkedin }) =
           classes="h-6 w-6 md:h-10 md:w-10 text-white cursor-pointer mb-5"
         />
       </div>
-      <p className="text-[1.3rem] font-light italic leading-7 mx-auto md:ml-14 md:mb-24 md:text-[1.5rem]">
+      <p className="text-[1.1rem] font-light italic leading-7 mx-auto md:ml-14 md:mb-24 md:text-[1.3rem] lg:text-[1.5rem]">
         <span className="text-[2rem] font-extrabold">&quot;</span>
         {testimonial}
         <span className="text-[2rem] font-extrabold">&quot;</span>
