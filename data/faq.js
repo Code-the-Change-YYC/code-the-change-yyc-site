@@ -12,7 +12,7 @@ export const FAQS = [
   {
     prompt: "How can I get involved?",
     content:
-      "We started as an organization in 2019! We operate as the Calgary chapter of the Code the Change organization, independently from the other global chapters (located in California and British Columbia).",
+      "Throughout the year, we invite students from all backgrounds to join our talented team. We may recruit admin team members to carry out our club mission, software engineers to develop our projects, product designers to build our visions, business analysts to handle our finances, and passionate planners to organize our events! Keep an eye out on our social media for open position postings or reach us at our email if you have any questions.",
   },
   {
     prompt: "Do I need to be a software engineer to be involved?",
