@@ -23,14 +23,26 @@ export const JOIN_TWO = [
 export const ROLE = [
   {
     name: "Development",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    description:
+      "As a project developer, you’ll be responsible for building code for our non-profit partners and perform code reviews. You’ll work as a team to implement a software project while communicating with our business partners to ensure all requirements are aligned.",
   },
   {
     name: "Marketing",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    description:
+      "As an marketing team member, you’ll be responsible for leading all facets of our external branding and marketing initiatives!",
   },
   {
     name: "Design",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    description: "As a design team member, you’ll be responsible for designing our marketing and promotional items!",
+  },
+  {
+    name: "Events",
+    description:
+      "As a events team member, you'll be responsible for organizing and host all of the code the change yyc events.",
+  },
+  {
+    name: "Contact Us",
+    description:
+      "Interested in connecting with us about a project, partnership, or anything else? Reach us via our email.",
   },
 ];
