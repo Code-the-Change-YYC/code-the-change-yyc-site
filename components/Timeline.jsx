@@ -31,7 +31,7 @@ const Timeline = () => {
           <div className="px-3 text-5xl font-semibold">{year}</div>
           <div className="top-1/2 relative border-t-4 border-[#7055FD] w-10" />
         </div>
-        <div className="w-40 ml-auto">{description}</div>
+        <div className="w-40 text-xs md:w-72 md:text-sm lg:w-60 ml-auto mr-1">{description}</div>
       </div>
       {MiddleLine}
       <div className="w-[43vw] ml-[7vw] lg:w-[21.5vw] lg:ml-[3.5vw] my-16 rounded-l-xl overflow-hidden drop-shadow-md">
@@ -54,7 +54,7 @@ const Timeline = () => {
           <div className="top-1/2 relative border-t-4 border-[#7055FD] w-10" />
           <div className="pl-3 text-5xl font-semibold">{year}</div>
         </div>
-        <div className="w-40 px-10 mr-auto">{description}</div>
+        <div className="w-40 text-xs md:w-72 md:text-sm lg:w-60 px-10 mr-auto">{description}</div>
       </div>
     </div>
   );

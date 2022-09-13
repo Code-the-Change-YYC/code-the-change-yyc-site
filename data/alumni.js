@@ -8,7 +8,8 @@ export const ALUMNI = [
     file: JofredCayabyabJpg,
     position: "Software Engineer - Meta",
     prevRole: "VP Events",
-    testimonial: "Great opportunity for up and coming students in tech to get involved.",
+    testimonial:
+      "Code the Change helped shape my tech career and is a big part of where I am today! Some of my fondest university memories are related to Code the Change YYC, whether it be working on exciting projects, organizing and attending cool tech events, or just hanging out with the Code the Change community. I will forever be grateful for the connections I've made, and the experience I've gained, and the fun I've had.",
     linkedin: "jofred-cayabyab",
   },
   {
@@ -16,7 +17,8 @@ export const ALUMNI = [
     file: AvneetGillJpg,
     position: "Software Engineer - Amazon",
     prevRole: "VP Tech",
-    testimonial: "Great opportunity for up and coming students in tech to get involved.",
+    testimonial:
+      "Joining Code the Change was one of the best decisions I made. It not only gave me the opportunity to grow my technical and leadership skills, but helped me meet some pretty amazing people. My fellow Code the Change community played a huge role in making my university experience, and helping me learn and develop into the software engineer I am today. I’m incredibly thankful for the network, experience and opportunities I gained from the team.",
     linkedin: "avneet-gill-223a87177",
   },
   {
@@ -24,7 +26,8 @@ export const ALUMNI = [
     file: OscarWongJpg,
     position: "Software Engineer - Figma",
     prevRole: "VP Tech",
-    testimonial: "Great opportunity for up and coming students in tech to get involved.",
+    testimonial:
+      "Code the Change YYC is a great way to get experience building cool things and making a positive impact in the community. I met so many dedicated individuals working on Code the Change projects and at their tech events. It's a great opportunity for students and an even better way to give back and make a difference through technology",
     linkedin: "oscarwong67",
   },
 ];
