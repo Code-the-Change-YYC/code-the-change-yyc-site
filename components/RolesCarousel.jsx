@@ -33,7 +33,7 @@ const RolesTile = ({ role }) => (
         <p className="md:text-[1.2rem] xl:text-[1.8rem] font-[500] py-3">{role.description}</p>
         <center>
           <Button
-            href="/join"
+            href="mailto:codethechangeyyc@gmail.com"
             classes="max-w-[15.5rem] lg:max-w-[19rem] lg:min-h-[3rem] border-[#9981f4] p-[0.313rem] lg:p-[0.7rem]"
           >
             <p className="text-[0.99rem] md:text-xl xl:text-[1.6rem] font-semibold text-white">Apply for this role</p>

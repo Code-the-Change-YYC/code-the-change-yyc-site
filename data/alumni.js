@@ -1,6 +1,7 @@
 import JofredCayabyabJpg from "../public/profiles/Jofred Cayabyab.jpg";
 import AvneetGillJpg from "../public/profiles/Avneet Gill.jpg";
 import OscarWongJpg from "../public/profiles/Oscar Wong.jpg";
+import AribaAneesJpg from "../public/profiles/Ariba Anees.jpg";
 
 export const ALUMNI = [
   {
@@ -29,5 +30,14 @@ export const ALUMNI = [
     testimonial:
       "Code the Change YYC is a great way to get experience building cool things and making a positive impact in the community. I met so many dedicated individuals working on Code the Change projects and at their tech events. It's a great opportunity for students and an even better way to give back and make a difference through technology",
     linkedin: "oscarwong67",
+  },
+  {
+    name: "Ariba Anees",
+    file: AribaAneesJpg,
+    position: "Data Engineer - Avanade",
+    prevRole: "Co-President",
+    testimonial:
+      "Being co-president of Code the Change YYC was truly a once in a lifetime experience! The welcoming and fun club culture from the start was formed by some of the most creative and talented people I had the pleasure of working alongside, and getting to connect with industry mentors and non-profits was a very unique and incredible learning opportunity. It was a highlight of my university years and also helped shape my career in a multitude of ways, and I’m so grateful for getting to be a part of this awesome club.",
+    linkedin: "aribaanees",
   },
 ];
