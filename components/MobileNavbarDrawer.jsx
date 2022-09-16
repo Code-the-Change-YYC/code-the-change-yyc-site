@@ -41,16 +41,16 @@ const MobileNavbarDrawer = () => {
           About
         </h1>
         {selectedLink === ABOUT && <NestedLinks options={["Who we are", "Projects"]} />}
-        <h1
+        {/* <h1
           className={`cursor-pointer ${TEXT_CLASSES} ${selectedLink === NEWS ? "underline" : ""}`}
           onClick={() => handleClick(NEWS)}
         >
           News
-        </h1>
+        </h1> */}
         {selectedLink === NEWS && <NestedLinks options={["Announcements", "Blog"]} />}
-        <a className={TEXT_CLASSES} href="partnerships">
+        {/* <a className={TEXT_CLASSES} href="partnerships">
           Partnerships
-        </a>
+        </a> */}
         <a className={TEXT_CLASSES} href="contact">
           Contact
         </a>
