@@ -10,7 +10,7 @@ import styles from "../components/RolesCarousel.module.css";
 import "swiper/css/navigation";
 const CAROUSEL_CONTAINER = styles.swiperContainer;
 const TILE_CONTAINER = "flex flex-col md:flex-row rounded-[1.875rem] p-[1.875rem]";
-const TILE_TEXT_CONTAINER = "basis-4/5 lg:basis-3/5 text-left";
+const TILE_TEXT_CONTAINER = "basis-4/5 lg:basis-3/5 text-left md:py-10";
 const TILE_TEXT_SPACING = "lg:space-y-24 py-2.5";
 const ARROW_INIT = { left: "swiper-button-prev", right: "swiper-button-next" };
 const LEFT_NAVIGATION_ARROW = styles.swiperButtonPrev;
