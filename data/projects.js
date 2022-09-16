@@ -1,6 +1,8 @@
 import RubyForGood from "../public/images/projects/rfg.png";
 import YWCA from "../public/images/projects/ywca.png";
 import Mindfuel from "../public/images/projects/mindfuel.png";
+import AMHAC from "../public/images/projects/amhac.png";
+import AXS from "../public/images/projects/axs_map.png";
 
 export const projects = [
   {
@@ -28,6 +30,22 @@ export const projects = [
       "Build an activity board that contains new aggregated data everyday",
       "Start from scratch or build on top of current system",
       "Work with skilled developers from the Mindfuel team",
+    ],
+  },
+  {
+    logo: AXS,
+    name: "AXS Map",
+    liveProjectLink: "https://www.axsmap.com/",
+    githubLink: "https://github.com/axsmap/app",
+    descriptions: ["A tool designed to help us map inclusion in communities and find more places for more people."],
+  },
+  {
+    logo: AMHAC,
+    name: "Alberta Mental Health Advocacy Coalition",
+    descriptions: [
+      "Create and design the organization website and logo",
+      "Expand their online presence to reach more individuals",
+      "Good project for members who are at the beginning of their programming journey",
     ],
   },
 ];
