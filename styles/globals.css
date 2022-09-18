@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 .text-stroke-outside {
-  -webkit-text-stroke: 5px white;
+  -webkit-text-stroke: 3px white;
 }
 
 @media (max-width: 768px) {

@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <div className="flex flex-col -mt-5">
       <div className="relative flex h-screen justify-center items-center">
-        <div className="absolute w-full h-full">
+        <div className="absolute w-full h-full opacity-50">
           <Image
             src={HomePageBackgroundImage}
             alt={HomePageBackgroundImage}
