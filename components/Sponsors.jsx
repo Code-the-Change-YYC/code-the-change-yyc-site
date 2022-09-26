@@ -50,7 +50,7 @@ const Sponsors = () => {
       </div>
       <div className={CONTENT_CONTAINER}>
         We are continuously pursuing endeavors that could help students achieve more social good for the community.
-        These are the sponsors that help make our events and ideas possible.
+        These are the amazing sponsors that help make our events and ideas possible.
       </div>
       <div className={UNDERLINE_CONTAINER}>
         <Image

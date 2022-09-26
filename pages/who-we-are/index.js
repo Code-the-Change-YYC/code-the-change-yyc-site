@@ -38,7 +38,7 @@ const WhoWeAre = () => {
       <Events />
       <Executives />
       <AlumniHighlights />
-      <div className="flex flex-col bg-white px-10 md:px-24 lg:px-48 w-full">
+      <div className="flex flex-col bg-white px-10 md:px-24 lg:px-48 w-full py-10">
         <Heading>FAQ</Heading>
         <div className="flex flex-col py-10 w-full space-y-4">
           {FAQS.map((props) => (
