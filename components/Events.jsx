@@ -8,11 +8,13 @@ import { Navigation } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
-const EVENTS_CONTAINER = "flex flex-col items-center h-[65rem] bg-[#BAFBE4] pt-10 z-0";
+const EVENTS_CONTAINER = "flex flex-col h-84 bg-[#BAFBE4] pt-10 z-0";
 const CONTENT_CONTAINER = "flex flex-col pt-14 p-5 md:px-32";
-const CAROUSEL_CONTAINER = "text-white rounded-lg w-[20rem] h-[40rem] shadow-2xl md:w-4/5";
+const CAROUSEL_CONTAINER = "text-white rounded-lg h-[40rem] shadow-2xl";
 const EVENTS_HEADER = "flex flex-row";
 const SPACE_BETWEEN_ELEMENTS = 50;
+
+const LONG_SQUIGGLY_LINE_SVG = "/svgs/events/long_events_squiggly_line.svg";
 
 const Events = () => {
   const EventsCarousel = () => (
@@ -48,8 +50,15 @@ const Events = () => {
           around technology for social impact? We host a variety of workshops and hackathons every year, blending
           together ideas around software development and social good.
         </TextSection>
+        <EventsCarousel />
+        <TextSection classes="text-black z-20 pt-10">
+          Whether you are interested in joining our team or attending one of our events,{" "}
+          <span className="text-[#7055FD]">please feel free to reach out to us!</span>
+        </TextSection>
       </div>
-      <EventsCarousel />
+      <div className="my-10 w-full h-40 xl:h-64 relative">
+        <Image src={LONG_SQUIGGLY_LINE_SVG} alt="" layout="fill" objectFit="cover" />
+      </div>
     </div>
   );
 };
