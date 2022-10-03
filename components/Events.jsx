@@ -8,28 +8,33 @@ import { Navigation } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
-const EVENTS_CONTAINER = "flex flex-col items-center h-[65rem] bg-[#BAFBE4] pt-10 shadow-xl z-0";
+const EVENTS_CONTAINER = "flex flex-col items-center h-[65rem] bg-[#BAFBE4] pt-10 z-0";
 const CONTENT_CONTAINER = "flex flex-col pt-14 p-5 md:px-32";
+const CAROUSEL_CONTAINER = "text-white rounded-lg w-[20rem] h-[40rem] shadow-2xl md:w-4/5";
 const EVENTS_HEADER = "flex flex-row";
 const SPACE_BETWEEN_ELEMENTS = 50;
 
 const Events = () => {
-  const EventsCarousel = (
-    <Carousel
-      style={{
-        "--swiper-navigation-color": "#FFF",
-        "--swiper-navigation-size": "25px",
-      }}
-      modules={[Navigation]}
-      navigation
-      spaceBetween={SPACE_BETWEEN_ELEMENTS}
-    >
-      {EVENTS_IMAGES.map((image) => (
-        <SwiperSlide key={image.key}>
-          <Image src={image.file} alt={image.key} layout="fill" objectFit="contain" placeholder="blur" />
-        </SwiperSlide>
-      ))}
-    </Carousel>
+  const EventsCarousel = () => (
+    <div className={CAROUSEL_CONTAINER}>
+      <Carousel
+        style={{
+          "--swiper-navigation-color": "#FFF",
+          "--swiper-navigation-size": "25px",
+        }}
+        modules={[Navigation]}
+        navigation
+        spaceBetween={SPACE_BETWEEN_ELEMENTS}
+      >
+        {EVENTS_IMAGES.map((image) => (
+          <SwiperSlide key={image.key}>
+            <div className="h-[40rem] relative rounded-lg overflow-hidden">
+              <Image src={image.file} alt={image.key} layout="fill" objectFit="cover" placeholder="blur" />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Carousel>
+    </div>
   );
 
   return (
@@ -43,10 +48,8 @@ const Events = () => {
           around technology for social impact? We host a variety of workshops and hackathons every year, blending
           together ideas around software development and social good.
         </TextSection>
-        <div className="scrollbar-hide overflow-x-auto">
-          <EventsCarousel />
-        </div>
       </div>
+      <EventsCarousel />
     </div>
   );
 };
