@@ -15,7 +15,7 @@ const LOGO_SVG_TOP = "/svgs/homepage/with_logo_top.svg";
 const LOGO_SVG_BOTTOM = "/svgs/homepage/with_logo_bottom.svg";
 const COMMUNITY_SVG = "/svgs/homepage/coding_community.svg";
 const ROLE_TILE_SIZE = 300;
-const ROLES = ["Development", "Marketing", "Design"];
+const ROLES = ["Development", "Marketing", "Design", "Events"];
 const STANDOUT_TEXT_CLASSES = "font-bold text-[#7055FD]";
 
 const RoleTile = ({ role }) => {
