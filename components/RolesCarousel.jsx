@@ -10,7 +10,7 @@ import styles from "../components/RolesCarousel.module.css";
 import "swiper/css/navigation";
 const CAROUSEL_CONTAINER = styles.swiperContainer;
 const TILE_CONTAINER = "flex flex-col md:flex-row rounded-[1.875rem] p-[1.875rem]";
-const TILE_TEXT_CONTAINER = "basis-4/5 lg:basis-3/5 text-left";
+const TILE_TEXT_CONTAINER = "basis-4/5 lg:basis-3/5 text-left md:py-10";
 const TILE_TEXT_SPACING = "lg:space-y-24 py-2.5";
 const ARROW_INIT = { left: "swiper-button-prev", right: "swiper-button-next" };
 const LEFT_NAVIGATION_ARROW = styles.swiperButtonPrev;
@@ -33,7 +33,7 @@ const RolesTile = ({ role }) => (
         <p className="md:text-[1.2rem] xl:text-[1.8rem] font-[500] py-3">{role.description}</p>
         <center>
           <Button
-            href="/join"
+            href="https://forms.gle/9xL859EbEwz1acPg6"
             classes="max-w-[15.5rem] lg:max-w-[19rem] lg:min-h-[3rem] border-[#9981f4] p-[0.313rem] lg:p-[0.7rem]"
           >
             <p className="text-[0.99rem] md:text-xl xl:text-[1.6rem] font-semibold text-white">Apply for this role</p>

@@ -48,17 +48,17 @@ const Navbar = () => {
           >
             <NavbarDropdownOptions options={["Who we are", "Projects"]} />
           </Dropdown>
-          <Dropdown
+          {/* <Dropdown
             title="News"
             titleClasses={TEXT_CLASSES}
             optionsClasses={OPTIONS_CLASSES}
             optionClasses={OPTION_CLASSES}
           >
             <NavbarDropdownOptions options={["Announcements", "Blog"]} />
-          </Dropdown>
-          <Link href="/partnerships">
+          </Dropdown> */}
+          {/* <Link href="/partnerships">
             <span className={TEXT_CLASSES}>Partnerships</span>
-          </Link>
+          </Link> */}
           <Link href="/contact">
             <span className={TEXT_CLASSES}>Contact</span>
           </Link>
