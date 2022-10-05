@@ -8,7 +8,7 @@ import { Navigation } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
-const EVENTS_CONTAINER = "flex flex-col h-84 bg-[#BAFBE4] pt-10 z-0";
+const EVENTS_CONTAINER = "flex flex-col h-[95rem] bg-[#BAFBE4] pt-10 z-0";
 const CONTENT_CONTAINER = "flex flex-col pt-14 p-5 md:px-32";
 const CAROUSEL_CONTAINER = "text-white rounded-lg h-[40rem] shadow-2xl";
 const EVENTS_HEADER = "flex flex-row";
@@ -56,7 +56,7 @@ const Events = () => {
           <span className="text-[#7055FD]">please feel free to reach out to us!</span>
         </TextSection>
       </div>
-      <div className="my-10 w-full h-40 xl:h-64 relative">
+      <div className="my-10 w-full h-56 xl:h-96 relative">
         <Image src={LONG_SQUIGGLY_LINE_SVG} alt="" layout="fill" objectFit="cover" />
       </div>
     </div>
