@@ -46,7 +46,7 @@ const Events = () => {
           <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>Events</Heading>
         </div>
         <TextSection classes="text-black pb-10 z-20">
-          Looking to work with an energetic and enthusiastic group of postsecondary students on improving awareness
+          Looking to work with an energetic and enthusiastic group of undergraduate students and industry mentors on improving awareness
           around technology for social impact? We host a variety of workshops and hackathons every year, blending
           together ideas around software development and social good.
         </TextSection>
