@@ -3,7 +3,6 @@ import { SwiperSlide } from "swiper/react";
 import Tile from "../components/Tile";
 import TextSection from "./TextSection";
 import Carousel from "../components/Carousel";
-import { Navigation } from "swiper";
 import Button from "../components/Button";
 import { ROLE } from "../data/join";
 import styles from "../components/RolesCarousel.module.css";
@@ -51,11 +50,7 @@ const RolesCarousel = () => {
       <TextSection classes="text-white py-3">More in depth description of what the specific role involves</TextSection>
       <div className={CAROUSEL_CONTAINER}>
         <div className={`${ARROW_INIT.left} ${LEFT_NAVIGATION_ARROW}`}></div>
-        <Carousel
-          navigation={{ prevEl: ".swiper-button-prev", nextEl: ".swiper-button-next", clickable: true }}
-          modules={[Navigation]}
-          className="mySwiper"
-        >
+        <Carousel navigation={{ prevEl: ".swiper-button-prev", nextEl: ".swiper-button-next", clickable: true }}>
           {ROLE.map((role) => (
             <SwiperSlide key={role.name}>
               <RolesTile role={role} />
