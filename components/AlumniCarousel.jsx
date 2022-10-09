@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { ALUMNI } from "../data/alumni";
-import { Navigation } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Carousel from "./Carousel";
@@ -12,8 +11,6 @@ const CAROUSEL_CONTAINER = "text-white rounded-lg w-[20rem] h-[44rem] shadow-2xl
 const ALUMNI_TILE =
   "bg-[#7055FD] w-[20rem] h-[70rem] md:h-[44rem] rounded-lg items-center p-14 lg:p-10 flex flex-col shadow-2xl md:w-full md:flex-row";
 const ALUMNI_PROFILE = "flex flex-col items-center mx-auto text-center md:p-10";
-
-const SPACE_BETWEEN_ELEMENTS = 50;
 
 const AlumniTile = ({ name, file, position, prevRole, testimonial, linkedin }) => {
   return (
@@ -43,15 +40,7 @@ const AlumniTile = ({ name, file, position, prevRole, testimonial, linkedin }) =
 const AlumniCarousel = () => {
   return (
     <div className={CAROUSEL_CONTAINER}>
-      <Carousel
-        style={{
-          "--swiper-navigation-color": "#FFF",
-          "--swiper-navigation-size": "25px",
-        }}
-        modules={[Navigation]}
-        navigation
-        spaceBetween={SPACE_BETWEEN_ELEMENTS}
-      >
+      <Carousel>
         {ALUMNI.map((alumni) => (
           <SwiperSlide key={alumni.name}>
             <AlumniTile {...alumni} />

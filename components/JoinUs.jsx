@@ -51,7 +51,7 @@ const JoinUs = () => {
       <div className="-mt-10 w-44 h-44 relative">
         <Image src={CRYSTAL_HEART_SVG} alt="" layout="fill" objectFit="contain" />
       </div>
-      <div className="-mt-24 w-screen h-56 xl:h-80 relative">
+      <div className="-mt-24 w-full h-56 xl:h-80 relative">
         <Image src={LONG_SQUIGGLY_LINE_SVG} alt="" layout="fill" objectFit="cover" />
       </div>
     </div>
