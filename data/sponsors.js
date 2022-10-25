@@ -7,6 +7,7 @@ import LighthouseLabs from "../public/sponsor_logos/Lighthouse Labs.png";
 import AltaML from "../public/sponsor_logos/AltaML.png";
 import Helcim from "../public/sponsor_logos/Helcim.png";
 import VillageIceCream from "../public/sponsor_logos/Village Ice Cream.png";
+import ATB from "../public/sponsor_logos/atb.png";
 
 // Multiplier is the value you need to multiply height by to get width
 export const GOLD_SPONSORS_ONE = [
@@ -17,6 +18,7 @@ export const GOLD_SPONSORS_ONE = [
 export const GOLD_SPONSORS_TWO = [
   { file: Arcurve, multiplier: 10, height: 50, website: "arcurve.com" },
   { file: Cisco, multiplier: 3.41, height: 120, website: "cisco.com" },
+  { file: ATB, multiplier: 1.42, height: 120, website: "atb.com" },
 ];
 
 export const SILVER_SPONSORS = [
