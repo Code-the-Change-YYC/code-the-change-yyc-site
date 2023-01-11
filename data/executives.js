@@ -1,5 +1,5 @@
 import HarsohailBrarJpg from "../public/profiles/Harsohail Brar.jpg";
-import TopanBudimanJpg from "../public/profiles/Topan Budiman.png";
+import TopanBudimanJpg from "../public/profiles/Topan Budiman.jpg";
 import NataliaIonescuJpg from "../public/profiles/Natalia Ionescu.jpg";
 import SophiaLuJpg from "../public/profiles/Sophia Lu.jpg";
 import HosseinAlamatsazJpg from "../public/profiles/Hossein Alamatsaz.jpg";
