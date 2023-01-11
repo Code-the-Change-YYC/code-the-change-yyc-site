@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import Heading from "./Heading";
-import { GOLD_SPONSORS_ONE, GOLD_SPONSORS_TWO, SILVER_SPONSORS, BRONZE_SPONSORS } from "../data/sponsors";
+import {
+  GOLD_SPONSORS_ONE,
+  GOLD_SPONSORS_TWO,
+  SILVER_SPONSORS_ONE,
+  SILVER_SPONSORS_TWO,
+  BRONZE_SPONSORS,
+} from "../data/sponsors";
 
 const SPONSORS_CONTAINER = "bg-white flex flex-col items-center py-10 md:py-20";
 const HEADING_CONTAINER = "flex flex-row justify-center mb-10 ml-5";
@@ -39,7 +45,12 @@ const Sponsors = () => {
         ))}
       </div>
       <div className={SPONSORS_LEVEL_CONTAINER}>
-        {SILVER_SPONSORS.map(({ ...props }) => (
+        {SILVER_SPONSORS_ONE.map(({ ...props }) => (
+          <SponsorImage key={props.file} {...props} />
+        ))}
+      </div>
+      <div className={SPONSORS_LEVEL_CONTAINER}>
+        {SILVER_SPONSORS_TWO.map(({ ...props }) => (
           <SponsorImage key={props.file} {...props} />
         ))}
       </div>

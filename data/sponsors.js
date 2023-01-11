@@ -8,6 +8,7 @@ import AltaML from "../public/sponsor_logos/AltaML.png";
 import Helcim from "../public/sponsor_logos/Helcim.png";
 import VillageIceCream from "../public/sponsor_logos/Village Ice Cream.png";
 import ATB from "../public/sponsor_logos/atb.jpg";
+import FacultyOfScience from "../public/sponsor_logos/UC Faculty of Science.jpg";
 
 // Multiplier is the value you need to multiply height by to get width
 export const GOLD_SPONSORS_ONE = [
@@ -21,8 +22,12 @@ export const GOLD_SPONSORS_TWO = [
   { file: Cisco, multiplier: 3.41, height: 120, website: "cisco.com" },
 ];
 
-export const SILVER_SPONSORS = [
+export const SILVER_SPONSORS_ONE = [
   { file: Schulich, multiplier: 1.45, height: 115, website: "schulich.ucalgary.ca" },
+  { file: FacultyOfScience, multiplier: 4.26, height: 115, website: "https://science.ucalgary.ca/" },
+];
+
+export const SILVER_SPONSORS_TWO = [
   {
     file: LighthouseLabs,
     multiplier: 4.8,
