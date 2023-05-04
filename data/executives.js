@@ -1,17 +1,17 @@
-import HarsohailBrarJpg from "../public/profiles/Harsohail Brar.jpg";
 import TopanBudimanJpg from "../public/profiles/Topan Budiman.jpg";
 import NataliaIonescuJpg from "../public/profiles/Natalia Ionescu.jpg";
 import SophiaLuJpg from "../public/profiles/Sophia Lu.jpg";
 import HosseinAlamatsazJpg from "../public/profiles/Hossein Alamatsaz.jpg";
 import AjayArumugamJpg from "../public/profiles/Ajay Arumugam.jpg";
-import TylerLamJpg from "../public/profiles/Tyler Lam.jpg";
+import ArminSandhuJpg from "../public/profiles/ArminSandhu.jpg";
+import DeslyJobJpg from "../public/profiles/DeslyJob.jpeg";
 
 export const EXECUTIVES = [
   {
-    name: "Harsohail Brar",
-    file: HarsohailBrarJpg,
+    name: "Armin Sandhu",
+    file: ArminSandhuJpg,
     position: "Co-President",
-    linkedin: "harsohailbrar",
+    linkedin: "armin-sandhu",
   },
   {
     name: "Topan Budiman",
@@ -39,9 +39,9 @@ export const EXECUTIVES = [
     linkedin: "ajay-arumugam-209a25198",
   },
   {
-    name: "Tyler Lam",
-    file: TylerLamJpg,
+    name: "Desly Job",
+    file: DeslyJobJpg,
     position: "VP Events",
-    linkedin: "tylerwlam",
+    linkedin: "desly-job",
   },
 ];
