@@ -19,9 +19,9 @@ const AlumniTile = ({ name, file, position, prevRole, testimonial, linkedin }) =
         <div className="w-40 h-40 mb-3 mt-5 md:w-60 md:h-60 mx-auto relative rounded-full overflow-hidden">
           <Image src={file} alt="Profile Picture" layout="fill" objectFit="contain" placeholder="blur" />
         </div>
-        <h2 className="text-[2rem] md:text-[2.5rem] font-bold">{name}</h2>
-        <h2 className="text-[1.25rem] md:text-[1.5rem] font-semibold text-[#BAFBE4]">{position}</h2>
-        <h2 className="text-[1.25rem] md:text-[1.5rem] font-medium mb-2">Previously: {prevRole}</h2>
+        <h2 className="text-[2rem] md:text-[2rem] font-bold">{name}</h2>
+        <h2 className="text-[1rem] md:text-[1rem] font-semibold text-[#BAFBE4]">{position}</h2>
+        <h2 className="text-[1rem] md:text-[1rem] font-medium mb-2">Previously: {prevRole}</h2>
         <FontAwesomeLink
           username={linkedin}
           icon={faLinkedin}
