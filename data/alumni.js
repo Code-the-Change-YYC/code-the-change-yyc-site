@@ -2,8 +2,28 @@ import JofredCayabyabJpg from "../public/profiles/Jofred Cayabyab.jpg";
 import AvneetGillJpg from "../public/profiles/Avneet Gill.jpg";
 import OscarWongJpg from "../public/profiles/Oscar Wong.jpg";
 import AribaAneesJpg from "../public/profiles/Ariba Anees.jpg";
+import TylerLamJpg from "../public/profiles/Tyler Lam.jpg";
+import HarsohailBrarJpg from "../public/profiles/Harsohail Brar.jpg";
 
 export const ALUMNI = [
+  {
+    name: "Tyler Lam",
+    file: TylerLamJpg,
+    position: "Software Engineer - Hive AI",
+    prevRole: "VP Events",
+    testimonial:
+      "Being part of the events team at Code the Change was an incredible privilege and opportunity for me. I worked with amazing people from all disciplines and learned a great deal on how we can use technology to improve the world around us. Over the two years I’ve been part of the club, we raised 15k for charities, held countless events for college students, and built a unique community of positive individuals dedicated to make change. The memories I’ve made during my time with the organization is something I’ll cherish forever, and am grateful for everything the club has done for me.",
+    linkedin: "tylerwlam",
+  },
+  {
+    name: "Harsohail Brar",
+    file: HarsohailBrarJpg,
+    position: "Software Engineer - AngelList",
+    prevRole: "Co-president",
+    testimonial:
+      "Code the Change has been instrumental in my career growth. My involvement with CTC provided me with the wealth of opportunities to develop my software development and leadership skills. Additionally, I had a chance to work with an amazing group of people, which led to valuable networking and new friendships. Thanks to Code the Change, I have not only growth professionally but personally as well!",
+    linkedin: "harsohailbrar",
+  },
   {
     name: "Jofred Cayabyab",
     file: JofredCayabyabJpg,
