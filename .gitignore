@@ -25,5 +25,3 @@ yarn-error.log*
 .env
 .next
 package-lock.json
-
-secret.js
