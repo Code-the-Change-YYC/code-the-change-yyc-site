@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Heading from './Heading';
 import Avatar from './Avatar';
 import { UnderlineTypes } from '../utils/underlineType';
-import { fetchContent } from './secret';
+import { fetchContent } from '../api/apiRoot';
 
 const EXECUTIVES_CONTAINER = 'bg-white flex flex-col items-center pt-5';
 const EXECUTIVE_LEVEL_CONTAINER = 'flex flex-row flex-wrap justify-center w-full sm:w-8/12 mb-5';
