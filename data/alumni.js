@@ -21,7 +21,7 @@ export const ALUMNI = [
     position: "Software Engineer - AngelList",
     prevRole: "Co-president",
     testimonial:
-      "Code the Change has been instrumental in my career growth. My involvement with CTC provided me with the wealth of opportunities to develop my software development and leadership skills. Additionally, I had a chance to work with an amazing group of people, which led to valuable networking and new friendships. Thanks to Code the Change, I have not only growth professionally but personally as well!",
+      "Code the Change has been instrumental in my career growth. My involvement with CTC provided me with the wealth of opportunities to develop my software development and leadership skills. Additionally, I had a chance to work with an amazing group of people, which led to valuable networking and new friendships. Thanks to Code the Change, I have not only grown professionally but personally as well!",
     linkedin: "harsohailbrar",
   },
   {
