@@ -1,22 +1,22 @@
-import { Menu } from "@headlessui/react";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import Dropdown from "./Dropdown";
-import Fade from "./Fade";
-import { FaBars } from "react-icons/fa";
-import MobileNavbarDrawer from "./MobileNavbarDrawer";
+import { Menu } from '@headlessui/react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import Dropdown from './Dropdown';
+import Fade from './Fade';
+import { FaBars } from 'react-icons/fa';
+import MobileNavbarDrawer from './MobileNavbarDrawer';
 
-const TEXT_CLASSES = "text-xl font-semibold text-[#FF4D6F] cursor-pointer";
-const OPTION_CLASSES = "text-xl font-semibold text-white p-2";
-const OPTIONS_CLASSES = "top-14 w-48 rounded-b-lg bg-[#FF4D6F] p-2";
+const TEXT_CLASSES = 'text-xl font-semibold text-[#FF4D6F] cursor-pointer';
+const OPTION_CLASSES = 'text-xl font-semibold text-white p-2';
+const OPTIONS_CLASSES = 'top-14 w-48 rounded-b-lg bg-[#FF4D6F] p-2';
 const IMAGE_SIZE = 44;
 
 const NavbarDropdownOptions = ({ options }) => {
   return (
     <Menu.Items as="div" className={`absolute right-0 origin-top-right divide-y ${OPTIONS_CLASSES}`}>
       {options.map((option) => {
-        const link = option.toLowerCase().split(" ").join("-");
+        const link = option.toLowerCase().split(' ').join('-');
         return (
           <Menu.Item key={option} className={`flex justify-center items-center ${OPTION_CLASSES}`}>
             <a href={`/${link}`}>{option}</a>
@@ -46,7 +46,7 @@ const Navbar = () => {
             optionsClasses={OPTIONS_CLASSES}
             optionClasses={OPTION_CLASSES}
           >
-            <NavbarDropdownOptions options={["Who we are", "Projects"]} />
+            <NavbarDropdownOptions options={['Who we are', 'Events', 'Projects']} />
           </Dropdown>
           {/* <Dropdown
             title="News"
