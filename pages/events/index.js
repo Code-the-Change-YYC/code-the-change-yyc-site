@@ -10,7 +10,7 @@ const Events = () => {
 			<PastEvents/>
 		*/}
       <h1 className="m-auto text-3xl text-center">
-        We're currently building the <b>Events Page</b> so stay tuned! 👀
+        We`re currently building the <b>Events Page</b> so stay tuned! 👀
       </h1>
     </div>
   );
