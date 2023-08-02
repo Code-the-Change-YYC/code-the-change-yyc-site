@@ -4,8 +4,10 @@ import hackathon2020 from "../public/images/timeline/2020_hackathon.jpg";
 import openNight2020 from "../public/images/timeline/2020_open_night.jpg";
 import hackathon2021 from "../public/images/timeline/2021_hackathon.jpg";
 import workshop2021 from "../public/images/timeline/2021_workshop.jpg";
-import pathToTech2022 from "../public/images/timeline/2022_path_to_tech.jpg";
+import hackathon2022 from "../public/images/timeline/2022_hackathon.jpg";
 import volunteering2022 from "../public/images/timeline/2022_volunteering.jpeg";
+import responsibleAI2023 from "../public/images/timeline/2023_responsible_AI.jpg";
+import resumeRoast2023 from "../public/images/timeline/2023_resume_roast.jpg";
 
 export const TIMELINE_DATA = [
   {
@@ -32,8 +34,15 @@ export const TIMELINE_DATA = [
   {
     year: 2022,
     description:
-      "Code the Change YYC underwent a brand refresh! Kicking off the year with a Path to Tech panel event, this year will be wrapped up with our biggest in-person hackathon to date!",
-    smallImage: pathToTech2022,
+      "Code the Change YYC underwent a brand refresh! We successfully held our biggest hybrid hackathon to date with 400+ participants!",
+    smallImage: hackathon2022,
     largeImage: volunteering2022,
   },
+  {
+    year: 2023,
+    description:
+      "We kicked off the year with a bang, hosting events like Developing Responsible AI, and our popular Resume Roast!",
+    smallImage: resumeRoast2023,
+    largeImage: responsibleAI2023, 
+  }
 ];
