@@ -1,15 +1,15 @@
-import { useState } from "react";
-import SocialMediaIcons from "./SocialMediaIcons";
+import { useState } from 'react';
+import SocialMediaIcons from './SocialMediaIcons';
 
-const TEXT_CLASSES = "text-4xl font-semibold text-white";
-const ABOUT = "about";
-const NEWS = "news";
+const TEXT_CLASSES = 'text-4xl font-semibold text-white';
+const ABOUT = 'about';
+const NEWS = 'news';
 
 const NestedLinks = ({ options }) => {
   return (
     <div className="ml-5 flex flex-col font-normal text-white">
       {options.map((option) => {
-        const link = option.toLowerCase().split(" ").join("-");
+        const link = option.toLowerCase().split(' ').join('-');
         return (
           <a key={option} href={`/${link}`} className="text-xl py-1">
             / {option}
@@ -35,19 +35,19 @@ const MobileNavbarDrawer = () => {
     <div className="flex flex-col bg-[#FF4D6F] rounded-b-2xl -mt-5 p-10 absolute top-full w-full items-center z-10">
       <div className="flex flex-col w-full space-y-4">
         <h1
-          className={`cursor-pointer ${TEXT_CLASSES} ${selectedLink === ABOUT ? "underline" : ""}`}
+          className={`cursor-pointer ${TEXT_CLASSES} ${selectedLink === ABOUT ? 'underline' : ''}`}
           onClick={() => handleClick(ABOUT)}
         >
           About
         </h1>
-        {selectedLink === ABOUT && <NestedLinks options={["Who we are", "Projects"]} />}
+        {selectedLink === ABOUT && <NestedLinks options={['Who we are', 'Events', 'Projects']} />}
         {/* <h1
           className={`cursor-pointer ${TEXT_CLASSES} ${selectedLink === NEWS ? "underline" : ""}`}
           onClick={() => handleClick(NEWS)}
         >
           News
         </h1> */}
-        {selectedLink === NEWS && <NestedLinks options={["Announcements", "Blog"]} />}
+        {selectedLink === NEWS && <NestedLinks options={['Announcements', 'Blog']} />}
         {/* <a className={TEXT_CLASSES} href="partnerships">
           Partnerships
         </a> */}
