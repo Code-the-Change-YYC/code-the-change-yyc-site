@@ -32,7 +32,7 @@ const Navbar = () => {
           {/* <Link href="/partnerships">
             <span className={TEXT_CLASSES}>Partnerships</span>
           </Link> */}
-          <Link href="/about">
+          <Link href="/who-we-are">
             <span className={TEXT_CLASSES}>About</span>
           </Link>
           <Link href="/events">
