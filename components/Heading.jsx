@@ -30,8 +30,8 @@ const Heading = ({ classes, underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE
 
   return (
     <div className={HEADING_CONTAINER}>
-      <h1 className={`text-5xl font-semibold ${classes}`}>{children}</h1>
-      <img src={getUnderline()} alt="" />
+      <h1 className={`${classes} text-5xl font-semibold`}>{children}</h1>
+      {underlineType !== 'None' && <img src={getUnderline()} alt="" />}
     </div>
   );
 };
