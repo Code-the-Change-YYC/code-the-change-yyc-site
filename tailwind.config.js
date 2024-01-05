@@ -12,6 +12,7 @@ module.exports = {
     colors: {
       'lilac': '#A689FF',
 	  'white': '#FFFFFF',
+	  'orange': '#FF6B54',
     },
   },
   plugins: [require('tailwind-scrollbar-hide')],
