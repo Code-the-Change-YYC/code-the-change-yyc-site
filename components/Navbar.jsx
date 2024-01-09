@@ -21,17 +21,6 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex md:items-center md:space-x-8">
-          {/* <Dropdown
-            title="News"
-            titleClasses={TEXT_CLASSES}
-            optionsClasses={OPTIONS_CLASSES}
-            optionClasses={OPTION_CLASSES}
-          >
-            <NavbarDropdownOptions options={["Announcements", "Blog"]} />
-          </Dropdown> */}
-          {/* <Link href="/partnerships">
-            <span className={TEXT_CLASSES}>Partnerships</span>
-          </Link> */}
           <Link href="/who-we-are">
             <span className={TEXT_CLASSES}>About</span>
           </Link>
@@ -39,7 +28,7 @@ const Navbar = () => {
             <span className={TEXT_CLASSES}>Events</span>
           </Link>
           <Link href="/projects">
-            <span className={TEXT_CLASSES}>Project</span>
+            <span className={TEXT_CLASSES}>Projects</span>
           </Link>
           <Link href="/contact">
             <span className={TEXT_CLASSES}>Contact</span>
