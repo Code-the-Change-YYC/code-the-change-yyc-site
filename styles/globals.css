@@ -11,4 +11,10 @@
   .text-stroke-outside {
     -webkit-text-stroke: 2px white;
   }
+
+  /* 
+@media (max-width: 768px) {
+  .text-stroke-outside {
+    -webkit-text-stroke: 2px white;
+  } */
 }
