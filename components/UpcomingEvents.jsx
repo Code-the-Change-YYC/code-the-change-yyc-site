@@ -1,6 +1,7 @@
 import { UnderlineTypes } from '../utils/underlineType';
 import Heading from './Heading';
-import EventCarousel from './EventsCarousel';
+import EventsCarousel from './EventsCarousel';
+import EventsTiles from './EventsTiles';
 
 const UpcomingEvents = () => {
   return (
@@ -11,7 +12,8 @@ const UpcomingEvents = () => {
           Events
         </Heading>
       </div>
-      <EventCarousel />
+      <EventsCarousel />
+      <EventsTiles />
     </div>
   );
 };
