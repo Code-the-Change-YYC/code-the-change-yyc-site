@@ -16,12 +16,13 @@ const events = [
     id: 3,
     name: 'Event Name',
     description:
-      'Our biggest event to date It saw students from all over Canada come up with innovative solution hfkjsdhfkajldfhla kfhewiuo akjlsfhakjdlf hsdklf hsadklf hsdakjl hasdk',
+      'Our biggest event to date It saw students from all over Canada come up with innovative solution kfhewiuo akjlsfhakjdlf hsdklf hsadklf hsdakjl hasdk',
   },
 ];
 
-const EVENTS_TILES_CONTAINER = 'w-4/5 mx-auto flex flex-wrap hidden md:flex';
+const EVENTS_TILES_CONTAINER = 'w-4/5 mx-auto flex flex-wrap md:flex hidden';
 const EVENT_TILE = 'flex flex-col h-96 bg-white rounded-3xl items-center px-4 justify-evenly';
+// const EVENT_TILE = 'flex flex-col h-96 bg-white rounded-3xl items-center px-4 justify-evenly';
 
 const EventTile = ({ name, description }) => {
   return (
@@ -38,11 +39,23 @@ const EventTile = ({ name, description }) => {
 const EventsTiles = () => {
   return (
     <div className={EVENTS_TILES_CONTAINER}>
-      {events.map((values, index) => (
-        <div key={index} className="w-full md:w-1/3 p-4">
-          <EventTile {...values} />
+      {/* First Column (One Large Item) */}
+      <div className="w-full lg:w-1/2 p-4">
+        <div className={`${EVENT_TILE} h-full`}>
+          <EventTile {...events[0]} />
         </div>
-      ))}
+      </div>
+
+      {/* Second Column (Two Rows) */}
+      <div className="w-full lg:w-1/2 flex flex-wrap">
+        {events.slice(1, 3).map((values, index) => (
+          <div key={index} className="w-full lg:h-1/2 p-4">
+            <div className={`${EVENT_TILE} `}>
+              <EventTile {...values} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
