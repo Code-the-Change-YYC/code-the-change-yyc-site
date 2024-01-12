@@ -5,7 +5,7 @@ const MAILING_LIST_CONTAINER = 'bg-[#7055FD] flex flex-col text-center';
 const CONTENT_CONTAINER = 'flex flex-col pt-14 p-5 md:px-32 text-center';
 const HEADING_CONTAINER = 'flex flex-row text-center justify-center';
 const LINK_TO_MAILING_LIST =
-  'https://docs.google.com/forms/d/e/1FAIpQLSdyU9zSPHnu76UwbRI3MO49FttyESLtkUBcPWWIK3vLkdTe_Q/viewform';
+  'https://docs.google.com/forms/d/e/1FAIpQLSfusGF-TTs6nXfBCodQuuDWqx7DnTrm6GF4c-CeDVUt1m_plA/viewform';
 const MailingList = () => {
   return (
     <div className={MAILING_LIST_CONTAINER}>
