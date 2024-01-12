@@ -1,15 +1,15 @@
-import Image from "next/image";
-import TextSection from "./TextSection";
-import { JOIN_ONE, JOIN_TWO } from "../data/join";
-const JOIN_US_CONTAINER = "bg-[#7055FD] flex flex-col";
-const CONTENT_CONTAINER = "flex flex-col pt-14 p-5 md:px-32";
-const HEADING_CONTAINER = "flex flex-row";
-const PHOTO_ROW = "flex flex-row justify-between flex-wrap lg:flex-nowrap";
+import Image from 'next/image';
+import TextSection from './TextSection';
+import { JOIN_ONE, JOIN_TWO } from '../data/join';
+const JOIN_US_CONTAINER = 'bg-[#7055FD] flex flex-col';
+const CONTENT_CONTAINER = 'flex flex-col pt-14 p-5 md:px-32';
+const HEADING_CONTAINER = 'flex flex-row';
+const PHOTO_ROW = 'flex flex-row justify-between flex-wrap lg:flex-nowrap';
 
-const HEART_SYMBOL_SVG = "/svgs/join/heart_symbol.svg";
-const DOWN_ARROW_SVG = "/svgs/join/down_arrow.svg";
-const CRYSTAL_HEART_SVG = "/svgs/join/crystal_heart.svg";
-const LONG_SQUIGGLY_LINE_SVG = "/svgs/join/long_squiggly_line.svg";
+const HEART_SYMBOL_SVG = '/svgs/join/heart_symbol.svg';
+const DOWN_ARROW_SVG = '/svgs/join/down_arrow.svg';
+const CRYSTAL_HEART_SVG = '/svgs/join/crystal_heart.svg';
+const LONG_SQUIGGLY_LINE_SVG = '/svgs/join/long_squiggly_line.svg';
 
 const JoinUs = () => {
   const TeamPhoto = ({ photo, classes }) => (
@@ -26,7 +26,7 @@ const JoinUs = () => {
         <div className={HEADING_CONTAINER}>
           <h1 className={`text-5xl font-semibold text-white`}>Join Us!</h1>
           <div className="-mt-2">
-            <Image src={HEART_SYMBOL_SVG} alt="" height="70%" width="70%" />
+            <Image src={HEART_SYMBOL_SVG} alt="" height={70} width={70} />
           </div>
         </div>
         <TextSection classes="text-white pb-10 z-20">
@@ -35,7 +35,7 @@ const JoinUs = () => {
           <strong className="text-bold text-[#FFD2DC]"> then please look to apply to our team!</strong>
         </TextSection>
         <div className="ml-auto -mt-14 -mb-10">
-          <Image src={DOWN_ARROW_SVG} alt="" height="100%" width="100%" />
+          <Image src={DOWN_ARROW_SVG} alt="" height={100} width={100} />
         </div>
         <div className={PHOTO_ROW}>
           {JOIN_ONE.map(({ key, photo, classes }) => (
