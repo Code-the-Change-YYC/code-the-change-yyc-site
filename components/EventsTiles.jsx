@@ -22,7 +22,6 @@ const events = [
 
 const EVENTS_TILES_CONTAINER = 'w-4/5 mx-auto flex flex-wrap md:flex hidden';
 const EVENT_TILE = 'flex flex-col h-96 bg-white rounded-3xl items-center px-4 justify-evenly';
-// const EVENT_TILE = 'flex flex-col h-96 bg-white rounded-3xl items-center px-4 justify-evenly';
 
 const EventTile = ({ name, description }) => {
   return (
@@ -39,14 +38,14 @@ const EventTile = ({ name, description }) => {
 const EventsTiles = () => {
   return (
     <div className={EVENTS_TILES_CONTAINER}>
-      {/* First Column (One Large Item) */}
+      {/* First Column (One Large Row) */}
       <div className="w-full lg:w-1/2 p-4">
         <div className={`${EVENT_TILE} h-full`}>
           <EventTile {...events[0]} />
         </div>
       </div>
 
-      {/* Second Column (Two Rows) */}
+      {/* Second Column (Two Smaller Rows) */}
       <div className="w-full lg:w-1/2 flex flex-wrap">
         {events.slice(1, 3).map((values, index) => (
           <div key={index} className="w-full lg:h-1/2 p-4">
