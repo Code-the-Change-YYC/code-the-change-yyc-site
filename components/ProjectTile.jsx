@@ -13,12 +13,12 @@ const ProjectTile = ({ logo, name, liveProjectLink, githubLink, descriptions }) 
       <h3 className="font-medium text-xl">{name}</h3>
       <div className="flex space-x-4 italic text-[#7055FD]">
         {liveProjectLink && (
-          <Link href={liveProjectLink}>
+          <Link href={liveProjectLink} legacyBehavior>
             <FaExternalLinkSquareAlt size={ICON_SIZE} className="cursor-pointer" />
           </Link>
         )}
         {githubLink && (
-          <Link href={githubLink}>
+          <Link href={githubLink} legacyBehavior>
             <FaGithub size={ICON_SIZE} className="cursor-pointer" />
           </Link>
         )}
