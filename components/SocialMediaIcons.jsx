@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import Link from 'next/link';
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const ICON_SIZE = 30;
 
@@ -8,6 +8,9 @@ const SocialMediaIcons = ({ classes }) => {
     <div className={`flex items-start pt-5 space-x-6 ${classes}`}>
       <Link href="https://www.facebook.com/CodeTheChangeYYC/">
         <FaFacebook size={ICON_SIZE} className="cursor-pointer" />
+      </Link>
+      <Link href="https://www.tiktok.com/@codethechangeyyc/">
+        <FaTiktok size={ICON_SIZE} className="cursor-pointer" />
       </Link>
       <Link href="https://www.instagram.com/codethechangeyyc/">
         <FaInstagram size={ICON_SIZE} className="cursor-pointer" />
