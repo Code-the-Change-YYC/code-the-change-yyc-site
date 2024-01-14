@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import { TIMELINE_DATA } from "../data/timeline";
-import { UnderlineTypes } from "../utils/underlineType";
-import Heading from "./Heading";
+import Image from 'next/image';
+import { TIMELINE_DATA } from '../data/timeline';
+import { UnderlineTypes } from '../utils/underlineType';
+import Heading from './Heading';
 
-const TIMELINE_CONTAINER = "bg-white flex flex-col lg:h-0 lg:h-screen";
-const PURPLE_SIDE_LINES_DIR = "/svgs/timeline/left_side_lines.svg";
+const TIMELINE_CONTAINER = 'bg-white flex flex-col lg:h-0 lg:h-screen';
+const PURPLE_SIDE_LINES_DIR = '/svgs/timeline/left_side_lines.svg';
 
 const Timeline = () => {
   const isEven = (index) => {
@@ -59,7 +59,7 @@ const Timeline = () => {
     </div>
   );
 
-  const renderTimeline = TIMELINE_DATA.map((props, index) => {
+  const renderTimeline = TIMELINE_DATA.reverse().map((props, index) => {
     return isEven(index) ? EvenTimelineBlock(props) : OddTimelineBlock(props);
   });
 
