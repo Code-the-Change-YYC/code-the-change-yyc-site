@@ -44,9 +44,7 @@ const Events = () => {
         <EventsCarousel />
         <TextSection classes="text-black z-20 pt-10">
           Whether you are interested in joining our team or attending one of our events,{" "}
-          <Link href="/contact">
-            <a className="text-[#7055FD]">please feel free to reach out to us!</a>
-          </Link>
+          <Link href="/contact" className="text-[#7055FD]">please feel free to reach out to us!</Link>
         </TextSection>
       </div>
       <div className="my-10 w-full h-56 xl:h-96 relative">

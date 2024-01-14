@@ -21,10 +21,8 @@ const UNDERLINE_PROPERTIES = {
 
 const Sponsors = () => {
   const SponsorImage = ({ file, multiplier, height, website }) => (
-    <Link href={`https://www.${website}`}>
-      <a className="mx-5">
+    <Link href={`https://www.${website}`} className="mx-5">
         <Image src={file} alt={file} width={height * multiplier} height={height} placeholder="blur" />
-      </a>
     </Link>
   );
 
@@ -32,7 +30,12 @@ const Sponsors = () => {
     <div className={SPONSORS_CONTAINER}>
       <div className={HEADING_CONTAINER}>
         <Heading>Sponsors</Heading>
-        <Image src="/svgs/sponsorship_heart.svg" alt="" height="100%" width="100%" />
+        <div style={{ width: '100%', height: '100%' }}>
+          <img src="/svgs/sponsorship_heart.svg" alt="" style={{ width: '100%', height: '100%' }} />
+        </div>
+
+
+
       </div>
       <div className={SPONSORS_LEVEL_CONTAINER}>
         {GOLD_SPONSORS_ONE.map(({ ...props }) => (
