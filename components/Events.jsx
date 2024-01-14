@@ -1,19 +1,19 @@
-import React from "react";
-import Heading from "./Heading";
-import { UnderlineTypes } from "../utils/underlineType";
-import TextSection from "./TextSection";
-import Carousel from "./Carousel";
-import { EVENTS_IMAGES } from "../data/events";
-import { SwiperSlide } from "swiper/react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Heading from './Heading';
+import { UnderlineTypes } from '../utils/underlineType';
+import TextSection from './TextSection';
+import Carousel from './Carousel';
+import { EVENTS_IMAGES } from '../data/events';
+import { SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const EVENTS_CONTAINER = "flex flex-col h-[95rem] bg-[#BAFBE4] pt-10 z-0";
-const CONTENT_CONTAINER = "flex flex-col pt-14 p-5 md:px-32";
-const CAROUSEL_CONTAINER = "text-white rounded-lg h-[40rem] shadow-2xl";
-const EVENTS_HEADER = "flex flex-row";
+const EVENTS_CONTAINER = 'flex flex-col h-[95rem] bg-[#BAFBE4] pt-10 z-0';
+const CONTENT_CONTAINER = 'flex flex-col pt-14 p-5 md:px-32';
+const CAROUSEL_CONTAINER = 'text-white rounded-lg h-[40rem] shadow-2xl';
+const EVENTS_HEADER = 'flex flex-row';
 
-const LONG_SQUIGGLY_LINE_SVG = "/svgs/events/long_events_squiggly_line.svg";
+const LONG_SQUIGGLY_LINE_SVG = '/svgs/events/long_events_squiggly_line.svg';
 
 const Events = () => {
   const EventsCarousel = () => (
@@ -43,9 +43,9 @@ const Events = () => {
         </TextSection>
         <EventsCarousel />
         <TextSection classes="text-black z-20 pt-10">
-          Whether you are interested in joining our team or attending one of our events,{" "}
-          <Link href="/contact">
-            <a className="text-[#7055FD]">please feel free to reach out to us!</a>
+          Whether you are interested in joining our team or attending one of our events,
+          <Link href="/contact" className="text-[#7055FD]">
+            <span> please feel free to reach out to us!</span>
           </Link>
         </TextSection>
       </div>
