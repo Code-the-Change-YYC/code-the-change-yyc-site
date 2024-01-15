@@ -18,7 +18,7 @@ const ARROW_INIT = { left: 'swiper-button-prev', right: 'swiper-button-next' };
 const LEFT_NAVIGATION_ARROW = styles.swiperButtonPrev;
 const RIGHT_NAVIGATION_ARROW = styles.swiperButtonNext;
 
-const PAST_EVENTS_CONTAINER = 'bg-[#00D3A9]';
+const PAST_EVENTS_CONTAINER = 'bg-[#00D3A9] pb-10';
 const PAST_EVENTS_CONTENT = 'px-10 md:px-24 lg:px-48 py-20';
 const PAST_EVENTS_HEADER = "flex flex-row";
 
