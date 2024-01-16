@@ -84,7 +84,7 @@ const PastEventsCarousel = () => {
           <div className={`${ARROW_INIT.right} ${RIGHT_NAVIGATION_ARROW}`}></div>
         </div>
       </div>
-      <div className="my-10 w-full h-32 xl:h-64 relative">
+      <div className="my-10 w-full h-48 xl:h-64 relative">
         <Image src={LONG_SQUIGGLY_LINE_SVG} alt="" layout="fill" objectFit="cover" />
       </div>
     </div>
