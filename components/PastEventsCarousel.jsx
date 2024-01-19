@@ -11,7 +11,7 @@ import Link from "next/link";
 import 'swiper/css/navigation';
 
 const CAROUSEL_CONTAINER = styles.swiperContainer;
-const TILE_CONTAINER = 'flex flex-col lg:h-[650px] md:flex-column rounded-[1.875rem] p-[1.875rem]';
+const TILE_CONTAINER = 'flex flex-col xl:h-[650px] lg:h-[700px] md:flex-column md:h-[820px] rounded-[1.875rem] p-[1.875rem] h-[900px]';
 const TILE_TEXT_CONTAINER = 'basis-3/5 md:basis-3/5 lg:basis-3/5 text-center md:py-10 ';
 const TILE_TEXT_SPACING = 'lg:space-y-48 py-5';
 const ARROW_INIT = { left: 'swiper-button-prev', right: 'swiper-button-next' };
