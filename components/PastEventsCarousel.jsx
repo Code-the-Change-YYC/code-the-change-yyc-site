@@ -15,10 +15,10 @@ const ARROW_INIT = { left: 'swiper-button-prev', right: 'swiper-button-next' };
 const LEFT_NAVIGATION_ARROW = styles.swiperButtonPrev;
 const RIGHT_NAVIGATION_ARROW = styles.swiperButtonNext;
 
-const TILE_CONTAINER = 'flex flex-col xl:h-[650px] lg:h-[820px] md:flex-column md:h-[820px] rounded-[1.875rem] p-[1.875rem] h-full';
+const TILE_CONTAINER = 'flex flex-col xl:h-[650px] lg:h-[820px] md:flex-column md:h-[820px] rounded-[1.8rem] p-[1.875rem] h-full';
 const TILE_IMAGE_CONTAINER = 'flex flex-row justify-center md:flex-row md:justify-around lg:justify-center relative';
 const TILE_TEXT_CONTAINER = 'basis-3/5 md:basis-3/5 lg:basis-3/5 text-center md:py-10 ';
-const TILE_TEXT_SPACING = 'lg:space-y-48 py-5';
+const TILE_TEXT_SPACING = 'lg:space-y-10 py-5';
 
 const PAST_EVENTS_CONTAINER = 'bg-[#00D3A9] pb-10';
 const PAST_EVENTS_CONTENT = 'px-10 md:px-24 lg:px-48 py-20';
