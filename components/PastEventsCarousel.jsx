@@ -30,6 +30,9 @@ const TILE_IMAGE_CONTAINER = "flex flex-row justify-center md:flex-row md:justif
 
 const PastEventsTile = ({ event }) => (
   <Tile classes={TILE_CONTAINER}>
+    <div className="basis-3/5 md:basis-3/5 lg:basis-3/5 text-center md:py-10 sm:hidden">
+      <h2 className="text-4xl md:text-6xl xl:text-6xl font-medium italic">{event.name}</h2>
+    </div>
     <div className={TILE_IMAGE_CONTAINER}>
       <div >
         <Image 
