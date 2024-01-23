@@ -1,4 +1,3 @@
-// import Image from 'next/image';
 import Link from 'next/link';
 import { FaEnvelope } from 'react-icons/fa';
 const MAILING_LIST_CONTAINER = 'bg-[#7055FD] flex flex-col text-center';
@@ -12,7 +11,7 @@ const MailingList = () => {
       <div className={CONTENT_CONTAINER}>
         <div className={HEADING_CONTAINER}>
           <h1 className="text-5xl font-semibold text-white pr-4 flex flex-col justify-center text-center items-center sm:flex-row space-x-2">
-            <button className="font-extrabold underline bg-[#FF6B54] rounded p-2 w-fit hover:opacity-85">
+            <button className="font-extrabold underline rounded p-2 w-fit hover:opacity-85">
               <Link href={LINK_TO_MAILING_LIST}>Join </Link>
             </button>
             <div className="">our Mailing list!</div>
@@ -20,8 +19,6 @@ const MailingList = () => {
           </h1>
         </div>
         <div className="text-lg text-white font-semibold">The link to our mailing list is also in our link tree </div>
-        {/* <div className="flex flex-row items-center space-x-4">
-        </div> */}
       </div>
     </div>
   );
