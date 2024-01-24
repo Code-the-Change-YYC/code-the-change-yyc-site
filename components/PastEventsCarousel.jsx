@@ -29,8 +29,11 @@ const LONG_SQUIGGLY_LINE_SVG = '/svgs/events/long_events_squiggly_line.svg';
 
 const PastEventsTile = ({ event }) => (
   <Tile classes={TILE_CONTAINER}>
+    <div className='md:hidden lg:hidden'>
+      <h2 className='text-center text-5xl font-medium italic mb-2'>{event.name}</h2>
+    </div>
     <div className={TILE_IMAGE_CONTAINER}>
-      <div >
+      <div>
         <PastEventImage img={event.img1} name={event.name} />
       </div>
       <div className='hidden md:block lg:block'>
@@ -41,7 +44,7 @@ const PastEventsTile = ({ event }) => (
       </div>
     </div>
     <div className={TILE_TEXT_CONTAINER}>
-      <h2 className='text-4xl md:text-6xl xl:text-6xl font-medium italic'>{event.name}</h2>
+      <h2 className='hidden md:block lg:block text-4xl md:text-6xl xl:text-6xl font-medium italic'>{event.name}</h2>
       <div className={TILE_TEXT_SPACING}>
         <p className='text-[1.5em] md:text-[2rem] xl:text-[2rem] font-[500] py-3'>{event.blurb}</p>
       </div>
