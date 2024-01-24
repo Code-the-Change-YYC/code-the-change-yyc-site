@@ -9,13 +9,14 @@ import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import Link from 'next/link';
 import 'swiper/css/navigation';
+import PastEventImage from './PastEventImage';
 
 const CAROUSEL_CONTAINER = styles.swiperContainer;
 const ARROW_INIT = { left: 'swiper-button-prev', right: 'swiper-button-next' };
 const LEFT_NAVIGATION_ARROW = styles.swiperButtonPrev;
 const RIGHT_NAVIGATION_ARROW = styles.swiperButtonNext;
 
-const TILE_CONTAINER = 'flex flex-col xl:h-[650px] lg:h-[820px] md:flex-column md:h-[820px] rounded-[1.8rem] p-[1.875rem] h-full';
+const TILE_CONTAINER = 'flex flex-col xl:h-[650px] lg:h-[820px] md:flex-column md:h-[820px] rounded-[2rem] p-[1.875rem] h-full';
 const TILE_IMAGE_CONTAINER = 'flex flex-row justify-center md:flex-row md:justify-around lg:justify-center relative';
 const TILE_TEXT_CONTAINER = 'basis-3/5 md:basis-3/5 lg:basis-3/5 text-center md:py-10 ';
 const TILE_TEXT_SPACING = 'lg:space-y-10 py-5';
@@ -23,7 +24,6 @@ const TILE_TEXT_SPACING = 'lg:space-y-10 py-5';
 const PAST_EVENTS_CONTAINER = 'bg-[#00D3A9] pb-10';
 const PAST_EVENTS_CONTENT = 'px-10 md:px-24 lg:px-48 py-20';
 const PAST_EVENTS_HEADER = 'flex flex-row';
-const PAST_EVENTS_IMAGE = 'w-50 h-50 p-2 md:w-60 md:h-60 lg:w-92 lg:h-92 mx-1 lg:mx-3 rounded-3xl drop-shadow-md relative';
 
 const LONG_SQUIGGLY_LINE_SVG = '/svgs/events/long_events_squiggly_line.svg';
 
@@ -31,25 +31,13 @@ const PastEventsTile = ({ event }) => (
   <Tile classes={TILE_CONTAINER}>
     <div className={TILE_IMAGE_CONTAINER}>
       <div >
-        <Image 
-          className={PAST_EVENTS_IMAGE}
-          src={event.img1} 
-          alt={event.name} 
-        />
+        <PastEventImage img={event.img1} name={event.name} />
       </div>
       <div className='hidden md:block lg:block'>
-        <Image 
-          className={PAST_EVENTS_IMAGE}
-          src={event.img2} 
-          alt={event.name} 
-        />
+        <PastEventImage img={event.img2} name={event.name} />
       </div>
       <div className='hidden md:hidden lg:block'>
-        <Image 
-          className={PAST_EVENTS_IMAGE}
-          src={event.img3} 
-          alt={event.name} 
-        />
+        <PastEventImage img={event.img3} name={event.name} />
       </div>
     </div>
     <div className={TILE_TEXT_CONTAINER}>
