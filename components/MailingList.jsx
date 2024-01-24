@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FaEnvelope } from 'react-icons/fa';
 const MAILING_LIST_CONTAINER = 'bg-[#7055FD] flex flex-col text-center';
-const CONTENT_CONTAINER = 'flex flex-col pt-14 p-5 md:px-32 text-center';
+const CONTENT_CONTAINER = 'flex flex-col p-5 md:px-32 text-center';
 const HEADING_CONTAINER = 'flex flex-row text-center justify-center';
 const LINK_TO_MAILING_LIST =
   'https://docs.google.com/forms/d/e/1FAIpQLSfusGF-TTs6nXfBCodQuuDWqx7DnTrm6GF4c-CeDVUt1m_plA/viewform';
@@ -14,7 +14,7 @@ const MailingList = () => {
             <button className="font-extrabold underline rounded p-2 w-fit hover:opacity-85">
               <Link href={LINK_TO_MAILING_LIST}>Join </Link>
             </button>
-            <div className="">our Mailing list!</div>
+            <div>our Mailing list!</div>
             <FaEnvelope size={45} color="white" className="hidden sm:block align-middle" />
           </h1>
         </div>
