@@ -22,7 +22,7 @@ const Map = () => {
       {LOCATIONS.map(({ name, coordinates, offset }) => (
         <Marker key={name} coordinates={coordinates}>
           <circle r={3} fill="#FF4D6F" />
-          <text textAnchor="middle" y={offset || DEFAULT_MARKER_TEXT_OFFSET}>
+          <text textAnchor="middle" y={offset || DEFAULT_MARKER_TEXT_OFFSET} className="mapText">
             {name}
           </text>
         </Marker>
