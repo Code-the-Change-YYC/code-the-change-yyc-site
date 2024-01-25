@@ -57,7 +57,6 @@ const AlumniTile = ({ fullName, position, previousRole, testimonial, linkedin, p
 };
 
 const AlumniCarousel = ({ alumni }) => {
-  console.log(alumni);
   return (
     <div className={CAROUSEL_CONTAINER}>
       <Carousel>
