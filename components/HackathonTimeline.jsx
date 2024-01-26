@@ -5,24 +5,24 @@ import { HACKATHONS } from '../data/hackathons';
 
 const HACKATHON_TIMELINE_CONTAINER = 'bg-white';
 const HACKATHON_TIMELINE_HEADER = 'text-center'
-const HACKATHON_TIMELINE_CONTENT = 'flex-col justify-center text-center text-xl px-[50px] font-bold mb-[70px]'
+const HACKATHON_TIMELINE_CONTENT = 'flex-col text-center text-xl px-[50px] font-bold mb-[70px] md:flex-row'
 const HACKATHON_TITLE_YEAR = 'text-5xl pb-[15px] italic'
-const HACKATHON_IMAGE = 'w-65 h-70'
+const HACKATHON_IMAGE = 'border-[8px] border-[#00D3A9] object-cover rounded-xl max-w-[400px]'
 
 const HackathonSection = ({ hackathon }) => {
     return (
         <div className={HACKATHON_TIMELINE_CONTENT}>
-            <h1 className={HACKATHON_TITLE_YEAR}>
-                 {hackathon.year}
-            </h1>
-            <div className={HACKATHON_IMAGE}>
-                <Image className='object-cover rounded-xl' src={hackathon.img} />
-            </div>
+            <div>
+                <h1 className={HACKATHON_TITLE_YEAR}>
+                    {hackathon.year}
+                </h1>
+                    <Image className={HACKATHON_IMAGE} src={hackathon.img} />
+                </div>
             <div>
                 <p className='text-left my-[15px] text-[#FF6B54]'>
                     Topics:  {hackathon.topic}
                 </p>
-                <p className='font-medium'>{hackathon.blurb}</p>
+                <p className='font-medium text-[#00D3A9]'>{hackathon.blurb}</p>
             </div>
         </div>
     );
