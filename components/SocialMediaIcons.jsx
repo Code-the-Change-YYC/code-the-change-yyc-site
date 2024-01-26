@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import Link from 'next/link';
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const ICON_SIZE = 30;
 
@@ -12,14 +12,13 @@ const SocialMediaIcons = ({ classes }) => {
       <Link href="https://www.instagram.com/codethechangeyyc/" legacyBehavior>
         <FaInstagram size={ICON_SIZE} className="cursor-pointer" />
       </Link>
-      <Link
-        href="https://www.linkedin.com/company/code-the-change-yyc/"
-        legacyBehavior>
+      <Link href="https://www.tiktok.com/@codethechangeyyc/">
+        <FaTiktok size={ICON_SIZE} className="cursor-pointer" />
+      </Link>
+      <Link href="https://www.linkedin.com/company/code-the-change-yyc/" legacyBehavior>
         <FaLinkedin size={ICON_SIZE} className="cursor-pointer" />
       </Link>
-      <Link
-        href="https://www.youtube.com/channel/UC4wZt-bCL31HjxUF-zc5U_g"
-        legacyBehavior>
+      <Link href="https://www.youtube.com/channel/UC4wZt-bCL31HjxUF-zc5U_g" legacyBehavior>
         <FaYoutube size={ICON_SIZE} className="cursor-pointer" />
       </Link>
       <Link href="https://github.com/Code-the-Change-YYC" legacyBehavior>

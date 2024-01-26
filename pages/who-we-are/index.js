@@ -1,12 +1,19 @@
-import { Disclosure } from "@headlessui/react";
-import { FaAngleDown } from "react-icons/fa";
-import About from "../../components/About";
-import Executives from "../../components/Executives";
-import Heading from "../../components/Heading";
-import AlumniHighlights from "../../components/AlumniHighlights";
-import Timeline from "../../components/Timeline";
-import { FAQS } from "../../data/faq";
-import Events from "../../components/Events";
+import { Disclosure } from '@headlessui/react';
+import { FaAngleDown } from 'react-icons/fa';
+import About from '../../components/About';
+import Executives from '../../components/Executives';
+import Heading from '../../components/Heading';
+import AlumniHighlights from '../../components/AlumniHighlights';
+import Timeline from '../../components/Timeline';
+import { FAQS } from '../../data/faq';
+import Events from '../../components/Events';
+import { fetchContent } from '../../api/apiRoot';
+
+export async function getStaticProps() {
+  const alumni = await fetchContent('alumni');
+  alumni.sort((a, b) => a.orderNumber - b.orderNumber);
+  return { props: { alumni } };
+}
 
 const FAQDropdown = ({ prompt, content }) => {
   return (
@@ -16,9 +23,9 @@ const FAQDropdown = ({ prompt, content }) => {
           <>
             <Disclosure.Button className="items-center drop-shadow-md flex w-full justify-between rounded-lg bg-[#7055FD] px-8 py-4 text-left focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
               <span className="text-white italic text-xl font-medium">&quot;{prompt}&quot;</span>
-              <FaAngleDown className={`${open ? "rotate-180 transform" : ""} h-5 w-5 text-white`} />
+              <FaAngleDown className={`${open && 'rotate-180 transform'} h-5 w-5 text-white`} />
             </Disclosure.Button>
-            <Disclosure.Panel className="px-8 py-4 text-sm font-medium text-base">{content}</Disclosure.Panel>
+            <Disclosure.Panel className="px-8 py-4 text-sm font-medium">{content}</Disclosure.Panel>
           </>
         )}
       </Disclosure>
@@ -26,7 +33,7 @@ const FAQDropdown = ({ prompt, content }) => {
   );
 };
 
-const WhoWeAre = () => {
+const WhoWeAre = ({ alumni }) => {
   return (
     <div className="flex flex-col w-full -mt-5 md:mt-0 lg:mt-0">
       <div className="flex flex-col lg:flex-row">
@@ -37,7 +44,7 @@ const WhoWeAre = () => {
       </div>
       <Events />
       <Executives />
-      <AlumniHighlights />
+      <AlumniHighlights alumni={alumni} />
       <div className="flex flex-col bg-white px-10 md:px-24 lg:px-48 w-full py-10">
         <Heading>FAQ</Heading>
         <div className="flex flex-col py-10 w-full space-y-4">
