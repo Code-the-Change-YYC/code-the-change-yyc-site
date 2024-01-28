@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { UnderlineTypes } from '../utils/underlineType';
 import Heading from './Heading';
 import TextSection from './TextSection';

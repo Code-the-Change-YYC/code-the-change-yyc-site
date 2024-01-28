@@ -2,7 +2,7 @@ import EventsBanner from '../../components/EventsBanner';
 import UpcomingEvents from '../../components/UpcomingEvents';
 
 const Events = () => {
-  const placeholder = 'Events page';
+  // const placeholder = 'Events page';
   return (
     // <div className="flex flex-col w-full mt-5 md:mt-0 lg:mt-0">
     <div className="flex flex-col w-full mt-5 md:mt-0 lg:mt-0 ">

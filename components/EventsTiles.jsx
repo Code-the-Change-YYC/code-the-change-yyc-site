@@ -60,10 +60,10 @@ const EventsTiles = () => {
       {/* Second Column (Two Smaller Rows) */}
       <div className="w-full lg:w-1/2 flex flex-wrap">
         {events.slice(1, 3).map((event) => (
-          <div className="w-full lg:h-1/2 p-4">
+          <div key={event.id} className="w-full lg:h-1/2 p-4">
             <div className={`${EVENT_TILE} `}>
               {/* <EventTile {...values} /> */}
-              <EventTile key={event.id} {...event} />
+              <EventTile {...event} />
             </div>
           </div>
         ))}
