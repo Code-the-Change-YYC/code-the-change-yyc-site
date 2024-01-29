@@ -23,7 +23,7 @@ const HackathonSection = ({ hackathon, index }) => {
   } else {
     sectionInfoStyling += 'md:flex-row-reverse';
     sectionTextStyling += 'md:text-right';
-    sectionTopicStyling += 'md:text-right';
+    sectionTopicStyling += 'md:text-right md:justify-end';
   }
 
   return (
