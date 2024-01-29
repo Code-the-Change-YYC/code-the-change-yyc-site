@@ -8,8 +8,8 @@ export const HACKATHONS = [
     title: '2023 Hackathon',
     year: '2023',
     img: Hackathon2023,
-    topic: 'Education, inequality, and sustainable living',
-    blurb: 'Our biggest hackathon to date! It saw students from all over Canada come up with innovative solutions.'
+    topic: 'Sustainability',
+    blurb: 'Our second biggest hybrid Canada-wide hackathon where students came together to develop solutions along the theme of promoting education and sustainable living!'
   },
   {
     title: '2022 Hackathon',
