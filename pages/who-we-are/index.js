@@ -12,7 +12,10 @@ import { fetchContent } from '../../api/apiRoot';
 export async function getStaticProps() {
   const alumni = await fetchContent('alumni');
   alumni.sort((a, b) => a.orderNumber - b.orderNumber);
-  return { props: { alumni } };
+  const timeline = await fetchContent('timeline');
+  timeline.sort((a, b) => a.year - b.year);
+
+  return { props: { alumni, timeline } };
 }
 
 const FAQDropdown = ({ prompt, content }) => {
@@ -33,13 +36,13 @@ const FAQDropdown = ({ prompt, content }) => {
   );
 };
 
-const WhoWeAre = ({ alumni }) => {
+const WhoWeAre = ({ alumni, timeline }) => {
   return (
     <div className="flex flex-col w-full -mt-5 md:mt-0 lg:mt-0">
       <div className="flex flex-col lg:flex-row">
         <About />
         <div className="scrollbar-hide overflow-y-auto">
-          <Timeline />
+          <Timeline timeline={timeline} />
         </div>
       </div>
       <Events />
