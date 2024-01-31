@@ -2,8 +2,15 @@ import HackathonTimeline from '../../components/HackathonTimeline';
 
 import EventsBanner from '../../components/EventsBanner';
 import UpcomingEvents from '../../components/UpcomingEvents';
+import { fetchContent } from '../../api/apiRoot';
 
-const Events = () => {
+export async function getStaticProps() {
+  const event = await fetchContent('upcomingEvents');
+  return { props: { event } };
+}
+
+const Events = ({ event }) => {
+  // const placeholder = 'Events page';
   return (
     // <div className="flex flex-col w-full mt-5 md:mt-0 lg:mt-0">
     <div className="flex flex-col w-full mt-5 md:mt-0 lg:mt-0 ">
@@ -18,7 +25,7 @@ const Events = () => {
         We`re currently building the <b>Events Page</b> so stay tuned! 👀
       </h1> */}
       <EventsBanner />
-      <UpcomingEvents />
+      <UpcomingEvents event={event} />
       <HackathonTimeline />
     </div>
   );
