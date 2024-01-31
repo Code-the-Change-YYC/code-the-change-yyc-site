@@ -3,7 +3,7 @@ import Heading from './Heading';
 import EventsCarousel from './EventsCarousel';
 import EventsTiles from './EventsTiles';
 
-const UpcomingEvents = () => {
+const UpcomingEvents = ({ event }) => {
   return (
     <div className="flex flex-col items-center bg-orange h-[80vh] md:h-[200vh] lg:h-[145vh] z-0">
       <div className="flex items-baseline space-x-4">
@@ -12,8 +12,8 @@ const UpcomingEvents = () => {
           Events
         </Heading>
       </div>
-      <EventsCarousel />
-      <EventsTiles />
+      <EventsCarousel event={event} />
+      <EventsTiles event={event} />
     </div>
   );
 };
