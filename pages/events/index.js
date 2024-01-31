@@ -6,7 +6,6 @@ const Events = () => {
   return (
     <>
       <HackathonTimeline />
-      <EventsPlaceholder placeholder={placeholder} />
     </>
   );
 };
