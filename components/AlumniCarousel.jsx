@@ -5,24 +5,11 @@ import Carousel from './Carousel';
 import FontAwesomeLink from './FontAwesomeLink';
 import 'swiper/css';
 import 'swiper/css/navigation';
-
+import { rgbDataURL } from '../utils/blurImage';
 const CAROUSEL_CONTAINER = 'text-white rounded-lg w-[20rem] h-[44rem] shadow-2xl md:w-4/5 swiper-button-white';
 const ALUMNI_TILE =
   'bg-[#7055FD] w-[20rem] h-[70rem] md:h-[44rem] rounded-lg items-center p-14 lg:p-10 flex flex-col shadow-2xl md:w-full md:flex-row';
 const ALUMNI_PROFILE = 'flex flex-col items-center mx-auto text-center md:p-10';
-
-const keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
-
-const triplet = (e1, e2, e3) =>
-  keyStr.charAt(e1 >> 2) +
-  keyStr.charAt(((e1 & 3) << 4) | (e2 >> 4)) +
-  keyStr.charAt(((e2 & 15) << 2) | (e3 >> 6)) +
-  keyStr.charAt(e3 & 63);
-
-const rgbDataURL = (r, g, b) =>
-  `data:image/gif;base64,R0lGODlhAQABAPAA${
-    triplet(0, r, g) + triplet(b, 255, 255)
-  }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
 
 const AlumniTile = ({ fullName, position, previousRole, testimonial, linkedin, profile }) => {
   return (
