@@ -12,16 +12,7 @@
     -webkit-text-stroke: 2px white;
   }
 
-<<<<<<< HEAD
   .mapText {
     font-size: 2.5rem;
   }
 }
-=======
-  /* 
-@media (max-width: 768px) {
-  .text-stroke-outside {
-    -webkit-text-stroke: 2px white;
-  } */
-}
->>>>>>> ace249f (Add large screen responsiveness to upcoming events)
