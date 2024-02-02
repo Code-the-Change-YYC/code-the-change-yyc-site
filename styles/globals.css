@@ -8,6 +8,11 @@
 }
 
 @media (max-width: 768px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
   .text-stroke-outside {
     -webkit-text-stroke: 2px white;
   }
