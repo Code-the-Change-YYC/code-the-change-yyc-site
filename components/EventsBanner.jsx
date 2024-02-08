@@ -11,9 +11,7 @@ const options = [
 const LIST_ITEM_STYLE = 'text-white text-3xl font-medium w-[70vw] py-4 hover:cursor-pointer';
 
 const EventsBanner = () => {
-  const handleClick = (id) => {
-    console.log('do something where you navigate with the Id to a certain section', id);
-  };
+  const handleClick = () => {};
 
   return (
     <div className="flex flex-col bg-lilac text-center items-center pb-12 md:py-12">
