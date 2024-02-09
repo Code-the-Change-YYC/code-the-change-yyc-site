@@ -1,22 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import { EffectCards } from "swiper";
-import { SwiperSlide } from "swiper/react";
-import Button from "../components/Button";
-import Carousel from "../components/Carousel";
-import Tile from "../components/Tile";
-import Heading from "../components/Heading";
-import TextSection from "../components/TextSection";
-import Sponsors from "../components/Sponsors";
-import { UnderlineTypes } from "../utils/underlineType";
-import HomePageBackgroundImage from "../public/images/homepage/homepage_background.png";
+import Image from 'next/image';
+import { EffectCards } from 'swiper';
+import { SwiperSlide } from 'swiper/react';
+import Button from '../components/Button';
+import Carousel from '../components/Carousel';
+import Tile from '../components/Tile';
+import Heading from '../components/Heading';
+import TextSection from '../components/TextSection';
+import Sponsors from '../components/Sponsors';
+import { UnderlineTypes } from '../utils/underlineType';
+import HomePageBackgroundImage from '../public/images/homepage/homepage_background.png';
 
-const LOGO_SVG_TOP = "/svgs/homepage/with_logo_top.svg";
-const LOGO_SVG_BOTTOM = "/svgs/homepage/with_logo_bottom.svg";
-const COMMUNITY_SVG = "/svgs/homepage/coding_community.svg";
+const LOGO_SVG_TOP = '/svgs/homepage/with_logo_top.svg';
+const LOGO_SVG_BOTTOM = '/svgs/homepage/with_logo_bottom.svg';
+const COMMUNITY_SVG = '/svgs/homepage/coding_community.svg';
 const ROLE_TILE_SIZE = 300;
-const ROLES = ["Development", "Marketing", "Design", "Events"];
-const STANDOUT_TEXT_CLASSES = "font-bold text-[#7055FD]";
+const ROLES = ['Development', 'Marketing', 'Design', 'Events'];
+const STANDOUT_TEXT_CLASSES = 'font-bold text-[#7055FD]';
 
 const RoleTile = ({ role }) => {
   return (
@@ -34,7 +34,7 @@ const RoleTile = ({ role }) => {
 
 const RolesMobileCardCarousel = () => {
   return (
-    <Carousel effect={"cards"} grabCursor={true} modules={[EffectCards]}>
+    <Carousel effect={'cards'} grabCursor={true} modules={[EffectCards]}>
       {ROLES.map((role) => (
         <SwiperSlide key={role}>
           <RoleTile role={role} key={role} />
@@ -85,7 +85,7 @@ export default function Home() {
           <Heading>Coding</Heading>
           <TextSection>
             We seek to partner with <span className={STANDOUT_TEXT_CLASSES}>nonprofit impact causes</span> that have
-            projects on the go that need{" "}
+            projects on the go that need{' '}
             <span className={STANDOUT_TEXT_CLASSES}>additional programming and software development support</span>. We
             work with project managers, product designers, and analysts to turn project visions to quality software.
           </TextSection>
@@ -96,7 +96,7 @@ export default function Home() {
         <div className="flex flex-col md:w-1/2 md:pl-32 px-5 md:px-0 items-center py-10 md:py-0">
           <Heading underlineType={UnderlineTypes.GREEN_LONG_UNDERLINE}>Community</Heading>
           <TextSection>
-            Whether it’s through{" "}
+            Whether it’s through{' '}
             <span className={STANDOUT_TEXT_CLASSES}>code, workshops, donations, or volunteering</span>, we’re always
             looking to do something for our local communities! Every year, we donate to charities across Calgary and
             around the world. We also dedicate time volunteering at local organizations and host technical workshops
@@ -115,7 +115,7 @@ export default function Home() {
             <RoleTile role={role} key={role} />
           ))}
         </div>
-        <div className="md:hidden px-10">
+        <div className="md:hidden overflow-hidden px-10">
           <RolesMobileCardCarousel />
         </div>
         <div className="py-12 flex justify-center">
