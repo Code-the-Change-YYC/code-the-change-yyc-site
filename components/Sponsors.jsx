@@ -11,7 +11,7 @@ import {
 
 const SPONSORS_CONTAINER = 'bg-white flex flex-col items-center py-10 md:py-20';
 const HEADING_CONTAINER = 'flex flex-row justify-center mb-10 ml-5';
-const SPONSORS_LEVEL_CONTAINER = 'flex flex-row justify-center items-center my-5';
+const SPONSORS_LEVEL_CONTAINER = 'flex flex-row justify-center items-center my-5 flex-wrap';
 const CONTENT_CONTAINER = 'my-10 font-medium w-1/2 text-center';
 const UNDERLINE_CONTAINER = 'mb-10';
 const UNDERLINE_PROPERTIES = {
