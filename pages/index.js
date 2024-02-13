@@ -115,7 +115,7 @@ export default function Home() {
             <RoleTile role={role} key={role} />
           ))}
         </div>
-        <div className="md:hidden px-10">
+        <div className="md:hidden overflow-hidden px-10">
           <RolesMobileCardCarousel />
         </div>
         <div className="py-12 flex justify-center">
