@@ -22,7 +22,7 @@ const TILE_TEXT_CONTAINER = 'basis-3/5 md:basis-3/5 lg:basis-3/5 text-center md:
 const TILE_TEXT_SPACING = 'lg:space-y-10 py-5';
 
 const PAST_EVENTS_CONTAINER = 'bg-[#00D3A9] pb-10';
-const PAST_EVENTS_CONTENT = 'px-10 md:px-24 lg:px-48 py-20';
+const PAST_EVENTS_CONTENT = 'px-10 md:px-24 lg:px-48 md:py-20';
 const PAST_EVENTS_HEADER = 'flex flex-row';
 
 const LONG_SQUIGGLY_LINE_SVG = '/svgs/events/long_events_squiggly_line.svg';
@@ -74,7 +74,7 @@ const PastEventsCarousel = () => {
           <div className={`${ARROW_INIT.right} ${RIGHT_NAVIGATION_ARROW}`}></div>
         </div>
       </div>
-      <div className='my-10 w-full h-48 xl:h-64 relative'>
+      <div className='md:my-10 w-full h-48 xl:h-64 relative'>
         <Image src={LONG_SQUIGGLY_LINE_SVG} alt='' layout='fill' objectFit='cover' />
       </div>
     </div>
