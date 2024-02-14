@@ -1,5 +1,5 @@
 import HackathonTimeline from '../../components/HackathonTimeline';
-
+import PastEventsCarousel from '../../components/PastEventsCarousel';
 import EventsBanner from '../../components/EventsBanner';
 import UpcomingEvents from '../../components/UpcomingEvents';
 import { fetchContent } from '../../api/apiRoot';
@@ -27,6 +27,7 @@ const Events = ({ event }) => {
       <EventsBanner />
       <UpcomingEvents event={event} />
       <HackathonTimeline />
+      <PastEventsCarousel />
     </div>
   );
 };
