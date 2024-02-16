@@ -14,16 +14,34 @@ const PAST_EVENTS_IMAGE =
 //     </div>
 //   );
 // };
-const PastEventImage = ({ image, eventName }) => {
+// const PastEventImage = ({ images }) => {
+//   console.log(images);
+//   return (
+//     <div>
+//       <Image
+//         className={PAST_EVENTS_IMAGE}
+//         src={`https:${images.fields.file.url}`}
+//         alt={images.fields.title}
+//         width={images.fields.file.details.image.width}
+//         height={images.fields.file.details.image.height}
+//       />
+//     </div>
+//   );
+// };
+const PastEventImage = ({ images }) => {
   return (
-    <div>
-      <Image
-        className={PAST_EVENTS_IMAGE}
-        src={`https:${image.fields.file.url}`}
-        alt={eventName}
-        width={image.fields.file.details.image.width}
-        height={image.fields.file.details.image.height}
-      />
+    <div className="flex flex-row overflow-x">
+      {images.map((image, index) => (
+        <div key={index}>
+          <Image
+            className={PAST_EVENTS_IMAGE}
+            src={`https:${image.fields.file.url}`}
+            alt={image.fields.title}
+            width={image.fields.file.details.image.width}
+            height={image.fields.file.details.image.height}
+          />
+        </div>
+      ))}
     </div>
   );
 };

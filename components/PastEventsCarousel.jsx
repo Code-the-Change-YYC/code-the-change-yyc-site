@@ -36,14 +36,14 @@ const PastEventsTile = ({ pastEvent }) => (
     <div className={TILE_IMAGE_CONTAINER}>
       <div>
         {/* <PastEventImage img={event.img1} name={event.name} /> */}
-        <PastEventImage image={pastEvent.image} />
+        <PastEventImage images={pastEvent.images} />
       </div>
-      <div className="hidden md:block lg:block">
-        <PastEventImage image={pastEvent.image} />
+      {/* <div className="hidden md:block lg:block">
+        <PastEventImage images={pastEvent.images} />
       </div>
       <div className="hidden md:hidden lg:block">
-        <PastEventImage image={pastEvent.image} />
-      </div>
+        <PastEventImage images={pastEvent.images} />
+      </div> */}
     </div>
     <div className={TILE_TEXT_CONTAINER}>
       <h2 className="hidden md:block lg:block text-4xl md:text-6xl xl:text-6xl font-medium italic">
@@ -59,6 +59,7 @@ const PastEventsTile = ({ pastEvent }) => (
 );
 
 const PastEventsCarousel = ({ pastEvent }) => {
+  console.log(pastEvent);
   return (
     <div className={PAST_EVENTS_CONTAINER}>
       <div className={PAST_EVENTS_CONTENT}>
