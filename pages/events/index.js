@@ -6,10 +6,12 @@ import { fetchContent } from '../../api/apiRoot';
 
 export async function getStaticProps() {
   const event = await fetchContent('upcomingEvents');
-  return { props: { event } };
+  const pastEvent = await fetchContent('pastEvents');
+  console.log(pastEvent);
+  return { props: { event, pastEvent } };
 }
 
-const Events = ({ event }) => {
+const Events = ({ event, pastEvent }) => {
   // const placeholder = 'Events page';
   return (
     // <div className="flex flex-col w-full mt-5 md:mt-0 lg:mt-0">
@@ -27,7 +29,7 @@ const Events = ({ event }) => {
       <EventsBanner />
       <UpcomingEvents event={event} />
       <HackathonTimeline />
-      <PastEventsCarousel />
+      <PastEventsCarousel pastEvent={pastEvent} />
     </div>
   );
 };
