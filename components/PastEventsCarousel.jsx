@@ -3,7 +3,6 @@ import { SwiperSlide } from 'swiper/react';
 import Tile from '../components/Tile';
 import TextSection from './TextSection';
 import Carousel from '../components/Carousel';
-import { PAST_EVENTS } from '../data/events';
 import styles from '../components/RolesCarousel.module.css';
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
