@@ -35,15 +35,8 @@ const PastEventsTile = ({ pastEvent }) => (
     </div>
     <div className={TILE_IMAGE_CONTAINER}>
       <div>
-        {/* <PastEventImage img={event.img1} name={event.name} /> */}
         <PastEventImage images={pastEvent.images} />
       </div>
-      {/* <div className="hidden md:block lg:block">
-        <PastEventImage images={pastEvent.images} />
-      </div>
-      <div className="hidden md:hidden lg:block">
-        <PastEventImage images={pastEvent.images} />
-      </div> */}
     </div>
     <div className={TILE_TEXT_CONTAINER}>
       <h2 className="hidden md:block lg:block text-4xl md:text-6xl xl:text-6xl font-medium italic">
@@ -59,7 +52,6 @@ const PastEventsTile = ({ pastEvent }) => (
 );
 
 const PastEventsCarousel = ({ pastEvent }) => {
-  console.log(pastEvent);
   return (
     <div className={PAST_EVENTS_CONTAINER}>
       <div className={PAST_EVENTS_CONTENT}>
@@ -78,10 +70,7 @@ const PastEventsCarousel = ({ pastEvent }) => {
         <div className={CAROUSEL_CONTAINER}>
           <div className={`${ARROW_INIT.left} ${LEFT_NAVIGATION_ARROW}`}></div>
           <Carousel navigation={{ prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next', clickable: true }}>
-            {/* {PAST_EVENTS.map((event) => ( */}
             {pastEvent.map((pastEvent) => (
-              // <SwiperSlide key={event.name}>
-              //   <PastEventsTile event={event} />
               <SwiperSlide key={pastEvent.name}>
                 <PastEventsTile pastEvent={pastEvent} />
               </SwiperSlide>
