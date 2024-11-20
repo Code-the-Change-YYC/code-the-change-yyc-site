@@ -13,7 +13,7 @@ export async function getStaticProps() {
   const alumni = await fetchContent('alumni');
   alumni.sort((a, b) => a.orderNumber - b.orderNumber);
   const timeline = await fetchContent('timeline');
-  timeline.sort((a, b) => a.year - b.year);
+  timeline.sort((a, b) => b.year - a.year);
 
   return { props: { alumni, timeline } };
 }

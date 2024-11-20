@@ -69,7 +69,7 @@ const Timeline = ({ timeline }) => {
     </div>
   );
 
-  const renderTimeline = timeline.reverse().map((props, index) => {
+  const renderTimeline = timeline.map((props, index) => {
     return isEven(index) ? EvenTimelineBlock(props) : OddTimelineBlock(props);
   });
 
