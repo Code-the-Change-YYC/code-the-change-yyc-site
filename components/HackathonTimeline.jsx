@@ -69,6 +69,7 @@ const HackathonTimeline = () => {
         {hackathons.map((hackathon, index) => (
           <HackathonSection hackathon={hackathon} key={index} index={index} />
         ))}
+          
       </div>
     </div>
   );
