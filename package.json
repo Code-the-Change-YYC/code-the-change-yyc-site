@@ -37,5 +37,18 @@
   },
   "engines": {
     "node": "^18.16.1"
-  }
+  },
+  "description": "First, run the development server:",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Code-the-Change-YYC/code-the-change-yyc-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Code-the-Change-YYC/code-the-change-yyc-site/issues"
+  },
+  "homepage": "https://github.com/Code-the-Change-YYC/code-the-change-yyc-site#readme"
 }
