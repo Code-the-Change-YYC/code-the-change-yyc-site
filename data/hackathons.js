@@ -32,5 +32,8 @@ export const HACKATHONS = [
     topic: 'Climate Action',
     blurb: 'Our first ever hackathon! Shout out to Benevity for letting us hold it there.'
   },
+
 ];
+
+
 
