@@ -7,6 +7,7 @@ import { fetchContent } from '../../api/apiRoot';
 export async function getStaticProps() {
   const event = await fetchContent('upcomingEvents');
   const pastEvent = await fetchContent('pastEvents');
+  console.log(event);
   return { props: { event, pastEvent } };
 }
 
