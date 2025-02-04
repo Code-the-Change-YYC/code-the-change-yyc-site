@@ -3,7 +3,7 @@ import EventsTiles from './EventsTiles';
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 
-const UpcomingEvents = ({ event }) => {
+const UpcomingEvents = ({ upcomingEvent }) => {
   return (
     <div className="flex flex-col items-center bg-orange z-0 pb-12 md:pb-16 lg:pb-20">
       <div className="flex items-baseline space-x-4 mb-4">
@@ -12,8 +12,8 @@ const UpcomingEvents = ({ event }) => {
           Events
         </Heading>
       </div>
-      <EventsCarousel event={event} />
-      <EventsTiles event={event} />
+      <EventsCarousel upcomingEvent={upcomingEvent} />
+      <EventsTiles upcomingEvent={upcomingEvent} />
     </div>
   );
 };
