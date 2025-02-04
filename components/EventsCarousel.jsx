@@ -27,7 +27,7 @@ const EventTile = ({ eventName, description, image }) => {
           <EventTileImage image={image} />
         </div>
       </div>
-      <TextSection classes="text-xs sm:py-2 ">{descriptionText}</TextSection>
+      <TextSection classes="text-sm pb-10">{descriptionText}</TextSection>
     </div>
   );
 };
