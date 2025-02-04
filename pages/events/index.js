@@ -5,17 +5,17 @@ import UpcomingEvents from '../../components/UpcomingEvents';
 import { fetchContent } from '../../api/apiRoot';
 
 export async function getStaticProps() {
-  const event = await fetchContent('upcomingEvents');
+  const upcomingEvent = await fetchContent('upcomingEvents');
   const pastEvent = await fetchContent('pastEvents');
-  console.log(event);
-  return { props: { event, pastEvent } };
+  console.log(upcomingEvent);
+  return { props: { upcomingEvent, pastEvent } };
 }
 
-const Events = ({ event, pastEvent }) => {
+const Events = ({ upcomingEvent, pastEvent }) => {
   return (
     <div className="flex flex-col w-full mt-5 md:mt-0 lg:mt-0 ">
       <EventsBanner />
-      <UpcomingEvents event={event} />
+      <UpcomingEvents upcomingEvent={upcomingEvent} />
       <HackathonTimeline />
       <PastEventsCarousel pastEvent={pastEvent} />
     </div>

@@ -4,7 +4,6 @@ import styles from '../components/RolesCarousel.module.css';
 import 'swiper/css/navigation';
 import TextSection from './TextSection';
 import Heading from './Heading';
-import Image from 'next/image';
 import { EventTileImage } from './EventTileImage';
 
 const CAROUSEL_CONTAINER = 'w-4/5 md:hidden swiper-button swiperContainer relative';
@@ -28,32 +27,19 @@ const EventTile = ({ eventName, description, image }) => {
           <EventTileImage image={image} />
         </div>
       </div>
-      {/* {image && (
-        <Image
-          className={EVENTS_IMAGE}
-          src={`https:${image.fields.file.url}`} // ✅ Correct way to access the image URL
-          alt={image.fields.title || 'Event image'}
-          width={180}
-          height={180}
-          placeholder="blur"
-          objectFit="cover"
-          blurDataURL={rgbDataURL()}
-        />
-      )} */}
-      {/* <Image src={EVENT_SVG} alt="event image" width={180} height={180} objectFit="cover" /> */}
       <TextSection classes="text-sm pb-10">{descriptionText}</TextSection>
     </div>
   );
 };
 
-const EventCarousel = ({ event }) => {
+const EventCarousel = ({ upcomingEvent }) => {
   return (
     <div className={CAROUSEL_CONTAINER}>
       <div className={`${ARROW_INIT.left} ${LEFT_NAVIGATION_ARROW}`}></div>
       <Carousel navigation={{ prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next', clickable: true }}>
-        {event.map((event) => (
-          <SwiperSlide key={event.id}>
-            <EventTile {...event} />
+        {upcomingEvent.map((upcomingEvent) => (
+          <SwiperSlide key={upcomingEvent.id}>
+            <EventTile {...upcomingEvent} />
           </SwiperSlide>
         ))}
       </Carousel>

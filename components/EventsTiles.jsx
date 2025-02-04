@@ -22,23 +22,23 @@ const EventTile = ({ eventName, description, image }) => {
   );
 };
 
-const EventsTiles = ({ event }) => {
+const EventsTiles = ({ upcomingEvent }) => {
   return (
     <div className={EVENTS_TILES_CONTAINER}>
       {/* First Column (One Large Row) */}
       <div className="w-full lg:w-1/2 p-4">
         <div className={`${EVENT_TILE} h-full`}>
-          {event.slice(0, 1).map((event) => (
-            <EventTile key={event.id} {...event} />
+          {upcomingEvent.slice(0, 1).map((upcomingEvent) => (
+            <EventTile key={upcomingEvent.id} {...upcomingEvent} />
           ))}
         </div>
       </div>
       {/* Second Column (Two Smaller Rows) */}
       <div className="w-full lg:w-1/2 flex flex-wrap">
-        {event.slice(1, 3).map((event) => (
-          <div key={event.id} className="w-full lg:h-1/2 p-4">
+        {upcomingEvent.slice(1, 3).map((upcomingEvent) => (
+          <div key={upcomingEvent.id} className="w-full lg:h-1/2 p-4">
             <div className={`${EVENT_TILE} `}>
-              <EventTile {...event} />
+              <EventTile {...upcomingEvent} />
             </div>
           </div>
         ))}
