@@ -1,9 +1,17 @@
+import Hackathon2024 from '../public/images/events/hackathons/htc2024.jpg';
 import Hackathon2023 from '../public/images/events/hackathons/htc2023.jpg';
 import Hackathon2022 from '../public/images/events/hackathons/htc2022.JPG';
 import Hackathon2021 from '../public/images/events/hackathons/htc2021.png';
 import Hackathon2019 from '../public/images/events/hackathons/htc2019.jpg';
 
 export const HACKATHONS = [
+  {
+    title: '2024 Hackathon',
+    year: '2024',
+    img: Hackathon2024,
+    topic: 'Justice, Peace, and Inclusion',
+    blurb: 'A hybrid hackathon that focussed on how we could leverage technology to provide access to justice for all and promote peace and inclusion in society!'
+  },
   {
     title: '2023 Hackathon',
     year: '2023',
