@@ -14,6 +14,9 @@ import ResponsibleAIthree from "../public/images/events/past-events/responsible_
 import RoastONE from "../public/images/events/past-events/resume_1.jpg";
 import RoastTWO from "../public/images/events/past-events/resume_2.jpg";
 import RoastTHREE from "../public/images/events/past-events/resume_3.jpg";
+import GenAiOne from "../public/images/events/past-events/gen_ai_1.jpg";
+import GenAiTwo from "../public/images/events/past-events/gen_ai_2.jpg";
+import GenAiThree from "../public/images/events/past-events/gen_ai_3.jpg";
 
 export const EVENTS_IMAGES = [
   {
@@ -35,6 +38,13 @@ export const EVENTS_IMAGES = [
 ];
 
 export const PAST_EVENTS = [
+  {
+    Name: "Generative AI",
+    img1: GenAiOne,
+    img2: GenAiTwo,
+    img3: GenAiThree,
+    blurb: "Presented by Wizdrop, students were guided through the process of building an interactive AI ChatBot for educational purposes.",
+  },
   {
     name: "Resume Roast",
     img1: RoastONE,
