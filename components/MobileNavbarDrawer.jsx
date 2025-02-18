@@ -9,6 +9,9 @@ const MobileNavbarDrawer = () => {
         <a className={TEXT_CLASSES} href="who-we-are">
           About
         </a>
+        <a className={TEXT_CLASSES} href="join">
+          News
+        </a>
         <a className={TEXT_CLASSES} href="events">
           Events
         </a>
