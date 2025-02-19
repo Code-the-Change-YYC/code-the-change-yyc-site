@@ -30,9 +30,6 @@ const Navbar = () => {
           <Link href="/newsletter" legacyBehavior>
             <span className={TEXT_CLASSES}>News</span>
           </Link>
-          <Link href="/" legacyBehavior>
-            <span className={TEXT_CLASSES}>News</span>
-          </Link>
           <Link href="/events" legacyBehavior>
             <span className={TEXT_CLASSES}>Events</span>
           </Link>
