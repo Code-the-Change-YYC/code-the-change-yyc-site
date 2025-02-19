@@ -12,7 +12,7 @@ const MobileNavbarDrawer = () => {
         <a className={TEXT_CLASSES} href="our-team">
           Our Team
         </a>
-        <a className={TEXT_CLASSES} href="join">
+        <a className={TEXT_CLASSES} href="newsletter">
           News
         </a>
         <a className={TEXT_CLASSES} href="events">
