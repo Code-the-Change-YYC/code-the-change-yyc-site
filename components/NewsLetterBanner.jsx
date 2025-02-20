@@ -4,13 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaAngleDown } from 'react-icons/fa';
 import { Disclosure } from '@headlessui/react';
-const PURPLE_SIDE_LINES_DIR = '/svgs/timeline/left_side_lines.svg';
+const GREEN_SIDE_LINES_DIR = '/svgs/newsletter/Group 33.svg';
 
 const NEWS_CONTAINER = 'flex flex-col min-h-screen bg-white pt-10 z-0';
 const CONTENT_CONTAINER = 'flex flex-col pt-14 p-5 md:px-32';
 const NEWS_HEADER = 'flex flex-row';
 
-const LONG_SQUIGGLY_LINE_SVG = '/svgs/events/long_events_squiggly_line.svg';
+const RED_SQUIGGLY_LINE = '/svgs/newsletter/Vector 41.svg';
+const PINK_SQUIGGLY_LINE = '/svgs/newsletter/Vector 49.svg';
+const GREEN_SQUIGGLY_LINE = '/svgs/newsletter/Vector 46.svg';
 
 const LETTERS = [
   {
@@ -19,6 +21,10 @@ const LETTERS = [
   },
   {
     prompt: 'Winter 2024',
+    letter: 'Should link to the pdf here',
+  },
+  {
+    prompt: 'Fall 2023',
     letter: 'Should link to the pdf here',
   },
 ];
@@ -45,8 +51,10 @@ const NewsLetterBanner = () => {
   return (
     <div className={NEWS_CONTAINER}>
       <div className={CONTENT_CONTAINER}>
+        <div className="absolute top-[-20px] left-0 w-full h-[50px] flex justify-start">
+          <img src={GREEN_SIDE_LINES_DIR} className="w-auto h-full" />
+        </div>
         <div className={NEWS_HEADER}>
-          <img src={PURPLE_SIDE_LINES_DIR}></img>
           <h1 className="text-5xl font-semibold text-[#FF4D6F]">Newsletter</h1>
         </div>
         <TextSection classes="text-black py-5 z-20">
@@ -68,8 +76,28 @@ const NewsLetterBanner = () => {
           </div>
         </div>
       </div>
-      <div className="my-10 w-full h-56 xl:h-96 bottom-0 absolute -z-10">
-        <Image src={LONG_SQUIGGLY_LINE_SVG} alt="" layout="fill" objectFit="cover" />
+      <div className="relative w-screen h-[340px] overflow-hidden">
+        <Image
+          src={RED_SQUIGGLY_LINE}
+          alt=""
+          width={603}
+          height={173}
+          className="absolute top-[100px] left-0 scale-110 z-[-10]"
+        />
+        <Image
+          src={PINK_SQUIGGLY_LINE}
+          alt=""
+          width={945}
+          height={275}
+          className="absolute top-[60px] left-10 scale-110 z-[-10]"
+        />
+        <Image
+          src={GREEN_SQUIGGLY_LINE}
+          alt=""
+          width={1505}
+          height={167}
+          className="absolute top-[20px] left-10 scale-110 z-[-10]"
+        />
       </div>
     </div>
   );
