@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import Heading from './Heading';
 import AlumniCarousel from './AlumniCarousel';
 import { UnderlineTypes } from '../utils/underlineType';
