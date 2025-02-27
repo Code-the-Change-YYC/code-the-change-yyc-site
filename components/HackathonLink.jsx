@@ -41,7 +41,7 @@ const HackathonLink = () => {
         </Link>
       </TextSection>
     </div>
-  );
+);
 };
 
 export default HackathonLink;
