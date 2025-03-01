@@ -10,9 +10,17 @@ const HackathonLink = () => {
   return (
     <div className="flex flex-col items-center bg-orange z-0 pb-12 md:pb-16 lg:pb-20">
       <div className="flex items-baseline space-x-4 mb-4 pt-16 px-10 md:px-24 lg:px-48">
-        <Heading classes="text-white text-[2.25rem]" underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>
-            Join the Change at Our Hackathons: Hack the Change
-        </Heading>
+        <div className="hidden lg:flex">
+          <Heading classes="text-white text-[2.25rem]" underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>
+              Join the Change at Our Hackathons: Hack the Change
+          </Heading>
+        </div>
+        <div className="lg:hidden">
+          <Heading classes="text-white text-[2.25rem]">
+              Join the Change at Our Hackathons: Hack the Change
+          </Heading>
+        </div>
+        
       </div>
       <TextSection classes="text-white pb-5 z-10 px-10 md:px-24 lg:px-48 md:py-4">
             Dive into collaborative innovation with Code the Change YYC&apos;s hackathons! Designed to empower 
