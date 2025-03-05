@@ -9,6 +9,8 @@ const PURPLE_SHORT_UNDERLINE_DIR = '/svgs/timeline/purple_heading_underline.svg'
 const WHITE_SINGLE_LINE_DIR = '/svgs/white_long_underline.svg';
 const WHITE_CURLY_LINE_DIR = '/svgs/white_alumni_underline.svg';
 const BEIGE_SHORT_UNDERLINE_DIR = '/svgs/beige_underline.svg';
+const PINK_UNDERLINE_DIR = '/svgs/pink_underline.svg';
+
 
 const Heading = ({ classes, underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE, children }) => {
   const getUnderline = () => {
@@ -25,6 +27,8 @@ const Heading = ({ classes, underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE
         return WHITE_CURLY_LINE_DIR;
       case UnderlineTypes.BEIGE_SHORT_UNDERLINE:
         return BEIGE_SHORT_UNDERLINE_DIR;
+      case UnderlineTypes.PINK_UNDERLINE:
+        return PINK_UNDERLINE_DIR;
     }
   };
 
