@@ -3,45 +3,48 @@ import { SwiperSlide } from 'swiper/react';
 import Carousel from './Carousel';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { rgbDataURL } from '../utils/blurImage';
+const CAROUSEL_CONTAINER = 'text-white rounded-lg w-[10rem] h-[30rem] md:w-full swiper-button-white';
+const ALUMNI_TILE =
+  'bg-[#00BA95] w-[10rem] h-[35rem] md:h-[30rem] rounded-lg items-center p-7 lg:p-5 flex flex-col md:w-full';
+const ALUMNI_PROFILE = 'flex flex-col items-center mx-auto text-center md:p-5';
 
-const CAROUSEL_CONTAINER = 'text-white rounded-lg w-full h-[30rem] md:w-full swiper-button-white';
-const NEWSLETTER_TILE = 'bg-[#00BA95] w-full h-[30rem] md:h-[30rem] rounded-[1rem] items-center px-7 lg:px-5 md:w-full';
-const NEWS_BODY = 'md:h-[28rem] h-[28rem] flex flex-col justify-evenly text-center md:px-5';
-
-const NewsTile = (news) => {
+const AlumniTile = (alumni) => {
   return (
-    <div className={NEWSLETTER_TILE}>
-      <div className={NEWS_BODY}>
-        <h2 className="text-[2rem] md:text-[2rem] font-bold">{news.title}</h2>
-        <div className="lg:h-2/3 h-[20rem] w-full overflow-hidden scrollbar-hide rounded-[1rem]">
+    <div className={ALUMNI_TILE}>
+      <div className={ALUMNI_PROFILE}>
+        <div className="mx-auto rounded-full overflow-hidden">
+          {/*
           <Image
-            className="object-cover"
-            src={news.image}
-            alt="Newsletter Image"
-            width={500}
-            height={300}
-            layout="responsive"
+            src={`https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg`}
+            alt="Profile Picture"
+            layout="fill"
+            objectFit="contain"
+            placeholder="blur"
+            blurDataURL={rgbDataURL(112, 85, 175)}
           />
+          */}
         </div>
-        <a
-          href={news.link}
-          className="text-[2rem] md:text-[2rem] font-semibold text-[#FF4D6F]"
-          download={news.pdf_name}
-        >
-          {news.month}
-        </a>
+        <h2 className="text-[2rem] md:text-[2rem] font-bold">{alumni.title}</h2>
+        <div className="h-1/2 w-full object-scale-down overflow-hidden">
+          <img
+            className="rounded-lg"
+            src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
+          ></img>
+        </div>
+        <h2 className="text-[1rem] md:text-[2rem] font-semibold text-[#FF4D6F]">{alumni.month}</h2>
       </div>
     </div>
   );
 };
 
-const NewsCarousel = ({ news }) => {
+const NewsCarousel = ({ alumni }) => {
   return (
     <div className={CAROUSEL_CONTAINER}>
-      <Carousel key={news.title}>
-        {news.map((news) => (
-          <SwiperSlide key={news.title}>
-            <NewsTile {...news} />
+      <Carousel>
+        {alumni.map((alumni) => (
+          <SwiperSlide key={alumni.prompt}>
+            <AlumniTile {...alumni} />
           </SwiperSlide>
         ))}
       </Carousel>
