@@ -2,8 +2,7 @@ import React from 'react';
 import TextSection from './TextSection';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaAngleDown } from 'react-icons/fa';
-import { Disclosure } from '@headlessui/react';
+import NewsCarousel from './NewsCarousel';
 const GREEN_SIDE_LINES_DIR = '/svgs/newsletter/Group 33.svg';
 
 const NEWS_CONTAINER = 'flex flex-col min-h-screen bg-white pt-10 z-0';
@@ -14,43 +13,26 @@ const RED_SQUIGGLY_LINE = '/svgs/newsletter/Vector 41.svg';
 const PINK_SQUIGGLY_LINE = '/svgs/newsletter/Vector 49.svg';
 const GREEN_SQUIGGLY_LINE = '/svgs/newsletter/Vector 46.svg';
 
-
-const LETTERS = [
+const NEWSLETTER = [
   {
-    prompt: "Spring/Summer 2024",
-    letter:
-        "Should link to the pdf here",
+    title: "Fall 2024",
+    month: "September 2024",
+    link: "haha newsletter link here",
+    image: "haha image here"
   },
   {
-    prompt: "Winter 2024",
-    letter:
-        "Should link to the pdf here",
+    title: "Fall 2024",
+    month: "September 2024",
+    link: "haha newsletter link here",
+    image: "haha image here"
   },
   {
-    prompt: "Fall 2023",
-    letter:
-        "Should link to the pdf here",
-  },
+    title: "Fall 2024",
+    month: "September 2024",
+    link: "haha newsletter link here",
+    image: "haha image here"
+  }
 ];
-  
-
-const NewsDropdown = ({ prompt, letter }) => {
-  return (
-    <div className="w-full rounded-2xl bg-white drop-shadow-md">
-      <Disclosure>
-        {({ open }) => (
-          <>
-            <Disclosure.Button className="items-center drop-shadow-md flex w-full justify-between rounded-lg bg-[#00BA95] px-8 py-4 text-left focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-              <span className="text-white italic text-xl font-medium">{prompt}</span>
-              <FaAngleDown className={`${open && 'rotate-180 transform'} h-5 w-5 text-white`} />
-            </Disclosure.Button>
-            <Disclosure.Panel className="px-8 py-4 text-[#FF4D6F] text-xl font-semibold">{letter}</Disclosure.Panel>
-          </>
-        )}
-      </Disclosure>
-    </div>
-  );
-};
 
 const NewsLetterBanner = () => {
 
@@ -77,10 +59,11 @@ const NewsLetterBanner = () => {
         and never miss out! 
         </TextSection>
         <div className="flex flex-col bg-white px-0 w-full overflow-y-auto scrollbar-hide h-full">
-          <div className="flex flex-col py-10 w-full space-y-4">
-            {LETTERS.map((props) => (
-              <NewsDropdown key={props.prompt} {...props} />
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 py-10 w-full justify-items-center">
+            <NewsCarousel alumni={NEWSLETTER}></NewsCarousel>
+            <NewsCarousel alumni={NEWSLETTER}></NewsCarousel>
+            <NewsCarousel alumni={NEWSLETTER}></NewsCarousel>
+            <NewsCarousel alumni={NEWSLETTER}></NewsCarousel>
           </div>
         </div>
       </div>
