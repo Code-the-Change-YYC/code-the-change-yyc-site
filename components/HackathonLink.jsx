@@ -10,18 +10,18 @@ const HackathonLink = () => {
   return (
     <div className="flex flex-col items-center bg-orange z-0 pb-12 md:pb-16 lg:pb-20">
       <div className="flex items-baseline space-x-4 mb-4 pt-16 px-10 md:px-24 lg:px-48">
-        <div className="text-center text-white items-baseline mx-20 sm:mx-20 md:mx-auto lg:mx-auto">
-          {/* <Heading classes="text-white text-[2.25rem]" underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>
-              Join the Change at Our Hackathons: Hack the Change
-          </Heading> */}
-          {/* <h1 className='text-5xl font-semibold'>Join the Change at Our </h1>
-          <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}> Hackathons:</Heading>
-          <h1 className='text-5xl font-semibold ml-2'> Hack the Change</h1> */}
-          {/* <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>Join</Heading>
-          <h1 className='text-5xl font-semibold ml-2'> the Change at Our Hackathons: Hack the Change</h1> */}
-          <h1 className='text-5xl font-semibold ml-2 inline'>Join the Change at Our Hackathons: Hack the</h1>
-          <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE} className='inline'>Change</Heading>
-
+        <div className="text-center flex flex-wrap items-baseline gap-x-2 text-white justify-center text-5xl font-semibold ml-2 mx-20 sm:mx-20 md:mx-auto lg:mx-auto">
+          <span>Join</span>
+          <span>the</span>
+          <span>Change</span>
+          <span>at</span>
+          <span>Our</span>
+          <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>
+            <span>Hackathons:</span>
+          </Heading>
+          <span>Hack</span>
+          <span>the</span>
+          <span>Change</span>
         </div>
         
       </div>
