@@ -1,30 +1,29 @@
-
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import TextSection from './TextSection';
 import Link from 'next/link';
 
-
-
 const HackathonLink = () => {
   return (
     <div className="flex flex-col items-center bg-orange z-0 pb-12 md:pb-16 lg:pb-20">
-      <div className="flex items-baseline space-x-4 mb-4 pt-16 px-10 md:px-24 lg:px-48">
-        <div className="text-center flex flex-wrap items-baseline gap-x-2 text-white justify-center text-5xl font-semibold ml-2 mx-20 sm:mx-20 md:mx-auto lg:mx-auto">
+      <div className="flex items-baseline space-x-4 pt-16 px-10 md:px-24 lg:px-48">
+        <div className="text-center flex flex-wrap items-baseline gap-x-2 gap-y-2 text-white justify-center text-5xl font-semibold ml-2 mx-auto sm:mx-20 md:mx-auto lg:mx-auto">
           <span>Join</span>
           <span>the</span>
           <span>Change</span>
-          <span>at</span>
-          <span>Our</span>
-          <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>
-            <span>Hackathons:</span>
-          </Heading>
-          <span>Hack</span>
-          <span>the</span>
-          <span>Change</span>
-        </div>
-        
+          <span>at our</span>
+          <div className='text-center justify-center flex flex-wrap gap-x-2'>
+            <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE} className="!py-0">
+              <span>Hackathon: </span>
+            </Heading>
+            <span>Hack</span>
+            <span>the</span>
+            <span>Change</span>            
+          </div>
+          
+        </div> 
       </div>
+      
       <TextSection classes="text-white text-center justify-center pb-5 z-10 px-10 md:px-24 lg:px-48 md:py-4">
             Dive into collaborative innovation with Code the Change YYC&apos;s hackathons! Designed to empower 
             student developers and create real-world impact, our hackathons offer an exciting opportunity 
