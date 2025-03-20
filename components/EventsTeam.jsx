@@ -1,15 +1,15 @@
 
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import Avatar from './Avatar';
-import { fetchContent } from '../api/apiRoot';
+// import { fetchContent } from '../api/apiRoot';
 
 
 const PROFILES_CONTAINER = 'bg-white flex flex-col items-center pt-5';
-const EXECUTIVE_LEVEL_CONTAINER = 'flex flex-row flex-wrap justify-center w-full sm:w-8/12 mb-5';
+const EXECUTIVE_LEVEL_CONTAINER = 'flex flex-wrap justify-center w-full gap-x-10 sm:gap-x-20 px-10';
 const DUMMY_PFP ="//i.pinimg.com/736x/dd/8b/a9/dd8ba98ba0b06489ac96f76b74fe7fc6.jpg";
 
 const EventsTeam = () => {
-
+// use this when we use api for real
   //   const [eventsTeam, setEventsTeam] = useState([]);
   //   useEffect(() => {
   //     fetchContent('eventsTeamMember').then((data) => setEventsTeam(data));
@@ -55,20 +55,18 @@ const EventsTeam = () => {
       <div className={PROFILES_CONTAINER}>
         <div className={EXECUTIVE_LEVEL_CONTAINER}>
           {eventsTeamLeads.map((exec) => (
-            <Avatar classes="text-[#00D3A9]" key={exec.name} {...exec} />
+            <Avatar classes="!text-[#00D3A9]" profileContainerClasses='!mx-0 !flex-wrap' key={exec.name} {...exec} />
           ))}
         </div>
       </div>
       <div className={PROFILES_CONTAINER}>
         <div className={EXECUTIVE_LEVEL_CONTAINER}>
           {eventsTeamMembers.map((exec) => (
-            <Avatar key={exec.name}{...exec} classes="text-[#00D3A9]" />
+            <Avatar key={exec.name}{...exec} profileContainerClasses='!mx-0 !flex-wrap' classes="!text-[#00D3A9]" />
           ))}
         </div>
       </div>
     </div>
-
-
   );
 };
 

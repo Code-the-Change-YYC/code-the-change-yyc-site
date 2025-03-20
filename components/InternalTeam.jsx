@@ -7,17 +7,19 @@ import EventsTeam from './EventsTeam';
 // internal team
 // page drop down add our team mini
 // bottom padding
-const INTERNAL_TEAM = 'flex flex-col pt-20 pb-50';
+const INTERNAL_TEAM = 'flex flex-col pt-10 pb-20';
 const GREEN_SIDE_LINES_DIR = '/svgs/our-team/green_lines.svg';
-const INTERNAL_TITLE = "flex items-baseline space-x-4 mb-4 py-5 justify-center px-20";
+const INTERNAL_TITLE = "flex flex-wrap items-center items-baseline gap-x-2 mb-4 pt-5 mx-5 justify-center text-center";
 
 
-const Internal = () => {
+const InternalTeam = () => {
   return (
     <div id="internal" className={INTERNAL_TEAM}>
       <div className={INTERNAL_TITLE}>
-        <Image src={GREEN_SIDE_LINES_DIR} alt="" width="30" height="25" className="pb-4" />
-        <Heading underlineType={UnderlineTypes.GREEN_SHORT_UNDERLINE}>Internal</Heading>
+        <div className='flex gap-x-3 items-baseline justify-center'>
+          <Image src={GREEN_SIDE_LINES_DIR} alt="" width="30" height="25" className="pb-4" />
+          <Heading underlineType={UnderlineTypes.GREEN_SHORT_UNDERLINE}>Internal</Heading>
+        </div>
         <h1 className='text-5xl font-semibold'>Team</h1>
       </div>
       <EventsTeam/>
@@ -27,4 +29,4 @@ const Internal = () => {
 };
 
 
-export default Internal;
+export default InternalTeam;
