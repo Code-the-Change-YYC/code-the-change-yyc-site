@@ -10,7 +10,7 @@ const WHITE_SINGLE_LINE_DIR = '/svgs/white_long_underline.svg';
 const WHITE_CURLY_LINE_DIR = '/svgs/white_alumni_underline.svg';
 const BEIGE_SHORT_UNDERLINE_DIR = '/svgs/beige_underline.svg';
 
-const Heading = ({ classes, underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE, children }) => {
+const Heading = ({ classes, underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE, className = '', children }) => {
   const getUnderline = () => {
     switch (underlineType) {
       case UnderlineTypes.GREEN_LONG_UNDERLINE:
@@ -29,7 +29,7 @@ const Heading = ({ classes, underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE
   };
 
   return (
-    <div className={HEADING_CONTAINER}>
+    <div className={`${HEADING_CONTAINER} ${className}`}>
       <h1 className={`${classes} text-5xl font-semibold`}>{children}</h1>
       {underlineType !== 'None' && <img src={getUnderline()} alt="" />}
     </div>
