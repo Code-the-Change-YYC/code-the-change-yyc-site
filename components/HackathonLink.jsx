@@ -7,13 +7,13 @@ const HackathonLink = () => {
   return (
     <div className="flex flex-col items-center bg-orange z-0 pb-12 md:pb-16 lg:pb-20">
       <div className="flex items-baseline space-x-4 pt-16 px-10 md:px-24 lg:px-48">
-        <div className="text-center flex flex-wrap items-baseline gap-x-2 gap-y-2 text-white justify-center text-5xl font-semibold ml-2 mx-auto sm:mx-20 md:mx-auto lg:mx-auto">
+        <div className="text-center flex flex-wrap items-baseline gap-x-2 gap-y-2 pb-8 text-white justify-center text-4xl font-semibold ml-2 mx-auto sm:text-5xl md:text-5xl lg:text-5xl sm:mx-20 md:mx-auto lg:mx-auto">
           <span>Join</span>
           <span>the</span>
           <span>Change</span>
           <span>at our</span>
           <div className='text-center justify-center flex flex-wrap gap-x-2'>
-            <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE} className="!py-0">
+            <Heading classes='!text-4xl sm:!text-5xl md:!text-5xl lg:!text-5xl' underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE} className="!py-0">
               <span>Hackathon: </span>
             </Heading>
             <span>Hack</span>
