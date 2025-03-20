@@ -4,10 +4,12 @@ import { UnderlineTypes } from '../utils/underlineType';
 import Image from 'next/image';
 import EventsTeam from './EventsTeam';
 
-
+// internal team
+// page drop down add our team mini
+// bottom padding
 const INTERNAL_TEAM = 'flex flex-col pt-20 pb-50';
 const GREEN_SIDE_LINES_DIR = '/svgs/our-team/green_lines.svg';
-const INTERNAL_TITLE = "flex items-baseline space-x-4 mb-4 py-5 justify-center";
+const INTERNAL_TITLE = "flex items-baseline space-x-4 mb-4 py-5 justify-center px-20";
 
 
 const Internal = () => {
