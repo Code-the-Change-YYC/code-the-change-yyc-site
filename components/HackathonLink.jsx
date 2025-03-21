@@ -16,9 +16,7 @@ const HackathonLink = () => {
             <Heading classes='!text-4xl sm:!text-5xl md:!text-5xl lg:!text-5xl' underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE} className="!py-0">
               <span>Hackathon: </span>
             </Heading>
-            <span>Hack</span>
-            <span>the</span>
-            <span>Change</span>            
+            <span>Hack the Change</span>            
           </div>
           
         </div> 
