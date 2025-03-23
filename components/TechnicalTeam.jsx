@@ -14,7 +14,9 @@ const TechnicalTeam = () => {
     fetchContent('adminTeamMember').then((data) => {
       setExecutives(data);
 
-      const uniquePositions = [...new Set(data.map((exec) => exec.position))];
+      const uniquePositions = data
+        .map((exec) => exec.position)
+        .filter((pos, index, self) => self.indexOf(pos) === index);
       setPositions(uniquePositions);
 
       if (uniquePositions.length > 0) {
