@@ -16,3 +16,11 @@
     font-size: 2.5rem;
   }
 }
+
+.team-tab:hover {
+  background-color: #7559fc;
+}
+
+.technical-section {
+  background-color: #bcfbe4;
+}
