@@ -3,6 +3,7 @@ import TextSection from './TextSection';
 import Image from 'next/image';
 import Link from 'next/link';
 import NewsCarousel from './NewsCarousel';
+
 const GREEN_SIDE_LINES_DIR = '/svgs/newsletter/Group 33.svg';
 
 const NEWS_CONTAINER = 'flex flex-col min-h-screen bg-white pt-10 z-0';
@@ -16,21 +17,15 @@ const GREEN_SQUIGGLY_LINE = '/svgs/newsletter/Vector 46.svg';
 const NEWSLETTER = [
   {
     title: 'Fall 2024',
-    month: 'September 2024',
-    link: 'haha newsletter link here',
-    image: 'haha image here',
+    month: 'November',
+    link: '../public/newsletters/novemberNewsLetter.pdf',
+    image: '/images/newsletter/nov2024.jpg',
   },
   {
     title: 'Fall 2024',
-    month: 'September 2024',
-    link: 'haha newsletter link here',
-    image: 'haha image here',
-  },
-  {
-    title: 'Fall 2024',
-    month: 'September 2024',
-    link: 'haha newsletter link here',
-    image: 'haha image here',
+    month: 'October',
+    link: '../public/newsletters/novemberNewsLetter.pdf',
+    image: '/images/newsletter/oct2024.jpg',
   },
 ];
 
@@ -57,8 +52,6 @@ const NewsLetterBanner = () => {
         </TextSection>
         <div className="flex flex-col bg-white px-0 w-full overflow-y-auto scrollbar-hide h-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 py-10 w-full justify-items-center">
-            <NewsCarousel alumni={NEWSLETTER}></NewsCarousel>
-            <NewsCarousel alumni={NEWSLETTER}></NewsCarousel>
             <NewsCarousel alumni={NEWSLETTER}></NewsCarousel>
             <NewsCarousel alumni={NEWSLETTER}></NewsCarousel>
           </div>
