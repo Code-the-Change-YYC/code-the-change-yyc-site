@@ -19,13 +19,13 @@ const NEWSLETTER = [
   {
     title: "Fall 2024",
     month: "November",
-    link: "../public/newsletters/novemberNewsLetter.pdf",
+    link: "/newsletters/novemberNewsLetter.pdf",
     image: "/images/newsletter/nov2024.jpg",
   },
   {
     title: "Fall 2024",
     month: "October",
-    link: "../public/newsletters/novemberNewsLetter.pdf",
+    link: "../public/newsletters/octoberNewsLetter.pdf",
     image: "/images/newsletter/oct2024.jpg",
   },
 ];
@@ -57,8 +57,8 @@ const NewsLetterBanner = () => {
         </TextSection>
         <div className="flex flex-col bg-white px-0 w-full overflow-y-auto scrollbar-hide h-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 py-10 w-full justify-items-center">
-            <NewsCarousel alumni={NEWSLETTER}></NewsCarousel>
-            <NewsCarousel alumni={NEWSLETTER}></NewsCarousel>
+            <NewsCarousel news={NEWSLETTER}></NewsCarousel>
+            <NewsCarousel news={NEWSLETTER}></NewsCarousel>
           </div>
         </div>
       </div>
