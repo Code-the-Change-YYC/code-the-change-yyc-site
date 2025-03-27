@@ -4,41 +4,40 @@ import Carousel from './Carousel';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import { rgbDataURL } from '../utils/blurImage';
-const CAROUSEL_CONTAINER = 'text-white rounded-lg w-[10rem] h-[30rem] md:w-full swiper-button-white';
-const ALUMNI_TILE =
-  'bg-[#00BA95] w-[10rem] h-[35rem] md:h-[30rem] rounded-[1rem] items-center px-7 lg:px-5 md:w-full';
-const ALUMNI_PROFILE = 'h-[450px] flex flex-col justify-evenly text-center md:px-5';
+const CAROUSEL_CONTAINER = 'text-white rounded-lg w-full h-[30rem] md:w-full swiper-button-white';
+const NEWSLETTER_TILE =
+  'bg-[#00BA95] w-full h-[30rem] md:h-[30rem] rounded-[1rem] items-center px-7 lg:px-5 md:w-full';
+const NEWS_BODY = 'md:h-[28rem] h-[28rem] flex flex-col justify-evenly text-center md:px-5';
 
-const AlumniTile = (alumni) => {
+const NewsTile = (news) => {
 
   return (
-    <div className={ALUMNI_TILE}>
-      <div className={ALUMNI_PROFILE}>
-        <h2 className="text-[2rem] md:text-[2rem] font-bold">{alumni.title}</h2>
-        <div className='lg:h-2/3 h-full w-full overflow-hidden scrollbar-hide rounded-[1rem]'>
-          <img className='' src={alumni.image} alt="" />
-          {/*<Image
-            src={alumni.image}
-            alt="newsletter image"
-            layout="fill"
-            objectFit="cover"
-          />*/}
+    <div className={NEWSLETTER_TILE}>
+      <div className={NEWS_BODY}>
+        <h2 className="text-[2rem] md:text-[2rem] font-bold">{news.title}</h2>
+        <div className='lg:h-2/3 h-[20rem] w-full overflow-hidden scrollbar-hide rounded-[1rem]'>
+          <Image
+            className='object-cover' 
+            src={news.image} 
+            alt="Newsletter Image" 
+            width={500} 
+            height={300} 
+            layout="responsive"/>
         </div>
-          <a href={alumni.link} className="text-[1rem] md:text-[2rem] font-semibold text-[#FF4D6F]">{alumni.month}</a>
+        <a href={news.link} className="text-[2rem] md:text-[2rem] font-semibold text-[#FF4D6F]" download="Newsletter.pdf">{news.month}</a>
       </div>
 
     </div>
   );
 };
 
-const NewsCarousel = ({ alumni }) => {
+const NewsCarousel = ({ news }) => {
   return (
     <div className={CAROUSEL_CONTAINER}>
-      <Carousel>
-        {alumni.map((alumni) => (
-          <SwiperSlide key={alumni.prompt}>
-            <AlumniTile {...alumni} />
+      <Carousel key={news.title}>
+        {news.map((news) => (
+          <SwiperSlide key={news.title}>
+            <NewsTile {...news} />
           </SwiperSlide>
         ))}
       </Carousel>
