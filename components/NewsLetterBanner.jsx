@@ -8,6 +8,7 @@ const NEWS_CONTAINER = 'flex flex-col min-h-screen bg-white pt-10 z-0';
 const CONTENT_CONTAINER = 'flex flex-col pt-14 p-5 md:px-32';
 const NEWS_HEADER = 'flex flex-row';
 
+const GREEN_ACCENT = '/svgs/newsletter/Group 33.svg';
 const RED_SQUIGGLY_LINE = '/svgs/newsletter/Vector 41.svg';
 const PINK_SQUIGGLY_LINE = '/svgs/newsletter/Vector 49.svg';
 const GREEN_SQUIGGLY_LINE = '/svgs/newsletter/Vector 46.svg';
@@ -35,6 +36,13 @@ const NewsLetterBanner = () => {
       <div className={CONTENT_CONTAINER}>
         <div className="absolute top-[-20px] left-0 w-full h-[50px] flex justify-start"></div>
         <div className={NEWS_HEADER}>
+          <Image
+            src={GREEN_ACCENT}
+            alt=""
+            width={50}
+            height={50}
+            className="absolute -left-3 top-[145px] md:left-[6rem] z-[-10]"
+          />
           <h1 className="text-5xl font-semibold text-[#FF4D6F]">Newsletter</h1>
         </div>
         <TextSection classes="text-black py-5 z-20">
