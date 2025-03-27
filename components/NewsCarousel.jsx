@@ -24,7 +24,7 @@ const NewsTile = (news) => {
             height={300} 
             layout="responsive"/>
         </div>
-        <a href={news.link} className="text-[2rem] md:text-[2rem] font-semibold text-[#FF4D6F]" download="Newsletter.pdf">{news.month}</a>
+        <a href={news.link} className="text-[2rem] md:text-[2rem] font-semibold text-[#FF4D6F]" download={news.pdf_name}>{news.month}</a>
       </div>
 
     </div>
