@@ -13,6 +13,25 @@ const INTERNAL_TITLE = "flex flex-wrap items-center items-baseline gap-x-2 mb-4 
 
 
 const InternalTeam = () => {
+  const [executives, setExecutives] = useState([]);
+  const [positions, setPositions] = useState([]);
+  const [activeTab, setActiveTab] = useState('');
+
+  useEffect(() => {
+    fetchContent('adminTeamMember').then((data) => {
+      setExecutives(data);
+
+      const uniquePositions = data
+        .map((exec) => exec.position)
+        .filter((pos, index, self) => self.indexOf(pos) === index);
+      setPositions(uniquePositions);
+
+      if (uniquePositions.length > 0) {
+        setActiveTab(uniquePositions[0]);
+      }
+    });
+  }, []);
+  
   return (
     <div id="internal" className={INTERNAL_TEAM}>
       <div className={INTERNAL_TITLE}>
