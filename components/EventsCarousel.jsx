@@ -5,8 +5,9 @@ import 'swiper/css/navigation';
 import TextSection from './TextSection';
 import Heading from './Heading';
 import { EventTileImage } from './EventTileImage';
+import { EventTileImage } from './EventTileImage';
 
-const CAROUSEL_CONTAINER = 'w-4/5  md:hidden swiper-button swiperContainer relative';
+const CAROUSEL_CONTAINER = 'w-4/5   md:hidden swiper-button swiperContainer relative';
 const ARROW_INIT = { left: 'swiper-button-prev', right: 'swiper-button-next' };
 const LEFT_NAVIGATION_ARROW = styles.swiperButtonPrev;
 const RIGHT_NAVIGATION_ARROW = styles.swiperButtonNext;
@@ -28,6 +29,12 @@ const EventTile = ({ eventName, description, image }) => {
         </div>
       </div>
       <TextSection classes="text-sm pb-10">{descriptionText}</TextSection>
+      <div className={TILE_IMAGE_CONTAINER}>
+        <div>
+          <EventTileImage image={image} />
+        </div>
+      </div>
+      <TextSection classes="text-xs sm:py-2 ">{descriptionText}</TextSection>
     </div>
   );
 };
