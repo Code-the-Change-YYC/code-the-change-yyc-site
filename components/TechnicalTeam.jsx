@@ -26,7 +26,7 @@ const TechnicalTeam = () => {
   }, []);
 
   return (
-    <section className="technical-section py-8">
+    <section id="technical" className="technical-section py-8">
       <div>
         <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>Technical Team</Heading>
       </div>
