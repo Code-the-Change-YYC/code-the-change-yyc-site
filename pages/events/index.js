@@ -3,6 +3,9 @@ import PastEventsCarousel from '../../components/PastEventsCarousel';
 import EventsBanner from '../../components/EventsBanner';
 import UpcomingEvents from '../../components/UpcomingEvents';
 import { fetchContent } from '../../api/apiRoot';
+import HackathonLink from '../../components/HackathonLink';
+
+
 
 export async function getStaticProps() {
   const upcomingEvent = await fetchContent('upcomingEvents');
@@ -17,6 +20,7 @@ const Events = ({ upcomingEvent, pastEvent }) => {
       <EventsBanner />
       <UpcomingEvents upcomingEvent={upcomingEvent} />
       <HackathonTimeline />
+      <HackathonLink />
       <PastEventsCarousel pastEvent={pastEvent} />
     </div>
   );
