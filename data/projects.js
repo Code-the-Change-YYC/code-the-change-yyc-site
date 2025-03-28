@@ -52,9 +52,6 @@ export const projects = [
   {
     logo: ScubaSeas,
     name: 'ScubaSeas',
-    appStoreLink: 'https://apps.apple.com/us/app/scuba-seasons/id6450968950',
-    playStoreLink: 'https://play.google.com/store/apps/details?id=com.freem11.divegomobile',
-    githubLink: 'https://github.com/Freem11/divego',
     descriptions: [
       'Open source mobile app that helps divers map out the entire ocean',
       'Mobile App Developers needed to contribute to the open source project',
