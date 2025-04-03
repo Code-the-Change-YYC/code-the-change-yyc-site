@@ -27,25 +27,15 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
-    "eslint": "8.20.0",
+    "eslint": "^8.20.0",
     "eslint-config-next": "12.2.3",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
     "postcss": "^8.4.14",
+    "prettier": "^3.5.2",
     "tailwindcss": "^3.3.6"
   },
   "engines": {
     "node": "^18.16.1"
-  },
-  "description": "First, run the development server:",
-  "main": "next.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Code-the-Change-YYC/code-the-change-yyc-site.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Code-the-Change-YYC/code-the-change-yyc-site/issues"
-  },
-  "homepage": "https://github.com/Code-the-Change-YYC/code-the-change-yyc-site#readme"
+  }
 }
