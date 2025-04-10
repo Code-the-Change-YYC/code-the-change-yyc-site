@@ -3,11 +3,13 @@ import { UnderlineTypes } from '../utils/underlineType';
 import TextSection from './TextSection';
 import Link from 'next/link';
 
+const HACKATHON_TITLE = "text-center flex flex-wrap items-baseline gap-x-2 gap-y-2 pb-8 text-white justify-center text-4xl font-semibold ml-2 mx-auto sm:text-5xl md:text-5xl lg:text-5xl sm:mx-20 md:mx-auto lg:mx-auto";
+
 const HackathonLink = () => {
   return (
     <div className="flex flex-col items-center bg-orange z-0 pb-12 md:pb-16 lg:pb-20">
       <div className="flex items-baseline space-x-4 pt-16 px-10 md:px-24 lg:px-48">
-        <div className="text-center flex flex-wrap items-baseline gap-x-2 gap-y-2 pb-8 text-white justify-center text-4xl font-semibold ml-2 mx-auto sm:text-5xl md:text-5xl lg:text-5xl sm:mx-20 md:mx-auto lg:mx-auto">
+        <div className={HACKATHON_TITLE}>
           <span>Join</span>
           <span>the</span>
           <span>Change</span>
