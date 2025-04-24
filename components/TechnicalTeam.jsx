@@ -7,20 +7,18 @@ import { UnderlineTypes } from '../utils/underlineType';
 
 const TechnicalTeam = () => {
   const [executives, setExecutives] = useState([]);
-  const [positions, setPositions] = useState([]);
+  const [projects, setProjects] = useState([]);
   const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
-    fetchContent('adminTeamMember').then((data) => {
+    fetchContent('technicalTeam').then((data) => {
       setExecutives(data);
 
-      const uniquePositions = data
-        .map((exec) => exec.position)
-        .filter((pos, index, self) => self.indexOf(pos) === index);
-      setPositions(uniquePositions);
+      const uniqueProjects = data.map((exec) => exec.project).filter((pos, index, self) => self.indexOf(pos) === index);
+      setProjects(uniqueProjects);
 
-      if (uniquePositions.length > 0) {
-        setActiveTab(uniquePositions[0]);
+      if (uniqueProjects.length > 0) {
+        setActiveTab(uniqueProjects[0]);
       }
     });
   }, []);
@@ -31,19 +29,19 @@ const TechnicalTeam = () => {
         <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>Technical Team</Heading>
       </div>
       <div>
-        {positions.length > 0 && (
+        {projects.length > 0 && (
           <Tabs value={activeTab} onChange={(val) => setActiveTab(val)}>
-            <TabsHeader className="flex justify-items-center">
-              {positions.map((position) => (
-                <Tab className="team-tab rounded-full p-1 font-medium" key={position} value={position}>
-                  {position}
+            <TabsHeader className="flex flex-row justify-center">
+              {projects.map((project) => (
+                <Tab className="team-tab rounded-full p-1 font-medium" key={project} value={project}>
+                  {project}
                 </Tab>
               ))}
             </TabsHeader>
             <TabsBody>
-              {positions.map((position) => (
-                <TabPanel key={position} value={position}>
-                  <Team executives={executives.filter((exec) => exec.position === position)} />
+              {projects.map((project) => (
+                <TabPanel key={project} value={project}>
+                  <Team executives={executives.filter((exec) => exec.project === project)} />
                 </TabPanel>
               ))}
             </TabsBody>
