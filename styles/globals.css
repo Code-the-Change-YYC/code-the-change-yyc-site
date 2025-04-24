@@ -17,8 +17,13 @@
   }
 }
 
+.team-tab {
+  max-width: 200px;
+}
+
 .team-tab:hover {
   background-color: #7559fc;
+  color: white;
 }
 
 .technical-section {
