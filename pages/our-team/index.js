@@ -1,4 +1,6 @@
 import UnderConstruction from '../../components/UnderConstruction';
+import AlumniSection from '../../components/AlumniSection';
+import TechnicalTeam from '../../components/TechnicalTeam';
 
 const OurTeam = () => {
   return (
@@ -6,6 +8,8 @@ const OurTeam = () => {
       {/* <MeetOurTeam />
       <InternalTeam />
       <TechnicalTeam /> */}
+      <AlumniSection />
+      <TechnicalTeam />
       <UnderConstruction />
     </div>
   );
