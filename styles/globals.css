@@ -38,3 +38,15 @@
 .technical-section {
   background-color: #bcfbe4;
 }
+
+.president-carousel {
+  position: relative;
+}
+
+.president-carousel .swiper-button-next {
+  right: 0px;
+}
+
+.president-carousel .swiper-button-prev {
+  left: 0px;
+}
