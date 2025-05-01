@@ -6,6 +6,7 @@ import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import CoPresident from "./CoPresident";
 
+// Dummy values to be replaced with contentful
 const people  = [{
   name: "John Doe",
   linkedin: "randomlink.com",
@@ -105,6 +106,48 @@ const people  = [{
   },
   classes: "text-white",
 },
+{
+  name: "John Doe",
+  linkedin: "randomlink.com",
+  position: "Dev",
+  project: "Finance",
+  pfp: {
+    fields: {
+      file: {
+        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
+      }
+    }
+  },
+  classes: "text-white",
+},
+{
+  name: "John Doe",
+  linkedin: "randomlink.com",
+  position: "Dev",
+  project: "Marketing",
+  pfp: {
+    fields: {
+      file: {
+        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
+      }
+    }
+  },
+  classes: "text-white",
+},
+{
+  name: "John Doe",
+  linkedin: "randomlink.com",
+  position: "Dev",
+  project: "Tech",
+  pfp: {
+    fields: {
+      file: {
+        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
+      }
+    }
+  },
+  classes: "text-white",
+},
 ];
 
 const TechnicalTeam = () => {
@@ -113,29 +156,32 @@ const TechnicalTeam = () => {
   const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
-    fetchContent('technicalTeam').then((data) => {
+    // Put Contenful stuff here
+    fetchContent('technicalTeam').then(() => {
       setExecutives(people);
 
-      const uniqueProjects = data.map((exec) => exec.project).filter((pos, index, self) => self.indexOf(pos) === index);
       setProjects(["Presidents", "Events", "Finance", "Marketing", "Tech"]);
 
-      if (uniqueProjects.length > 0) {
-        setActiveTab(uniqueProjects[0]);
-      }
+      setActiveTab("Presidents");
     });
   }, []);
 
   return (
-    <section className="bg-[#7055FD] p-12 h-screen">
+    <section className="bg-[#7055FD] p-12 md:min-h-screen h-full">
       <div className="mb-9">
         <Heading underlineType={UnderlineTypes.GREEN_SHORT_UNDERLINE} classes={"text-white"}>Alumni</Heading>
       </div>
       <div>
         {projects.length > 0 && (
-          <Tabs value={activeTab} onChange={(val) => setActiveTab(val)}>
+          <Tabs 
+            value={activeTab}>
             <TabsHeader className="flex flex-row justify-center">
               {projects.map((project) => (
-                <Tab className="alumni-tab rounded-full p-1 font-medium" key={project} value={project}>
+                <Tab className={`alumni-tab rounded-full p-1 font-medium text-white ${
+                  activeTab === project
+                    ? 'bg-[#00D3A9]'
+                    : ''
+                }`} key={project} value={project} onClick={() => setActiveTab(project)}>
                   {project}
                 </Tab>
               ))}
