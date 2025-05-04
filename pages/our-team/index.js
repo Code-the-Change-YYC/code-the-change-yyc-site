@@ -1,6 +1,4 @@
 import UnderConstruction from '../../components/UnderConstruction';
-import AlumniSection from '../../components/AlumniSection';
-import TechnicalTeam from '../../components/TechnicalTeam';
 
 const OurTeam = () => {
   return (
