@@ -42,6 +42,39 @@ const President = [[{
   },
   classes: "text-[#7055FD]",
 }
+],
+[{
+  name: "Jane Doe",
+  position: "Co-Pres",
+  year: "2025",
+  previousRole: "Events team",
+  testimonial: "Wow I love this club",
+  linkedin: "random link",
+  pfp: {
+    fields: {
+      file: {
+        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
+      }
+    }
+  },
+  classes: "text-[#7055FD]",
+},
+{
+  name: "John Doe",
+  position: "Co-Pres",
+  year: "2025",
+  previousRole: "Events team",
+  testimonial: "Vitae eget venenatis rhoncus aliquet curabitur mauris, sed turpis nulla. Neque molestie mi placerat ultrices sit in sit.",
+  linkedin: "random link",
+  pfp: {
+    fields: {
+      file: {
+        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
+      }
+    }
+  },
+  classes: "text-[#7055FD]",
+}
 ]];
 
 const PresidentTile = ({ name, linkedin, pfp, classes, testimonial, position }) => {
@@ -75,4 +108,3 @@ const CoPresident = () => {
   );
 };
 export default CoPresident;
-
