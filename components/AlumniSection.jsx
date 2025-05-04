@@ -5,6 +5,7 @@ import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from '@material-tailwind/re
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import CoPresident from "./CoPresident";
+const GREEN_SIDE_LINES_DIR = '/svgs/green_side_lines.svg';
 
 // Dummy values to be replaced with contentful
 const people  = [{
@@ -168,7 +169,8 @@ const TechnicalTeam = () => {
 
   return (
     <section className="bg-[#7055FD] p-12 md:min-h-screen h-full">
-      <div className="mb-9">
+      <div className="mb-9 flex flex-row justify-center">
+        <img src={GREEN_SIDE_LINES_DIR} alt="" className='pb-16'/>
         <Heading underlineType={UnderlineTypes.GREEN_SHORT_UNDERLINE} classes={"text-white"}>Alumni</Heading>
       </div>
       <div>

@@ -7,9 +7,8 @@ const OurTeam = () => {
     <div>
       {/* <MeetOurTeam />
       <InternalTeam />
-      <TechnicalTeam /> */}
-      <AlumniSection />
-      <TechnicalTeam />
+      <TechnicalTeam /> 
+      <AlumniSection /> */}
       <UnderConstruction />
     </div>
   );
