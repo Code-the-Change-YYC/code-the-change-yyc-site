@@ -3,10 +3,10 @@ import { SwiperSlide } from 'swiper/react';
 import Carousel from './Carousel';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Avatar from './Avatar';
+import Avatar from './PresidentAvatar';
 const CAROUSEL_CONTAINER = 'president-carousel text-white rounded-lg w-[20rem] h-full md:w-4/5 swiper-button-white flex justify-center items-center';
 const PRESIDENT_TILE =
-  'bg-[#A689FF] bg-opacity-50 w-[20rem] h-[70rem] md:h-[20rem] rounded-lg items-center p-14 lg:p-10 flex flex-col md:w-4/5 md:flex-row';
+  'bg-[#A689FF] bg-opacity-50 w-[20rem] h-[70rem] md:h-[25rem] rounded-lg items-center p-14 lg:p-10 flex flex-col md:w-4/5 md:flex-row';
 
 
 
@@ -14,7 +14,7 @@ const President = [[{
   name: "Jane Doe",
   position: "Co-Pres",
   year: "2025",
-  previousRole: "Events team",
+  currRole: "current job",
   testimonial: "Wow I love this club",
   linkedin: "random link",
   pfp: {
@@ -30,7 +30,7 @@ const President = [[{
   name: "John Doe",
   position: "Co-Pres",
   year: "2025",
-  previousRole: "Events team",
+  currRole: "Events team",
   testimonial: "Vitae eget venenatis rhoncus aliquet curabitur mauris, sed turpis nulla. Neque molestie mi placerat ultrices sit in sit.",
   linkedin: "random link",
   pfp: {
@@ -59,28 +59,12 @@ const President = [[{
   },
   classes: "text-[#7055FD]",
 },
-{
-  name: "John Doe",
-  position: "Co-Pres",
-  year: "2025",
-  previousRole: "Events team",
-  testimonial: "Vitae eget venenatis rhoncus aliquet curabitur mauris, sed turpis nulla. Neque molestie mi placerat ultrices sit in sit.",
-  linkedin: "random link",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-[#7055FD]",
-}
 ]];
 
-const PresidentTile = ({ name, linkedin, pfp, classes, testimonial, position }) => {
+const PresidentTile = ({ name, linkedin, pfp, classes, testimonial, position, currRole }) => {
   return (
     <div className={PRESIDENT_TILE}>
-      <Avatar key={name} {...{name, linkedin, pfp, classes, position}}></Avatar>
+      <Avatar key={name} {...{name, linkedin, pfp, classes, position, currRole}}></Avatar>
       <p className="text-[1.1rem] font-light italic leading-7 mx-auto md:ml-14 md:mb-24 md:text-[1.3rem] lg:text-[1.5rem] md:p-10 text-[#000000]">
         <span className="text-[2rem] font-extrabold">&quot;</span>
         {testimonial}
@@ -99,7 +83,7 @@ const CoPresident = () => {
             <div className='bg-white w-full rounded-3xl h-full flex flex-col justify-center items-center gap-10 py-20'>
               <div className='text-[#000000] text-4xl absolute top-5 left-32'>{president[0].year}</div>
               <PresidentTile {...president[0]} />
-              <PresidentTile {...president[1]} />
+              {president[1] && <PresidentTile {...president[1]} />}
             </div>
           </SwiperSlide>
         ))}
