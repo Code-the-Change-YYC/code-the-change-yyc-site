@@ -1,7 +1,6 @@
 import { UnderlineTypes } from '../utils/underlineType';
 
 /* eslint-disable @next/next/no-img-element */
-const HEADING_CONTAINER = 'py-5 flex flex-col items-center';
 
 const GREEN_LONG_UNDERLINE_DIR = '/svgs/long_heading_underline.svg';
 const GREEN_SHORT_UNDERLINE_DIR = '/svgs/short_heading_underline.svg';
@@ -11,8 +10,12 @@ const WHITE_CURLY_LINE_DIR = '/svgs/white_alumni_underline.svg';
 const BEIGE_SHORT_UNDERLINE_DIR = '/svgs/beige_underline.svg';
 const PINK_UNDERLINE_DIR = '/svgs/pink_underline.svg';
 
-
-const Heading = ({ classes, underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE, children }) => {
+const Heading = ({
+  classes = '',
+  distanceFromTop = 0,
+  underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE,
+  children,
+}) => {
   const getUnderline = () => {
     switch (underlineType) {
       case UnderlineTypes.GREEN_LONG_UNDERLINE:
@@ -33,9 +36,9 @@ const Heading = ({ classes, underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE
   };
 
   return (
-    <div className={HEADING_CONTAINER}>
-      <h1 className={`${classes} text-5xl font-semibold`}>{children}</h1>
-      {underlineType !== 'None' && <img src={getUnderline()} alt="" />}
+    <div className="relative inline-block text-center">
+      <span className={`relative z-10 ${classes} text-5xl font-semibold`}>{children}</span>
+      {underlineType !== 'None' && <img src={getUnderline()} alt="squiggly" className="w-4/5 mx-auto" />}
     </div>
   );
 };

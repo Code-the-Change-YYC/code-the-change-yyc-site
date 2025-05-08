@@ -46,17 +46,26 @@ const InternalTeam = () => {
   }, []);
 
   return (
-    <section className="p-12">
-      <div className="mb-9">
-        <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>Internal Team</Heading>
+    <>
+      <div className="mb-12 flex justify-center gap-3">
+        <Heading distanceFromTop={11} underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>
+          Internal{' '}
+        </Heading>
+        <span className="text-5xl font-semibold">Team</span>
       </div>
       <div>
         {groups.length > 0 && (
           <Tabs value={activeTab} onChange={(val) => setActiveTab(val)}>
             <TabsHeader className="flex flex-row justify-center">
               {groups.map((group) => (
-                <Tab className="team-tab rounded-full p-1 font-medium" key={group} value={group}>
-                  {group}
+                <Tab key={group} value={group}>
+                  <div
+                    className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-300
+                  ${activeTab === group ? 'bg-[#7559fc] text-white' : 'text-black'}
+                  `}
+                  >
+                    {group}
+                  </div>
                 </Tab>
               ))}
             </TabsHeader>
@@ -70,7 +79,7 @@ const InternalTeam = () => {
           </Tabs>
         )}
       </div>
-    </section>
+    </>
   );
 };
 

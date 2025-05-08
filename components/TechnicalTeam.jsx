@@ -26,31 +26,38 @@ const TechnicalTeam = () => {
   }, []);
 
   return (
-    <section className="technical-section p-12">
-      <div className="mb-9">
-        <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>Technical Team</Heading>
+    <>
+      <div className="mb-12 flex justify-center gap-3">
+        <Heading distanceFromTop={11} underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>
+          Technical{' '}
+        </Heading>
+        <span className="text-5xl font-semibold">Team</span>
       </div>
-      <div>
-        {positions.length > 0 && (
-          <Tabs value={activeTab} onChange={(val) => setActiveTab(val)}>
-            <TabsHeader className="flex justify-items-center">
-              {positions.map((position) => (
-                <Tab className="team-tab rounded-full p-1 font-medium" key={position} value={position}>
+      {positions.length > 0 && (
+        <Tabs value={activeTab}>
+          <TabsHeader className="flex flex-row justify-center">
+            {positions.map((position) => (
+              <Tab key={position} value={position} onClick={() => setActiveTab(position)}>
+                <div
+                  className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-300
+                  ${activeTab === position ? 'bg-[#7559fc] text-white' : 'text-black'}
+                  `}
+                >
                   {position}
-                </Tab>
-              ))}
-            </TabsHeader>
-            <TabsBody>
-              {positions.map((position) => (
-                <TabPanel key={position} value={position}>
-                  <Team executives={executives.filter((exec) => exec.position === position)} />
-                </TabPanel>
-              ))}
-            </TabsBody>
-          </Tabs>
-        )}
-      </div>
-    </section>
+                </div>
+              </Tab>
+            ))}
+          </TabsHeader>
+          <TabsBody>
+            {positions.map((position) => (
+              <TabPanel key={position} value={position}>
+                <Team executives={executives.filter((exec) => exec.position === position)} />
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
+      )}
+    </>
   );
 };
 
