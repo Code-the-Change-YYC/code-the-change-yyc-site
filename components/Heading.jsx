@@ -12,7 +12,7 @@ const PINK_UNDERLINE_DIR = '/svgs/pink_underline.svg';
 
 const Heading = ({
   classes = '',
-  distanceFromTop = 0,
+  // distanceFromTop = 0,
   underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE,
   children,
 }) => {
