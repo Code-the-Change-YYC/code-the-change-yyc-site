@@ -55,12 +55,12 @@ const InternalTeam = () => {
       </div>
       <div>
         {groups.length > 0 && (
-          <Tabs value={activeTab} onChange={(val) => setActiveTab(val)}>
+          <Tabs value={activeTab}>
             <TabsHeader className="flex flex-row justify-center">
               {groups.map((group) => (
-                <Tab key={group} value={group}>
+                <Tab key={group} value={group} onClick={() => setActiveTab(group)}>
                   <div
-                    className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-300
+                    className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-200
                   ${activeTab === group ? 'bg-[#7559fc] text-white' : 'text-black'}
                   `}
                   >

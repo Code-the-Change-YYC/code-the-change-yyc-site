@@ -20,7 +20,7 @@ const Avatar = ({ name, linkedin, position, pfp, classes, prevRole, profileConta
           Previously: {prevRole}
         </h2>
       )}
-      {linkedin && <FontAwesomeLink username={linkedin} icon={faLinkedin} className={`${classes}`} />}
+      {linkedin && <FontAwesomeLink username={linkedin} icon={faLinkedin} className={`${classes} fill-black `} />}
     </div>
   );
 };

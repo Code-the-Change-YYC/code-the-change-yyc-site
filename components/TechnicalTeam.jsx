@@ -39,7 +39,7 @@ const TechnicalTeam = () => {
             {positions.map((position) => (
               <Tab key={position} value={position} onClick={() => setActiveTab(position)}>
                 <div
-                  className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-300
+                  className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-200
                   ${activeTab === position ? 'bg-[#7559fc] text-white' : 'text-black'}
                   `}
                 >
