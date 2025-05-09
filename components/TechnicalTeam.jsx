@@ -35,7 +35,7 @@ const TechnicalTeam = () => {
       </div>
       {positions.length > 0 && (
         <Tabs value={activeTab}>
-          <TabsHeader className="flex flex-row justify-center">
+          <TabsHeader className="overflow-x-auto whitespace-nowrap scrollbar-hide w-full flex flex-row">
             {positions.map((position) => (
               <Tab key={position} value={position} onClick={() => setActiveTab(position)}>
                 <div

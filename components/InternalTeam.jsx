@@ -53,32 +53,30 @@ const InternalTeam = () => {
         </Heading>
         <span className="text-5xl font-semibold">Team</span>
       </div>
-      <div>
-        {groups.length > 0 && (
-          <Tabs value={activeTab}>
-            <TabsHeader className="flex flex-row justify-center">
-              {groups.map((group) => (
-                <Tab key={group} value={group} onClick={() => setActiveTab(group)}>
-                  <div
-                    className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-200
+      {groups.length > 0 && (
+        <Tabs value={activeTab} className="">
+          <TabsHeader className="overflow-x-auto whitespace-nowrap scrollbar-hide w-full flex flex-row">
+            {groups.map((group) => (
+              <Tab key={group} value={group} onClick={() => setActiveTab(group)}>
+                <div
+                  className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-200
                   ${activeTab === group ? 'bg-[#7559fc] text-white' : 'text-black'}
                   `}
-                  >
-                    {group}
-                  </div>
-                </Tab>
-              ))}
-            </TabsHeader>
-            <TabsBody>
-              {groups.map((group) => (
-                <TabPanel key={group} value={group}>
-                  <Team executives={executives.filter((exec) => exec.group === group)} />
-                </TabPanel>
-              ))}
-            </TabsBody>
-          </Tabs>
-        )}
-      </div>
+                >
+                  {group}
+                </div>
+              </Tab>
+            ))}
+          </TabsHeader>
+          <TabsBody>
+            {groups.map((group) => (
+              <TabPanel key={group} value={group}>
+                <Team executives={executives.filter((exec) => exec.group === group)} />
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
+      )}
     </>
   );
 };
