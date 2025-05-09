@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from '@material-tailwind/react';
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
+import { PageIdentifiers } from '../utils/flags';
 
 const TechnicalTeam = () => {
   const [executives, setExecutives] = useState([]);
@@ -51,7 +52,10 @@ const TechnicalTeam = () => {
           <TabsBody>
             {positions.map((position) => (
               <TabPanel key={position} value={position}>
-                <Team executives={executives.filter((exec) => exec.position === position)} />
+                <Team
+                  teamIdentifier={PageIdentifiers.EXECUTIVE_LEVEL_CONTAINER}
+                  teamMembers={executives.filter((exec) => exec.position === position)}
+                />
               </TabPanel>
             ))}
           </TabsBody>

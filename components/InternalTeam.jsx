@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from '@material-tailwind/react';
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
+import { PageIdentifiers } from '../utils/flags';
 
 const positionToGroupMap = {
   'Jr VP Marketing': 'Marketing',
@@ -48,19 +49,19 @@ const InternalTeam = () => {
   return (
     <>
       <div className="mb-12 flex justify-center gap-3">
-        <Heading distanceFromTop={11} underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>
+        <Heading distanceFromTop={11} underlineType={UnderlineTypes.GREEN_SHORT_UNDERLINE}>
           Internal{' '}
         </Heading>
         <span className="text-5xl font-semibold">Team</span>
       </div>
       {groups.length > 0 && (
-        <Tabs value={activeTab} className="">
+        <Tabs value={activeTab}>
           <TabsHeader className="overflow-x-auto whitespace-nowrap scrollbar-hide w-full flex flex-row">
             {groups.map((group) => (
               <Tab key={group} value={group} onClick={() => setActiveTab(group)}>
                 <div
-                  className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-200
-                  ${activeTab === group ? 'bg-[#7559fc] text-white' : 'text-black'}
+                  className={`rounded-full p-2 px-6 font-medium hover:bg-[#00D3A9] hover:text-white transition-all duration-200
+                  ${activeTab === group ? 'bg-[#00D3A9] text-white' : 'text-black'}
                   `}
                 >
                   {group}
@@ -71,7 +72,10 @@ const InternalTeam = () => {
           <TabsBody>
             {groups.map((group) => (
               <TabPanel key={group} value={group}>
-                <Team executives={executives.filter((exec) => exec.group === group)} />
+                <Team
+                  teamIdentifier={PageIdentifiers.INTERNAL_LEVEL_CONTAINER}
+                  teamMembers={executives.filter((exec) => exec.group === group)}
+                />
               </TabPanel>
             ))}
           </TabsBody>
