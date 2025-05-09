@@ -56,18 +56,20 @@ const InternalTeam = () => {
       </div>
       {groups.length > 0 && (
         <Tabs value={activeTab}>
-          <TabsHeader className="overflow-x-auto whitespace-nowrap scrollbar-hide w-full flex flex-row">
-            {groups.map((group) => (
-              <Tab key={group} value={group} onClick={() => setActiveTab(group)}>
-                <div
-                  className={`rounded-full p-2 px-6 font-medium hover:bg-[#00D3A9] hover:text-white transition-all duration-200
-                  ${activeTab === group ? 'bg-[#00D3A9] text-white' : 'text-black'}
-                  `}
-                >
-                  {group}
-                </div>
-              </Tab>
-            ))}
+          <TabsHeader className="overflow-x-auto grid place-items-center">
+            <div className="flex flex-row gap-2">
+              {groups.map((group) => (
+                <Tab key={group} value={group} onClick={() => setActiveTab(group)}>
+                  <div
+                    className={`rounded-full px-4 py-2 font-medium hover:bg-[#00D3A9] hover:text-white transition-all duration-200
+              ${activeTab === group ? 'bg-[#00D3A9] text-white' : 'text-black'}
+            `}
+                  >
+                    {group}
+                  </div>
+                </Tab>
+              ))}
+            </div>
           </TabsHeader>
           <TabsBody>
             {groups.map((group) => (

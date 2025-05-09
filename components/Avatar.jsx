@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+// please forgive me idk why it made me do this someone with different eslint config can fix this
 import Image from 'next/image';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import FontAwesomeLink from './FontAwesomeLink';
@@ -17,7 +19,7 @@ const Avatar = ({ name, linkedin, position, pfp, classes, prevRole, profileConta
 
   return (
     <div className={`${PROFILE_CONTAINER} ${profileContainerClasses}`}>
-      <div className={`w-28 h-28 sm:w-48 sm:h-48 rounded-full relative overflow-hidden`}>
+      <div className={`size-28 sm:size-44 md:size-48 rounded-full relative overflow-hidden`}>
         <Image src={img} alt={name} layout="fill" objectFit="contain" unoptimized={true} />
       </div>
       <h2 className={`${colorTheme} text-xs sm:text-base font-semibold mt-3 ${classes}`}>{name}</h2>
