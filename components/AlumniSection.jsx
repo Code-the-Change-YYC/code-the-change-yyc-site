@@ -152,9 +152,9 @@ const people  = [{
 },
 ];
 
-const TechnicalTeam = () => {
+const AlumniSection = () => {
   const [executives, setExecutives] = useState([]);
-  const [projects, setProjects] = useState([]);
+  const [teams, setTeams] = useState([]);
   const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
@@ -162,25 +162,25 @@ const TechnicalTeam = () => {
     fetchContent('technicalTeam').then(() => {
       setExecutives(people);
 
-      setProjects(["Presidents", "Events", "Finance", "Marketing", "Tech"]);
+      setTeams(["Presidents", "Events", "Finance", "Marketing", "Tech"]);
 
       setActiveTab("Presidents");
     });
   }, []);
 
   return (
-    <section className="bg-[#7055FD] p-12 md:min-h-screen h-full">
-      <div className="mb-9 flex flex-row justify-center">
+    <section className="bg-[#7055FD] p-20 md:min-h-screen h-full">
+      <div className="mb-20 flex flex-row justify-center">
         <Image src={GREEN_SIDE_LINES_DIR} width={30} height={30} alt="" className='pb-16'/>
         <Heading underlineType={UnderlineTypes.GREEN_SHORT_UNDERLINE} classes={"text-white"}>Alumni</Heading>
       </div>
       <div>
-        {projects.length > 0 && (
+        {teams.length > 0 && (
           <Tabs 
             value={activeTab}>
-            <TabsHeader className="flex flex-row justify-center">
-              {projects.map((project) => (
-                <Tab className={`alumni-tab rounded-full p-1 font-medium text-white ${
+            <TabsHeader className="flex flex-row justify-center gap-4 pb-20">
+              {teams.map((project) => (
+                <Tab className={`alumni-tab rounded-full p-2 font-medium text-white ${
                   activeTab === project
                     ? 'bg-[#00D3A9]'
                     : ''
@@ -190,7 +190,7 @@ const TechnicalTeam = () => {
               ))}
             </TabsHeader>
             <TabsBody>
-              {projects.map((project) => (
+              {teams.map((project) => (
                 <TabPanel key={project} value={project}>
                   {project === "Presidents" ? (
                     <div className="text-white text-center text-xl font-semibold flex justify-center">
@@ -208,4 +208,4 @@ const TechnicalTeam = () => {
   );
 };
 
-export default TechnicalTeam;
+export default AlumniSection;
