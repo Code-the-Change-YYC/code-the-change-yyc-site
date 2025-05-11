@@ -30,7 +30,7 @@ const President = [[{
   name: "John Doe",
   position: "Co-Pres",
   year: "2025",
-  currRole: "Events team",
+  currRole: "current job",
   testimonial: "Vitae eget venenatis rhoncus aliquet curabitur mauris, sed turpis nulla. Neque molestie mi placerat ultrices sit in sit.",
   linkedin: "random link",
   pfp: {
@@ -47,7 +47,7 @@ const President = [[{
   name: "Jane Doe",
   position: "Co-Pres",
   year: "2025",
-  previousRole: "Events team",
+  currRole: "current job",
   testimonial: "Wow I love this club",
   linkedin: "random link",
   pfp: {
