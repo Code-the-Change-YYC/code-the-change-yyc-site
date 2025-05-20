@@ -3,7 +3,7 @@ import { SwiperSlide } from 'swiper/react';
 import Carousel from './Carousel';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Avatar from './PresidentAvatar';
+import Avatar from './Avatar';
 const CAROUSEL_CONTAINER = 'president-carousel text-white rounded-lg w-[20rem] h-full md:w-4/5 swiper-button-white flex justify-center items-center';
 const PRESIDENT_TILE =
   'bg-[#A689FF] bg-opacity-50 w-[20rem] h-[70rem] md:h-[25rem] rounded-lg items-center p-14 lg:p-10 flex flex-col md:w-4/5 md:flex-row';
@@ -24,7 +24,7 @@ const President = [[{
       }
     }
   },
-  classes: "text-[#7055FD]",
+  classes: "text-[#7055FD] president-avatar !mb-0",
 },
 {
   name: "John Doe",
@@ -40,7 +40,7 @@ const President = [[{
       }
     }
   },
-  classes: "text-[#7055FD]",
+  classes: "text-[#7055FD] president-avatar !mb-0",
 }
 ],
 [{
@@ -57,7 +57,7 @@ const President = [[{
       }
     }
   },
-  classes: "text-[#7055FD]",
+  classes: "text-[#7055FD] president-avatar !mb-0",
 },
 ]];
 
@@ -77,7 +77,7 @@ const PresidentTile = ({ name, linkedin, pfp, classes, testimonial, position, cu
 const CoPresident = () => {
   return (
     <div className={CAROUSEL_CONTAINER}>
-      <Carousel>
+      <Carousel className='president-carousel'>
         {President.map((president) => (
           <SwiperSlide key={president[0].name}>
             <div className='bg-white w-full rounded-3xl h-full flex flex-col justify-center items-center gap-10 py-20'>
