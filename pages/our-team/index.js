@@ -1,13 +1,12 @@
 import UnderConstruction from '../../components/UnderConstruction';
-import AlumniSection from '../../components/AlumniSection';
 
 const OurTeam = () => {
   return (
     <div>
       {/* <MeetOurTeam />
       <InternalTeam />
-      <TechnicalTeam /> */} 
-      <AlumniSection />
+      <TechnicalTeam />
+      <AlumniSection /> */}
       <UnderConstruction />
     </div>
   );
