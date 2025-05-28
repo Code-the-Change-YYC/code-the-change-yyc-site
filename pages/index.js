@@ -10,7 +10,6 @@ import TextSection from '../components/TextSection';
 import Sponsors from '../components/Sponsors';
 import { UnderlineTypes } from '../utils/underlineType';
 import HomePageBackgroundImage from '../public/images/homepage/homepage_background.png';
-import '../styles/globals.css';
 
 const LOGO_SVG_TOP = '/svgs/homepage/with_logo_top.svg';
 const LOGO_SVG_BOTTOM = '/svgs/homepage/with_logo_bottom.svg';
