@@ -43,10 +43,40 @@
   position: relative;
 }
 
-.president-carousel .swiper-button-next {
-  color: white;
+.president-carousel .swiper-pagination-bullet-active {
+  background-color: #A689FF; 
 }
 
 .president-carousel .swiper-button-prev {
   color: white;
+  left: 0.1rem; 
+}
+
+@media (min-width: 768px) {
+  .president-carousel .swiper-button-prev {
+    left: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .president-carousel .swiper-button-prev {
+    left: 1.5rem;
+  }
+}
+
+.president-carousel .swiper-button-next {
+  color: white;
+  right: 0.1rem; 
+}
+
+@media (min-width: 768px) {
+  .president-carousel .swiper-button-next {
+    right: 1rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .president-carousel .swiper-button-next {
+    right: 1.5rem;
+  }
 }
