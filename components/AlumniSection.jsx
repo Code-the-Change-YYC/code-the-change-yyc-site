@@ -152,6 +152,8 @@ const people  = [{
 },
 ];
 
+const TITLE_HEADER = "flex flex-row text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] justify-start px-auto lg:px-10 md:px-16 gap-2 lg:pb-10 pb-5 overflow-auto scrollbar-webkit @support scrollbar-thin";
+
 const AlumniSection = () => {
   const [executives, setExecutives] = useState([]);
   const [teams, setTeams] = useState([]);
@@ -169,18 +171,18 @@ const AlumniSection = () => {
   }, []);
 
   return (
-    <section className="bg-[#7055FD] p-20 md:min-h-screen h-full">
-      <div className="mb-20 flex flex-row justify-center">
+    <section className="bg-[#7055FD] lg:p-20 py-10 px-5 w-full h-full">
+      <div className="mb-8 flex flex-row justify-center">
         <Image src={GREEN_SIDE_LINES_DIR} width={30} height={30} alt="" className='pb-16'/>
         <Heading underlineType={UnderlineTypes.GREEN_SHORT_UNDERLINE} classes={"text-white"}>Alumni</Heading>
       </div>
-      <div>
+      <div className='px-5'>
         {teams.length > 0 && (
           <Tabs 
             value={activeTab}>
-            <TabsHeader className="flex flex-row justify-center gap-4 pb-20">
+            <TabsHeader className={TITLE_HEADER}>
               {teams.map((project) => (
-                <Tab className={`alumni-tab rounded-full p-2 font-medium text-white ${
+                <Tab className={`alumni-tab rounded-full py-2 px-4 lg:mx-4 font-medium text-white ${
                   activeTab === project
                     ? 'bg-[#00D3A9]'
                     : ''
