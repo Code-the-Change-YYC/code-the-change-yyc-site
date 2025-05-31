@@ -31,6 +31,15 @@
   color: white;
 }
 
+.alumni-tab {
+  max-width: 200px;
+}
+
+.alumni-tab:hover {
+  background-color: #00D3A9;
+  color: white;
+}
+
 .technical-section {
   background-color: #bcfbe4;
 }
