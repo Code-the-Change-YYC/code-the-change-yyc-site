@@ -4,8 +4,7 @@ import Avatar from './Avatar';
 const EXECUTIVE_LEVEL_CONTAINER = 'flex flex-row flex-wrap justify-center w-full';
 const ITEMS_PER_PAGE = 4;
 
-const Team = ({ teamMembers, teamIdentifier }) => {
-  const TEAM_CONTAINER = 'flex flex-row flex-wrap justify-center w-full';
+const Team = ({ teamMembers }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(teamMembers.length / ITEMS_PER_PAGE);
