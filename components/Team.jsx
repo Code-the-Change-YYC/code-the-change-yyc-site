@@ -4,13 +4,14 @@ import Avatar from './Avatar';
 const EXECUTIVE_LEVEL_CONTAINER = 'flex flex-row flex-wrap justify-center w-full';
 const ITEMS_PER_PAGE = 4;
 
-const Team = ({ executives }) => {
+const Team = ({ teamMembers, teamIdentifier }) => {
+  const TEAM_CONTAINER = 'flex flex-row flex-wrap justify-center w-full';
   const [currentPage, setCurrentPage] = useState(1);
 
-  const totalPages = Math.ceil(executives.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(teamMembers.length / ITEMS_PER_PAGE);
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentExecutives = executives.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const currentExecutives = teamMembers.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   const goToPage = (page) => {
     if (page >= 1 && page <= totalPages) {
