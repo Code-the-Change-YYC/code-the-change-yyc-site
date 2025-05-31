@@ -198,7 +198,7 @@ const AlumniSection = () => {
                     <div className="text-white text-center text-xl font-semibold flex justify-center">
                       <CoPresident />
                     </div>) : (
-                    <Team executives={executives.filter((exec) => exec.project === project)} />
+                    <Team teamMembers={executives.filter((exec) => exec.project === project)} />
                   )}
                 </TabPanel>
               ))}

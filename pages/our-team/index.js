@@ -1,19 +1,9 @@
-// import UnderConstruction from '../../components/UnderConstruction';
+import UnderConstruction from '../../components/UnderConstruction';
+import { underConstruction } from '../../utils/flags';
 import MeetOurTeam from '../../components/MeetOurTeam';
-import InternalTeam from '../../components/InternalTeam';
-import TechnicalTeam from '../../components/TechnicalTeam';
-import AlumniSection from '../../components/AlumniSection';
 
 const OurTeam = () => {
-  return (
-    <div>
-      <MeetOurTeam />
-      <InternalTeam />
-      <TechnicalTeam />  
-      <AlumniSection />
-      {/* <UnderConstruction /> */}
-    </div>
-  );
+  return <div>{underConstruction ? <UnderConstruction /> : <MeetOurTeam />}</div>;
 };
 
 export default OurTeam;

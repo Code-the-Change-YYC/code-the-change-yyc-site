@@ -1,12 +1,12 @@
 import Avatar from './Avatar';
 
-const Team = ({ executives }) => {
-  const EXECUTIVE_LEVEL_CONTAINER = 'flex flex-row flex-wrap justify-center w-full';
+const Team = ({ teamMembers, teamIdentifier }) => {
+  const TEAM_CONTAINER = 'flex flex-row flex-wrap justify-center w-full';
 
   return (
-    <div className={EXECUTIVE_LEVEL_CONTAINER}>
-      {executives.map((exec) => (
-        <Avatar key={exec.name} {...exec} />
+    <div className={TEAM_CONTAINER}>
+      {teamMembers.map((member) => (
+        <Avatar teamIdentifier={teamIdentifier} key={member.name} {...member} />
       ))}
     </div>
   );

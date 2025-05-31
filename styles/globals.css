@@ -17,12 +17,17 @@
   }
 }
 
-.team-tab {
+.team-tab:hover {
+  background-color: #7559fc;
+  color: white;
+}
+
+.alumni-tab {
   max-width: 200px;
 }
 
-.team-tab:hover {
-  background-color: #7559fc;
+.alumni-tab:hover {
+  background-color: #00D3A9;
   color: white;
 }
 
@@ -43,8 +48,8 @@
   position: relative;
 }
 
-.president-carousel .swiper-pagination-bullet-active {
-  background-color: #A689FF; 
+.president-carousel .swiper-button-next {
+  color: white;
 }
 
 .president-carousel .swiper-button-prev {

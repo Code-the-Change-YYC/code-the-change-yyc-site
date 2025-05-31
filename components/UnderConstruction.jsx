@@ -3,7 +3,7 @@ import { UnderlineTypes } from '../utils/underlineType';
 
 const UnderConstruction = () => {
   return (
-    <section className="h-screen p-12">
+    <section className="h-screen p-12 flex justify-center ">
       <Heading underlineType={UnderlineTypes.IGE_SHORT_UNDERLINE_DIR}>Under Construction</Heading>
     </section>
   );
