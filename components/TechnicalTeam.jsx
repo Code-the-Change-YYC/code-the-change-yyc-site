@@ -8,20 +8,18 @@ import { PageIdentifiers } from '../utils/flags';
 
 const TechnicalTeam = () => {
   const [executives, setExecutives] = useState([]);
-  const [positions, setPositions] = useState([]);
+  const [projects, setProjects] = useState([]);
   const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
-    fetchContent('adminTeamMember').then((data) => {
+    fetchContent('technicalTeam').then((data) => {
       setExecutives(data);
 
-      const uniquePositions = data
-        .map((exec) => exec.position)
-        .filter((pos, index, self) => self.indexOf(pos) === index);
-      setPositions(uniquePositions);
+      const uniqueProjects = data.map((exec) => exec.project).filter((pos, index, self) => self.indexOf(pos) === index);
+      setProjects(uniqueProjects);
 
-      if (uniquePositions.length > 0) {
-        setActiveTab(uniquePositions[0]);
+      if (uniqueProjects.length > 0) {
+        setActiveTab(uniqueProjects[0]);
       }
     });
   }, []);
@@ -34,11 +32,11 @@ const TechnicalTeam = () => {
         </Heading>
         <span className="text-5xl font-semibold">Team</span>
       </div>
-      {positions.length > 0 && (
+      {projects.length > 0 && (
         <Tabs value={activeTab}>
           <TabsHeader className="overflow-x-auto grid place-items-center">
             <div className="flex flex-row gap-2 whitespace-nowrap">
-              {positions.map((position) => (
+              {projects.map((position) => (
                 <Tab key={position} value={position} onClick={() => setActiveTab(position)}>
                   <div
                     className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-200
@@ -52,7 +50,7 @@ const TechnicalTeam = () => {
             </div>
           </TabsHeader>
           <TabsBody>
-            {positions.map((position) => (
+            {projects.map((position) => (
               <TabPanel key={position} value={position}>
                 <Team
                   teamIdentifier={PageIdentifiers.EXECUTIVE_LEVEL_CONTAINER}

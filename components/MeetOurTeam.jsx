@@ -4,6 +4,7 @@ import { UnderlineTypes } from '../utils/underlineType';
 import { useRef } from 'react';
 import InternalTeam from './InternalTeam';
 import TechnicalTeam from './TechnicalTeam';
+import AlumniSection from './AlumniSection';
 
 const MEET_OUR_TEAM = 'flex flex-col bg-pink pt-10 z-0 w-full';
 const CONTENT_CONTAINER = 'flex flex-col pt-5 p-5 md:px-32';
@@ -68,6 +69,9 @@ const MeetOurAmazingTeam = () => {
       </section>
       <section id="technical" ref={technicalRef} className="h-screen p-12 bg-[#bcfbe4]">
         <TechnicalTeam />
+      </section>
+      <section>
+        <AlumniSection />
       </section>
     </div>
   );
