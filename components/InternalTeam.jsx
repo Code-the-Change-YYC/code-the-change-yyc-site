@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from '@material-tailwind/react';
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
+import { PageIdentifiers } from '../utils/flags';
 
 const positionToGroupMap = {
   'Jr VP Marketing': 'Marketing',
@@ -46,31 +47,43 @@ const InternalTeam = () => {
   }, []);
 
   return (
-    <section className="p-12">
-      <div className="mb-9">
-        <Heading underlineType={UnderlineTypes.PURPLE_SHORT_UNDERLINE}>Internal Team</Heading>
+    <>
+      <div className="mb-12 flex justify-center gap-3">
+        <Heading distanceFromTop={11} underlineType={UnderlineTypes.GREEN_SHORT_UNDERLINE}>
+          Internal{' '}
+        </Heading>
+        <span className="text-5xl font-semibold">Team</span>
       </div>
-      <div>
-        {groups.length > 0 && (
-          <Tabs value={activeTab} onChange={(val) => setActiveTab(val)}>
-            <TabsHeader className="flex flex-row justify-center">
+      {groups.length > 0 && (
+        <Tabs value={activeTab}>
+          <TabsHeader className="overflow-x-auto grid place-items-center">
+            <div className="flex flex-row gap-2">
               {groups.map((group) => (
-                <Tab className="team-tab rounded-full p-1 font-medium" key={group} value={group}>
-                  {group}
+                <Tab key={group} value={group} onClick={() => setActiveTab(group)}>
+                  <div
+                    className={`rounded-full px-4 py-2 font-medium hover:bg-[#00D3A9] hover:text-white transition-all duration-200
+              ${activeTab === group ? 'bg-[#00D3A9] text-white' : 'text-black'}
+            `}
+                  >
+                    {group}
+                  </div>
                 </Tab>
               ))}
-            </TabsHeader>
-            <TabsBody>
-              {groups.map((group) => (
-                <TabPanel key={group} value={group}>
-                  <Team executives={executives.filter((exec) => exec.group === group)} />
-                </TabPanel>
-              ))}
-            </TabsBody>
-          </Tabs>
-        )}
-      </div>
-    </section>
+            </div>
+          </TabsHeader>
+          <TabsBody>
+            {groups.map((group) => (
+              <TabPanel key={group} value={group}>
+                <Team
+                  teamIdentifier={PageIdentifiers.INTERNAL_LEVEL_CONTAINER}
+                  teamMembers={executives.filter((exec) => exec.group === group)}
+                />
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
+      )}
+    </>
   );
 };
 
