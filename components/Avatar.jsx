@@ -32,13 +32,6 @@ const Avatar = ({ name, linkedin, position, pfp, classes, prevRole, currRole, pr
           {currRole}
         </h2>
       )}
-      {(isPresidentAvatar && !isPresidentAvatar) && (
-        <h2
-          className={`text-[#7055FD] w-28 text-center text-xs sm:text-base hidden sm:block font-medium mb-2 ${classes}`}
-        >
-          {currRole}
-        </h2>
-      )}
       {(prevRole && !isPresidentAvatar) && (
         <h2
           className={`${colorTheme} w-28 text-center text-xs sm:text-base hidden sm:block font-medium mb-2 ${classes}`}
