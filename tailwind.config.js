@@ -30,16 +30,17 @@ module.exports = {
         },
         ".scrollbar-webkit": {
           "&::-webkit-scrollbar" :{
-            width: "8px"
+            width: "8px",
+            height: "6px"
           },
           "&::-webkit-scrollbar-track":{
-            background: "rgb(90, 68, 220)",
+            background: "var(--scrollbar-track-colour)",
             borderRadius: "20px"
           },
           "&::-webkit-scrollbar-thumb":{
-            backgroundColor: "rgb(0 211 169)",
+            backgroundColor: "var(--scrollbar-thumb-colour)",
             borderRadius: "20px",
-            border: "2px solid rgb(90, 68, 220)"
+            border: "none"
           },
         }, 
       };

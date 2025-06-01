@@ -152,7 +152,7 @@ const people  = [{
 },
 ];
 
-const TITLE_HEADER = "flex flex-row text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] justify-start px-auto lg:px-10 md:px-16 gap-2 lg:pb-10 pb-5 overflow-auto scrollbar-webkit @support scrollbar-thin";
+const TITLE_HEADER = "flex flex-row text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] justify-center px-auto lg:px-10 md:px-16 gap-2 lg:pb-10 pb-5 overflow-auto scrollbar-webkit @support scrollbar-thin";
 
 const AlumniSection = () => {
   const [executives, setExecutives] = useState([]);
@@ -180,11 +180,17 @@ const AlumniSection = () => {
         {teams.length > 0 && (
           <Tabs 
             value={activeTab}>
-            <TabsHeader className={TITLE_HEADER}>
+            <TabsHeader 
+              className={TITLE_HEADER}
+              style={{
+                "--scrollbar-thumb-colour": "rgb(0, 211, 169)",
+                "--scrollbar-track-colour": "rgb(90, 68, 220)",
+              }}
+            >
               {teams.map((project) => (
-                <Tab className={`alumni-tab rounded-full py-2 px-4 lg:mx-4 font-medium text-white ${
+                <Tab className={`hover:bg-[#00BA95] hover:text-white rounded-full py-2 px-4 lg:mx-4 font-medium text-white transition-all duration-200 ${
                   activeTab === project
-                    ? 'bg-[#00D3A9]'
+                    ? 'bg-[#00BA95]'
                     : ''
                 }`} key={project} value={project} onClick={() => setActiveTab(project)}>
                   {project}

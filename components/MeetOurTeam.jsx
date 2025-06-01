@@ -22,7 +22,7 @@ const Button = ({ classes = '', children, targetRef }) => {
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
       }}
-      className={`cursor-pointer rounded-full text-white border-white py-2 px-8 bg-brightPink border-4 text-3xl font-bold w-48 ${classes}`}
+      className={`cursor-pointer rounded-full text-white border-white py-2 px-8 bg-brightPink border-4 text-3xl font-semibold w-48 ${classes}`}
     >
       {children}
     </button>
@@ -32,6 +32,7 @@ const Button = ({ classes = '', children, targetRef }) => {
 const MeetOurAmazingTeam = () => {
   const internalRef = useRef(null);
   const technicalRef = useRef(null);
+  const alumniRef = useRef(null);
 
   return (
     <div>
@@ -60,6 +61,9 @@ const MeetOurAmazingTeam = () => {
             <Button targetRef={technicalRef} timeout={1000}>
               Technical
             </Button>
+            <Button targetRef={alumniRef} timeout={1000}>
+              Alumni
+            </Button>
           </div>
         </div>
       </div>
@@ -70,7 +74,7 @@ const MeetOurAmazingTeam = () => {
       <section id="technical" ref={technicalRef} className="h-screen p-12 bg-[#bcfbe4]">
         <TechnicalTeam />
       </section>
-      <section>
+      <section id="alumni" ref={alumniRef} className='h-screen'>
         <AlumniSection />
       </section>
     </div>

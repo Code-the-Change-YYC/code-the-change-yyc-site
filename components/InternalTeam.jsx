@@ -6,6 +6,8 @@ import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import { PageIdentifiers } from '../utils/flags';
 
+const TABS_STYLES = "flex flex-row text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] justify-center px-auto lg:px-10 md:px-16 gap-2 lg:pb-10 pb-5 overflow-auto scrollbar-webkit @support scrollbar-thin";
+
 const positionToGroupMap = {
   'Jr VP Marketing': 'Marketing',
   'VP Marketing': 'Marketing',
@@ -56,17 +58,22 @@ const InternalTeam = () => {
       </div>
       {groups.length > 0 && (
         <Tabs value={activeTab}>
-          <TabsHeader className="overflow-x-auto grid place-items-center">
+          <TabsHeader 
+            className={TABS_STYLES}
+            style={{
+              "--scrollbar-thumb-colour": "rgb(0, 211, 169)",
+              "--scrollbar-track-colour": "rgb(235, 235, 235)",
+            }}
+          >
             <div className="flex flex-row gap-2">
               {groups.map((group) => (
-                <Tab key={group} value={group} onClick={() => setActiveTab(group)}>
-                  <div
-                    className={`rounded-full px-4 py-2 font-medium hover:bg-[#00D3A9] hover:text-white transition-all duration-200
-              ${activeTab === group ? 'bg-[#00D3A9] text-white' : 'text-black'}
-            `}
-                  >
-                    {group}
-                  </div>
+                <Tab className={`flex-1 min-w-max rounded-full lg:mx-4 px-4 py-2 font-medium hover:bg-[#00BA95] hover:text-white transition-all duration-200 ${
+                  activeTab === group 
+                    ? 'bg-[#00BA95] text-white' 
+                    : 'text-black'
+                }`} key={group} value={group} onClick={() => setActiveTab(group)}
+                >
+                  {group}
                 </Tab>
               ))}
             </div>
