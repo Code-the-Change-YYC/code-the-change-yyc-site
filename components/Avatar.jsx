@@ -8,7 +8,8 @@ import { PageIdentifiers } from '../utils/flags';
 const PROFILE_CONTAINER = 'flex flex-col items-center m-10';
 
 const Avatar = ({ name, linkedin, position, pfp, classes, prevRole, currRole, profileContainerClasses = '', teamIdentifier }) => {
-  const img = 'https:' + pfp.fields.file.url;
+  // conditional statement for temporary use of local images
+  const img = typeof pfp === 'string' ? pfp : 'https:' + pfp.fields.file.url;
   const isPresidentAvatar = String(classes).includes("president-avatar");
 
   const colorTheme =

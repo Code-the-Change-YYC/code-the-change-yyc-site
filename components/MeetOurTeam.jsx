@@ -64,10 +64,10 @@ const MeetOurAmazingTeam = () => {
         </div>
       </div>
 
-      <section id="internal" ref={internalRef} className="h-screen p-12">
+      <section id="internal" ref={internalRef} className="min-h-screen p-12">
         <InternalTeam />
       </section>
-      <section id="technical" ref={technicalRef} className="h-screen p-12 bg-[#bcfbe4]">
+      <section id="technical" ref={technicalRef} className="min-h-screen p-12 bg-[#bcfbe4]">
         <TechnicalTeam />
       </section>
       <section>

@@ -9,7 +9,7 @@ import Image from 'next/image';
 const GREEN_SIDE_LINES_DIR = '/svgs/green_side_lines.svg';
 
 // Dummy values to be replaced with contentful
-const people  = [{
+export const people  = [{
   name: "John Doe",
   linkedin: "randomlink.com",
   position: "Dev",
