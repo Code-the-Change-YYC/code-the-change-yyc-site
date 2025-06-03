@@ -154,17 +154,14 @@ const people  = [{
 
 const AlumniSection = () => {
   const [executives, setExecutives] = useState([]);
-  const [teams, setTeams] = useState([]);
-  const [activeTab, setActiveTab] = useState('');
+  const [activeTab, setActiveTab] = useState("Presidents");
+
+  const teams = ["Presidents", "Events", "Finance", "Marketing", "Tech"];
 
   useEffect(() => {
     // Put Contenful stuff here
     fetchContent('technicalTeam').then(() => {
       setExecutives(people);
-
-      setTeams(["Presidents", "Events", "Finance", "Marketing", "Tech"]);
-
-      setActiveTab("Presidents");
     });
   }, []);
 
