@@ -69,6 +69,32 @@ export const INTERNAL_MEMBERS = [
     linkedin: 'anthonyych4n',
   },
   {
+    name: 'Sebastian Nieto',
+    pfp: {
+      fields: {
+        file: {
+          url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
+        }
+      }
+    },
+    group: 'Events',
+    position: 'Events Comissioner',
+    linkedin: '',
+  },
+  {
+    name: 'May Liu',
+    pfp: {
+      fields: {
+        file: {
+          url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
+        }
+      }
+    },
+    group: 'Events',
+    position: 'Events Comissioner',
+    linkedin: '',
+  },
+  {
     name: 'Ryan Obiar',
     pfp: '/profiles/RyanObiar.jpg',
     group: 'Marketing & Design',

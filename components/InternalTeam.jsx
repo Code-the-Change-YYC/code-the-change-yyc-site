@@ -74,6 +74,7 @@ const InternalTeam = () => {
                 <Team
                   teamIdentifier={PageIdentifiers.INTERNAL_LEVEL_CONTAINER}
                   teamMembers={executives.filter((exec) => exec.group === group)}
+                  section='internal'
                 />
               </TabPanel>
             ))}

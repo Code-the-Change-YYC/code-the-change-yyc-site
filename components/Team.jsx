@@ -4,7 +4,22 @@ import Avatar from './Avatar';
 const TEAM_CONTAINER = 'flex flex-row flex-wrap justify-center w-full gap-6';
 const ITEMS_PER_PAGE = 4;
 
-const Team = ({ teamMembers, teamIdentifier }) => {
+const PAGINATION_STYLES = {
+  default: {
+    active: 'z-10 text-[#7055FD] text-base bg-white border rounded-full',
+    inactive: 'text-white',
+  },
+  internal: {
+    active: 'z-10 text-white bg-[#00BA95] border-green-500 rounded-full',
+    inactive: 'text-[#00BA95]',
+  },
+  technical: {
+    active: 'z-10 text-[#9FDEC8] bg-[#7055FD] border-pink-500 rounded-full',
+    inactive: 'text-[#7055FD]',
+  },
+};
+
+const Team = ({ teamMembers, teamIdentifier, section = "default" }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   // Separate leads/vps and others
@@ -58,8 +73,8 @@ const Team = ({ teamMembers, teamIdentifier }) => {
                 onClick={() => goToPage(index + 1)}
                 className={`relative inline-flex items-center px-4 py-2 font-semibold ${
                   currentPage === index + 1
-                    ? 'z-10 text-[#7055FD] text-base bg-white border rounded-full'
-                    : 'text-white hover:text-lg'
+                    ? PAGINATION_STYLES[section]?.active || PAGINATION_STYLES.default.active
+                    : PAGINATION_STYLES[section]?.inactive || PAGINATION_STYLES.default.inactive
                 }`}
               >
                 {index + 1}

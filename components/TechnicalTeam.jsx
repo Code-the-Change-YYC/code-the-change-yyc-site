@@ -64,6 +64,7 @@ const TechnicalTeam = () => {
                 <Team
                   teamIdentifier={PageIdentifiers.EXECUTIVE_LEVEL_CONTAINER}
                   teamMembers={executives.filter((exec) => exec.project === project)}
+                  section='technical'
                 />
               </TabPanel>
             ))}
