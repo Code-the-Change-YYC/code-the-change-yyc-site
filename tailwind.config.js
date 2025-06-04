@@ -2,7 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}',],
   theme: {
     extend: {
       fontFamily: {
@@ -21,5 +21,29 @@ module.exports = {
   variants: {
     fill: ['hover', 'focus'],
   },
-  plugins: [require('tailwind-scrollbar-hide')],
+  plugins: [require('tailwind-scrollbar-hide'),
+    function ({addUtilities}){
+      const newUtilities ={
+        "@supports .scrollbar-thin" :{
+          scrollbarWidth: "thin",
+          scrollbarColor: "rgb(0, 211, 169) rgb(90, 68, 220)"
+        },
+        ".scrollbar-webkit": {
+          "&::-webkit-scrollbar" :{
+            width: "8px",
+            height: "6px"
+          },
+          "&::-webkit-scrollbar-track":{
+            background: "var(--scrollbar-track-colour)",
+            borderRadius: "20px"
+          },
+          "&::-webkit-scrollbar-thumb":{
+            backgroundColor: "var(--scrollbar-thumb-colour)",
+            borderRadius: "20px",
+            border: "none"
+          },
+        }, 
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    } ],
 };

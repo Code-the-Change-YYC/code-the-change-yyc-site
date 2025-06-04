@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Omnes';
+  src: url('/fonts/Omnes Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 .text-stroke-outside {
   -webkit-text-stroke: 3px white;
 }
@@ -22,24 +30,6 @@
   color: white;
 }
 
-.alumni-tab {
-  max-width: 200px;
-}
-
-.alumni-tab:hover {
-  background-color: #00D3A9;
-  color: white;
-}
-
-.alumni-tab {
-  max-width: 200px;
-}
-
-.alumni-tab:hover {
-  background-color: #00D3A9;
-  color: white;
-}
-
 .technical-section {
   background-color: #bcfbe4;
 }
@@ -54,4 +44,34 @@
 
 .president-carousel .swiper-button-prev {
   color: white;
+  left: 0.1rem; 
+}
+
+@media (min-width: 768px) {
+  .president-carousel .swiper-button-prev {
+    left: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .president-carousel .swiper-button-prev {
+    left: 1.5rem;
+  }
+}
+
+.president-carousel .swiper-button-next {
+  color: white;
+  right: 0.1rem; 
+}
+
+@media (min-width: 768px) {
+  .president-carousel .swiper-button-next {
+    right: 1rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .president-carousel .swiper-button-next {
+    right: 1.5rem;
+  }
 }

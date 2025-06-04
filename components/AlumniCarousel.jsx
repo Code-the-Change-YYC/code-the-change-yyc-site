@@ -7,8 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { rgbDataURL } from '../utils/blurImage';
 const CAROUSEL_CONTAINER = 'text-white rounded-lg w-[20rem] h-[44rem] shadow-2xl md:w-4/5 swiper-button-white';
-const ALUMNI_TILE =
-  'bg-[#7055FD] w-[20rem] h-[70rem] md:h-[44rem] rounded-lg items-center p-14 lg:p-10 flex flex-col shadow-2xl md:w-full md:flex-row';
+const ALUMNI_TILE = 'bg-[#7055FD] w-[20rem] h-[70rem] md:h-[44rem] rounded-lg items-center p-14 lg:p-10 flex flex-col shadow-2xl md:w-full md:flex-row';
 const ALUMNI_PROFILE = 'flex flex-col items-center mx-auto text-center md:p-10';
 
 const AlumniTile = ({ fullName, position, previousRole, testimonial, linkedin, profile }) => {

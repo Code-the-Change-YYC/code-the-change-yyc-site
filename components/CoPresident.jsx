@@ -4,11 +4,16 @@ import Carousel from './Carousel';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Avatar from './Avatar';
-const CAROUSEL_CONTAINER = 'president-carousel text-white rounded-lg w-[20rem] h-full md:w-4/5 swiper-button-white flex justify-center items-center';
+
+const SWIPERS = 'swiper-button-white w-full h-full flex justify-center items-center relative';
+const CAROUSEL_CONTAINER = 'president-carousel text-white rounded-lg w-full max-w-[90%] h-full md:w-4/5 flex justify-center items-center';
 const PRESIDENT_TILE =
-  'bg-[#A689FF] bg-opacity-50 w-[20rem] h-[70rem] md:h-[25rem] rounded-lg items-center p-14 lg:p-10 flex flex-col md:w-4/5 md:flex-row';
-
-
+  'bg-[#A689FF] bg-opacity-50 w-full h-full rounded-lg items-center px-4 md:pb-8 pb-16 mb-10 md:w-4/5 flex flex-col md:flex-row mx:auto';
+const TEXT = "my-10 md:pt-10 md:pb-6 pr-5 w-fit mx-auto text-center";
+const QUOTES = "md:text-[1.3rem] text-[1.2rem] font-light font-medium italic text-[#4833B2]";
+const QUOTATION_MARK = "text-[2rem] md:text-[2rem] font-extrabold";
+const PRESIDENT_YEAR = 'text-[#000000] font-bold text-4xl absolute top-6 left:right';
+const PRESIDENT_TILE_CONTAINER = 'bg-white md:rounded-3xl rounded-xl flex flex-col items-center md:px-2 px-8 py-20';
 
 const President = [[{
   name: "Jane Doe",
@@ -65,30 +70,36 @@ const PresidentTile = ({ name, linkedin, pfp, classes, testimonial, position, cu
   return (
     <div className={PRESIDENT_TILE}>
       <Avatar key={name} {...{name, linkedin, pfp, classes, position, currRole}}></Avatar>
-      <p className="text-[1.1rem] font-light italic leading-7 mx-auto md:ml-14 md:mb-24 md:text-[1.3rem] lg:text-[1.5rem] md:p-10 text-[#000000]">
-        <span className="text-[2rem] font-extrabold">&quot;</span>
-        {testimonial}
-        <span className="text-[2rem] font-extrabold">&quot;</span>
-      </p>
+      <div className={TEXT}>
+        <p className={QUOTES}>
+          <span className={QUOTATION_MARK}>&quot;  </span>
+          {testimonial}
+          <span className={QUOTATION_MARK}>  &quot;</span>
+        </p>
+      </div>
     </div>
   );
 };
 
 const CoPresident = () => {
   return (
-    <div className={CAROUSEL_CONTAINER}>
-      <Carousel className='president-carousel'>
-        {President.map((president) => (
-          <SwiperSlide key={president[0].name}>
-            <div className='bg-white w-full rounded-3xl h-full flex flex-col justify-center items-center gap-10 py-20'>
-              <div className='text-[#000000] text-4xl absolute top-5 left-32'>{president[0].year}</div>
-              <PresidentTile {...president[0]} />
-              {president[1] && <PresidentTile {...president[1]} />}
-            </div>
-          </SwiperSlide>
-        ))}
-      </Carousel>
+    <div className={SWIPERS}>
+      <div className={CAROUSEL_CONTAINER}>
+        <Carousel className='president-carousel'>
+          {President.map(([pres1, pres2], index) => (
+            <SwiperSlide key={pres1.name + index}>
+              <div className={PRESIDENT_TILE_CONTAINER}>
+                <div className={PRESIDENT_YEAR}>{pres1.year}</div>
+                <PresidentTile {...pres1} />
+                {pres2 && <PresidentTile {...pres2} />}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Carousel>
+      </div>
     </div>
   );
 };
+
 export default CoPresident;
+
