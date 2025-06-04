@@ -1,7 +1,6 @@
 import { Disclosure } from '@headlessui/react';
 import { FaAngleDown } from 'react-icons/fa';
 import About from '../../components/About';
-import Executives from '../../components/Executives';
 import Heading from '../../components/Heading';
 import AlumniHighlights from '../../components/AlumniHighlights';
 import Timeline from '../../components/Timeline';
@@ -46,10 +45,9 @@ const WhoWeAre = ({ alumni, timeline }) => {
         </div>
       </div>
       <Events />
-      <Executives />
       <AlumniHighlights alumni={alumni} />
       <div className="flex flex-col bg-white px-10 md:px-24 lg:px-48 w-full py-10 overflow-y-auto scrollbar-hide" style={{height: 728 + 'px'}}>
-        <Heading>FAQ</Heading>
+        <Heading width='1/10'>FAQ</Heading>
         <div className="flex flex-col py-10 w-full space-y-4">
           {FAQS.map((props) => (
             <FAQDropdown key={props.prompt} {...props} />

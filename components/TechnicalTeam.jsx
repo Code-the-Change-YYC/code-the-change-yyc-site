@@ -23,6 +23,7 @@ const TechnicalTeam = () => {
     //   }
     // });
 
+    // temporarily use local data
     setExecutives(TECHNICAL_MEMBERS);
     const uniqueProjects = TECHNICAL_MEMBERS.map((exec) => exec.project).filter((pos, index, self) => self.indexOf(pos) === index);
     setProjects(uniqueProjects);

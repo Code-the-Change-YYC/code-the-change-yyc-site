@@ -6,66 +6,32 @@ import 'swiper/css/navigation';
 import Avatar from './Avatar';
 const CAROUSEL_CONTAINER = 'president-carousel text-white rounded-lg w-[20rem] h-full md:w-4/5 swiper-button-white flex justify-center items-center';
 const PRESIDENT_TILE =
-  'bg-[#A689FF] bg-opacity-50 w-[20rem] h-[70rem] md:h-[25rem] rounded-lg items-center p-14 lg:p-10 flex flex-col md:w-4/5 md:flex-row';
+  'bg-[#A689FF] bg-opacity-50 w-[20rem] rounded-lg items-center p-14 lg:p-10 flex flex-col md:w-4/5 md:flex-row';
 
 
 
-const President = [[{
-  name: "Jane Doe",
-  position: "Co-Pres",
-  year: "2025",
-  currRole: "current job",
-  testimonial: "Wow I love this club",
-  linkedin: "random link",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
+const President = [[
+  {
+    name: "Topan Budiman",
+    linkedin: "topanb",
+    currRole: "SDE @ Amazon",
+    project: "Presidents",
+    pfp: "/profiles/TopanBudiman.jpg",
+    testimonial: `
+      Being a part of Code the Change YYC was one of the major highlights of my undergrad! During my time at CTC, 
+      I met lots of super talented and cool people - some of whom became lifelong friends. In today’s competitive tech market, 
+      it’s important to upskill and CTC gave me plenty of opportunities to grow my software development and leadership skills. 
+      I wouldn’t be the person I am today without the countless memories and experiences  I had with this club.`,
+    classes: "text-[#7055FD] president-avatar !mb-0",
+    year: 2025
   },
-  classes: "text-[#7055FD] president-avatar !mb-0",
-},
-{
-  name: "John Doe",
-  position: "Co-Pres",
-  year: "2025",
-  currRole: "current job",
-  testimonial: "Vitae eget venenatis rhoncus aliquet curabitur mauris, sed turpis nulla. Neque molestie mi placerat ultrices sit in sit.",
-  linkedin: "random link",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-[#7055FD] president-avatar !mb-0",
-}
-],
-[{
-  name: "Jane Doe",
-  position: "Co-Pres",
-  year: "2025",
-  currRole: "current job",
-  testimonial: "Wow I love this club",
-  linkedin: "random link",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-[#7055FD] president-avatar !mb-0",
-},
 ]];
 
 const PresidentTile = ({ name, linkedin, pfp, classes, testimonial, position, currRole }) => {
   return (
     <div className={PRESIDENT_TILE}>
       <Avatar key={name} {...{name, linkedin, pfp, classes, position, currRole}}></Avatar>
-      <p className="text-[1.1rem] font-light italic leading-7 mx-auto md:ml-14 md:mb-24 md:text-[1.3rem] lg:text-[1.5rem] md:p-10 text-[#000000]">
+      <p className="text-[1.1rem] font-light italic leading-7 mx-auto md:text-l lg:text-2xl md:p-10 text-[#000000]">
         <span className="text-[2rem] font-extrabold">&quot;</span>
         {testimonial}
         <span className="text-[2rem] font-extrabold">&quot;</span>

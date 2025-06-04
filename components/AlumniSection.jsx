@@ -9,148 +9,7 @@ import Image from 'next/image';
 const GREEN_SIDE_LINES_DIR = '/svgs/green_side_lines.svg';
 
 // Dummy values to be replaced with contentful
-export const people  = [{
-  name: "John Doe",
-  linkedin: "randomlink.com",
-  position: "Dev",
-  project: "Events",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-white",
-},
-{
-  name: "John Doe",
-  linkedin: "randomlink.com",
-  position: "Dev",
-  project: "Events",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-white",
-},
-{
-  name: "John Doe",
-  linkedin: "randomlink.com",
-  position: "Dev",
-  project: "Events",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-white",
-},
-{
-  name: "John Doe",
-  linkedin: "randomlink.com",
-  position: "Dev",
-  project: "Events",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-white",
-},
-
-{
-  name: "John Doe",
-  linkedin: "randomlink.com",
-  position: "Dev",
-  project: "Events",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-white",
-},
-{
-  name: "John Doe",
-  linkedin: "randomlink.com",
-  position: "Dev",
-  project: "Events",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-white",
-},
-{
-  name: "John Doe",
-  linkedin: "randomlink.com",
-  position: "Dev",
-  project: "Events",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-white",
-},
-{
-  name: "John Doe",
-  linkedin: "randomlink.com",
-  position: "Dev",
-  project: "Finance",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-white",
-},
-{
-  name: "John Doe",
-  linkedin: "randomlink.com",
-  position: "Dev",
-  project: "Marketing",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-white",
-},
-{
-  name: "John Doe",
-  linkedin: "randomlink.com",
-  position: "Dev",
-  project: "Tech",
-  pfp: {
-    fields: {
-      file: {
-        url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-      }
-    }
-  },
-  classes: "text-white",
-},
-];
+export const alumni  = [];
 
 const AlumniSection = () => {
   const [executives, setExecutives] = useState([]);
@@ -160,7 +19,7 @@ const AlumniSection = () => {
   useEffect(() => {
     // Put Contenful stuff here
     fetchContent('technicalTeam').then(() => {
-      setExecutives(people);
+      setExecutives(alumni);
 
       setTeams(["Presidents", "Events", "Finance", "Marketing", "Tech"]);
 

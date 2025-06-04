@@ -87,4 +87,18 @@ export const TECHNICAL_MEMBERS = [
     position: 'Developer',
     linkedin: 'anthonyych4n',
   },
+  {
+    name: 'Ajay Sallh',
+    pfp: '/profiles/AjaySallh.jpg',
+    project: 'Hackathon Management Tool',
+    position: 'Developer',
+    linkedin: 'ajaypalsallh',
+  },
+  {
+    name: 'Favour Iheanyichukwu ',
+    pfp: '/profiles/FavourIheanyichukwu.jpeg',
+    project: 'Scuba Seas',
+    position: 'Developer',
+    linkedin: 'favour-iheanyichukwu',
+  },
 ];
