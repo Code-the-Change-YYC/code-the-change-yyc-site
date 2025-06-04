@@ -9,21 +9,18 @@ import Image from 'next/image';
 const GREEN_SIDE_LINES_DIR = '/svgs/green_side_lines.svg';
 
 // Dummy values to be replaced with contentful
-export const alumni  = [];
+const alumni  = [];
 
 const AlumniSection = () => {
   const [executives, setExecutives] = useState([]);
-  const [teams, setTeams] = useState([]);
-  const [activeTab, setActiveTab] = useState('');
+  const [activeTab, setActiveTab] = useState("Presidents");
+
+  const teams = ["Presidents", "Events", "Finance", "Marketing", "Tech"];
 
   useEffect(() => {
     // Put Contenful stuff here
     fetchContent('technicalTeam').then(() => {
       setExecutives(alumni);
-
-      setTeams(["Presidents", "Events", "Finance", "Marketing", "Tech"]);
-
-      setActiveTab("Presidents");
     });
   }, []);
 
