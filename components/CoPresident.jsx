@@ -86,19 +86,20 @@ const CoPresident = () => {
     <div className={SWIPERS}>
       <div className={CAROUSEL_CONTAINER}>
         <Carousel className='president-carousel'>
-          {President.map((president) => (
-            <SwiperSlide key={president[0].name}>
+          {President.map(([pres1, pres2], index) => (
+            <SwiperSlide key={pres1.name + index}>
               <div className={PRESIDENT_TILE_CONTAINER}>
-                <div className={PRESIDENT_YEAR}>{president[0].year}</div>
-                <PresidentTile {...president[0]} />
-                {president[1] && <PresidentTile {...president[1]} />}
+                <div className={PRESIDENT_YEAR}>{pres1.year}</div>
+                <PresidentTile {...pres1} />
+                {pres2 && <PresidentTile {...pres2} />}
               </div>
             </SwiperSlide>
           ))}
         </Carousel>
       </div>
     </div>
-
   );
 };
+
 export default CoPresident;
+
