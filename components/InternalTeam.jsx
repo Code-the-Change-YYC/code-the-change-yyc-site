@@ -33,9 +33,9 @@ const InternalTeam = () => {
 
     // temporarily use local data
     setExecutives(INTERNAL_MEMBERS);
-    const uniqueGroups = INTERNAL_MEMBERS
-      .map((exec) => exec.group)
-      .filter((group, index, self) => self.indexOf(group) === index);
+    const uniqueGroups = INTERNAL_MEMBERS.map((exec) => exec.group).filter(
+      (group, index, self) => self.indexOf(group) === index
+    );
     setGroups(uniqueGroups);
 
     if (uniqueGroups.length > 0) {
@@ -74,7 +74,7 @@ const InternalTeam = () => {
                 <Team
                   teamIdentifier={PageIdentifiers.INTERNAL_LEVEL_CONTAINER}
                   teamMembers={executives.filter((exec) => exec.group === group)}
-                  section='internal'
+                  section="internal"
                 />
               </TabPanel>
             ))}

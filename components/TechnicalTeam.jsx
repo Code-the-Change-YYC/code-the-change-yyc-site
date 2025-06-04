@@ -25,9 +25,11 @@ const TechnicalTeam = () => {
 
     // temporarily use local data
     setExecutives(TECHNICAL_MEMBERS);
-    const uniqueProjects = TECHNICAL_MEMBERS.map((exec) => exec.project).filter((pos, index, self) => self.indexOf(pos) === index);
+    const uniqueProjects = TECHNICAL_MEMBERS.map((exec) => exec.project).filter(
+      (pos, index, self) => self.indexOf(pos) === index
+    );
     setProjects(uniqueProjects);
-  
+
     if (uniqueProjects.length > 0) {
       setActiveTab(uniqueProjects[0]);
     }
@@ -64,7 +66,7 @@ const TechnicalTeam = () => {
                 <Team
                   teamIdentifier={PageIdentifiers.EXECUTIVE_LEVEL_CONTAINER}
                   teamMembers={executives.filter((exec) => exec.project === project)}
-                  section='technical'
+                  section="technical"
                 />
               </TabPanel>
             ))}
