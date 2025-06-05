@@ -1,7 +1,7 @@
-import Team from './Team';
-import { fetchContent } from '../api/apiRoot';
-import { useState, useEffect } from 'react';
-import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from '@material-tailwind/react';
+// import Team from './Team';
+// import { fetchContent } from '../api/apiRoot';
+// import { useState, useEffect } from 'react';
+// import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from '@material-tailwind/react';
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import CoPresident from './CoPresident';
@@ -9,20 +9,20 @@ import Image from 'next/image';
 const GREEN_SIDE_LINES_DIR = '/svgs/green_side_lines.svg';
 
 // Dummy values to be replaced with contentful
-const alumni = [];
+// const alumni = [];
 
 const AlumniSection = () => {
-  const [executives, setExecutives] = useState([]);
-  const [activeTab, setActiveTab] = useState('Presidents');
+  // const [executives, setExecutives] = useState([]);
+  // const [activeTab, setActiveTab] = useState('Presidents');
 
-  const teams = ['Presidents', 'Events', 'Finance', 'Marketing', 'Tech'];
+  // const teams = ['Presidents', 'Events', 'Finance', 'Marketing', 'Tech'];
 
-  useEffect(() => {
-    // Put Contenful stuff here
-    fetchContent('technicalTeam').then(() => {
-      setExecutives(alumni);
-    });
-  }, []);
+  // useEffect(() => {
+  //   // Put Contenful stuff here
+  //   fetchContent('technicalTeam').then(() => {
+  //     setExecutives(alumni);
+  //   });
+  // }, []);
 
   return (
     <section className="py-10 px-5 w-full h-full">
@@ -32,8 +32,9 @@ const AlumniSection = () => {
           Alumni
         </Heading>
       </div>
-      <div className="px-5 h-full">
-        {teams.length > 0 && (
+      <div className="px-5 flex items-center justify-center">
+        <CoPresident />
+        {/* {teams.length > 0 && (
           <Tabs value={activeTab}>
             <TabsHeader
               className="overflow-x-auto grid place-items-center scrollbar-webkit @support scrollbar-thin"
@@ -60,9 +61,7 @@ const AlumniSection = () => {
               {teams.map((project) => (
                 <TabPanel key={project} value={project} className="w-full h-full">
                   {project === 'Presidents' ? (
-                    <div className="text-white text-center text-xl font-semibold flex justify-center">
-                      <CoPresident />
-                    </div>
+                    <div className="text-white text-center text-xl font-semibold flex justify-center"></div>
                   ) : (
                     <Team teamMembers={executives.filter((exec) => exec.project === project)} />
                   )}
@@ -70,7 +69,7 @@ const AlumniSection = () => {
               ))}
             </TabsBody>
           </Tabs>
-        )}
+        )} */}
       </div>
     </section>
   );

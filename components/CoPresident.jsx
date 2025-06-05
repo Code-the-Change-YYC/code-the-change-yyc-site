@@ -4,6 +4,8 @@ import Carousel from './Carousel';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Avatar from './Avatar';
+import { ImQuotesLeft } from 'react-icons/im';
+
 const CAROUSEL_CONTAINER =
   'president-carousel text-white rounded-lg w-[20rem] h-full md:w-4/5 swiper-button-white flex justify-center items-center';
 const PRESIDENT_TILE =
@@ -32,11 +34,12 @@ const PresidentTile = ({ name, linkedin, pfp, classes, testimonial, position, cu
   return (
     <div className={PRESIDENT_TILE}>
       <Avatar key={name} {...{ name, linkedin, pfp, classes, position, currRole }}></Avatar>
-      <p className="text-[1.1rem] font-light italic leading-7 mx-auto md:text-l lg:text-2xl md:p-10 text-[#000000]">
-        <span className="text-[2rem] font-extrabold">&quot;</span>
-        {testimonial}
-        <span className="text-[2rem] font-extrabold">&quot;</span>
-      </p>
+      <div className="flex flex-col justify-center items-center text-center mt-5 md:mt-0 xl:ml-10 italic">
+        <ImQuotesLeft className="text-[#000000] size-4 sm:size-6 mb-4 md:size-8 lg:mb-0 lg:size-10" />
+        <p className="text-[1.1rem] font-light italic leading-7 mx-auto md:text-lg lg:text-2xl md:p-10 text-[#000000]">
+          {testimonial}
+        </p>
+      </div>
     </div>
   );
 };
@@ -48,7 +51,7 @@ const CoPresident = () => {
         {President.map((president) => (
           <SwiperSlide key={president[0].name}>
             <div className="bg-white w-full rounded-3xl h-full flex flex-col justify-center items-center gap-10 py-20">
-              <div className="text-[#000000] text-4xl absolute top-5 left-32">{president[0].year}</div>
+              <div className="text-[#000000] text-4xl absolute font-bold top-5 left-32">{president[0].year}</div>
               <PresidentTile {...president[0]} />
               {president[1] && <PresidentTile {...president[1]} />}
             </div>

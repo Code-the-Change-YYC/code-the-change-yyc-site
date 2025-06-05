@@ -50,9 +50,10 @@ const MeetOurAmazingTeam = () => {
         </div>
         <div className={CONTENT_CONTAINER}>
           <TextSection classes="text-black pb-10 w-fit justify-center text-center mx-10 sm:mx-20 md:mx-auto lg:mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
+            We’re a passionate group of student developers, designers, and leaders dedicated to building impactful
+            software solutions for nonprofits at the University of Calgary. As a student-led organization, our team is
+            divided into different teams that handle software development and events. We’re also proud to highlight our
+            Alumni, whose contributions helped shape the club and continue to inspire our mission beyond campus.
           </TextSection>
           <div className="pt-5 pb-12 flex justify-center gap-6 mx-auto flex-col sm:flex-row">
             <Button targetRef={internalRef} timeout={500}>
