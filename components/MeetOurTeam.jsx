@@ -74,7 +74,7 @@ const MeetOurAmazingTeam = () => {
       <section id="technical" ref={technicalRef} className="min-h-screen p-12 bg-[#bcfbe4]">
         <TechnicalTeam />
       </section>
-      <section id="alumni" ref={alumniRef} className='min-h-screen'>
+      <section id="alumni" ref={alumniRef} className="min-h-screen p-12 bg-[#7055FD]">
         <AlumniSection />
       </section>
     </div>

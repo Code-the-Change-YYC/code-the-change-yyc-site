@@ -45,8 +45,13 @@ const TechnicalTeam = () => {
       </div>
       {projects.length > 0 && (
         <Tabs value={activeTab}>
-          <TabsHeader className="overflow-x-auto grid place-items-center">
-            <div className="flex flex-row gap-2 whitespace-nowrap">
+          <TabsHeader
+            className="overflow-x-auto grid place-items-center scrollbar-webkit @support scrollbar-thin"
+            style={{
+              '--scrollbar-thumb-colour': '#7559fc',
+            }}
+          >
+            <div className="flex flex-row gap-2 pb-2 whitespace-nowrap">
               {projects.map((project) => (
                 <Tab key={project} value={project} onClick={() => setActiveTab(project)}>
                   <div

@@ -39,9 +39,9 @@ export const INTERNAL_MEMBERS = [
     pfp: {
       fields: {
         file: {
-          url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-        }
-      }
+          url: '//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg',
+        },
+      },
     },
     group: 'Events',
     position: 'Events Comissioner',
@@ -73,9 +73,9 @@ export const INTERNAL_MEMBERS = [
     pfp: {
       fields: {
         file: {
-          url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-        }
-      }
+          url: '//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg',
+        },
+      },
     },
     group: 'Events',
     position: 'Events Comissioner',
@@ -86,9 +86,9 @@ export const INTERNAL_MEMBERS = [
     pfp: {
       fields: {
         file: {
-          url: "//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg"
-        }
-      }
+          url: '//t3.ftcdn.net/jpg/05/16/27/58/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg',
+        },
+      },
     },
     group: 'Events',
     position: 'Events Comissioner',

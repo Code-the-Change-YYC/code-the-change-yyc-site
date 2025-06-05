@@ -19,20 +19,16 @@ const PAGINATION_STYLES = {
   },
 };
 
-const Team = ({ teamMembers, teamIdentifier, section = "default" }) => {
+const Team = ({ teamMembers, teamIdentifier, section = 'default' }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   // Separate leads/vps and others
   const topRowMembers = teamMembers.filter(
-    (member) =>
-      member.position.toLowerCase().includes('team lead') ||
-      member.position.toLowerCase().includes('vp')
+    (member) => member.position.toLowerCase().includes('team lead') || member.position.toLowerCase().includes('vp')
   );
 
   const paginatedMembers = teamMembers.filter(
-    (member) =>
-      !member.position.toLowerCase().includes('team lead') &&
-      !member.position.toLowerCase().includes('vp')
+    (member) => !member.position.toLowerCase().includes('team lead') && !member.position.toLowerCase().includes('vp')
   );
 
   const totalPages = Math.ceil(paginatedMembers.length / ITEMS_PER_PAGE);

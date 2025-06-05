@@ -7,7 +7,7 @@ import Avatar from './Avatar';
 const CAROUSEL_CONTAINER =
   'president-carousel text-white rounded-lg w-[20rem] h-full md:w-4/5 swiper-button-white flex justify-center items-center';
 const PRESIDENT_TILE =
-  'bg-[#A689FF] bg-opacity-50 w-[20rem] rounded-lg items-center p-14 lg:p-10 flex flex-col md:w-4/5 md:flex-row';
+  'bg-[#A689FF] bg-opacity-50 w-[20rem] rounded-lg items-center p-14 lg:p-10 flex flex-col md:w-4/5 xl:flex-row';
 
 const President = [
   [
