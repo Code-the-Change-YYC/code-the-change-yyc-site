@@ -1,12 +1,10 @@
 import Team from './Team';
-import { fetchContent } from '../api/apiRoot';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from '@material-tailwind/react';
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import { PageIdentifiers } from '../utils/flags';
-
-const TABS_STYLES = "flex flex-row text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] justify-center px-auto lg:px-10 md:px-16 gap-2 lg:pb-10 pb-5 overflow-auto scrollbar-webkit @support scrollbar-thin";
+import { TECHNICAL_MEMBERS } from '../data/technicalTeams';
 
 const TechnicalTeam = () => {
   const [executives, setExecutives] = useState([]);
@@ -14,16 +12,27 @@ const TechnicalTeam = () => {
   const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
-    fetchContent('technicalTeam').then((data) => {
-      setExecutives(data);
+    // fetchContent('technicalTeam').then((data) => {
+    //   setExecutives(data);
 
-      const uniqueProjects = data.map((exec) => exec.project).filter((pos, index, self) => self.indexOf(pos) === index);
-      setProjects(uniqueProjects);
+    //   const uniqueProjects = data.map((exec) => exec.project).filter((pos, index, self) => self.indexOf(pos) === index);
+    //   setProjects(uniqueProjects);
 
-      if (uniqueProjects.length > 0) {
-        setActiveTab(uniqueProjects[0]);
-      }
-    });
+    //   if (uniqueProjects.length > 0) {
+    //     setActiveTab(uniqueProjects[0]);
+    //   }
+    // });
+
+    // temporarily use local data
+    setExecutives(TECHNICAL_MEMBERS);
+    const uniqueProjects = TECHNICAL_MEMBERS.map((exec) => exec.project).filter(
+      (pos, index, self) => self.indexOf(pos) === index
+    );
+    setProjects(uniqueProjects);
+
+    if (uniqueProjects.length > 0) {
+      setActiveTab(uniqueProjects[0]);
+    }
   }, []);
 
   return (
@@ -36,31 +45,33 @@ const TechnicalTeam = () => {
       </div>
       {projects.length > 0 && (
         <Tabs value={activeTab}>
-          <TabsHeader 
-            className={TABS_STYLES}
+          <TabsHeader
+            className="overflow-x-auto grid place-items-center scrollbar-webkit @support scrollbar-thin"
             style={{
-              "--scrollbar-thumb-colour": "#7559fc",
-              "--scrollbar-track-colour": "#9FDEC8",
+              '--scrollbar-thumb-colour': '#7559fc',
             }}
           >
-            <div className="flex flex-row gap-2 whitespace-nowrap">
-              {projects.map((position) => (
-                <Tab className={`rounded-full lg:mx-4 max-w-[12rem] hover:bg-[#7559fc] hover:text-white py-2 px-4 lg:mx-4 font-medium text-black transition-all duration-200 ${
-                  activeTab === position
-                    ? 'bg-[#7559fc] text-white'
-                    : 'text-black'
-                }`} key={position} value={position} onClick={() => setActiveTab(position)}>
-                  {position}
+            <div className="flex flex-row gap-2 pb-2 whitespace-nowrap">
+              {projects.map((project) => (
+                <Tab key={project} value={project} onClick={() => setActiveTab(project)}>
+                  <div
+                    className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-200
+                  ${activeTab === project ? 'bg-[#7559fc] text-white' : 'text-black'}
+                  `}
+                  >
+                    {project}
+                  </div>
                 </Tab>
               ))}
             </div>
           </TabsHeader>
           <TabsBody>
-            {projects.map((position) => (
-              <TabPanel key={position} value={position}>
+            {projects.map((project) => (
+              <TabPanel key={project} value={project}>
                 <Team
                   teamIdentifier={PageIdentifiers.EXECUTIVE_LEVEL_CONTAINER}
-                  teamMembers={executives.filter((exec) => exec.position === position)}
+                  teamMembers={executives.filter((exec) => exec.project === project)}
+                  section="technical"
                 />
               </TabPanel>
             ))}

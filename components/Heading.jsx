@@ -14,6 +14,7 @@ const Heading = ({
   classes = '',
   // distanceFromTop = 0,
   underlineType = UnderlineTypes.GREEN_SHORT_UNDERLINE,
+  width = 'w-4/5',
   children,
 }) => {
   const getUnderline = () => {
@@ -38,7 +39,7 @@ const Heading = ({
   return (
     <div className="relative inline-block text-center">
       <span className={`relative z-10 ${classes} text-5xl font-semibold`}>{children}</span>
-      {underlineType !== 'None' && <img src={getUnderline()} alt="squiggly" className="w-4/5 mx-auto" />}
+      {underlineType !== 'None' && <img src={getUnderline()} alt="squiggly" className={`${width} mx-auto`} />}
     </div>
   );
 };

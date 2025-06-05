@@ -15,7 +15,7 @@ const About = () => {
       <Image src={winsVolunteeringJpeg} alt="Volunteering at WINS" placeholder="blur" />
       <div className="flex flex-col bg-[#7055FD] items-center">
         <div className="flex flex-row">
-          <Heading longUnderline={true} classes="pt-10 text-white">
+          <Heading longUnderline={true} classes="pt-10 text-white" width="w-full">
             Hello!
           </Heading>
           <Image src={WAVING_HAND_SVG} alt="" width={SVG_SIZE} height={SVG_SIZE} />

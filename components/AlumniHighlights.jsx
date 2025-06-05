@@ -21,7 +21,7 @@ const AlumniHighlights = ({ alumni }) => {
     <div className={ALUMNI_CONTAINER}>
       <div className={ALUMNI_HEADER}>
         <div className="hidden lg:flex">
-          <Heading classes="text-white" underlineType={UnderlineTypes.WHITE_LONG_UNDERLINE}>
+          <Heading classes="text-white" underlineType={UnderlineTypes.WHITE_LONG_UNDERLINE} width='w-2/5'>
             {HeaderContent}
           </Heading>
         </div>
