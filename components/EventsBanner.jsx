@@ -14,7 +14,7 @@ const EventsBanner = () => {
   const handleClick = () => {};
 
   return (
-    <div className="flex flex-col bg-lilac text-center items-center pb-12 md:py-12">
+    <div className="flex flex-col bg-lilac text-center items-center pb-12 md:py-12 pt-12">
       <Heading classes="text-white text-4xl" underlineType={UnderlineTypes.BEIGE_SHORT_UNDERLINE}>
         Events
       </Heading>
