@@ -8,11 +8,13 @@ import ScubaSeas from '../public/images/projects/ScubaSeas.png';
 export const projects = [
   {
     logo: RubyForGood,
-    name: 'Ruby for Good CASA',
+    name: 'Ruby for Good - Kiwanis',
     liveProjectLink: 'https://casavolunteertracking.org/',
     githubLink: 'https://github.com/rubyforgood/casa/issues/1017',
     descriptions: [
-      'Built an SMS Twilio integration within a volunteer management system for the nonprofit CASA, which serves foster youth in counties across America',
+      'Built a web app to streamline Kiwanis annual BlueBerry Drive fundraiser ',
+      'Created a volunteer dashboard to help manage blueberry donations and active volunteers',
+      'Developed APIs to track shipping and inventory of blueberries'
     ],
   },
   {
