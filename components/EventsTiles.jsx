@@ -1,9 +1,9 @@
-import TextSection from './TextSection';
-import Heading from './Heading';
 import { EventTileImage } from './EventTileImage';
+import Heading from './Heading';
+import TextSection from './TextSection';
 
 const EVENTS_TILES_CONTAINER = 'w-4/5 mx-auto flex flex-wrap md:flex hidden';
-const EVENT_TILE = 'flex flex-col size-full bg-white rounded-3xl items-center px-4 justify-evenly';
+const EVENT_TILE = 'flex flex-col size-full bg-white rounded-3xl items-center px-4 justify-evenly pt-4';
 
 const EventTile = ({ eventName, description, image }) => {
   const descriptionText = description.content[0].content[0].value;

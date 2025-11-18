@@ -1,14 +1,14 @@
 import Image from 'next/image';
-import { SwiperSlide } from 'swiper/react';
-import Tile from '../components/Tile';
-import TextSection from './TextSection';
-import Carousel from '../components/Carousel';
-import styles from '../components/RolesCarousel.module.css';
-import Heading from './Heading';
-import { UnderlineTypes } from '../utils/underlineType';
 import Link from 'next/link';
 import 'swiper/css/navigation';
+import { SwiperSlide } from 'swiper/react';
+import Carousel from '../components/Carousel';
+import styles from '../components/RolesCarousel.module.css';
+import Tile from '../components/Tile';
+import { UnderlineTypes } from '../utils/underlineType';
+import Heading from './Heading';
 import PastEventImage from './PastEventImage';
+import TextSection from './TextSection';
 
 const CAROUSEL_CONTAINER = styles.swiperContainer;
 const ARROW_INIT = { left: 'swiper-button-prev', right: 'swiper-button-next' };
@@ -16,7 +16,7 @@ const LEFT_NAVIGATION_ARROW = styles.swiperButtonPrev;
 const RIGHT_NAVIGATION_ARROW = styles.swiperButtonNext;
 
 const TILE_CONTAINER =
-  'flex flex-col xl:h-[650px] lg:h-[820px] md:flex-column md:h-[820px] h-[930px] rounded-[30px] p-[1.875rem]';
+  'flex flex-col xl:h-[650px] lg:h-[820px] md:flex-column md:h-[820px] h-[930px] rounded-[30px] p-[1.875rem] ';
 const TILE_IMAGE_CONTAINER = 'flex flex-row justify-center md:flex-row md:justify-around lg:justify-center relative';
 const TILE_TEXT_CONTAINER = 'basis-3/5 md:basis-3/5 lg:basis-3/5 text-center md:py-10 ';
 const TILE_TEXT_SPACING = 'lg:space-y-10 py-5';

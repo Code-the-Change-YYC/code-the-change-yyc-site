@@ -1,10 +1,10 @@
-import Heading from './Heading';
 import Image from 'next/image';
-import { UnderlineTypes } from '../utils/underlineType';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchContent } from '../api/apiRoot';
+import { UnderlineTypes } from '../utils/underlineType';
+import Heading from './Heading';
 
-const HACKATHON_TIMELINE_CONTAINER = 'flex justify-center bg-white';
+const HACKATHON_TIMELINE_CONTAINER = 'flex justify-center bg-white ';
 const HACKATHON_TIMELINE_CONTENT = 'max-w-[500px] w-[80vw] md:max-w-[1100px]';
 const HACKATHON_TIMELINE_HEADER = 'md:justify-start md:my-[60px] my-[30px] flex justify-center';
 
