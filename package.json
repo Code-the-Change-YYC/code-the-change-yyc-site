@@ -34,7 +34,7 @@
     "tailwindcss": "^3.4.17"
   },
   "engines": {
-    "node": "^18.16.1"
+    "node": "^22.0.0"
   },
   "description": "First, run the development server:",
   "main": "next.config.js",
