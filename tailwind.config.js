@@ -15,7 +15,7 @@ module.exports = {
       orange: '#FF6B54',
       pink: '#FFD2DC',
       brightPink: '#FF4D6F',
-      green: '00D3A9',
+      green: '#00D3A9',
     },
   },
   variants: {
@@ -25,11 +25,11 @@ module.exports = {
     require('tailwind-scrollbar-hide'),
     function ({ addUtilities }) {
       const newUtilities = {
-        '@supports .scrollbar-thin': {
+        '.scrollbar-thin': {
           scrollbarWidth: 'thin',
           scrollbarColor: '#00D3A9 #7559fc',
         },
-        '.scrollbar-webkit': {
+        '.scrollbar-thin': {
           '&::-webkit-scrollbar': {
             width: '8px',
             height: '6px',
