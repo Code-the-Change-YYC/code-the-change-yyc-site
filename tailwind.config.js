@@ -29,7 +29,7 @@ module.exports = {
           scrollbarWidth: 'thin',
           scrollbarColor: '#00D3A9 #7559fc',
         },
-        '.scrollbar-thin': {
+        '.scrollbar-webkit': {
           '&::-webkit-scrollbar': {
             width: '8px',
             height: '6px',
