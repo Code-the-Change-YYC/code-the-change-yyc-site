@@ -1,22 +1,22 @@
 import WinsVolunteeringOne from '../public/images/join/wins_volunteering_1.png';
 import WinsVolunteeringFour from '../public/images/join/wins_volunteering_4.png';
-import JoinOne from '../public/images/join/join1.png';
-import JoinTwo from '../public/images/join/join2.png';
-import JoinThree from '../public/images/join/join3.png';
-import JoinFour from '../public/images/join/join4.png';
-import JoinFive from '../public/images/join/join5.png';
-import JoinSix from '../public/images/join/join6.png';
+import HackathonOne from '../public/images/join/hackathon_2025_1.png';
+import HackathonTwo from '../public/images/join/hackathon_2025_2.png';
+import HackathonThree from '../public/images/join/hackathon_2025_3.png';
+import HackathonFour from '../public/images/join/hackathon_2024_1.png';
+import TeamPicOne from '../public/images/join/team_pic_2024_1.png';
+import TeamPicTwo from '../public/images/join/team_pic_2024_2.png';
 
 export const JOIN_ONE = [
-  { key: 'join-us-one', photo: JoinOne, classes: '' },
-  { key: 'join-us-two', photo: JoinTwo, classes: 'mt-10' },
-  { key: 'join-us-three', photo: JoinThree, classes: '' },
+  { key: 'hackathon-2025-one', photo: HackathonOne, classes: '' },
+  { key: 'hackathon-2025-two', photo: HackathonTwo, classes: 'mt-10' },
+  { key: 'hackathon-2025-three', photo: HackathonThree, classes: '' },
   { key: 'wins-volunteering-one', photo: WinsVolunteeringOne, classes: 'mt-10' },
 ];
 export const JOIN_TWO = [
-  { key: 'join-us-four', photo: JoinFour, classes: '' },
-  { key: 'join-us-five', photo: JoinFive, classes: 'mt-10' },
-  { key: 'join-us-six', photo: JoinSix, classes: '' },
+  { key: 'hackathon-2024-one', photo: HackathonFour, classes: '' },
+  { key: 'team_pic-2024-one', photo: TeamPicOne, classes: 'mt-10' },
+  { key: 'team_pic-2024-two', photo: TeamPicTwo, classes: '' },
   { key: 'wins-volunteering-four', photo: WinsVolunteeringFour, classes: 'mt-10' },
 ];
 
