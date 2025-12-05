@@ -1,5 +1,5 @@
-import TextSection from '/components/TextSection.jsx';
-import Heading from '/components/Heading';
+import TextSection from './TextSection';
+import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import { useRef } from 'react';
 import InternalTeam from './InternalTeam';
