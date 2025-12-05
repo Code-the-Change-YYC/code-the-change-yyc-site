@@ -21,7 +21,7 @@ const UNDERLINE_PROPERTIES = {
 
 const Sponsors = () => {
   const SponsorImage = ({ file, multiplier, height, website }) => (
-    <Link href={`https://www.${website}`} className="mx-5" legacyBehavior>
+    <Link href={`https://www.${website}`} className="mx-5">
       <Image src={file} alt={file} width={height * multiplier} height={height} placeholder="blur" />
     </Link>
   );
