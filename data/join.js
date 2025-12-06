@@ -1,22 +1,22 @@
-import CactusClubOne from '../public/images/join/cactus_club_1.jpg';
-import CactusClubTwo from '../public/images/join/cactus_club_2.jpg';
-import MadeByMarcusOne from '../public/images/join/made_by_marcus_1.jpg';
-import MadeByMarcusTwo from '../public/images/join/made_by_marcus_2.jpg';
 import WinsVolunteeringOne from '../public/images/join/wins_volunteering_1.png';
-import WinsVolunteeringTwo from '../public/images/join/wins_volunteering_2.png';
-import WinsVolunteeringThree from '../public/images/join/wins_volunteering_3.png';
 import WinsVolunteeringFour from '../public/images/join/wins_volunteering_4.png';
+import HackathonOne from '../public/images/join/hackathon_2025_1.png';
+import HackathonTwo from '../public/images/join/hackathon_2025_2.png';
+import HackathonThree from '../public/images/join/hackathon_2025_3.png';
+import HackathonFour from '../public/images/join/hackathon_2024_1.png';
+import TeamPicOne from '../public/images/join/team_pic_2024_1.png';
+import TeamPicTwo from '../public/images/join/team_pic_2024_2.png';
 
 export const JOIN_ONE = [
-  { key: 'cactus-club-one', photo: CactusClubOne, classes: '' },
-  { key: 'made-by-marcus-one', photo: MadeByMarcusOne, classes: 'mt-10' },
-  { key: 'made-by-marcus-two', photo: MadeByMarcusTwo, classes: '' },
+  { key: 'hackathon-2025-one', photo: HackathonOne, classes: '' },
+  { key: 'hackathon-2025-two', photo: HackathonTwo, classes: 'mt-10' },
+  { key: 'hackathon-2025-three', photo: HackathonThree, classes: '' },
   { key: 'wins-volunteering-one', photo: WinsVolunteeringOne, classes: 'mt-10' },
 ];
 export const JOIN_TWO = [
-  { key: 'cactus-club-two', photo: CactusClubTwo, classes: '' },
-  { key: 'wins-volunteering-two', photo: WinsVolunteeringTwo, classes: 'mt-10' },
-  { key: 'wins-volunteering-three', photo: WinsVolunteeringThree, classes: '' },
+  { key: 'hackathon-2024-one', photo: HackathonFour, classes: '' },
+  { key: 'team_pic-2024-one', photo: TeamPicOne, classes: 'mt-10' },
+  { key: 'team_pic-2024-two', photo: TeamPicTwo, classes: '' },
   { key: 'wins-volunteering-four', photo: WinsVolunteeringFour, classes: 'mt-10' },
 ];
 
