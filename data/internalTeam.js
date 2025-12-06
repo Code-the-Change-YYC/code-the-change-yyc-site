@@ -29,7 +29,7 @@ export const INTERNAL_MEMBERS = [
   },
   {
     name: 'Abdullah Yousaf',
-    pfp: '/profiles/AbdullahYousaf.jpg',
+    pfp: '/profiles/AbdullahYousaf1.jpg',
     group: 'Events',
     position: 'Events Comissioner',
     linkedin: 'abdullahysf',
