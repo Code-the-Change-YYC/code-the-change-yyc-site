@@ -48,14 +48,14 @@ const TechnicalTeam = () => {
         }
 
         const transformedProjects = allProjects.items
-        .map((entry) => {
-          const project = entry.fields;
-          
-          return {
-            name: project.name,
-            projectId: entry.sys.id,
-          };
-        });
+          .map((entry) => {
+            const project = entry.fields;
+            
+            return {
+              name: project.name,
+              projectId: entry.sys.id,
+            };
+          });
 
         setProjects(transformedProjects);
 
