@@ -1,10 +1,10 @@
 import Team from './Team';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from '@material-tailwind/react';
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import { PageIdentifiers } from '../utils/flags';
-import { TECHNICAL_MEMBERS } from '../data/technicalTeams';
+import { apiRoot } from '../api/apiRoot';
 
 const TechnicalTeam = () => {
   const [executives, setExecutives] = useState([]);
@@ -12,27 +12,62 @@ const TechnicalTeam = () => {
   const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
-    // fetchContent('technicalTeam').then((data) => {
-    //   setExecutives(data);
+    const fetchData = async () => {
+      try {
+        let technicalTeam;
+        let allProjects;
+        
+        try {
+          technicalTeam = await apiRoot.getEntries({ content_type: 'technicalTeam', include: 2 });
+        } catch (error) {
+          console.error('Error fetching technical team data:', error);
+        }
 
-    //   const uniqueProjects = data.map((exec) => exec.project).filter((pos, index, self) => self.indexOf(pos) === index);
-    //   setProjects(uniqueProjects);
+        const transformedMembers = technicalTeam.items
+          .map((entry) => {
+            const member = entry.fields;
+            
+            return {
+              name: member.name,
+              pfp: member.pfp,
+              projectId: member.project.sys.id,
+              project: member.project, 
+              position: member.position,
+              linkedin: member.linkedin,
+              isTeamLead: member.isTeamLead || false,
+              order: member.order || 0,
+            };
+          });
 
-    //   if (uniqueProjects.length > 0) {
-    //     setActiveTab(uniqueProjects[0]);
-    //   }
-    // });
+        setExecutives(transformedMembers);
 
-    // temporarily use local data
-    setExecutives(TECHNICAL_MEMBERS);
-    const uniqueProjects = TECHNICAL_MEMBERS.map((exec) => exec.project).filter(
-      (pos, index, self) => self.indexOf(pos) === index
-    );
-    setProjects(uniqueProjects);
+        try {
+          allProjects = await apiRoot.getEntries({ content_type: 'project' });
+        } catch (error) {
+          console.error('Error fetching projects data:', error);
+        }
 
-    if (uniqueProjects.length > 0) {
-      setActiveTab(uniqueProjects[0]);
-    }
+        const transformedProjects = allProjects.items
+        .map((entry) => {
+          const project = entry.fields;
+          
+          return {
+            name: project.name,
+            projectId: entry.sys.id,
+          };
+        });
+
+        setProjects(transformedProjects);
+
+        if (transformedProjects.length > 0) {
+          setActiveTab(transformedProjects[0].projectId);
+        }
+      } catch (error) {
+        console.error('Error fetching technical team data:', error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -52,29 +87,33 @@ const TechnicalTeam = () => {
             }}
           >
             <div className="flex flex-row gap-2 pb-2 whitespace-nowrap">
-              {projects.map((project) => (
-                <Tab key={project} value={project} onClick={() => setActiveTab(project)}>
-                  <div
-                    className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-200
-                  ${activeTab === project ? 'bg-[#7559fc] text-white' : 'text-black'}
-                  `}
-                  >
-                    {project}
-                  </div>
-                </Tab>
-              ))}
+              {projects.map((project) => {
+                return (
+                  <Tab key={project.projectId} value={project.projectId} onClick={() => setActiveTab(project.projectId)}>
+                    <div
+                      className={`rounded-full p-2 px-4 font-medium hover:bg-[#7559fc] hover:text-white transition-all duration-200
+                    ${activeTab === project.projectId ? 'bg-[#7559fc] text-white' : 'text-black'}
+                    `}
+                    >
+                      {project.name}
+                    </div>
+                  </Tab>
+                );
+              })}
             </div>
           </TabsHeader>
           <TabsBody>
-            {projects.map((project) => (
-              <TabPanel key={project} value={project}>
-                <Team
-                  teamIdentifier={PageIdentifiers.EXECUTIVE_LEVEL_CONTAINER}
-                  teamMembers={executives.filter((exec) => exec.project === project)}
-                  section="technical"
-                />
-              </TabPanel>
-            ))}
+            {projects.map((project) => {
+              return (
+                <TabPanel key={project.projectId} value={project.projectId}>
+                  <Team
+                    teamIdentifier={PageIdentifiers.EXECUTIVE_LEVEL_CONTAINER}
+                    teamMembers={executives.filter((exec) => exec.projectId === project.projectId)}
+                    section="technical"
+                  />
+                </TabPanel>
+              );
+            })}
           </TabsBody>
         </Tabs>
       )}

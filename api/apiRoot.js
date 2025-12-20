@@ -3,7 +3,7 @@ import nextConfig from '../next.config';
 
 const { PUBLIC_ACCESS_TOKEN } = nextConfig;
 
-const apiRoot = contentful.createClient({
+export const apiRoot = contentful.createClient({
   space: '963e09izo0py',
   accessToken: PUBLIC_ACCESS_TOKEN,
 });
