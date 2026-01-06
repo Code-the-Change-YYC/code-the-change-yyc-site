@@ -14,7 +14,6 @@
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.1",
     "@headlessui/react": "^2.2.9",
-    "@material-tailwind/react": "^2.1.10",
     "@tailwindcss/postcss": "^4.1.17",
     "contentful": "^11.9.0",
     "next": "^15.5.7",

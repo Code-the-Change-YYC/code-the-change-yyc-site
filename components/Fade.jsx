@@ -11,7 +11,9 @@ const Fade = ({ open, children }) => {
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
     >
-      {children}
+      <div>
+        {children}
+      </div>
     </Transition>
   );
 };
