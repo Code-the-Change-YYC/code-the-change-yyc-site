@@ -79,8 +79,8 @@ const TechnicalTeam = () => {
         <span className="text-5xl font-semibold">Team</span>
       </div>
       {projects.length > 0 && (
-        <Tabs value={activeTab}>
-          <TabsHeader
+        <div>
+          <div
             className="overflow-x-auto grid place-items-center scrollbar-webkit @support scrollbar-thin"
             style={{
               '--scrollbar-thumb-colour': '#7559fc',

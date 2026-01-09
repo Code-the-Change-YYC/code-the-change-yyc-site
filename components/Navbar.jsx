@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import Fade from './Fade';
 import { FaBars } from 'react-icons/fa';
+import Fade from './Fade';
 import MobileNavbarDrawer from './MobileNavbarDrawer';
 
 const TEXT_CLASSES = 'text-xl font-semibold text-[#FF4D6F] cursor-pointer';
@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="md:hidden"></div>
       </div>
       <Fade open={open}>
-        <MobileNavbarDrawer />
+        <MobileNavbarDrawer onClose={() => setOpen(false)} />
       </Fade>
     </div>
   );
