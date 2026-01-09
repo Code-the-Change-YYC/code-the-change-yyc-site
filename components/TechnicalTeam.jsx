@@ -79,14 +79,14 @@ const TechnicalTeam = () => {
         <span className="text-5xl font-semibold">Team</span>
       </div>
       {projects.length > 0 && (
-        <div>
+        <Tabs value={activeTab}>
           <div
             className="overflow-x-auto grid place-items-center scrollbar-webkit @support scrollbar-thin"
             style={{
               '--scrollbar-thumb-colour': '#7559fc',
             }}
           >
-            <div className="flex flex-row gap-2 pb-2 whitespace-nowrap">
+            <TabsHeader className="flex flex-row gap-2 pb-2 whitespace-nowrap">
               {projects.map((project) => {
                 return (
                   <Tab key={project.projectId} value={project.projectId} onClick={() => setActiveTab(project.projectId)}>
@@ -100,8 +100,8 @@ const TechnicalTeam = () => {
                   </Tab>
                 );
               })}
-            </div>
-          </TabsHeader>
+            </TabsHeader>
+          </div>
           <TabsBody>
             {projects.map((project) => {
               return (
