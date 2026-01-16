@@ -4,8 +4,27 @@ import Mindfuel from '../public/images/projects/mindfuel.png';
 import AMHAC from '../public/images/projects/amhac.png';
 import AXS from '../public/images/projects/axs_map.png';
 import ScubaSeas from '../public/images/projects/ScubaSeas.png';
+import Kiwanis from '../public/images/projects/kiwanis_international.png';
+import SalvationArmy from '../public/images/projects/salvation_army.png';
+
 
 export const projects = [
+  {
+    logo: SalvationArmy,
+    name: 'Salvation Army Navigation Tool',
+    githubLink: 'https://github.com/Code-the-Change-YYC/salvationarmy',
+    descriptions: [
+      'Add information here',
+    ],
+  },
+  {
+    logo: Kiwanis,
+    name: 'Kiwanis International',
+    githubLink: 'https://github.com/rubyforgood/kiwanis-ctc',
+    descriptions: [
+      'Add information here',
+    ],
+  },
   {
     logo: RubyForGood,
     name: 'Ruby for Good CASA',
