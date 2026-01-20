@@ -8,16 +8,17 @@ import HackathonLink from '../../components/HackathonLink';
 
 
 export async function getStaticProps() {
-  const event = await fetchContent('upcomingEvents');
+  const upcomingEvent = await fetchContent('upcomingEvents');
   const pastEvent = await fetchContent('pastEvents');
-  return { props: { event, pastEvent } };
+  console.log(upcomingEvent);
+  return { props: { upcomingEvent, pastEvent } };
 }
 
-const Events = ({ event, pastEvent }) => {
+const Events = ({ upcomingEvent, pastEvent }) => {
   return (
     <div className="flex flex-col w-full mt-5 md:mt-0 lg:mt-0 ">
       <EventsBanner />
-      <UpcomingEvents event={event} />
+      <UpcomingEvents upcomingEvent={upcomingEvent} />
       <HackathonTimeline />
       <HackathonLink />
       <PastEventsCarousel pastEvent={pastEvent} />
