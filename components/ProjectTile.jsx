@@ -13,22 +13,22 @@ const ProjectTile = ({ logo, name, appStoreLink, playStoreLink, liveProjectLink,
       <h3 className="font-medium text-xl">{name}</h3>
       <div className="flex space-x-4 italic text-[#7055FD]">
         {appStoreLink && (
-          <Link href={appStoreLink} legacyBehavior>
+          <Link href={appStoreLink}>
             <FaAppStoreIos size={ICON_SIZE} className="cursor-pointer" />
           </Link>
         )}
         {playStoreLink && (
-          <Link href={playStoreLink} legacyBehavior>
+          <Link href={playStoreLink}>
             <FaPlayCircle size={ICON_SIZE} className="cursor-pointer" />
           </Link>
         )}
         {liveProjectLink && (
-          <Link href={liveProjectLink} legacyBehavior>
+          <Link href={liveProjectLink}>
             <FaExternalLinkSquareAlt size={ICON_SIZE} className="cursor-pointer" />
           </Link>
         )}
         {githubLink && (
-          <Link href={githubLink} legacyBehavior>
+          <Link href={githubLink}>
             <FaGithub size={ICON_SIZE} className="cursor-pointer" />
           </Link>
         )}
