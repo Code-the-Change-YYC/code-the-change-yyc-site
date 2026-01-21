@@ -14,7 +14,8 @@ export const projects = [
     name: 'Salvation Army Navigation Tool',
     githubLink: 'https://github.com/Code-the-Change-YYC/salvationarmy',
     descriptions: [
-      'Add information here',
+      'Partnered with the main Calgary Salvation Army branch to develop a web app to streamline internal processes at the Navigation Centre',
+      'Helped individuals experiencing homelessness access the services and destinations they need'
     ],
   },
   {
@@ -22,7 +23,9 @@ export const projects = [
     name: 'Kiwanis International',
     githubLink: 'https://github.com/rubyforgood/kiwanis-ctc',
     descriptions: [
-      'Add information here',
+      'Built a web app to streamline Kiwanis annual BlueBerry Drive fundraiser ',
+      'Created a volunteer dashboard to help manage blueberry donations and active volunteers',
+      'Developed APIs to track shipping and inventory of blueberries'
     ],
   },
   {
