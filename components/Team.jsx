@@ -24,11 +24,13 @@ const Team = ({ teamMembers, teamIdentifier, section = 'default' }) => {
 
   // Separate leads/vps and others
   const topRowMembers = teamMembers.filter(
-    (member) => member.position.toLowerCase().includes('team lead') || member.position.toLowerCase().includes('vp')
+    (member) =>
+      member.isTeamLead
   );
 
   const paginatedMembers = teamMembers.filter(
-    (member) => !member.position.toLowerCase().includes('team lead') && !member.position.toLowerCase().includes('vp')
+    (member) =>
+      !member.isTeamLead
   );
 
   const totalPages = Math.ceil(paginatedMembers.length / ITEMS_PER_PAGE);
