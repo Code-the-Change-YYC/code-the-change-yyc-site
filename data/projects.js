@@ -4,8 +4,30 @@ import Mindfuel from '../public/images/projects/mindfuel.png';
 import AMHAC from '../public/images/projects/amhac.png';
 import AXS from '../public/images/projects/axs_map.png';
 import ScubaSeas from '../public/images/projects/ScubaSeas.png';
+import Kiwanis from '../public/images/projects/kiwanis_international.png';
+import SalvationArmy from '../public/images/projects/salvation_army.png';
+
 
 export const projects = [
+  {
+    logo: SalvationArmy,
+    name: 'Salvation Army Navigation Tool',
+    githubLink: 'https://github.com/Code-the-Change-YYC/salvationarmy',
+    descriptions: [
+      'Partnered with the main Calgary Salvation Army branch to develop a web app to streamline internal processes at the Navigation Centre',
+      'Helped individuals experiencing homelessness access the services and destinations they need'
+    ],
+  },
+  {
+    logo: Kiwanis,
+    name: 'Kiwanis International',
+    githubLink: 'https://github.com/rubyforgood/kiwanis-ctc',
+    descriptions: [
+      'Built a web app to streamline Kiwanis annual BlueBerry Drive fundraiser ',
+      'Created a volunteer dashboard to help manage blueberry donations and active volunteers',
+      'Developed APIs to track shipping and inventory of blueberries'
+    ],
+  },
   {
     logo: RubyForGood,
     name: 'Ruby for Good CASA',
