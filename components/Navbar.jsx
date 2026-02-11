@@ -24,23 +24,23 @@ const Navbar = () => {
           <Link href="/who-we-are">
             <span className={TEXT_CLASSES}>About</span>
           </Link>
-          <Link href="/our-team">
-            <span className={TEXT_CLASSES}>Our Team</span>
-          </Link>
-          <Link href="/newsletter">
-            <span className={TEXT_CLASSES}>News</span>
+          <Link href="/projects">
+            <span className={TEXT_CLASSES}>Projects</span>
           </Link>
           <Link href="/events">
             <span className={TEXT_CLASSES}>Events</span>
           </Link>
-          <Link href="/projects">
-            <span className={TEXT_CLASSES}>Projects</span>
+          <Link href="/newsletter">
+            <span className={TEXT_CLASSES}>News</span>
           </Link>
-          <Link href="/contact">
-            <span className={TEXT_CLASSES}>Contact</span>
+          <Link href="/our-team">
+            <span className={TEXT_CLASSES}>Our Team</span>
           </Link>
           <Link href="/join">
             <span className={TEXT_CLASSES}>Join</span>
+          </Link>
+          <Link href="/contact">
+            <span className={TEXT_CLASSES}>Contact</span>
           </Link>
         </div>
 
