@@ -1,3 +1,4 @@
+
 import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import TextSection from './TextSection';
@@ -17,7 +18,6 @@ const HackathonLink = () => {
             </Heading>
             <span>Hack the Change</span>            
           </div>
-          
         </div> 
       </div>
       
@@ -30,13 +30,13 @@ const HackathonLink = () => {
       <TextSection classes="text-white text-center justify-center pb-5 z-10 px-10 md:px-24 lg:px-48 md:py-4 font-medium">
             Explore upcoming events, resources, and more at: {' '}
       </TextSection>
-      <TextSection classes="text-blue-800 text-center justify-center pb-10 z-20 px-10 md:px-24 lg:px-48 md:py-4">
+      <TextSection classes="text-center justify-center pb-10 z-20 px-10 md:px-24 lg:px-48 md:py-4">
         <Link 
           href="https://hackthechangeyyc.ca" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="">
-          <span className="!text-regal-blue hover:text-regal-blue font-semibold underline">hackthechangeyyc.ca</span>
+          className="text-white font-semibold underline hover:!text-blue-50 hover:no-underline">
+          <span>hackthechangeyyc.ca</span>
         </Link>
       </TextSection>
     </div>
