@@ -8,7 +8,7 @@ import Events from '../../components/Events';
 import { fetchContent } from '../../api/apiRoot';
 
 export async function getStaticProps() {
-  const alumni = await fetchContent('alumni')
+  const alumni = await fetchContent('alumni');
   alumni.sort((a,b ) => a.orderNumber - b.orderNumber);
   const timeline = await fetchContent('timeline');
   timeline.sort((a, b) => b.year - a.year);
