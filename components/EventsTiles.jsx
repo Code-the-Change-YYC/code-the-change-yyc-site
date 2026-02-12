@@ -3,13 +3,13 @@ import Heading from './Heading';
 import { EventTileImage } from './EventTileImage';
 
 const EVENTS_TILES_CONTAINER = 'w-4/5 mx-auto flex flex-wrap md:flex hidden';
-const EVENT_TILE = 'flex flex-col size-full bg-white rounded-3xl items-center px-4 justify-evenly';
+const EVENT_TILE = 'flex flex-col size-full bg-white rounded-3xl items-center px-4 pt-4 pb-2 justify-evenly';
 
 const EventTile = ({ eventName, description, image }) => {
   const descriptionText = description.content[0].content[0].value;
   return (
     <div className={EVENT_TILE}>
-      <Heading classes=" text-3xl py-2 font-medium" underlineType="None">
+      <Heading classes="" underlineType="None">
         {eventName}
       </Heading>
       <EventTileImage image={image} />
