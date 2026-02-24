@@ -9,7 +9,7 @@ const EventTile = ({ eventName, description, image }) => {
   const descriptionText = description.content[0].content[0].value;
   return (
     <div className={EVENT_TILE}>
-      <Heading classes="" underlineType="None">
+      <Heading underlineType="None">
         {eventName}
       </Heading>
       <EventTileImage image={image} />
