@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
-import { EffectCards } from 'swiper/modules';
+import { EffectCards } from 'swiper';
 import { SwiperSlide } from 'swiper/react';
 import Button from '../components/Button';
 import Carousel from '../components/Carousel';
