@@ -4,7 +4,7 @@ import { UnderlineTypes } from '../utils/underlineType';
 import { useRef } from 'react';
 import InternalTeam from './InternalTeam';
 import TechnicalTeam from './TechnicalTeam';
-import AlumniSection from './AlumniSection';
+import AlumniHighlights from './AlumniHighlights';
 
 const MEET_OUR_TEAM = 'flex flex-col bg-pink pt-10 z-0 w-full';
 const CONTENT_CONTAINER = 'flex flex-col pt-5 p-5 md:px-32';
@@ -29,7 +29,7 @@ const Button = ({ classes = '', children, targetRef }) => {
   );
 };
 
-const MeetOurAmazingTeam = () => {
+const MeetOurAmazingTeam = ({ alumni = []}) => {
   const internalRef = useRef(null);
   const technicalRef = useRef(null);
   const alumniRef = useRef(null);
@@ -76,7 +76,7 @@ const MeetOurAmazingTeam = () => {
         <TechnicalTeam />
       </section>
       <section id="alumni" ref={alumniRef} className="min-h-screen p-12 bg-[#7055FD]">
-        <AlumniSection />
+        <AlumniHighlights alumni={alumni} />
       </section>
     </div>
   );
