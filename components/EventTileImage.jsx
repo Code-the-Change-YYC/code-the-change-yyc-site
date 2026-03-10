@@ -7,7 +7,7 @@ import { rgbDataURL } from '../utils/blurImage';
 export const EventTileImage = ({ image }) => {
   return (
     <div>
-      <div>
+      <div className = "mt-10">
         <Image
           className={EVENTS_IMAGE}
           src={`https:${image.fields.file.url}`}
