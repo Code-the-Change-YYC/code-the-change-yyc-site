@@ -6,7 +6,8 @@ import FontAwesomeLink from './FontAwesomeLink';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { rgbDataURL } from '../utils/blurImage';
-const CAROUSEL_CONTAINER = 'text-black rounded-lg w-[20rem] h-[44rem] shadow-2xl md:w-4/5 swiper-button-white';
+const CAROUSEL_CONTAINER =
+  'alumni-carousel text-black rounded-lg w-[20rem] h-[44rem] shadow-2xl md:w-4/5';
 const ALUMNI_TILE = 'bg-[white] w-[20rem] h-[70rem] md:h-[44rem] rounded-3xl items-center p-14 lg:p-10 flex flex-col shadow-2xl md:w-full md:flex-row';
 const ALUMNI_PROFILE = 'flex flex-col items-center mx-auto text-center md:p-10';
 
@@ -25,8 +26,10 @@ const AlumniTile = ({ fullName, position, previousRole, testimonial, linkedin, p
           />
         </div>
         <h2 className="text-[2rem] md:text-[2rem] font-bold">{fullName}</h2>
-        <h2 className="text-[1rem] md:text-[1rem] font-semibold text-[#BAFBE4]">{position}</h2>
-        <h2 className="text-[1rem] md:text-[1rem] font-medium mb-2">Previously: {previousRole}</h2>
+        <h2 className="text-[1rem] md:text-[1rem] font-semibold text-[#7055FD]">{position}</h2>
+        <h2 className="text-[1rem] md:text-[1rem] font-medium mb-2 text-[#7055FD]">
+          Previously: {previousRole}
+        </h2>
         <FontAwesomeLink
           username={linkedin}
           icon={faLinkedin}
