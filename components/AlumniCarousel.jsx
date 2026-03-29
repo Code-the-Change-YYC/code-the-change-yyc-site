@@ -28,9 +28,9 @@ const AlumniTile = ({ fullName, position, previousRole, testimonial, linkedin, p
         <h2 className="text-[1rem] md:text-[1rem] font-semibold text-[#BAFBE4]">{position}</h2>
         <h2 className="text-[1rem] md:text-[1rem] font-medium mb-2">Previously: {previousRole}</h2>
         <FontAwesomeLink
-          username={linkedin}
+          url={`https://www.linkedin.com/in/${linkedin}`}
           icon={faLinkedin}
-          classes="h-6 w-6 md:h-10 md:w-10 text-white cursor-pointer mb-5"
+          className="h-6 w-6 md:h-10 md:w-10 text-white cursor-pointer mb-5"
         />
       </div>
       <p className="text-[1.1rem] font-light italic leading-7 mx-auto md:ml-14 md:mb-24 md:text-[1.3rem] lg:text-[1.5rem] md:p-10">
