@@ -8,7 +8,7 @@ const WHITE_FLOWER_SVG = "/svgs/about/white_flower.svg";
 const BLUE_BOLD_TEXT = "text-2xl text-[#BAFBE4]";
 
 const SVG_SIZE = 100;
-//test
+
 const About = () => {
   return (
     <div className="flex flex-col w-full lg:w-1/3 grow">
