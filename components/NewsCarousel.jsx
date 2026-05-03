@@ -3,9 +3,12 @@ import { SwiperSlide } from 'swiper/react';
 import Carousel from './Carousel';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+
 
 const CAROUSEL_CONTAINER = 'text-white rounded-lg w-full h-[30rem] md:w-full swiper-button-white';
-const NEWSLETTER_TILE = 'bg-[#00BA95] w-full h-[30rem] md:h-[30rem] rounded-[1rem] items-center px-7 lg:px-5 md:w-full';
+const NEWSLETTER_TILE = 'bg-green w-full h-[30rem] md:h-[30rem] rounded-[1rem] items-center px-7 lg:px-5 md:w-full';
 const NEWS_BODY = 'md:h-[28rem] h-[28rem] flex flex-col justify-evenly text-center md:px-5';
 
 const NewsTile = (news) => {
@@ -26,9 +29,18 @@ const NewsTile = (news) => {
         <a
           href={news.link}
           className="text-[2rem] md:text-[2rem] font-semibold text-[#FF4D6F]"
-          download={news.pdf_name}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {news.month}
+         </a>
+         <a
+        
+          href={news.link}
+          download={news.pdf_name}
+          className="bg-white text-green rounded-full px-6 py-3 font-semibold hover:bg-green hover:text-white transition-all duration-200 cursor-pointer active:scale-95 flex items-center gap-2 w-full mx-auto"
+        >
+          <FontAwesomeIcon icon={faDownload} /> Download Newsletter
         </a>
       </div>
     </div>

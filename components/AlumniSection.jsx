@@ -45,8 +45,8 @@ const AlumniSection = () => {
               <div className="flex flex-row gap-2 pb-2 whitespace-nowrap">
                 {teams.map((project) => (
                   <Tab
-                    className={`hover:bg-[#00BA95] hover:text-white rounded-full py-2 px-8 lg:mx-4 font-medium text-white transition-all duration-200 ${
-                      activeTab === project ? 'bg-[#00BA95]' : ''
+                    className={`hover:bg-green hover:text-white rounded-full py-2 px-8 lg:mx-4 font-medium text-white transition-all duration-200 ${
+                      activeTab === project ? 'bg-green' : ''
                     }`}
                     key={project}
                     value={project}
