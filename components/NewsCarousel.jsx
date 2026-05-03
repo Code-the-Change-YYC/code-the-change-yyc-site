@@ -26,7 +26,8 @@ const NewsTile = (news) => {
         <a
           href={news.link}
           className="text-[2rem] md:text-[2rem] font-semibold text-[#FF4D6F]"
-          download={news.pdf_name}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {news.month}
         </a>
