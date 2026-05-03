@@ -3,6 +3,8 @@ import { SwiperSlide } from 'swiper/react';
 import Carousel from './Carousel';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 
 const CAROUSEL_CONTAINER = 'text-white rounded-lg w-full h-[30rem] md:w-full swiper-button-white';
@@ -36,9 +38,9 @@ const NewsTile = (news) => {
         
           href={news.link}
           download={news.pdf_name}
-          className="bg-white text-green rounded-full px-6 py-3 font-semibold hover:bg-green hover:text-white transition-all duration-200 cursor-pointer active:scale-95 flex items-center gap-2 w-fit mx-auto"
+          className="bg-white text-green rounded-full px-6 py-3 font-semibold hover:bg-green hover:text-white transition-all duration-200 cursor-pointer active:scale-95 flex items-center gap-2 w-full mx-auto"
         >
-          - Download Newsletter
+          <FontAwesomeIcon icon={faDownload} /> Download Newsletter
         </a>
       </div>
     </div>
