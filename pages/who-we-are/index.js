@@ -3,7 +3,7 @@ import { FaAngleDown } from 'react-icons/fa';
 import About from '../../components/About';
 import Heading from '../../components/Heading';
 import Timeline from '../../components/Timeline';
-import { FAQS } from '../../data/faq';
+//import { FAQS } from '../../data/faq';
 import Events from '../../components/Events';
 import { fetchContent } from '../../api/apiRoot';
 
@@ -12,8 +12,9 @@ export async function getStaticProps() {
   alumni.sort((a,b ) => a.orderNumber - b.orderNumber);
   const timeline = await fetchContent('timeline');
   timeline.sort((a, b) => b.year - a.year);
+  const FAQS = await fetchContent('faq');
 
-  return { props: { timeline } };
+  return { props: { timeline, FAQS } };
 }
 
 const FAQDropdown = ({ prompt, content }) => {
@@ -34,7 +35,7 @@ const FAQDropdown = ({ prompt, content }) => {
   );
 };
 
-const WhoWeAre = ({ timeline }) => {
+const WhoWeAre = ({ timeline, FAQS }) => {
   return (
     <div className="flex flex-col w-full -mt-5 md:mt-0 lg:mt-0">
       <div className="flex flex-col lg:flex-row">
