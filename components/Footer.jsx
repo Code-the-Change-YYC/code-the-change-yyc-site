@@ -1,17 +1,47 @@
 import React from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
-
-const footerContainer = "flex flex-col items-center justify-center text-[#A689FF] h-36 bg-[#FFFFFF] md:bg-[#7055FD]";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <>
-      <div className={footerContainer}>
-        <h2 className="font-medium">Keep Up With Us!</h2>
-        <SocialMediaIcons classes="text-[#7055FD] md:text-white" />
-        <h4 className="text-[#C5C5C5] font-light mt-6">Copyright @ Code the Change YYC</h4>
+    <footer className="bg-gradient-to-r from-[#6D5AE6] to-[#6A5AE0] text-white px-8 py-10">
+
+      <div className="grid grid-cols-3 items-center w-full max-w-6xl mx-auto">
+
+        <div className="flex items-center gap-3 justify-center">
+          <div className="flex items-center gap-3 w-[300px] justify-center">
+            <h2 className="text-xl font-semibold leading-tight whitespace-nowrap">
+              Code the Change YYC
+            </h2>
+            <img src="/logo.png" alt="logo" className="w-10 h-10 object-contain" />
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center">
+          <div className="w-[300px] flex justify-center">
+            <SocialMediaIcons classes="flex items-center justify-center gap-8 text-white text-2xl" />
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center -ml-11">
+          <div className="w-[300px] flex justify-center">
+            <button className="bg-white text-[#6D5AE6] px-6 py-2 rounded-full font-medium shadow-md">
+              Keep Up With Us!
+            </button>
+          </div>
+        </div>
+
       </div>
-    </>
+
+      
+      <div className="border-t border-white/20 mt-8"></div>
+
+      
+      <p className="text-center text-sm text-white/70 mt-4">
+        © 2026 Code the Change YYC
+      </p>
+    </footer>
   );
 };
+
 export default Footer;
