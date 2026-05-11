@@ -1,11 +1,18 @@
 import ProjectsSection from "./ProjectsSection";
 import Impact from "../../components/Impact";
+import { fetchContent } from "../../api/apiRoot";
 
-const Projects = () => {
+export async function getStaticProps() {
+  const projects = await fetchContent('externalProject');
+
+  return { props: { projects } };
+}
+
+const Projects = ({ projects }) => {
   return (
     <div className="flex flex-col">
       <Impact />
-      <ProjectsSection />
+      <ProjectsSection projects={projects} />
     </div>
   );
 };

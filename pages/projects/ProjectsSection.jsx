@@ -1,8 +1,8 @@
 import Heading from "../../components/Heading";
 import ProjectTile from "../../components/ProjectTile";
-import { projects } from "../../data/projects";
+//import { projects } from "../../data/projects";
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ projects }) => {
   return (
     <div className="flex flex-col bg-[#7055FD] px-2 md:px-18 lg:px-36 w-full py-20">
       <Heading classes="text-white" width="w-1/10">Our Projects</Heading>

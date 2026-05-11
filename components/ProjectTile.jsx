@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaExternalLinkSquareAlt, FaGithub, FaAppStoreIos, FaPlayCircle } from 'react-icons/fa';
+import { rgbDataURL } from '../utils/blurImage';
 
 const ICON_SIZE = 30;
 
@@ -8,7 +9,15 @@ const ProjectTile = ({ logo, name, appStoreLink, playStoreLink, liveProjectLink,
   return (
     <div className="flex flex-col items-center bg-white rounded-3xl border-4 border-[#A689FF] p-10 m-10 space-y-4 drop-shadow-md">
       <div className="w-60">
-        <Image alt={name} src={logo} placeholder="blur" layout="responsive" />
+        <Image
+          alt={name}
+          src={`https:${logo.fields.file.url}`}
+          width={logo.fields.file.details.image.width}
+          height={logo.fields.file.details.image.height}
+          placeholder="blur"
+          blurDataURL={rgbDataURL()}
+          layout="responsive"
+        />
       </div>
       <h3 className="font-medium text-xl">{name}</h3>
       <div className="flex space-x-4 italic text-[#7055FD]">
