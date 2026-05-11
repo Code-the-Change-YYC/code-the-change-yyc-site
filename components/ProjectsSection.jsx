@@ -1,5 +1,5 @@
-import Heading from "../../components/Heading";
-import ProjectTile from "../../components/ProjectTile";
+import Heading from "./Heading";
+import ProjectTile from "./ProjectTile";
 //import { projects } from "../../data/projects";
 
 const ProjectsSection = ({ projects }) => {

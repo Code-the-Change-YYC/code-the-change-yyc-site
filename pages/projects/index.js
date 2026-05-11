@@ -1,4 +1,4 @@
-import ProjectsSection from "./ProjectsSection";
+import ProjectsSection from "../../components/ProjectsSection";
 import Impact from "../../components/Impact";
 import { fetchContent } from "../../api/apiRoot";
 
