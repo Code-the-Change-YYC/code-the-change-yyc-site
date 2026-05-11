@@ -3,10 +3,11 @@ import Heading from './Heading';
 import { UnderlineTypes } from '../utils/underlineType';
 import TextSection from './TextSection';
 import Carousel from './Carousel';
-import { EVENTS_IMAGES } from '../data/events';
+//import { EVENTS_IMAGES } from '../data/events';
 import { SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { rgbDataURL } from '../utils/blurImage';
 
 const EVENTS_CONTAINER = 'flex flex-col h-[95rem] bg-[#BAFBE4] pt-10 z-0';
 const CONTENT_CONTAINER = 'flex flex-col pt-14 p-5 md:px-32';
@@ -15,14 +16,21 @@ const EVENTS_HEADER = 'flex flex-row';
 
 const LONG_SQUIGGLY_LINE_SVG = '/svgs/events/long_events_squiggly_line.svg';
 
-const Events = () => {
+const Events = ({ eventImages }) => {
   const EventsCarousel = () => (
     <div className={CAROUSEL_CONTAINER}>
       <Carousel>
-        {EVENTS_IMAGES.map((image) => (
+        {eventImages.map((image) => (
           <SwiperSlide key={image.key}>
             <div className="h-[40rem] relative rounded-lg overflow-hidden">
-              <Image src={image.file} alt={image.key} layout="fill" objectFit="cover" placeholder="blur" />
+              <Image
+                src={`https:${image.file.fields.file.url}`}
+                alt={image.key}
+                layout="fill"
+                objectFit="cover"
+                placeholder="blur"
+                blurDataURL={rgbDataURL()}
+              />
             </div>
           </SwiperSlide>
         ))}

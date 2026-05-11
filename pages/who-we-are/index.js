@@ -13,8 +13,9 @@ export async function getStaticProps() {
   const timeline = await fetchContent('timeline');
   timeline.sort((a, b) => b.year - a.year);
   const FAQS = await fetchContent('faq');
+  const eventImages = await fetchContent('eventImage');
 
-  return { props: { timeline, FAQS } };
+  return { props: { timeline, FAQS, eventImages } };
 }
 
 const FAQDropdown = ({ prompt, content }) => {
@@ -35,7 +36,7 @@ const FAQDropdown = ({ prompt, content }) => {
   );
 };
 
-const WhoWeAre = ({ timeline, FAQS }) => {
+const WhoWeAre = ({ timeline, FAQS, eventImages }) => {
   return (
     <div className="flex flex-col w-full -mt-5 md:mt-0 lg:mt-0">
       <div className="flex flex-col lg:flex-row">
@@ -44,7 +45,7 @@ const WhoWeAre = ({ timeline, FAQS }) => {
           <Timeline timeline={timeline} />
         </div>
       </div>
-      <Events />
+      <Events eventImages={eventImages} />
       <div className="flex flex-col bg-white px-10 md:px-24 lg:px-48 w-full py-10 overflow-y-auto scrollbar-hide" style={{height: 728 + 'px'}}>
         <Heading width='1/10'>FAQ</Heading>
         <div className="flex flex-col py-10 w-full space-y-4">
