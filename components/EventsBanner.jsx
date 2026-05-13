@@ -15,7 +15,7 @@ const EventsBanner = () => {
 
   return (
     <div className="flex flex-col bg-lilac text-center items-center pb-12 md:py-12">
-      <Heading classes="text-white text-4xl" underlineType={UnderlineTypes.BEIGE_SHORT_UNDERLINE}>
+      <Heading classes="text-white" underlineType={UnderlineTypes.BEIGE_SHORT_UNDERLINE}>
         Events
       </Heading>
       <ul className="md:hidden">
@@ -29,7 +29,7 @@ const EventsBanner = () => {
           </li>
         ))}
       </ul>
-      <TextSection classes="text-sm  sm:text-base md:text-xl text-white w-3/4">
+      <TextSection classes="text-sm pt-6 sm:text-base md:text-xl text-white w-3/4">
         Looking to work with an energetic and enthusiastic group of postsecondary students on improving awareness around
         technology for social impact? We host a variety of workshops and hackathons every year, blending together ideas
         around software development and social good.
