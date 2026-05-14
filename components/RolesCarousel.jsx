@@ -3,7 +3,7 @@ import { SwiperSlide } from 'swiper/react';
 import Tile from '../components/Tile';
 import TextSection from './TextSection';
 import Carousel from '../components/Carousel';
-import { ROLE } from '../data/join';
+//import { ROLE } from '../data/join';
 import styles from '../components/RolesCarousel.module.css';
 import 'swiper/css/navigation';
 
@@ -21,7 +21,7 @@ const ROLE_TILE_SIZE = 450;
 const RolesTile = ({ role }) => (
   <Tile classes={TILE_CONTAINER}>
     <Image
-      src={`/svgs/homepage/${role.name.toLowerCase()}.svg`}
+      src={`https:${role.image.fields.file.url}`}
       alt={role.name}
       width={ROLE_TILE_SIZE}
       height={ROLE_TILE_SIZE}
@@ -35,7 +35,7 @@ const RolesTile = ({ role }) => (
   </Tile>
 );
 
-const RolesCarousel = () => {
+const RolesCarousel = ({ roles }) => {
   return (
     <div className={ROLES_CONTAINER}>
       <h1 className="text-5xl font-semibold text-white">Roles</h1>
@@ -43,7 +43,7 @@ const RolesCarousel = () => {
       <div className={CAROUSEL_CONTAINER}>
         <div className={`${ARROW_INIT.left} ${LEFT_NAVIGATION_ARROW}`}></div>
         <Carousel navigation={{ prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next', clickable: true }}>
-          {ROLE.map((role) => (
+          {roles.map((role) => (
             <SwiperSlide key={role.name}>
               <RolesTile role={role} />
             </SwiperSlide>
