@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from 'react-icons/fa';
 
-const ICON_SIZE = 30;
-
 const SocialMediaIcons = ({ classes }) => {
   return (
     <div className={`flex items-center justify-center gap-8 ${classes}`}>

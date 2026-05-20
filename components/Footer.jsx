@@ -5,15 +5,19 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-[#6D5AE6] to-[#6A5AE0] text-white px-8 py-10">
-
       <div className="grid grid-cols-3 items-center w-full max-w-6xl mx-auto">
-
         <div className="flex items-center gap-3 justify-center">
           <div className="flex items-center gap-3 w-[300px] justify-center">
             <h2 className="text-xl font-semibold leading-tight whitespace-nowrap">
               Code the Change YYC
             </h2>
-            <img src="/logo.png" alt="logo" className="w-10 h-10 object-contain" />
+            <Image
+              src="/logo.png"
+              alt="Code the Change YYC logo"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
           </div>
         </div>
 
@@ -30,13 +34,10 @@ const Footer = () => {
             </button>
           </div>
         </div>
-
       </div>
 
-      
       <div className="border-t border-white/20 mt-8"></div>
 
-      
       <p className="text-center text-sm text-white/70 mt-4">
         © 2026 Code the Change YYC
       </p>
@@ -45,3 +46,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
