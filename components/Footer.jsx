@@ -1,6 +1,7 @@
 import React from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -29,9 +30,11 @@ const Footer = () => {
 
         <div className="flex justify-center items-center -ml-11">
           <div className="w-[300px] flex justify-center">
-            <button className="bg-white text-[#6D5AE6] px-6 py-2 rounded-full font-medium shadow-md">
-              Keep Up With Us!
-            </button>
+            <Link href="https://www.codethechangeyyc.ca/contact">
+              <button className="bg-white text-[#6D5AE6] px-6 py-2 rounded-full font-medium shadow-md">
+                Keep Up With Us!
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -46,4 +49,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
