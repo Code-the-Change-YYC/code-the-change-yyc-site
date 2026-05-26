@@ -3,7 +3,6 @@ import { FaAngleDown } from 'react-icons/fa';
 import About from '../../components/About';
 import Heading from '../../components/Heading';
 import Timeline from '../../components/Timeline';
-//import { FAQS } from '../../data/faq';
 import Events from '../../components/Events';
 import { fetchContent } from '../../api/apiRoot';
 

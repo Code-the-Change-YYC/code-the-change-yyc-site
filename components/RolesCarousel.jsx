@@ -3,7 +3,6 @@ import { SwiperSlide } from 'swiper/react';
 import Tile from '../components/Tile';
 import TextSection from './TextSection';
 import Carousel from '../components/Carousel';
-//import { ROLE } from '../data/join';
 import styles from '../components/RolesCarousel.module.css';
 import 'swiper/css/navigation';
 
@@ -43,7 +42,7 @@ const RolesCarousel = ({ roles }) => {
       <div className={CAROUSEL_CONTAINER}>
         <div className={`${ARROW_INIT.left} ${LEFT_NAVIGATION_ARROW}`}></div>
         <Carousel navigation={{ prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next', clickable: true }}>
-          {roles.map((role) => (
+          {roles.filter( role => role?.image?.fields?.file ).map((role) => (
             <SwiperSlide key={role.name}>
               <RolesTile role={role} />
             </SwiperSlide>
