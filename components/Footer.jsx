@@ -5,13 +5,15 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-[#6D5AE6] to-[#6A5AE0] text-white px-8 py-10">
-      <div className="grid grid-cols-3 items-center w-full max-w-6xl mx-auto">
-        <div className="flex items-center gap-3 justify-center">
-          <div className="flex items-center gap-3 w-[300px] justify-center">
-            <h2 className="text-xl font-semibold leading-tight whitespace-nowrap">
+    <footer className="bg-gradient-to-r from-[#7055FD] to-[#7055FD] text-white px-4 md:px-8 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center w-full max-w-6xl mx-auto">
+
+        <div className="flex items-center justify-center">
+          <div className="flex flex-col lg:flex-row items-center gap-2 md:gap-3 justify-center md:w-[300px]">
+            <h2 className="text-lg md:text-xl font-semibold leading-tight text-center lg:text-left">
               Code the Change YYC
             </h2>
+
             <Image
               src="/logo.png"
               alt="Code the Change YYC logo"
@@ -23,17 +25,28 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-center items-center">
-          <div className="w-[300px] flex justify-center">
-            <SocialMediaIcons classes="flex items-center justify-center gap-8 text-white text-2xl" />
+          <div className="w-full md:w-[300px] flex justify-center">
+            <SocialMediaIcons classes="flex items-center justify-center gap-6 md:gap-8 text-white text-xl md:text-2xl" />
           </div>
         </div>
 
-        <div className="flex justify-center items-center -ml-11">
-          <div className="w-[300px] flex justify-center">
-            <Link href="https://www.codethechangeyyc.ca/contact">
-              <button className="bg-white text-[#6D5AE6] px-6 py-2 rounded-full font-medium shadow-md">
-                Keep Up With Us!
-              </button>
+        <div className="flex justify-center items-center">
+          <div className="w-full md:w-[300px] flex justify-center">
+            <Link
+              href="https://www.codethechangeyyc.ca/contact"
+              className="
+                bg-white text-[#6D5AE6]
+                px-4 md:px-6
+                py-2
+                text-sm md:text-base
+                rounded-full
+                font-medium
+                shadow-md
+                inline-block
+                whitespace-nowrap
+              "
+            >
+              Keep Up With Us!
             </Link>
           </div>
         </div>
