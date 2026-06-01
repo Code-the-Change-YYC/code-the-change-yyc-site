@@ -1,13 +1,13 @@
-import { Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/effect-cards";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useRef } from "react";
 
 const SPACE_BETWEEN_ELEMENTS = 50;
 
-const Carousel = ({ children, className='', ...props }) => {
+const Carousel = ({ paginationColour = "FFF", children, className='', ...props }) => {
   const isPresidentCarousel = String(className).includes("president-carousel");
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -49,7 +49,9 @@ const Carousel = ({ children, className='', ...props }) => {
           className={`mySwiper ${className}`}
           {...props}
         >
-          {children}
+          {children.map((child, index) => (
+            <SwiperSlide key={index}>{child}</SwiperSlide>
+          ))}
         </Swiper>
       </div>
     );
@@ -60,7 +62,7 @@ const Carousel = ({ children, className='', ...props }) => {
       style={{
         "--swiper-navigation-color": "#FFF",
         "--swiper-navigation-size": "25px",
-        "--swiper-pagination-color": "#FFF",
+        "--swiper-pagination-color": paginationColour,
       }}
       modules={[Navigation, Pagination]}
       navigation
@@ -69,7 +71,9 @@ const Carousel = ({ children, className='', ...props }) => {
       className="mySwiper"
       {...props}
     >
-      {children}
+      {children.map((child, index) => (
+        <SwiperSlide key={index}>{child}</SwiperSlide>
+      ))}
     </Swiper>
   );
 };
