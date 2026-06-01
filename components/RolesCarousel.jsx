@@ -42,11 +42,13 @@ const RolesCarousel = ({ roles }) => {
       <div className={CAROUSEL_CONTAINER}>
         <div className={`${ARROW_INIT.left} ${LEFT_NAVIGATION_ARROW}`}></div>
         <Carousel navigation={{ prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next', clickable: true }}>
-          {roles.filter( role => role?.image?.fields?.file ).map((role) => (
-            <SwiperSlide key={role.name}>
-              <RolesTile role={role} />
-            </SwiperSlide>
-          ))}
+          {roles
+            .filter( role => role?.image?.fields?.file )
+            .map((role) => (
+              <SwiperSlide key={role.name}>
+                <RolesTile role={role} />
+              </SwiperSlide>
+            ))}
         </Carousel>
         <div className={`${ARROW_INIT.right} ${RIGHT_NAVIGATION_ARROW}`}></div>
       </div>

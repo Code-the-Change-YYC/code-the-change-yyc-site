@@ -19,20 +19,22 @@ const Events = ({ eventImages }) => {
   const EventsCarousel = () => (
     <div className={CAROUSEL_CONTAINER}>
       <Carousel>
-        {eventImages.filter( image => image?.file?.fields?.file ).map((image) => (
-          <SwiperSlide key={image.key}>
-            <div className="h-[40rem] relative rounded-lg overflow-hidden">
-              <Image
-                src={`https:${image.file.fields.file.url}`}
-                alt={image.key}
-                layout="fill"
-                objectFit="cover"
-                placeholder="blur"
-                blurDataURL={rgbDataURL()}
-              />
-            </div>
-          </SwiperSlide>
-        ))}
+        {eventImages
+          .filter( image => image?.file?.fields?.file )
+          .map((image) => (
+            <SwiperSlide key={image.key}>
+              <div className="h-[40rem] relative rounded-lg overflow-hidden">
+                <Image
+                  src={`https:${image.file.fields.file.url}`}
+                  alt={image.key}
+                  layout="fill"
+                  objectFit="cover"
+                  placeholder="blur"
+                  blurDataURL={rgbDataURL()}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
       </Carousel>
     </div>
   );
