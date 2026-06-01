@@ -36,7 +36,7 @@ const EventCarousel = ({ upcomingEvent }) => {
   return (
     <div className={CAROUSEL_CONTAINER}>
       <div className={`${ARROW_INIT.left} ${LEFT_NAVIGATION_ARROW}`}></div>
-      <Carousel navigation={{ prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next', clickable: true }}>
+      <Carousel paginationColour="#ffa79a" navigation={{ prevEl: '.swiper-button-prev', nextEl: '.swiper-button-next', clickable: true }}>
         {upcomingEvent.map((upcomingEvent) => (
           <SwiperSlide key={upcomingEvent.id}>
             <EventTile {...upcomingEvent} />
