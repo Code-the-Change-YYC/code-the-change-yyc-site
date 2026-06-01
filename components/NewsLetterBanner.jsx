@@ -12,6 +12,8 @@ const GREEN_ACCENT = '/svgs/newsletter/Group 33.svg';
 const RED_SQUIGGLY_LINE = '/svgs/newsletter/Vector 41.svg';
 const PINK_SQUIGGLY_LINE = '/svgs/newsletter/Vector 49.svg';
 const GREEN_SQUIGGLY_LINE = '/svgs/newsletter/Vector 46.svg';
+const LINK_TO_MAILING_LIST =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfusGF-TTs6nXfBCodQuuDWqx7DnTrm6GF4c-CeDVUt1m_plA/viewform';
 
 const NEWSLETTER1 = [
   {
@@ -52,7 +54,7 @@ const NewsLetterBanner = () => {
         {/* Need to Add signup for newsletter functionality */}
         <TextSection classes="text-black z-20">
           Not a subscriber yet? Sign up
-          <Link href="/contact" className="text-[#FF4D6F]">
+          <Link href={LINK_TO_MAILING_LIST} className="text-[#FF4D6F]">
             <span> here </span>
           </Link>
           and never miss out!
