@@ -1,4 +1,4 @@
-import { Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -49,7 +49,9 @@ const Carousel = ({ children, className='', ...props }) => {
           className={`mySwiper ${className}`}
           {...props}
         >
-          {children}
+          {children.map((child, index) => (
+            <SwiperSlide key={index}>{child}</SwiperSlide>
+          ))}
         </Swiper>
       </div>
     );
@@ -69,7 +71,9 @@ const Carousel = ({ children, className='', ...props }) => {
       className="mySwiper"
       {...props}
     >
-      {children}
+      {children.map((child, index) => (
+        <SwiperSlide key={index}>{child}</SwiperSlide>
+      ))}
     </Swiper>
   );
 };

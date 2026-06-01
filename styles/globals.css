@@ -74,9 +74,3 @@
     right: 1.5rem;
   }
 }
-
-/* Alumni carousel specific styles */
-.alumni-carousel .swiper-button-prev,
-.alumni-carousel .swiper-button-next {
-  color: #000000;
-}
