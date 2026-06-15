@@ -28,7 +28,7 @@ const Footer = () => {
 
         <div className="flex justify-center md:justify-end items-center">
           <Link
-            href="https://www.codethechangeyyc.ca/contact"
+            href="/contact"
             className="
               bg-white text-[#6D5AE6]
               px-4 md:px-6
@@ -49,7 +49,7 @@ const Footer = () => {
       <div className="border-t border-white/20 mt-8"></div>
 
       <p className="text-center text-sm text-white/70 mt-4">
-        © 2026 Code the Change YYC
+        © {new Date().getFullYear()} Code the Change YYC
       </p>
     </footer>
   );
