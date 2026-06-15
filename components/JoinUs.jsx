@@ -21,11 +21,11 @@ const JoinUs = () => {
   );
 
   const scrollToRoles = () => {
-  document.getElementById('roles')?.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  });
-};
+    document.getElementById('roles')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
 
   return (
     <div className={JOIN_US_CONTAINER}>
