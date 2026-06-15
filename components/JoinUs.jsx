@@ -20,6 +20,13 @@ const JoinUs = () => {
     </div>
   );
 
+  const scrollToRoles = () => {
+  document.getElementById('roles')?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  });
+};
+
   return (
     <div className={JOIN_US_CONTAINER}>
       <div className={CONTENT_CONTAINER}>
@@ -33,16 +40,11 @@ const JoinUs = () => {
           We are a welcoming and diverse team of students united by the mission of bettering our society through code.
           Regardless of what background you come from, if you are interested in making the world a better place -
           <strong
-            className="text-bold text-[#FFD2DC]"
-            onClick={() => 
-              document.getElementById('roles')?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-              })
-            }
-            >
-              {' '} then please look to apply to our team!
-              </strong>
+            className="font-bold text-[#FFD2DC] cursor-pointer hover:underline"
+            onClick={scrollToRoles}
+          >
+            then please look to apply to our team!
+          </strong>
         </TextSection>
         <div className="ml-auto -mt-14 -mb-10">
           <Image src={DOWN_ARROW_SVG} alt="" height={100} width={100} />
