@@ -7,6 +7,7 @@ import { EVENTS_IMAGES } from '../data/events';
 import { SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import 'swiper/css/navigation';
 
 const EVENTS_CONTAINER = 'flex flex-col h-[95rem] bg-[#BAFBE4] pt-10 z-0';
 const CONTENT_CONTAINER = 'flex flex-col pt-14 p-5 md:px-32';
