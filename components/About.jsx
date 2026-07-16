@@ -21,7 +21,7 @@ const About = () => {
           <Image src={WAVING_HAND_SVG} alt="" width={SVG_SIZE} height={SVG_SIZE} />
         </div>
 
-        <TextSection classes="text-white w-2/3 sm:w-2/3 pt-10 pb-10 lg:pb-44">
+        <TextSection classes="text-white w-2/3 pt-10 pb-10 lg:pb-44">
           <strong className={BLUE_BOLD_TEXT}>code the change yyc</strong> is a student-led initiative where students in
           technology-focused programs volunteer their time to work on projects for causes as a way to grow their
           <strong className={BLUE_BOLD_TEXT}> skills</strong>, gain
