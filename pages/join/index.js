@@ -6,13 +6,37 @@ import { fetchContent } from '../../api/apiRoot';
 export async function getStaticProps() {
   const roles = await fetchContent('role');
 
-  return { props: { roles } };
+  const JOIN_ONE = await fetchContent('joinPageExhibitOne');
+  //Assigning classes for images for zigzag effect
+  JOIN_ONE.forEach(
+    (image, index, joinOne) => {
+      if( index%2==1 ){
+        joinOne[index].classes = 'mt-10';
+      }else{
+        joinOne[index].classes = '';
+      }
+    }
+  );
+
+  const JOIN_TWO = await fetchContent('joinPageExhibitTwo');
+  //Again, Assigning classes for images for zigzag effect
+  JOIN_TWO.forEach(
+    (image, index, joinOne) => {
+      if( index%2==1 ){
+        joinOne[index].classes = 'mt-10';
+      }else{
+        joinOne[index].classes = '';
+      }
+    }
+  );
+
+  return { props: { roles, JOIN_ONE, JOIN_TWO } };
 }
 
-const Join = ({ roles }) => {
+const Join = ({ roles, JOIN_ONE, JOIN_TWO }) => {
   return (
     <div>
-      <JoinUs />
+      <JoinUs JOIN_ONE={JOIN_ONE} JOIN_TWO={JOIN_TWO} />
       <RolesCarousel roles={roles} />
       <MailingList />
     </div>

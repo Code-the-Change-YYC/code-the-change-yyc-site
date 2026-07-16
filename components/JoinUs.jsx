@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import TextSection from './TextSection';
-import { JOIN_ONE, JOIN_TWO } from '../data/join';
+import { rgbDataURL } from '../utils/blurImage';
 const JOIN_US_CONTAINER = 'bg-[#7055FD] flex flex-col';
 const CONTENT_CONTAINER = 'flex flex-col pt-14 p-5 md:px-32';
 const HEADING_CONTAINER = 'flex flex-row';
@@ -11,12 +11,19 @@ const DOWN_ARROW_SVG = '/svgs/join/down_arrow.svg';
 const CRYSTAL_HEART_SVG = '/svgs/join/crystal_heart.svg';
 const LONG_SQUIGGLY_LINE_SVG = '/svgs/join/long_squiggly_line.svg';
 
-const JoinUs = () => {
+const JoinUs = ({ JOIN_ONE, JOIN_TWO }) => {
   const TeamPhoto = ({ photo, classes }) => (
     <div
       className={`relative basis-2/5 grow w-48 h-48 md:w-60 md:h-60 lg:w-96 lg:h-96 mx-1 lg:mx-3 rounded-3xl overflow-hidden border-2 border-white ${classes}`}
     >
-      <Image src={photo} alt="Team event photo" layout="fill" objectFit="cover" placeholder="blur" />
+      <Image
+        src={`https:${photo.fields.file.url}`}
+        alt="Team event photo"
+        layout="fill"
+        objectFit="cover"
+        placeholder="blur"
+        blurDataURL={rgbDataURL()}
+      />
     </div>
   );
 
@@ -38,14 +45,18 @@ const JoinUs = () => {
           <Image src={DOWN_ARROW_SVG} alt="" height={100} width={100} />
         </div>
         <div className={PHOTO_ROW}>
-          {JOIN_ONE.map(({ key, photo, classes }) => (
-            <TeamPhoto key={key} photo={photo} classes={classes} />
-          ))}
+          {JOIN_ONE
+            .filter( image => image?.photo?.fields?.file?.url )
+            .map(({ name, photo, classes }) => (
+              <TeamPhoto key={name} photo={photo} classes={classes} />
+            ))}
         </div>
         <div className={`${PHOTO_ROW} hidden lg:flex`}>
-          {JOIN_TWO.map(({ key, ...props }) => (
-            <TeamPhoto key={key} {...props} />
-          ))}
+          {JOIN_TWO
+            .filter( image => image?.photo?.fields?.file?.url )
+            .map(({ name, photo, classes }) => (
+              <TeamPhoto key={name} photo={photo} classes={classes} />
+            ))}
         </div>
       </div>
       <div className="-mt-10 w-44 h-44 relative">

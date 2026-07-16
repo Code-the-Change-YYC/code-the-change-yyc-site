@@ -7,7 +7,7 @@ const ProjectsSection = ({ projects }) => {
       <Heading classes="text-white" width="w-1/10">Our Projects</Heading>
       <div className="grid grid-cols-1 md:grid-cols-2 py-4 md:py-8">
         {projects
-          .filter( project => project?.logo?.fields?.file )
+          .filter( project => project?.logo?.fields?.file?.url )
           .map((project) => (
             <ProjectTile key={project.name} {...project} />
           ))}

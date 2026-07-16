@@ -20,7 +20,7 @@ const Events = ({ eventImages }) => {
     <div className={CAROUSEL_CONTAINER}>
       <Carousel>
         {eventImages
-          .filter( image => image?.file?.fields?.file )
+          .filter( image => image?.file?.fields?.file?.url )
           .map((image) => (
             <SwiperSlide key={image.key}>
               <div className="h-[40rem] relative rounded-lg overflow-hidden">
