@@ -39,7 +39,7 @@ const WhoWeAre = ({ timeline }) => {
     <div className="flex flex-col w-full -mt-5 md:mt-0 lg:mt-0">
       <div className="flex flex-col lg:flex-row">
         <About />
-        <div className="scrollbar-hide overflow-y-auto">
+        <div className="scrollbar-hide overflow-y-auto lg:w-0 flex-[2_1_auto]">
           <Timeline timeline={timeline} />
         </div>
       </div>

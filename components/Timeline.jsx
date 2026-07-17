@@ -32,7 +32,7 @@ const Timeline = ({ timeline }) => {
   );
 
   const EvenTimelineBlock = ({ year, description, smallImage, largeImage }) => (
-    <div className="flex flex-row flex-start">
+    <div className="flex flex-row justify-center">
       <div className="flex flex-col">
         <div className="w-[29vw] mx-[10vw] lg:w-[14.5vw] lg:mx-[5vw] h-32 lg:h-40 mt-10 rounded-xl overflow-hidden drop-shadow-md relative">
           <ImageBlock image={smallImage} />
@@ -44,15 +44,15 @@ const Timeline = ({ timeline }) => {
         <div className="w-40 text-xs md:w-72 md:text-sm lg:w-60 ml-auto mr-1">{description}</div>
       </div>
       {MiddleLine}
-      <div className="w-[43vw] ml-[7vw] lg:w-[21.5vw] lg:ml-[3.5vw] my-16 rounded-l-xl overflow-hidden drop-shadow-md relative">
+      <div className="w-[43vw] ml-[7vw] lg:w-[21.5vw] lg:ml-[3.5vw] my-16 rounded-xl overflow-hidden drop-shadow-md relative">
         <ImageBlock image={largeImage} />
       </div>
     </div>
   );
 
   const OddTimelineBlock = ({ year, description, smallImage, largeImage }) => (
-    <div className="flex flex-row flex-start">
-      <div className="w-[42vw] mr-[7vw] lg:w-[21vw] lg:mr-[3.5vw] my-16 rounded-r-xl overflow-hidden drop-shadow-md relative">
+    <div className="flex flex-row justify-center">
+      <div className="w-[42vw] mr-[7vw] lg:w-[21vw] lg:mr-[3.5vw] my-16 rounded-xl overflow-hidden drop-shadow-md relative">
         <ImageBlock image={smallImage} />
       </div>
       {MiddleLine}
