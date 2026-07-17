@@ -32,7 +32,7 @@ const JoinUs = () => {
         <TextSection classes="text-white pb-10 z-20">
           We are a welcoming and diverse team of students united by the mission of bettering our society through code.
           Regardless of what background you come from, if you are interested in making the world a better place -
-          <strong className="text-bold text-[#FFD2DC]"> then please look to apply to our team!</strong>
+          <strong className="text-bold text-pink"> then please look to apply to our team!</strong>
         </TextSection>
         <div className="ml-auto -mt-14 -mb-10">
           <Image src={DOWN_ARROW_SVG} alt="" height={100} width={100} />

@@ -5,7 +5,7 @@ const TEXT_CLASSES = 'text-4xl font-semibold text-white cursor-pointer';
 
 const MobileNavbarDrawer = ({ onClose }) => {
   return (
-    <div className="flex flex-col bg-[#FF4D6F] rounded-b-2xl -mt-5 p-10 absolute top-full w-full items-center z-10">
+    <div className="flex flex-col bg- rounded-b-2xl -mt-5 p-10 absolute top-full w-full items-center z-10">
       <div className="flex flex-col w-full space-y-4">
         <Link href="/who-we-are">
           <span className={TEXT_CLASSES} onClick={onClose}>About</span>
@@ -30,7 +30,7 @@ const MobileNavbarDrawer = ({ onClose }) => {
         </Link>
       </div>
 
-      <SocialMediaIcons classes="text-[#FFD2DC]" />
+      <SocialMediaIcons classes="text-pink" />
     </div>
   );
 };

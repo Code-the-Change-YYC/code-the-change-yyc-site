@@ -45,7 +45,7 @@ const NewsLetterBanner = () => {
             height={50}
             className="absolute -left-3 top-[145px] md:left-[6rem] z-[-10]"
           />
-          <h1 className="text-5xl font-semibold text-[#FF4D6F]">Newsletter</h1>
+          <h1 className="text-5xl font-semibold text-brightPink">Newsletter</h1>
         </div>
         <TextSection classes="text-black py-5 z-20">
           Stay in the loop with our monthly newsletter! Discover upcoming events like the annual Resume Roast and
@@ -54,7 +54,7 @@ const NewsLetterBanner = () => {
         {/* Need to Add signup for newsletter functionality */}
         <TextSection classes="text-black z-20">
           Not a subscriber yet? Sign up
-          <Link href={LINK_TO_MAILING_LIST} className="text-[#FF4D6F]">
+          <Link href={LINK_TO_MAILING_LIST} className="text-brightPink">
             <span> here </span>
           </Link>
           and never miss out!

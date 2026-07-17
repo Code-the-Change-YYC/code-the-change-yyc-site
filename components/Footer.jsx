@@ -1,7 +1,7 @@
 import React from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
 
-const footerContainer = "flex flex-col items-center justify-center text-[#A689FF] h-36 bg-[#FFFFFF] md:bg-[#7055FD]";
+const footerContainer = "flex flex-col items-center justify-center text-[#A689FF] h-36 bg-green md:bg-[#7055FD]";
 
 const Footer = () => {
   return (

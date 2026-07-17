@@ -15,7 +15,7 @@ const ARROW_INIT = { left: 'swiper-button-prev', right: 'swiper-button-next' };
 const LEFT_NAVIGATION_ARROW = styles.swiperButtonPrev;
 const RIGHT_NAVIGATION_ARROW = styles.swiperButtonNext;
 
-const ROLES_CONTAINER = 'px-10 md:px-24 lg:px-48 py-20 bg-[#FF6B54]';
+const ROLES_CONTAINER = 'px-10 md:px-24 lg:px-48 py-20 bg-orange';
 const ROLE_TILE_SIZE = 450;
 
 const RolesTile = ({ role }) => (

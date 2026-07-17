@@ -11,10 +11,10 @@ const HACKATHON_TIMELINE_HEADER = 'md:justify-start md:my-[60px] my-[30px] flex 
 const HACKATHON_EVENT_INFO = 'flex text-center text-xl font-bold mb-[70px] md:items-center flex-col items-center';
 const HACKATHON_TITLE_YEAR = 'text-5xl pb-[15px] italic md:text-4xl';
 const HACKATHON_IMAGE =
-  'object-cover w-[80vw] md:rounded-xl md:w-[450px] md:h-[250px] md:shadow-[15px_15px_0px_0px_#00D3A9]';
+  'object-cover w-[80vw] md:rounded-xl md:w-[450px] md:h-[250px] md:shadow-[15px_15px_0px_0px_green]';
 const HACKATHON_TEXT = 'flex-col md:w-[400px] md:mx-[40px] leading-[1] text-[20px]';
 const HACKATHON_TOPIC_TEXT =
-  'flex text-left my-[15px] text-[#FF4D6F] md:text-[#FF6B54] md:my-1 md:font-extrabold md:text-[25px]';
+  'flex text-left my-[15px] text-brightPink md:text-orange md:my-1 md:font-extrabold md:text-[25px]';
 
 const HackathonSection = ({ hackathon, index }) => {
   let sectionInfoStyling = 'md:flex-row-reverse';
@@ -40,7 +40,7 @@ const HackathonSection = ({ hackathon, index }) => {
           <p className="md:hidden pr-[5px]">Topics:</p>
           <p>{hackathon.topic}</p>
         </div>
-        <p className="font-medium md:text-[#00D3A9]">{hackathon.blurb}</p>
+        <p className="font-medium md:text-green">{hackathon.blurb}</p>
       </div>
     </div>
   );
