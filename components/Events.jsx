@@ -6,6 +6,7 @@ import Carousel from './Carousel';
 import { SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import 'swiper/css/navigation';
 import { rgbDataURL } from '../utils/blurImage';
 
 const EVENTS_CONTAINER = 'flex flex-col h-[95rem] bg-[#BAFBE4] pt-10 z-0';
