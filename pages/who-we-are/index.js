@@ -3,7 +3,6 @@ import { FaAngleDown } from 'react-icons/fa';
 import About from '../../components/About';
 import Heading from '../../components/Heading';
 import Timeline from '../../components/Timeline';
-import { FAQS } from '../../data/faq';
 import Events from '../../components/Events';
 import { fetchContent } from '../../api/apiRoot';
 
@@ -12,8 +11,10 @@ export async function getStaticProps() {
   alumni.sort((a,b ) => a.orderNumber - b.orderNumber);
   const timeline = await fetchContent('timeline');
   timeline.sort((a, b) => b.year - a.year);
+  const FAQS = await fetchContent('faq');
+  const eventImages = await fetchContent('eventImage');
 
-  return { props: { timeline } };
+  return { props: { timeline, FAQS, eventImages } };
 }
 
 const FAQDropdown = ({ prompt, content }) => {
@@ -34,16 +35,16 @@ const FAQDropdown = ({ prompt, content }) => {
   );
 };
 
-const WhoWeAre = ({ timeline }) => {
+const WhoWeAre = ({ timeline, FAQS, eventImages }) => {
   return (
     <div className="flex flex-col w-full -mt-5 md:mt-0 lg:mt-0">
       <div className="flex flex-col lg:flex-row">
         <About />
-        <div className="scrollbar-hide overflow-y-auto">
+        <div className="scrollbar-hide overflow-y-auto lg:w-0 flex-[2_1_auto]">
           <Timeline timeline={timeline} />
         </div>
       </div>
-      <Events />
+      <Events eventImages={eventImages} />
       <div className="flex flex-col bg-white px-10 md:px-24 lg:px-48 w-full py-10 overflow-y-auto scrollbar-hide" style={{height: 728 + 'px'}}>
         <Heading width='1/10'>FAQ</Heading>
         <div className="flex flex-col py-10 w-full space-y-4">
