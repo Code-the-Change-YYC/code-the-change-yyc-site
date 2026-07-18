@@ -3,14 +3,16 @@ import { SwiperSlide } from 'swiper/react';
 import Carousel from './Carousel';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const CAROUSEL_CONTAINER = 'text-white rounded-lg w-full h-[30rem] md:w-full swiper-button-white';
-const NEWSLETTER_TILE = 'bg-[#00BA95] w-full h-[30rem] md:h-[30rem] rounded-[1rem] items-center px-7 lg:px-5 md:w-full';
+const NEWSLETTER_TILE = 'bg-green w-full h-[30rem] md:h-[30rem] rounded-[1rem] items-center px-7 lg:px-5 md:w-full';
 const NEWS_BODY = 'md:h-[28rem] h-[28rem] flex flex-col justify-evenly text-center md:px-5';
 
 const NewsTile = (news) => {
   return (
-    <div className={NEWSLETTER_TILE}>
+    <div className={`${NEWSLETTER_TILE} block`}>
       <div className={NEWS_BODY}>
         <h2 className="text-[2rem] md:text-[2rem] font-bold">{news.title}</h2>
         <div className="lg:h-2/3 h-[20rem] w-full overflow-hidden scrollbar-hide rounded-[1rem]">
@@ -23,12 +25,15 @@ const NewsTile = (news) => {
             layout="responsive"
           />
         </div>
+        <p className="text-[2rem] md:text-[2rem] font-semibold text-pink">
+          {news.month}
+        </p>
         <a
           href={news.link}
-          className="text-[2rem] md:text-[2rem] font-semibold text-[#FF4D6F]"
-          download={news.pdf_name}
+          download={news.pdf_name || true}
+          className="bg-white text-green rounded-full px-6 py-3 font-semibold hover:bg-purple hover:text-white transition-all duration-200 cursor-pointer active:scale-95 flex items-center gap-2 w-full mx-auto justify-center"
         >
-          {news.month}
+          <FontAwesomeIcon icon={faDownload} /> Download Newsletter
         </a>
       </div>
     </div>
@@ -39,9 +44,9 @@ const NewsCarousel = ({ news }) => {
   return (
     <div className={CAROUSEL_CONTAINER}>
       <Carousel key={news.title}>
-        {news.map((news) => (
-          <SwiperSlide key={news.title}>
-            <NewsTile {...news} />
+        {news.map((item) => (
+          <SwiperSlide key={item.pdf_name || item.link}>
+            <NewsTile {...item} />
           </SwiperSlide>
         ))}
       </Carousel>

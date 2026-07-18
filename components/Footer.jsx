@@ -3,6 +3,8 @@ import SocialMediaIcons from "./SocialMediaIcons";
 import Image from "next/image";
 import Link from "next/link";
 
+const footerContainer = "flex flex-col items-center justify-center text-[#A689FF] h-36 bg-white md:bg-[#7055FD]";
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-[#7055FD] to-[#7055FD] text-white px-4 md:px-8 py-10">

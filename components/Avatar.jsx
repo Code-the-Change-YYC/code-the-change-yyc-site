@@ -14,7 +14,7 @@ const Avatar = ({ name, linkedin, position, pfp, classes, prevRole, currRole, pr
 
   const colorTheme =
     teamIdentifier === PageIdentifiers.INTERNAL_LEVEL_CONTAINER
-      ? 'text-[#00BA95]'
+      ? 'text-green'
       : teamIdentifier === PageIdentifiers.EXECUTIVE_LEVEL_CONTAINER
       ? 'text-[#7055FD]'
       : '';

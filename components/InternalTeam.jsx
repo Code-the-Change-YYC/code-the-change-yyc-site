@@ -69,8 +69,8 @@ const InternalTeam = () => {
                 return (
                   <Tab key={team} value={team} onClick={() => setActiveTab(team)}>
                     <div
-                      className={`rounded-full whitespace-nowrap px-4 py-2 font-medium hover:bg-[#00D3A9] hover:text-white transition-all duration-200
-                    ${activeTab === team ? 'bg-[#00D3A9] text-white' : 'text-black'}
+                      className={`rounded-full whitespace-nowrap px-4 py-2 font-medium hover:bg-green hover:text-white transition-all duration-200
+                    ${activeTab === team ? 'bg-green text-white' : 'text-black'}
                     `}
                     >
                       {team}
