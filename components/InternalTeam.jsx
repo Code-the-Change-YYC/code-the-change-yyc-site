@@ -61,7 +61,7 @@ const InternalTeam = () => {
           <div
             className="overflow-x-auto grid place-items-center scrollbar-webkit @support scrollbar-thin"
             style={{
-              '--scrollbar-thumb-colour': 'green',
+              '--scrollbar-thumb-colour': '#00D3A9',
             }}
           >
             <TabsHeader className="flex flex-row gap-2 pb-2 whitespace-nowrap">

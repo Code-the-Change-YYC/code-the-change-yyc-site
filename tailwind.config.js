@@ -17,6 +17,7 @@ module.exports = {
       brightPink: '#FF4D6F',
       green: '#00D3A9',
       black: '#000000',
+      purple: '#7055FD',
     },
   },
   variants: {

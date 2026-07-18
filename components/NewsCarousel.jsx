@@ -12,12 +12,7 @@ const NEWS_BODY = 'md:h-[28rem] h-[28rem] flex flex-col justify-evenly text-cent
 
 const NewsTile = (news) => {
   return (
-    <a
-      href={news.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`${NEWSLETTER_TILE} block cursor-pointer`}
-    >
+    <div className={`${NEWSLETTER_TILE} block`}>
       <div className={NEWS_BODY}>
         <h2 className="text-[2rem] md:text-[2rem] font-bold">{news.title}</h2>
         <div className="lg:h-2/3 h-[20rem] w-full overflow-hidden scrollbar-hide rounded-[1rem]">
@@ -33,18 +28,15 @@ const NewsTile = (news) => {
         <p className="text-[2rem] md:text-[2rem] font-semibold text-pink">
           {news.month}
         </p>
-        <div
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            window.open(news.link, '_blank');
-          }}
-          className="bg-white text-green rounded-full px-6 py-3 font-semibold hover:bg-lilac hover:text-white transition-all duration-200 cursor-pointer active:scale-95 flex items-center gap-2 w-full mx-auto"
+        <a
+          href={news.link}
+          download={news.pdf_name || true}
+          className="bg-white text-green rounded-full px-6 py-3 font-semibold hover:bg-purple hover:text-white transition-all duration-200 cursor-pointer active:scale-95 flex items-center gap-2 w-full mx-auto justify-center"
         >
           <FontAwesomeIcon icon={faDownload} /> Download Newsletter
-        </div>
+        </a>
       </div>
-    </a>
+    </div>
   );
 };
 
@@ -53,7 +45,7 @@ const NewsCarousel = ({ news }) => {
     <div className={CAROUSEL_CONTAINER}>
       <Carousel key={news.title}>
         {news.map((item) => (
-          <SwiperSlide key={item.title}>
+          <SwiperSlide key={item.pdf_name || item.link}>
             <NewsTile {...item} />
           </SwiperSlide>
         ))}

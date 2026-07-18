@@ -55,7 +55,7 @@ const EventsTeam = () => {
       <div className={PROFILES_CONTAINER}>
         <div className={EXECUTIVE_LEVEL_CONTAINER}>
           {eventsTeamLeads.map((exec) => (
-            <Avatar classes="!text-" profileContainerClasses='!mx-0 !flex-wrap' key={exec.name} {...exec} />
+            <Avatar classes="!text-green" profileContainerClasses='!mx-0 !flex-wrap' key={exec.name} {...exec} />
           ))}
         </div>
       </div>
