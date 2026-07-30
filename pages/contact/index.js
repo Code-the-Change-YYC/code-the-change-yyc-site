@@ -12,14 +12,36 @@ const Contact = () => {
         Wanna connect with us about a <strong>project</strong>, <strong>partnership</strong>, or{" "}
         <strong>anything else?</strong>
       </p>
-      <p className="text-2xl">Reach us via our email</p>
+      <p className="text-2xl">Reach out to us via one of the following:</p>
+      
+      <div className="flex flex-row items-center">
 
-      <div className="flex flex-col items-center w-full py-4">
-        <img src={MAIL_DIR} alt="" width={200} />
-        <a className="text-2xl font-semibold" href="mailto:codethechangeyyc@gmail.com">
-          codethechangeyyc@gmail.com
-        </a>
-        <img src={LONG_UNDERLINE_DIR} alt="" width={200} />
+        {/* Email */}
+        <div className="flex flex-col items-center w-full py-4">
+          <img src={MAIL_DIR} alt="" width={200} />
+          <a className="text-2xl font-semibold" href="mailto:codethechangeyyc@gmail.com">
+            codethechangeyyc@gmail.com
+          </a>
+          <img src={LONG_UNDERLINE_DIR} alt="" width={200} />
+        </div>
+
+        {/* Instagram */}
+        <div className="flex flex-col items-center w-full py-4">
+          <img src={MAIL_DIR} alt="" width={200} />
+          <a className="text-2xl font-semibold" href="mailto:codethechangeyyc@gmail.com">
+            @codethechangeyyc
+          </a>
+          <img src={LONG_UNDERLINE_DIR} alt="" width={200} />
+        </div>
+
+        {/* Linkedin */}
+        <div className="flex flex-col items-center w-full py-4">
+          <img src={MAIL_DIR} alt="" width={200} />
+          <a className="text-2xl font-semibold" href="mailto:codethechangeyyc@gmail.com">
+            @codethechangeyyc
+          </a>
+          <img src={LONG_UNDERLINE_DIR} alt="" width={200} />
+        </div>
       </div>
 
       <div className="py-10">
