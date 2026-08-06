@@ -36,7 +36,7 @@ const RolesTile = ({ role }) => (
 
 const RolesCarousel = ({ roles }) => {
   return (
-    <div className={ROLES_CONTAINER}>
+    <div id="roles" className={ROLES_CONTAINER}>
       <h1 className="text-5xl font-semibold text-white">Roles</h1>
       <TextSection classes="text-white py-3">More in depth description of what the specific role involves</TextSection>
       <div className={CAROUSEL_CONTAINER}>
