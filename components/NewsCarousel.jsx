@@ -12,7 +12,18 @@ const NEWS_BODY = 'md:h-[28rem] h-[28rem] flex flex-col justify-evenly text-cent
 
 const NewsTile = (news) => {
   return (
-    <div className={`${NEWSLETTER_TILE} block`}>
+    <div
+      className={`${NEWSLETTER_TILE} block cursor-pointer`}
+      onClick={() => window.open(news.link, '_blank', 'noopener,noreferrer')}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          window.open(news.link, '_blank', 'noopener,noreferrer');
+        }
+      }}
+      role="link"
+      tabIndex={0}
+    >
       <div className={NEWS_BODY}>
         <h2 className="text-[2rem] md:text-[2rem] font-bold">{news.title}</h2>
         <div className="lg:h-2/3 h-[20rem] w-full overflow-hidden scrollbar-hide rounded-[1rem]">
@@ -31,6 +42,7 @@ const NewsTile = (news) => {
         <a
           href={news.link}
           download={news.pdf_name || true}
+          onClick={(e) => e.stopPropagation()}
           className="bg-white text-green rounded-full px-6 py-3 font-semibold hover:bg-purple hover:text-white transition-all duration-200 cursor-pointer active:scale-95 flex items-center gap-2 w-full mx-auto justify-center"
         >
           <FontAwesomeIcon icon={faDownload} /> Download Newsletter
