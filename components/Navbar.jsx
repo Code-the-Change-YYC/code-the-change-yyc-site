@@ -5,7 +5,7 @@ import { FaBars } from 'react-icons/fa';
 import Fade from './Fade';
 import MobileNavbarDrawer from './MobileNavbarDrawer';
 
-const TEXT_CLASSES = 'text-xl font-semibold text-[#FF4D6F] cursor-pointer';
+const TEXT_CLASSES = 'text-xl font-semibold text-brightPink cursor-pointer';
 const IMAGE_SIZE = 44;
 
 const Navbar = () => {

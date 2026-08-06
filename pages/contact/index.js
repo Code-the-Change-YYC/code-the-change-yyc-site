@@ -23,7 +23,7 @@ const Contact = () => {
       </div>
 
       <div className="py-10">
-        <p className="italic font-medium text-2xl text-[#FF4D6F]">Other Code the Change chapters:</p>
+        <p className="italic font-medium text-2xl text-brightPink">Other Code the Change chapters:</p>
       </div>
 
       <Map />

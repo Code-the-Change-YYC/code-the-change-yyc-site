@@ -21,7 +21,7 @@ const TILE_IMAGE_CONTAINER = 'flex flex-row justify-center md:flex-row md:justif
 const TILE_TEXT_CONTAINER = 'basis-3/5 md:basis-3/5 lg:basis-3/5 text-center md:py-10 ';
 const TILE_TEXT_SPACING = 'lg:space-y-10 py-5';
 
-const PAST_EVENTS_CONTAINER = 'bg-[#00D3A9] pb-10';
+const PAST_EVENTS_CONTAINER = 'bg-green pb-10';
 const PAST_EVENTS_CONTENT = 'px-10 md:px-24 lg:px-48 md:py-20';
 const PAST_EVENTS_HEADER = 'flex flex-row';
 

@@ -6,6 +6,7 @@ import TextSection from './TextSection';
 import Heading from './Heading';
 import { EventTileImage } from './EventTileImage';
 
+
 const CAROUSEL_CONTAINER = 'w-4/5  md:hidden swiper-button swiperContainer relative';
 const ARROW_INIT = { left: 'swiper-button-prev', right: 'swiper-button-next' };
 const LEFT_NAVIGATION_ARROW = styles.swiperButtonPrev;

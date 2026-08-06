@@ -105,7 +105,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-10 md:px-24 lg:px-48 py-20 bg-[#FF6B54]">
+      <div className="px-10 md:px-24 lg:px-48 py-20 bg-orange">
         <h1 className="text-5xl font-semibold text-white">Ready to join the change?</h1>
         <p className="text-xl text-white py-10 font-medium">
           Explore our roles here and follow us on our socials to know when we’re recruiting! :)
