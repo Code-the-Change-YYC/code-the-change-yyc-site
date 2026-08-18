@@ -2,6 +2,8 @@ import Map from "../../components/Map";
 
 /* eslint-disable @next/next/no-img-element */
 const MAIL_DIR = "/svgs/contact/mail.svg";
+const INSTA_DIR = "/svgs/contact/instagram.svg";
+const LINKEDIN_DIR = "/svgs/contact/linkedin.svg";
 const LONG_UNDERLINE_DIR = "/svgs/long_heading_underline.svg";
 
 const Contact = () => {
@@ -12,14 +14,46 @@ const Contact = () => {
         Wanna connect with us about a <strong>project</strong>, <strong>partnership</strong>, or{" "}
         <strong>anything else?</strong>
       </p>
-      <p className="text-2xl">Reach us via our email</p>
+      <p className="text-2xl">Reach out to us via one of the following:</p>
+      
+      <div className="flex flex-row items-center gap-8">
 
-      <div className="flex flex-col items-center w-full py-4">
-        <img src={MAIL_DIR} alt="" width={200} />
-        <a className="text-2xl font-semibold" href="mailto:codethechangeyyc@gmail.com">
-          codethechangeyyc@gmail.com
-        </a>
-        <img src={LONG_UNDERLINE_DIR} alt="" width={200} />
+        {/* Email */}
+        <div className="flex flex-col items-center w-full py-4">
+          <img src={MAIL_DIR} alt="" width={200} />
+          <a className="text-2xl font-semibold" href="mailto:codethechangeyyc@gmail.com">
+            codethechangeyyc@gmail.com
+          </a>
+          <img src={LONG_UNDERLINE_DIR} alt="" width={200} />
+        </div>
+
+        {/* Instagram */}
+        <div className="flex flex-col items-center w-full py-4">
+          <img src={INSTA_DIR} alt="" width={200} />
+          <a
+            className="text-2xl font-semibold"
+            href="https://www.instagram.com/codethechangeyyc/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @codethechangeyyc
+          </a>
+          <img src={LONG_UNDERLINE_DIR} alt="" width={200} />
+        </div>
+
+        {/* Linkedin */}
+        <div className="flex flex-col items-center w-full py-4">
+          <img src={LINKEDIN_DIR} alt="" width={200} />
+          <a
+            className="text-2xl font-semibold"
+            href="https://www.linkedin.com/company/codethechangeyyc/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @codethechangeyyc
+          </a>
+          <img src={LONG_UNDERLINE_DIR} alt="" width={200} />
+        </div>
       </div>
 
       <div className="py-10">
