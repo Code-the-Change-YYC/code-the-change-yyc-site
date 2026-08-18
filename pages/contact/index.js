@@ -2,6 +2,8 @@ import Map from "../../components/Map";
 
 /* eslint-disable @next/next/no-img-element */
 const MAIL_DIR = "/svgs/contact/mail.svg";
+const INSTA_DIR = "/svgs/contact/instagram.svg"
+const LINKEDIN_DIR = "/svgs/contact/linkedin.svg"
 const LONG_UNDERLINE_DIR = "/svgs/long_heading_underline.svg";
 
 const Contact = () => {
@@ -27,7 +29,7 @@ const Contact = () => {
 
         {/* Instagram */}
         <div className="flex flex-col items-center w-full py-4">
-          <img src={MAIL_DIR} alt="" width={200} />
+          <img src={INSTA_DIR} alt="" width={200} />
           <a className="text-2xl font-semibold" href="mailto:codethechangeyyc@gmail.com">
             @codethechangeyyc
           </a>
@@ -36,7 +38,7 @@ const Contact = () => {
 
         {/* Linkedin */}
         <div className="flex flex-col items-center w-full py-4">
-          <img src={MAIL_DIR} alt="" width={200} />
+          <img src={LINKEDIN_DIR} alt="" width={200} />
           <a className="text-2xl font-semibold" href="mailto:codethechangeyyc@gmail.com">
             @codethechangeyyc
           </a>
