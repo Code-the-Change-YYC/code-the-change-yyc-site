@@ -16,7 +16,7 @@ const Contact = () => {
       </p>
       <p className="text-2xl">Reach out to us via one of the following:</p>
       
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center gap-8">
 
         {/* Email */}
         <div className="flex flex-col items-center w-full py-4">
@@ -30,7 +30,12 @@ const Contact = () => {
         {/* Instagram */}
         <div className="flex flex-col items-center w-full py-4">
           <img src={INSTA_DIR} alt="" width={200} />
-          <a className="text-2xl font-semibold" href="mailto:codethechangeyyc@gmail.com">
+          <a
+            className="text-2xl font-semibold"
+            href="https://www.instagram.com/codethechangeyyc/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             @codethechangeyyc
           </a>
           <img src={LONG_UNDERLINE_DIR} alt="" width={200} />
@@ -39,7 +44,12 @@ const Contact = () => {
         {/* Linkedin */}
         <div className="flex flex-col items-center w-full py-4">
           <img src={LINKEDIN_DIR} alt="" width={200} />
-          <a className="text-2xl font-semibold" href="mailto:codethechangeyyc@gmail.com">
+          <a
+            className="text-2xl font-semibold"
+            href="https://www.linkedin.com/company/codethechangeyyc/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             @codethechangeyyc
           </a>
           <img src={LONG_UNDERLINE_DIR} alt="" width={200} />
