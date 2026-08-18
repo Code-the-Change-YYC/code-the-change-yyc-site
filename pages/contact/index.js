@@ -2,8 +2,8 @@ import Map from "../../components/Map";
 
 /* eslint-disable @next/next/no-img-element */
 const MAIL_DIR = "/svgs/contact/mail.svg";
-const INSTA_DIR = "/svgs/contact/instagram.svg"
-const LINKEDIN_DIR = "/svgs/contact/linkedin.svg"
+const INSTA_DIR = "/svgs/contact/instagram.svg";
+const LINKEDIN_DIR = "/svgs/contact/linkedin.svg";
 const LONG_UNDERLINE_DIR = "/svgs/long_heading_underline.svg";
 
 const Contact = () => {
