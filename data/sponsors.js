@@ -2,14 +2,13 @@ import Benevity from '../public/sponsor_logos/Benevity.png';
 import Schulich from '../public/sponsor_logos/Schulich School of Engineering.png';
 import FacultyOfScience from '../public/sponsor_logos/UC Faculty of Science.jpg';
 import AWS from '../public/sponsor_logos/AWS.png';
-import Village from '../public/sponsor_logos/Village Ice Cream.png';
 import Clio from '../public/sponsor_logos/clio.png';
 import Pason from '../public/sponsor_logos/pason.png';
 
 // Multiplier is the value you need to multiply height by to get width
 export const GOLD_SPONSORS_ONE = [
-  { file: Clio, multiplier: 2.85, height: 100, website: 'clio.com' },
   { file: Benevity, multiplier: 3.216, height: 90, website: 'benevity.com' },
+  { file: Clio, multiplier: 2.85, height: 100, website: 'clio.com' },
 ];
 
 export const GOLD_SPONSORS_TWO = [{ file: AWS, multiplier: 1.5, height: 100, website: 'aws.amazon.com' }];
@@ -20,7 +19,6 @@ export const SILVER_SPONSORS_ONE = [
 ];
 
 export const SILVER_SPONSORS_TWO = [
-  { file: Village, multiplier: 1.25, height: 95, website: 'villageicecream.com' },
   { file: Pason, multiplier: 1.907, height: 100, website: 'pason.com' },
 ];
 
